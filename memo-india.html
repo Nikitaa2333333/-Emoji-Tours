@@ -38,57 +38,125 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
+        
+        /* Стили навигации как в Google Docs */
+        .nav-link {
+            position: relative;
+            padding-left: 1.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            color: #4b4b4b;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            line-height: 1.25;
+            border-left: 2px solid transparent;
+        }
+        .nav-link:hover {
+            color: #000;
+        }
+        .nav-link.active {
+            color: #000;
+            font-weight: 700;
+            border-left-color: #f5e2a1; /* Цвет акцента Emoji Tours */
+        }
     </style>
 </head>
 
 <body class="bg-background text-on-surface">
 
-    <!-- ═══ ФИКСИРОВАННАЯ КНОПКА НАЗАД ═══ -->
-    <a href="index.html#countries" title="Все страны" style="
-        position: fixed;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%) rotate(180deg);
-        z-index: 100;
-        background: #f5e2a1;
-        color: #000;
-        writing-mode: vertical-lr;
-        text-orientation: mixed;
-        padding: 20px 12px;
-        border-radius: 0 14px 14px 0;
-        font-family: 'Manrope', sans-serif;
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        box-shadow: 3px 0 16px rgba(0,0,0,0.12);
-        transition: padding 0.2s;
-    " onmouseover="this.style.paddingLeft='18px'" onmouseout="this.style.paddingLeft='12px'">
-        ← Все страны
-    </a>
-
-    <nav class="p-8 max-w-6xl mx-auto flex items-center">
-        <a href="index.html#countries">
-            <img src="LogoB_300x.png" alt="Emoji Tours" class="h-12" id="site-logo">
-        </a>
+    <!-- ═══ ФИКСИРОВАННАЯ ШАПКА ═══ -->
+    <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/80 backdrop-blur-md border-b border-black/5 py-4">
+        <div class="max-w-7xl mx-auto flex justify-center items-center px-8 relative">
+            <a href="index.html" class="absolute left-8 text-sm font-bold flex items-center gap-2 hover:opacity-70 transition-opacity">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Все страны
+            </a>
+            <a href="index.html">
+                <img src="LogoB_300x.png" alt="Emoji Tours" class="h-10">
+            </a>
+        </div>
     </nav>
 
     <main>
-        <div class="max-w-4xl mx-auto px-8 pt-4 pb-12 space-y-10">
-            <h1 class="text-7xl md:text-[9rem] font-black tracking-tighter leading-none" id="page-title">Памятка: Индия</h1>
-            <div class="flex flex-wrap gap-4" id="action-buttons">
-                <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+        <!-- ═══ LAYOUT WITH SIDEBAR ═══ -->
+        <div class="max-w-7xl mx-auto px-8 relative flex flex-col lg:flex-row gap-12 pt-32">
+            
+            <!-- ═══ SIDEBAR NAVIGATION (LEFT, STICKY) ═══ -->
+            <aside class="hidden lg:block w-64 pt-20">
+                <div class="sticky top-32 space-y-8">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant/50 mb-6 px-6">Содержание</p>
+                        <nav id="quick-links" class="flex flex-col">
+                            <a href="#section-0" class="nav-link">Туристам, выезжающим в  индию</a>
+<a href="#section-1" class="nav-link">Перед отъездом</a>
+<a href="#section-2" class="nav-link">В российском аэропорту вылета/прилета</a>
+<a href="#section-3" class="nav-link">Таможенный контроль на вылете из рф</a>
+<a href="#section-4" class="nav-link">Таможенный контроль на прилете в рф</a>
+<a href="#section-5" class="nav-link">Регистрация на рейс и оформление багажа</a>
+<a href="#section-6" class="nav-link">Пограничный контроль в аэропорту рф</a>
+<a href="#section-7" class="nav-link">Санитарный контроль</a>
+<a href="#section-8" class="nav-link">Ветеринарный и фито контроль в аэропортах рф</a>
+<a href="#section-9" class="nav-link">Внимание!</a>
+<a href="#section-10" class="nav-link">В индийском аэропорту прилета/вылета</a>
+<a href="#section-11" class="nav-link">Таможенный контроль в аэропорту индии</a>
+<a href="#section-12" class="nav-link">Санитарный контроль в аэропорту индии</a>
+<a href="#section-13" class="nav-link">Ветеринарный контроль в аэропорту индии</a>
+<a href="#section-14" class="nav-link">Республика индия</a>
+<a href="#section-18" class="nav-link">Время</a>
+<a href="#section-19" class="nav-link">Климат</a>
+<a href="#section-20" class="nav-link">Валюта</a>
+<a href="#section-21" class="nav-link">Язык</a>
+<a href="#section-22" class="nav-link">Население</a>
+<a href="#section-23" class="nav-link">Религия</a>
+<a href="#section-24" class="nav-link">Обычаи</a>
+<a href="#section-26" class="nav-link">Праздники и нерабочие дни</a>
+<a href="#section-27" class="nav-link">Транспорт</a>
+<a href="#section-28" class="nav-link">Телефон</a>
+<a href="#section-29" class="nav-link">Экстренные телефоны</a>
+<a href="#section-30" class="nav-link">В отеле</a>
+<a href="#section-32" class="nav-link">Напряжение электросети</a>
+<a href="#section-33" class="nav-link">Экскурсии</a>
+<a href="#section-35" class="nav-link">Кухня</a>
+<a href="#section-36" class="nav-link">Магазины</a>
+<a href="#section-38" class="nav-link">Правила личной гигиены и безопасности:</a>
+<a href="#section-39" class="nav-link">В случае потери паспорта</a>
+<a href="#section-40" class="nav-link">Tel.: (8-10-9111) 611-0640 (41,42); 687-3800</a>
+<a href="#section-41" class="nav-link">Fax: (8-10-9111) 687-6823</a>
+<a href="#section-42" class="nav-link">E-mail: indrusem@del2.vsnl.net.in</a>
+<a href="#section-43" class="nav-link">Вт, ср, пт – 8:00 – 14:00</a>
+<a href="#section-44" class="nav-link">1, 7 января, 8 марта, 1, 2, 9 мая, 12 июня, 7 ноября</a>
+<a href="#section-45" class="nav-link">Tel.: (022) 2363-36-27, 2363-36-28</a>
+<a href="#section-46" class="nav-link">Fax: (022) 2363-04-03</a>
+<a href="#section-47" class="nav-link">E-mail: consul@mtnl.net.in</a>
+<a href="#section-48" class="nav-link">Foreigners regional registration office (f.r.r.o.), mumbai</a>
+<a href="#section-49" class="nav-link">Tel.: (022) 2262-1169</a>
+<a href="#section-50" class="nav-link">Fax: (022)2262-0721 e-mail: frromum@nic.in</a>
+<a href="#section-51" class="nav-link">Желаем вам приятного путешествия!</a>
+<a href="#section-52" class="nav-link">Телефон: +7 (977) 730 95 22</a>
+<a href="#section-53" class="nav-link">Соцсети: вконтакте | instagram | telegram</a>
+<a href="#section-54" class="nav-link">Индивидуальный предприниматель трохин евгений альбертович</a>
+<a href="#section-55" class="nav-link">/</a>
+<a href="#section-56" class="nav-link">Город москва, щербинка ул. юбилейная д.3а</a>
+
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ═══ CONTENT AREA ═══ -->
+            <div class="flex-1 py-20">
+                <p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
+                <h1 id="page-title" class="text-7xl md:text-9xl font-black tracking-tighter leading-none mb-12">Памятка: Индия</h1>
                 
-                <button id="download-pdf-btn" onclick="downloadPDF()" class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-2"><span class="material-symbols-outlined">download</span> Скачать PDF</button>
-            </div>
-        </div>
+                <div class="flex flex-wrap gap-4 mb-24">
+                    <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+                    <a href="memo-██slug██.html" class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
+                </div>
 
-        <img src="" class="w-full h-[80vh] object-cover" style="display:block;" id="hero-image">
-
-        <div class="max-w-4xl mx-auto px-8 py-24 space-y-32" id="memo-content-area">
-             <section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Туристам, выезжающим в  индию</h2><div class="space-y-8">
+                <div class="space-y-32" id="memo-content-area">
+                     <section class="pt-24 border-t border-black/5"><h2 id="section-0" class="text-6xl font-black mb-16 tracking-tight">Туристам, выезжающим в  индию</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ПЕРЕД ОТЪЕЗДОМ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-1" class="text-6xl font-black mb-16 tracking-tight">Перед отъездом</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Проверьте наличие необходимых для поездки документов:</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Заграничный паспорт (паспорт должен быть действителен в течение не менее шести месяцев с даты начала поездки,  и иметь свободную страницу для проставления визы); ксерокопии загранпаспорта (могут пригодиться при утрате загранпаспорта и в случае иных непредвиденных обстоятельств); авиабилеты или маршрут/квитанции электронного билета; ваучер; страховой медицинский полис.</p>
 <img src="tild3434-6638-4437-a663-626532353762__zagranpasport-novogo.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
@@ -103,23 +171,23 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не забывайте собрать и взять с собой аптечку первой помощи, которая поможет Вам при легких недомоганиях, сэкономит Ваше время на поиски лекарственных средств и избавит от проблем общения на иностранном языке.</p>
 <img src="tild3838-6539-4365-b630-323066343866__thumb_67866_expert_b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В РОССИЙСКОМ АЭРОПОРТУ ВЫЛЕТА/ПРИЛЕТА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-2" class="text-6xl font-black mb-16 tracking-tight">В российском аэропорту вылета/прилета</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед выездом в аэропорт:</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рекомендуем получить дополнительную информацию о возможно произошедших изменениях в условиях вылета Вашего рейса, используя возможности сайта авиакомпании, выполняющей рейс, или по телефону ее справочной службы.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рекомендуем заблаговременно, не позднее, чем за три часа до вылета рейса, прибыть к месту регистрации пассажиров для прохождения процедур регистрации на рейс, оформления багажа, и выполнения требований, связанных с пограничным, таможенным, санитарно-карантинным, ветеринарным и другими видами контроля, установленными законодательством РФ.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ТАМОЖЕННЫЙ КОНТРОЛЬ НА ВЫЛЕТЕ ИЗ РФ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-3" class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль на вылете из рф</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если Вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то Вам следует проходить зону таможенного контроля по «Зеленому коридору».</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Без предъявления документов и без внесения сведений о валюте в пассажирскую таможенную декларацию туристы имеют право вывезти наличную иностранную валюту и/или валюту Российской Федерации, а также дорожные чеки на сумму не более 10.000 долларов США. При вывозе физическими лицами иностранной валюты и/или валюты Российской Федерации в эквиваленте до 10.000 долларов США, либо дорожных чеков в сумме, превышающей 10.000 долларов США, эти суммы средств должны быть задекларированы в пассажирской таможенной декларации.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">На денежные средства, вывозимые с помощью банковской карты, ограничений нет. Банковскую карту декларировать не требуется.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ТАМОЖЕННЫЙ КОНТРОЛЬ НА ПРИЛЕТЕ В РФ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-4" class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль на прилете в рф</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если Вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то Вам следует проходить зону таможенного контроля по «Зеленому коридору».</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Без уплаты таможенных пошлин можно ввозить в Российскую Федерацию товары для личного пользования на сумму не более 10.000 долларов по курсу на день декларирования, общим весом – не более 50 килограммов.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Физическое лицо не моложе 18 лет может ввозить без уплаты таможенных пошлин: 3 литра алкогольных напитков и пиво; 50 сигар (сигарилл) или 200 сигарет или 250 граммов табака, либо указанные изделия в ассортименте общим весом не более 250 граммов.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При единовременном ввозе в Россию физическими лицами наличных денежных средств и/или дорожных чеков в сумме в эквиваленте превышающей 10.000 долларов США, либо внешних и/или внутренних ценных бумаг в документарной форме (независимо от суммы), то эти суммы и сведения необходимо внести в пассажирскую таможенную декларацию.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">РЕГИСТРАЦИЯ НА РЕЙС И ОФОРМЛЕНИЕ БАГАЖА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-5" class="text-6xl font-black mb-16 tracking-tight">Регистрация на рейс и оформление багажа</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Регистрация пассажиров на рейс и оформление их багажа производятся на основании именного авиабилета или распечатанной на бумажном носителе маршрут/квитанции электронного билета, а также заграничного паспорта пассажира.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При регистрации пассажиру выдается посадочный талон, который необходимо сохранять до момента возможного предъявления авиакомпании претензий по качеству предоставленных услуг авиаперевозки.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Регистрация на рейс заканчивается за 40 минут, а посадка в воздушное судно за 20 минут, – до времени вылета рейса по местному времени. Пассажиру, опоздавшему ко времени окончания регистрации или посадки в воздушное судно, может быть отказано в перевозке.</p>
@@ -127,26 +195,26 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">За провоз багажа сверх установленной нормы бесплатного провоза, взимается дополнительная плата по тарифу, установленному перевозчиком.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перевозчик имеет право отказать туристу в перевозе багажа, вес или объем которого не соответствуют установленным нормам.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Пограничный контроль в аэропорту рф</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-6" class="text-6xl font-black mb-16 tracking-tight">Пограничный контроль в аэропорту рф</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для прохождения пограничного контроля необходимо предъявить заграничный паспорт и посадочный талон. При осуществлении пограничного контроля пограничники имеют право запрашивать у туристов дополнительные документы и проводить их устный опрос.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">САНИТАРНЫЙ КОНТРОЛЬ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-7" class="text-6xl font-black mb-16 tracking-tight">Санитарный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При совершении путешествия по Индии риска заражения особо опасными инфекционными заболеваниями нет, делать прививки официально не требуются. Можно рекомендовать в профилактических целях сделать противостолбнячные инъекции и прививку против гепатита А и В.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Ветеринарный и фито контроль в аэропортах рф</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-8" class="text-6xl font-black mb-16 tracking-tight">Ветеринарный и фито контроль в аэропортах рф</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если Вы вывозите животных, то Вам необходимо иметь комплект документов, подтверждающих, что они здоровы. Как правило, следует иметь: Ветеринарный паспорт, Справку о состоянии здоровья (выдается любой государственной ветеринарной клиникой), Справку из клуба СКОР или РКФ (в справке указывается, что собака не представляет племенной ценности, справки из других клубов вызывают вопросы на таможне).</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Следует знать, что отели Индии размещения с домашними животными, как правило, не предоставляют.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При ввозе в РФ животных и птиц Вам необходимо иметь сопровождающее ветеринарное свидетельство, полученное в Государственной ветеринарной службе страны, где приобретено животное.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ВНИМАНИЕ!</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-9" class="text-6xl font-black mb-16 tracking-tight">Внимание!</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ЗАПРЕЩЕНО на выезде и въезде ПЕРЕМЕЩЕНИЕ КУЛЬТУРНЫХ ЦЕННОСТЕЙ, ОБЪЕКТОВ ДИКОЙ ФАУНЫ и ФЛОРЫ, находящихся под угрозой исчезновения, ОРУЖИЯ И БОЕПРИПАСОВ к нему БЕЗ РАЗРЕШЕНИЯ УПОЛНОМОЧЕННЫХ ОРГАНОВ.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ЗАПРЕЩЕНО на выезде и въезде ПРИНИМАТЬ ОТ ПОСТОРОННИХ ЛИЦ чемоданы, посылки и другие предметы для перевозки на борту воздушного судна.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ПОМНИТЕ! Незаконное перемещение товаров или валюты через таможенную границу Российской Федерации или их недекларирование либо недостоверное декларирование влечет за собой административную или уголовную ответственность.</p>
 <img src="tild6263-3236-4164-b132-313762653661__34944474314_b12b5af4.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В ИНДИЙСКОМ АЭРОПОРТУ ПРИЛЕТА/ВЫЛЕТА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-10" class="text-6xl font-black mb-16 tracking-tight">В индийском аэропорту прилета/вылета</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль в аэропорту индии</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-11" class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль в аэропорту индии</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Ввоз иностранной валюты неограничен.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Разрешен беспошлинный ввоз 200 сигарет или 250 г табака, или 50 штук сигар, 1 л алкогольных напитков, косметики, парфюмерии, продуктов питания в пределах личной потребности. Ауди- видео-, теле- и фотоаппаратуру необходимо указывать в декларации.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ЗАПРЕЩЕН ввоз наркотиков, лекарств, содержащих большую дозу наркотических веществ, и оружия.</p>
@@ -154,53 +222,53 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ЗАПРЕЩЕН вывоз объектов дикой природы и изделий, изготовленных из них; ювелирных украшений, по стоимости превышающие 2000 рупий; предметов, имеющих историческую ценность; наложен запрет на золото и серебро в банковских слитках.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ЗАПРЕЩЕН вывоз национальной валюты.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Санитарный контроль в аэропорту индии</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-12" class="text-6xl font-black mb-16 tracking-tight">Санитарный контроль в аэропорту индии</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Туристам сертификат о прививках не требуется.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Ветеринарный контроль в аэропорту индии</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-13" class="text-6xl font-black mb-16 tracking-tight">Ветеринарный контроль в аэропорту индии</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При ввозе домашних животных требуется предъявлять действительный сертификат ветеринарной службы с отметкой о всех прививках, включая прививку против бешенства.</p>
 <img src="tild6164-3539-4236-a536-653666633263__919255ebe5775d87ea2b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">РЕСПУБЛИКА ИНДИЯ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-14" class="text-6xl font-black mb-16 tracking-tight">Республика индия</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3664-3439-4039-a230-616331306562__post-1.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Индия – государство в Южной Азии, большей частью расположенное на полуострове Индостан. Занимает седьмое место в мире по площади, второе по численности населения. Побережье Индии, длина которого составляет 7 тыс. км, омывается водами Индийского океана – Бенгальским заливом с юго-востока и Аравийским с юго-запада. Площадь общей территории Индии составляет 3,3 млн. км². На востоке Индия граничит с Бангладешем и Бирмой, на западе – с Пакистаном и Афганистаном, на севере – с Китаем, Непалом и Бутаном. От Индонезии, Мальдив и Шри-Ланки Индию отделяют морские границы.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3961-3230-4163-b465-653036386661__other19.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Индия является федеративной республикой, состоящей из двадцати восьми штатов, шести союзных территорий и Национального столичного округа Дели. Столица государства – Нью-Дели. Гоа – один из наиболее процветающих штатов Индии за счет сельского хозяйства и туризма. Здесь самый высокий уровень дохода на душу населения. Столица штата – Панаджи. Гоа расположен на западном побережье Аравийского моря. Общая площадь штата – 659 км². Гоа соседствует со штатом Махараштра на севере и со штатом Карнатака – на юге. В регионе много рек и все они судоходные. Самая крупная река севера – Тиракол, юга – Галджибага. В центре побережья находятся острова Святого Георгия и Большой. По побережью разбросаны небольшие деревушки, центральная деревня – Анджуна. На востоке Гоа расположен горный массив – Западные Гаты, покрытый густыми лесами с разнообразной флорой и фауной.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3931-3765-4161-a564-353663633863__ingoa.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Время</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-18" class="text-6xl font-black mb-16 tracking-tight">Время</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Разница во времени с Москвой – плюс 2 часа 30 мин.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Климат</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-19" class="text-6xl font-black mb-16 tracking-tight">Климат</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Туристическим сезоном в Гоа считается период с конца октября и по начало марта. Климат тропический, теплый и влажный. Средняя температура днем – 31-33С°, ночью – 23-25С°, воды – 27-28С°.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Валюта</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-20" class="text-6xl font-black mb-16 tracking-tight">Валюта</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Индийская валюта – рупии. В обращении находятся банкноты достоинством 1000, 500, 100, 50, 20 и 5 рупий, монеты по 5, 2, 1 рупий, 10 и 50 пайсов. При поездке в Индию, рекомендуем запастись мелочью, так как могут возникнуть проблемы со сдачей.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Индийскую валюту можно приобрести в российском аэропорту, в банках, отелях и обменных пунктах Индии. Чеки об обмене валюты следует сохранять на случай обратного обмена.</p>
 <img src="tild6566-3339-4064-a166-393761313533__all_about_the_indian.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Язык</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-21" class="text-6xl font-black mb-16 tracking-tight">Язык</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Официальный язык страны – хинди. Универсальным языком общения является английский. В Гоа говорят конкани, широко распространен язык маратхи.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Население</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-22" class="text-6xl font-black mb-16 tracking-tight">Население</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Более 1 млрд. 210 млн. человек. В Индии насчитывается несколько сот наций, народностей и племен, крупнейшие из них: хиндустанцы, телугу, маратхи, бенгальцы, тамилы, гуджаратцы, каннара и пенджабцы.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Религия</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-23" class="text-6xl font-black mb-16 tracking-tight">Религия</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Индуисты составляют 80% населения, мусульмане – 14%, христиане – 2,4%, сикхи – 2%, буддисты – 0,7%.</p>
 <img src="tild3037-3033-4638-b831-383333346333__02cf42bdd82fdb18c5ea.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Обычаи</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-24" class="text-6xl font-black mb-16 tracking-tight">Обычаи</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Хотя жители Гоа уже привыкли к туристам, приезжие индийцы могут толпиться вокруг вас, рассматривать, показывать пальцем, смеяться и пытаться вступить в разговор. Не удивляйтесь, если посторонние люди заговорят о ваших делах, семье и доходах. Вопросы личного характера – проявление гостеприимства. В Индии очень любят детей и угощают их фруктами и сладостями. Будьте осторожны, они могут оказаться не мытыми.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Приветствуя друг друга, индийцы складывают руки перед грудью как в молитве и произносят «намасте». Одеваться за пределами пляжа следует скромно. Большинство индийцев не курят в присутствии старших.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Фотографировать кого-либо без разрешения в Индии считается оскорблением. В туристических центрах работают профессионалы в традиционных нарядах, за право их сфотографировать необходимо заплатить.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В Индии живут последователи множества религий, но правила поведения в местах отправления религиозного культа одинаковы. Посетители должны быть скромно одеты и вести себя достойно. Прежде чем войти в храм, нужно снять обувь, головы женщин должна быть покрыта.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild6634-6130-4231-b761-663838356336__s1200.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Праздники и нерабочие дни</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-26" class="text-6xl font-black mb-16 tracking-tight">Праздники и нерабочие дни</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">6 января – праздник в честь волхвов, пришедших к младенцу Иисусу с дарами. Рядом с крупными церквями устраиваются ярмарки.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Февраль / март – индуистский праздник в честь ночи, когда бог Шива при помощи танца победил демона Трипурасура.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Февраль / март – карнавал в честь начала весны, перед постом. Праздник не имеет религиозной окраски. По улицам движутся живописные платформы, играет музыка, все танцуют мандо и соревнуются в красоте карнавальных костюмов. Во всех отелях и клубах устраиваются танцы и празднества.</p>
@@ -209,44 +277,44 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">25 декабря – католическое рождество, в этот день жители Гоа собираются семьями за праздничным столом и делают друг другу подарки.</p>
 <img src="tild6230-3131-4166-b262-363761613665__44444444444448d44723.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Транспорт</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-27" class="text-6xl font-black mb-16 tracking-tight">Транспорт</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Автобусы соединяют между собой большинство городов и деревень. Это экономичный и удобный способ передвижения. Однако они бывают часто переполнены. Такси можно взять на стоянках возле отелей и в аэропорту. У водителей есть карточки с указанием стоимости проезда до главных городов и достопримечательностей Гоа. В отеле или Корпорации развития туризма Гоа можно нанять автомобиль с шофером. Большинство водителей хорошо говорят по-английски. В индивидуальное пользование можно арендовать велосипед или мотоцикл. Если вы планируете передвигаться по Гоа на мотоцикле, обязательно возьмите с собой шлем и водительские права международного образца на данный вид транспорта.</p>
 <img src="tild6139-3230-4933-b439-653937366465__transport_goa_003.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Телефон</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-28" class="text-6xl font-black mb-16 tracking-tight">Телефон</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для телефонных переговоров удобно использовать карточки, которые продаются в лавках, магазинах и на почте. На курортах есть также специальные отделения телефонной связи, звонить из которых дешевле, чем из отеля, но дороже, чем по карточкам. Ведущие мобильные операторы Гоа – INA AIR Tel и BPL.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Чтобы позвонить в Россию надо набрать: 00 (выход на международную связь) + 7 (код России) + код города + номер абонента (стационарный телефон), 00 (выход на международную связь) + 7 (код России) + номер абонента (мобильный телефон)</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Чтобы позвонить из России в Гоа надо набрать: 8-10-91 + 0832 (код Гоа) + номер абонента.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Телефонный код Дели – 11, Мумбаи – 22.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Экстренные телефоны</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-29" class="text-6xl font-black mb-16 tracking-tight">Экстренные телефоны</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Полиция – 100, скорая помощь – 102, пожарная служба – 101.</p>
 <img src="tild3337-3934-4532-a536-386363633935__phone_old_year_built.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В отеле</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-30" class="text-6xl font-black mb-16 tracking-tight">В отеле</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В день приезда расселение осуществляется в соответствии с правилами, принятыми в отеле. Обычно начиная с 14-00 местного времени. Расчетный час, как правило, 12-00. Просим ознакомиться на месте с условиями предоставления услуг в отеле и придерживаться установленных отелем правил.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В день выезда до наступления расчетного часа (как правило, 12-00) необходимо освободить свой номер и оплатить дополнительные услуги: телефонные переговоры, мини-бар, заказ питания и напитков в номер, массаж и др. Свой багаж Вы можете оставить в камере хранения отеля и оставаться на территории отеля до прибытия трансфера. Если Вы не сдали номер до 12-00, стоимость комнаты оплачивается полностью за следующие сутки.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild6133-6434-4132-b232-633264646531__960.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Напряжение электросети</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-32" class="text-6xl font-black mb-16 tracking-tight">Напряжение электросети</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Напряжение может быть 230-240 V. Частота тока 50 Hz.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Экскурсии</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-33" class="text-6xl font-black mb-16 tracking-tight">Экскурсии</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Гид принимающей Вас в Индии во время встречи в отеле сообщит Вам перечень предлагаемых экскурсий, их содержание, график проведения и их стоимость. Не рекомендуем Вам приобретать экскурсии или прочие услуги в неизвестных вам туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, а также о качестве транспорта для ее организации. Вам может быть предоставлено для использования несертифицированное, неисправное или не соответствующее санитарно-гигиеническим нормам оборудование, в том числе зараженный паразитарными, грибковыми, инфекционными заболеваниями инвентарь, включая сжатый воздух в баллонах для погружения.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3336-6565-4063-b636-336434323662__ncvp4tdysy8.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Кухня</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-35" class="text-6xl font-black mb-16 tracking-tight">Кухня</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Поскольку Гоа находится в прибрежной зоне, в многочисленных ресторанах предлагаются блюда из морепродуктов. Также здесь готовят баранину, говядину, козлятину, свинину, курицу и утку, приправленные местными специями. В качестве гарнира – широкий выбор овощей и рис с соусом карри. Очень велик ассортимент фруктов. Чай и кофе подают с молоком и сахаром, популярностью пользуется напиток ласси или чаас, напоминающий йогурт. Местный вид мороженого – кулфи. Тхали – традиционный обед из местного меню по фиксированной цене, в него входят свежие и маринованные овощи, лепешки, фасоль, рис, йогурт и соусы, иногда местные сладости.</p>
 <img src="tild3737-3239-4037-a166-666661346232__indiyskaya-kuhnya-as.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Магазины</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-36" class="text-6xl font-black mb-16 tracking-tight">Магазины</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В крупных магазинах цены фиксированы, при большой покупке вам могут сделать скидку. Магазины объявляют о распродажах в местных газетах и в собственных витринах. Цены на уличных рынках значительно ниже, кроме того, здесь можно торговаться. Лучшие магазины Гоа расположены в Панаджи, Понде, Мадгаоне и Мапусе. Рекомендуем привезти с собой специи, расписные изразцы – азулежу, а также воспользоваться услугами портных. На местных рынках Вы найдете прекрасные копии старинных изделий.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild6464-3261-4463-b432-396637633034__01goa.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ПРАВИЛА ЛИЧНОЙ ГИГИЕНЫ И БЕЗОПАСНОСТИ:</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-38" class="text-6xl font-black mb-16 tracking-tight">Правила личной гигиены и безопасности:</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед путешествием мы советуем ознакомиться с «Полезными советами российским гражданам, выезжающим за рубеж», размещенными на сайте МИД России: http://www.mid.ru/dks.nsf/advinf</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не нарушайте правила безопасности, установленные авиакомпаниями, транспортными организациями, гостиницами, местными органами власти.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Категорически не рекомендуем Вам приобретать экскурсии и дополнительные туристские услуги в неизвестных Вам туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, Вам не будет гарантирована безопасность предоставленных услуг и исправность используемого оборудования, тем самым Вы можете подвергнуть себя серьезной опасности.</p>
@@ -276,7 +344,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для россиян ограничений на передвижение по стране нет.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если Вы оказались на территории иностранного государства без средств к существованию, Вы имеет право на получение помощи от дипломатических представительств и консульств РФ.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В СЛУЧАЕ ПОТЕРИ ПАСПОРТА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-39" class="text-6xl font-black mb-16 tracking-tight">В случае потери паспорта</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Как только Вы поняли, что загранпаспорт потерялся, или его украли, то незамедлительно обращайтесь в дипломатическое представительство, в консульское учреждение или в представительство МИД России, которое находится в пределах приграничной территории.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Вам необходимо получить свидетельство на въезд в РФ (REENTRY CERTIFICATE TO THE RUSSIAN FEDERATION), которое еще называется временным загранпаспортом. Выдается на срок до 15 дней, для того, чтобы Вы успели купить обратный билет и улететь на родину.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для того, чтобы Вам выдали свидетельство на возвращение в РФ, необходимо представить следующие документы:</p>
@@ -290,239 +358,140 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Посольство Российской Федерации в Нью-Дели:</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Address: Shantipath, Chanak apuri, New Delhi, 1100021, India</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Tel.: (8-10-9111) 611-0640 (41,42); 687-3800</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-40" class="text-6xl font-black mb-16 tracking-tight">Tel.: (8-10-9111) 611-0640 (41,42); 687-3800</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Fax: (8-10-9111) 687-6823</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-41" class="text-6xl font-black mb-16 tracking-tight">Fax: (8-10-9111) 687-6823</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">E-mail: indrusem@del2.vsnl.net.in</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-42" class="text-6xl font-black mb-16 tracking-tight">E-mail: indrusem@del2.vsnl.net.in</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Часы работы посольства:</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Пн, Чт – 8:00 – 14:00, 15:30 – 18:30,</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Вт, ср, пт – 8:00 – 14:00</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-43" class="text-6xl font-black mb-16 tracking-tight">Вт, ср, пт – 8:00 – 14:00</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Праздничные выходные дни:</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">1, 7 января, 8 марта, 1, 2, 9 мая, 12 июня, 7 ноября</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-44" class="text-6xl font-black mb-16 tracking-tight">1, 7 января, 8 марта, 1, 2, 9 мая, 12 июня, 7 ноября</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Генеральное консульство РФ в Мумбаи:</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Consulate General of the Russian Federation in Mumbai,</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Address: 42, L. Jagmohandas Marg (Old Nepean Sea Road), "Palm Beach", 400036, Mumbai</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Tel.: (022) 2363-36-27, 2363-36-28</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-45" class="text-6xl font-black mb-16 tracking-tight">Tel.: (022) 2363-36-27, 2363-36-28</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Fax: (022) 2363-04-03</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-46" class="text-6xl font-black mb-16 tracking-tight">Fax: (022) 2363-04-03</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">E-mail: consul@mtnl.net.in</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-47" class="text-6xl font-black mb-16 tracking-tight">E-mail: consul@mtnl.net.in</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Foreigners regional registration office (f.r.r.o.), mumbai</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-48" class="text-6xl font-black mb-16 tracking-tight">Foreigners regional registration office (f.r.r.o.), mumbai</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Adress: 3rd Floor, Special Branch Bldg.,</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Badruddin Tayabji Lane, Behind St. Xavier's College, 400001, Mumbai</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Tel.: (022) 2262-1169</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-49" class="text-6xl font-black mb-16 tracking-tight">Tel.: (022) 2262-1169</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Fax: (022)2262-0721 e-mail: frromum@nic.in</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-50" class="text-6xl font-black mb-16 tracking-tight">Fax: (022)2262-0721 e-mail: frromum@nic.in</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ЖЕЛАЕМ ВАМ ПРИЯТНОГО ПУТЕШЕСТВИЯ!</h2><div class="space-y-8">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По всем вопросам свяжитесь с нами любым удобным способом:</p>
+<section class="pt-24 border-t border-black/5"><h2 id="section-51" class="text-6xl font-black mb-16 tracking-tight">Желаем вам приятного путешествия!</h2><div class="space-y-8">
+
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">E-mail: trohin.zh@yandex.ru</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-52" class="text-6xl font-black mb-16 tracking-tight">Телефон: +7 (977) 730 95 22</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Телефон: +7 (977) 730 95 22</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-53" class="text-6xl font-black mb-16 tracking-tight">Соцсети: вконтакте | instagram | telegram</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Соцсети: вконтакте | instagram | telegram</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-54" class="text-6xl font-black mb-16 tracking-tight">Индивидуальный предприниматель трохин евгений альбертович</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Индивидуальный предприниматель трохин евгений альбертович</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-55" class="text-6xl font-black mb-16 tracking-tight">/</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ИНН 503613656680 / ОГРН ИП 315507400016056</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-56" class="text-6xl font-black mb-16 tracking-tight">Город москва, щербинка ул. юбилейная д.3а</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Город москва, щербинка ул. юбилейная д.3а</h2><div class="space-y-8">
-</div></section>
+
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
         </div>
 
         <!-- ═══ ФОРМА (ШАБЛОН) ═══ -->
         <section id="booking-form" class="py-32 px-8 bg-surface-container-high relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
-        <div class="max-w-4xl mx-auto relative z-10">
-        <div class="text-center mb-16 space-y-4">
-        <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
-        <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
-        </div>
-        <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Индия" type="text"/>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
-        </div>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
-        <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
-        </div>
-        </div>
-        <div class="space-y-4">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
-        <div class="flex flex-wrap gap-8">
-        <label class="flex items-center gap-3 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
-        </label>
-        <label class="flex items-center gap-3 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
-        </label>
-        <label class="flex items-center gap-4 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio" checked/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
-        </label>
-        </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
-        <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
-        </div>
-        </div>
-        <div class="pt-8 flex justify-center">
-        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
-        </div>
-        </form>
-        </div>
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
+            <div class="max-w-4xl mx-auto relative z-10">
+                <div class="text-center mb-16 space-y-4">
+                    <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
+                    <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
+                </div>
+                <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Направление</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Памятка: Индия" type="text"/>
+                        </div>
+                    </div>
+                    <div class="pt-8 flex justify-center">
+                        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer class="bg-white py-32 px-8 border-t border-black/5 flex flex-col items-center">
-        <img src="LogoB_300x.png" alt="Emoji Tours" class="h-20">
+    <footer class="bg-[#fffcf5] w-full border-t border-black/10 pt-20 pb-12 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div class="space-y-6 max-w-sm">
+                    <img src="LogoB_300x.png" alt="Emoji Tours" class="h-16">
+                    <div class="text-black/60 font-['Manrope'] text-sm leading-relaxed">
+                        © 2024 Emoji Tours. Путешествия с душой.
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- PDF Generation Logic -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
-        async function downloadPDF() {
-            const btn = document.getElementById('download-pdf-btn');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = 'Генерируем текст...';
-            btn.disabled = true;
-
-            try {
-                // Создаем временный элемент для PDF
-                const pdfContainer = document.createElement('div');
-                pdfContainer.style.background = '#fff';
-                pdfContainer.style.padding = '20mm';
-                pdfContainer.style.fontFamily = 'Arial, sans-serif'; // Системный шрифт надежнее для PDF
-                pdfContainer.style.color = '#000';
-
-                // Добавляем заголовок
-                const header = document.createElement('div');
-                header.style.marginBottom = '10mm';
-                header.style.textAlign = 'center';
-                
-                const logo = document.getElementById('site-logo').cloneNode(true);
-                logo.style.height = '12mm';
-                logo.style.marginBottom = '5mm';
-                header.appendChild(logo);
-                
-                const title = document.createElement('h1');
-                title.innerText = document.getElementById('page-title').innerText;
-                title.style.fontSize = '24pt';
-                title.style.fontWeight = 'bold';
-                title.style.borderBottom = '2px solid #000';
-                title.style.paddingBottom = '3mm';
-                header.appendChild(title);
-                
-                pdfContainer.appendChild(header);
-
-                // Копируем контент
-                const originalContent = document.getElementById('memo-content-area');
-                const content = originalContent.cloneNode(true);
-                
-                // --- ОЧИСТКА ---
-                // 1. Удаляем все картинки
-                content.querySelectorAll('img').forEach(img => img.remove());
-                
-                // 2. Сбрасываем гигантские классы разметки Tilda/Tailwind
-                content.className = ""; // Убираем space-y-32, py-24 и т.д.
-                content.style.lineHeight = "1.5";
-                
-                // 3. Форматируем секции
-                content.querySelectorAll('section').forEach(s => {
-                    s.className = ""; 
-                    s.style.marginTop = '8mm';
-                    s.style.pageBreakInside = 'avoid';
-                    
-                    const h2 = s.querySelector('h2');
-                    if (h2) {
-                        h2.className = "";
-                        h2.style.fontSize = '18pt';
-                        h2.style.fontWeight = 'bold';
-                        h2.style.marginBottom = '4mm';
-                        h2.style.marginTop = '6mm';
-                    }
-                    
-                    const pList = s.querySelectorAll('p');
-                    pList.forEach(p => {
-                        p.className = "";
-                        p.style.fontSize = '11pt';
-                        p.style.marginBottom = '3mm';
-                        p.style.textAlign = 'justify';
+        // Плавный скролл для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 120,
+                        behavior: 'smooth'
                     });
-                });
+                }
+            });
+        });
 
-                pdfContainer.appendChild(content);
+        // ScrollSpy: подсветка активного пункта в меню при скролле
+        const sections = document.querySelectorAll('h2[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-                const opt = {
-                    margin: 10,
-                    filename: `Памятка_${document.getElementById('page-title').innerText.replace('Памятка: ', '')}.pdf`,
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { 
-                        scale: 1, 
-                        useCORS: true,
-                        scrollY: -window.scrollY // Исправляет смещение/пустые страницы
-                    },
-                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-                };
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-                await html2pdf().set(opt).from(pdfContainer).save();
-            } catch (e) {
-                console.error('PDF Error:', e);
-                alert('Ошибка при создании PDF.');
-            } finally {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }
-        }
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === "#" + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
-

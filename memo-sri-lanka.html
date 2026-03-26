@@ -38,57 +38,120 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
+        
+        /* Стили навигации как в Google Docs */
+        .nav-link {
+            position: relative;
+            padding-left: 1.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            color: #4b4b4b;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            line-height: 1.25;
+            border-left: 2px solid transparent;
+        }
+        .nav-link:hover {
+            color: #000;
+        }
+        .nav-link.active {
+            color: #000;
+            font-weight: 700;
+            border-left-color: #f5e2a1; /* Цвет акцента Emoji Tours */
+        }
     </style>
 </head>
 
 <body class="bg-background text-on-surface">
 
-    <!-- ═══ ФИКСИРОВАННАЯ КНОПКА НАЗАД ═══ -->
-    <a href="index.html#countries" title="Все страны" style="
-        position: fixed;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%) rotate(180deg);
-        z-index: 100;
-        background: #f5e2a1;
-        color: #000;
-        writing-mode: vertical-lr;
-        text-orientation: mixed;
-        padding: 20px 12px;
-        border-radius: 0 14px 14px 0;
-        font-family: 'Manrope', sans-serif;
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        box-shadow: 3px 0 16px rgba(0,0,0,0.12);
-        transition: padding 0.2s;
-    " onmouseover="this.style.paddingLeft='18px'" onmouseout="this.style.paddingLeft='12px'">
-        ← Все страны
-    </a>
-
-    <nav class="p-8 max-w-6xl mx-auto flex items-center">
-        <a href="index.html#countries">
-            <img src="LogoB_300x.png" alt="Emoji Tours" class="h-12" id="site-logo">
-        </a>
+    <!-- ═══ ФИКСИРОВАННАЯ ШАПКА ═══ -->
+    <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/80 backdrop-blur-md border-b border-black/5 py-4">
+        <div class="max-w-7xl mx-auto flex justify-center items-center px-8 relative">
+            <a href="index.html" class="absolute left-8 text-sm font-bold flex items-center gap-2 hover:opacity-70 transition-opacity">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Все страны
+            </a>
+            <a href="index.html">
+                <img src="LogoB_300x.png" alt="Emoji Tours" class="h-10">
+            </a>
+        </div>
     </nav>
 
     <main>
-        <div class="max-w-4xl mx-auto px-8 pt-4 pb-12 space-y-10">
-            <h1 class="text-7xl md:text-[9rem] font-black tracking-tighter leading-none" id="page-title">Памятка: Шри-Ланка</h1>
-            <div class="flex flex-wrap gap-4" id="action-buttons">
-                <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+        <!-- ═══ LAYOUT WITH SIDEBAR ═══ -->
+        <div class="max-w-7xl mx-auto px-8 relative flex flex-col lg:flex-row gap-12 pt-32">
+            
+            <!-- ═══ SIDEBAR NAVIGATION (LEFT, STICKY) ═══ -->
+            <aside class="hidden lg:block w-64 pt-20">
+                <div class="sticky top-32 space-y-8">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant/50 mb-6 px-6">Содержание</p>
+                        <nav id="quick-links" class="flex flex-col">
+                            <a href="#section-0" class="nav-link">Туристам, выезжающим в шри-ланку</a>
+<a href="#section-1" class="nav-link">Перед отъездом</a>
+<a href="#section-2" class="nav-link">Беременным женщинам</a>
+<a href="#section-3" class="nav-link">В российском аэропорту вылета/прилета</a>
+<a href="#section-4" class="nav-link">Таможенный контроль до начала путешествия</a>
+<a href="#section-5" class="nav-link">Таможенный контроль по окончанию путешествия</a>
+<a href="#section-6" class="nav-link">Регистрация на рейс и оформление багажа</a>
+<a href="#section-8" class="nav-link">Паспортный контроль</a>
+<a href="#section-9" class="nav-link">Санитарный контроль</a>
+<a href="#section-10" class="nav-link">Ветеринарный контроль</a>
+<a href="#section-11" class="nav-link">В аэропорту прилета/вылета шри-ланки</a>
+<a href="#section-12" class="nav-link">Место встречи в аэропортах</a>
+<a href="#section-14" class="nav-link">Таможенный контроль в шри-ланке</a>
+<a href="#section-15" class="nav-link">● из шри ланки 20 000 рупий</a>
+<a href="#section-16" class="nav-link">Демократическая социалистическая республика шри-ланка</a>
+<a href="#section-17" class="nav-link">Сервисный налог</a>
+<a href="#section-18" class="nav-link">Время</a>
+<a href="#section-19" class="nav-link">Климат</a>
+<a href="#section-20" class="nav-link">Валюта</a>
+<a href="#section-22" class="nav-link">Язык</a>
+<a href="#section-23" class="nav-link">Население</a>
+<a href="#section-24" class="nav-link">Религия</a>
+<a href="#section-25" class="nav-link">Обычаи</a>
+<a href="#section-26" class="nav-link">Праздники и нерабочие дни</a>
+<a href="#section-28" class="nav-link">Транспорт</a>
+<a href="#section-29" class="nav-link">Аренда автомобиля</a>
+<a href="#section-31" class="nav-link">Телефон</a>
+<a href="#section-32" class="nav-link">Экстренные телефоны</a>
+<a href="#section-33" class="nav-link">В отеле</a>
+<a href="#section-34" class="nav-link">Питание в отелях шри-ланки</a>
+<a href="#section-35" class="nav-link">Напряжение электросети</a>
+<a href="#section-36" class="nav-link">Экскурсии</a>
+<a href="#section-37" class="nav-link">Кухня</a>
+<a href="#section-39" class="nav-link">Магазины</a>
+<a href="#section-41" class="nav-link">Правила личной гигиены и безопасности:</a>
+<a href="#section-42" class="nav-link">В случае потери паспорта</a>
+<a href="#section-43" class="nav-link">Для граждан республики беларусь</a>
+<a href="#section-44" class="nav-link">Посольство россии в коломбо</a>
+<a href="#section-45" class="nav-link">Е-mail: rusemb@itmin.net</a>
+<a href="#section-46" class="nav-link">Сайт: www.sri-lanka.mid.ru</a>
+<a href="#section-47" class="nav-link">Tourism@srilankaembassy.org, www.srilankaembassy.org</a>
+<a href="#section-48" class="nav-link">Желаем вам приятного путешествия!</a>
+<a href="#section-49" class="nav-link">Соцсети: вконтакте |telegram</a>
+<a href="#section-50" class="nav-link">Индивидуальный предприниматель трохин евгений альбертович</a>
+<a href="#section-51" class="nav-link">/</a>
+
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ═══ CONTENT AREA ═══ -->
+            <div class="flex-1 py-20">
+                <p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
+                <h1 id="page-title" class="text-7xl md:text-9xl font-black tracking-tighter leading-none mb-12">Памятка: Шри-Ланка</h1>
                 
-                <button id="download-pdf-btn" onclick="downloadPDF()" class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-2"><span class="material-symbols-outlined">download</span> Скачать PDF</button>
-            </div>
-        </div>
+                <div class="flex flex-wrap gap-4 mb-24">
+                    <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+                    <a href="memo-██slug██.html" class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
+                </div>
 
-        <img src="" class="w-full h-[80vh] object-cover" style="display:block;" id="hero-image">
-
-        <div class="max-w-4xl mx-auto px-8 py-24 space-y-32" id="memo-content-area">
-             <section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Туристам, выезжающим в шри-ланку</h2><div class="space-y-8">
+                <div class="space-y-32" id="memo-content-area">
+                     <section class="pt-24 border-t border-black/5"><h2 id="section-0" class="text-6xl font-black mb-16 tracking-tight">Туристам, выезжающим в шри-ланку</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Перед отъездом</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-1" class="text-6xl font-black mb-16 tracking-tight">Перед отъездом</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Проверьте наличие необходимых для поездки документов:</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● загранпаспорт (паспорт должен быть действителен на весь период поездки);</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● ксерокопия загранпаспортов (могут пригодиться при утрате загранпаспорта и в случае иных непредвиденных обстоятельств);</p>
@@ -104,7 +167,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При следовании несовершеннолетнего российского гражданина через государственную границу РФ совместно с одним из родителей предъявлять письменное согласие второго родителя не нужно, если только от него ранее в пограничные органы не поступало заявление о несогласии на выезд из РФ своих детей.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если у несовершеннолетнего ребенка и выезжающего с ним родителя разные фамилии, то рекомендуем взять с собой нотариально заверенную копию свидетельства о рождении для подтверждения родства. На практике отсутствие такого подтверждения служило основанием для отказа ребенку в пересечении границы.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Беременным женщинам</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-2" class="text-6xl font-black mb-16 tracking-tight">Беременным женщинам</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед полетом мы рекомендуем ознакомиться с правилами авиакомпании на необходимость предоставления письменного согласия врача на полет, а также иных документов для осуществления авиаперелета. Сотрудники авиакомпании имеют полное право отказать в авиаперевозке или потребовать медицинское освидетельствование в аэропорту вылета в случае нарушения правил.</p>
 <img src="tild6234-6362-4539-b665-323137643933__komfortnyi-otdykh-s-.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Собирая багаж:</p>
@@ -112,11 +175,11 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не забывайте собрать и взять с собой аптечку первой помощи, которая поможет при легких недомоганиях, сэкономит время на поиски лекарственных средств и избавит от нежелательного общения на иностранном языке.</p>
 <img src="tild3838-6539-4365-b630-323066343866__thumb_67866_expert_b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В РОССИЙСКОМ АЭРОПОРТУ ВЫЛЕТА/ПРИЛЕТА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-3" class="text-6xl font-black mb-16 tracking-tight">В российском аэропорту вылета/прилета</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед выездом в аэропорт получите дополнительную информацию о возможно произошедших изменениях в условиях вылета, используя сайт авиакомпании, выполняющей рейс, или по телефону ее справочной службы.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рекомендуем заранее, не позднее чем за три часа до вылета, прибыть к месту регистрации пассажиров для прохождения установленных процедур регистрации, оформления багажа, и выполнения требований, связанных с пограничным, таможенным, санитарно-карантинным, ветеринарным и другими видами контроля, установленными законодательством РФ.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль до начала путешествия</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-4" class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль до начала путешествия</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед полетом рекомендуем проверять действующие правила вывоза физическими лицами наличной иностранной валюты из РФ, товаров и иных предметов на сайте Федеральной Таможенной Службы customs.gov.ru.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Обращаем внимание на то, что в настоящее время действуют ограничения. Внимание! Запрещено перемещение на выезде и въезде:</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● культурных ценностей,</p>
@@ -125,27 +188,27 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Запрещено на выезде и въезде:</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● принимать от посторонних лиц чемоданы, посылки и другие предметы для перевозки на борту воздушного судна.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль по окончанию путешествия</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-5" class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль по окончанию путешествия</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то вам следует проходить зону таможенного контроля по «Зелёному коридору».</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Актуальную информацию о ввозе валюты, товаров и иных предметов для личного пользования, вы найдете на сайте Федеральной Таможенной Службы customs.gov.ru.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Внимание!</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Недекларирование товаров в случае превышения стоимостных или весовых норм, а также наличных денежных средств и (или) денежных инструментов влечёт за собой административную или уголовную ответственность.</p>
 <img src="tild6364-3637-4261-b761-386566643134__ria_6136134hr_a91.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Регистрация на рейс и оформление багажа</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-6" class="text-6xl font-black mb-16 tracking-tight">Регистрация на рейс и оформление багажа</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">До начала поездки настоятельно рекомендуем уточнить время начала и окончания регистрации на рейс, а также время посадки на борт. Указанную информацию вы можете посмотреть на официальном сайте авиакомпании. Помните, что у разных авиакомпаний могут быть свои правила. Регистрация пассажиров и оформление багажа производятся на основании именного авиабилета или распечатанных на бумажном носителе маршрута и/или квитанции электронного билета, а также заграничного паспорта пассажира. При регистрации пассажиру выдается посадочный талон, который необходимо сохранять до момента возможного предъявления авиакомпании претензий по качеству предоставленных услуг авиаперевозки.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед посадкой на рейс рекомендуем проверить номер выхода и время начала посадки на рейс на информационном табло в аэропорту. Пассажиру, опоздавшему ко времени окончания регистрации пассажиров и оформления багажа или посадки в воздушное судно, может быть отказано в перевозке.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Каждый авиаперевозчик устанавливает свои нормы провоза багажа, а также габариты и вес ручной клади, провозимой в салоне самолета. Уточняйте данную информацию перед вылетом. За провоз багажа сверх установленной нормы бесплатного провоза багажа взимается дополнительная плата по тарифу, установленному перевозчиком. Перевозчик имеет право отказать туристу в перевозе багажа, вес или объем которого не соответствуют установленным нормам.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3039-3166-4636-b537-366535646636__secret-01.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Паспортный контроль</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-8" class="text-6xl font-black mb-16 tracking-tight">Паспортный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для прохождения пограничного контроля необходимо предъявить заграничный/внутренний российский паспорт. Пограничные органы ФСБ РФ при осуществлении пограничного контроля имеют право запрашивать у туристов дополнительные документы (авиабилет, посадочный талон, ваучер и т. п.), а также проводить опрос лиц, следующих через границу.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Санитарный контроль</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-9" class="text-6xl font-black mb-16 tracking-tight">Санитарный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Туристам сертификат о прививках не требуется.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Ветеринарный контроль</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-10" class="text-6xl font-black mb-16 tracking-tight">Ветеринарный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Животные подвергаются ветеринарному осмотру.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если вы вывозите животных из России, то вам необходимо иметь комплект документов, подтверждающих, что они здоровы.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Как правило, следует иметь:</p>
@@ -159,7 +222,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Запрещен ввоз на территорию РФ любых грузов животного происхождения, в том числе в ручной клади и багаже, при отсутствии письменного разрешения Главного государственного ветеринарного инспектора РФ. Без разрешения уполномоченных органов РФ запрещено ввозить и вывозить объекты дикой фауны и флоры, находящиеся под угрозой исчезновения.</p>
 <img src="tild6164-3539-4236-a536-653666633263__919255ebe5775d87ea2b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В аэропорту прилета/вылета шри-ланки</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-11" class="text-6xl font-black mb-16 tracking-tight">В аэропорту прилета/вылета шри-ланки</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По прибытии в аэропорт Республики Шри-Ланка нужно последовательно:</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● заполнить туристическую карту,</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● пройти паспортный контроль,</p>
@@ -171,10 +234,10 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Внимание!</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При осуществлении перелета стыковочными рейсами принимающая сторона осуществляет встречу только в конечном пункте прилета.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Место встречи в аэропортах</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-12" class="text-6xl font-black mb-16 tracking-tight">Место встречи в аэропортах</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Сотрудники туроператора встретят вас в аэропорту и проводят до трансфера.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3332-6238-4166-b734-386662626630__223617_a33.webp</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Паспортный контроль. Виза.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Граждане РФ, которые хотят посетить Шри-Ланку с краткосрочным визитом, могут получить Электронное туристическое разрешение (ЕТА) до своего прибытия в Шри-Ланку (ЕТА выдается онлайн), а также могут въезжать на территорию Шри-Ланки на срок до 30 дней с получением визы по прибытии в порту прилета. Оформление электронного разрешения ETA возможно только тем туристам, у которых срок действия загранпаспорта более 6 месяцев с даты окончания тура!</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Важно:</p>
@@ -182,12 +245,12 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Внимание!</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для граждан, не имеющих гражданства Российской Федерации, могут быть установлены иные правила въезда на территорию Республики Шри-Ланка. Получить информацию по этому вопросу следует в посольстве Шри-Ланки по месту гражданства.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль в шри-ланке</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-14" class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль в шри-ланке</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Ввоз и вывоз иностранной валюты не ограничен, но обязательна декларация сумм свыше 10 000 долларов.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Запрещен транзит индийской и пакистанской валюты. Ввоз и вывоз национальной валюты ограничен.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Без декларирования можно провозить:</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">● из шри ланки 20 000 рупий</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-15" class="text-6xl font-black mb-16 tracking-tight">● из шри ланки 20 000 рупий</h2><div class="space-y-8">
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● Из РФ в Шри Ланку 15 000 рупий Дорогостоящие предметы и вещи также декларируются для последующего вывоза из страны.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Лицам старше 18 лет разрешен беспошлинный ввоз:</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● до 2 бутылок (0,75 л) вина и до 1,5 л крепких спиртных напитков;</p>
@@ -209,39 +272,39 @@
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● товаров коммерческого назначения (исключение составляют торговые образцы)</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Обращаем внимание на перевозку дронов на Шри-Ланку Для дрона необходимо заранее получить разрешение. Разрешение заполняется на сайте гражданской авиации https://portal.caa.lk/drone/apply-now/report.php. Процесс может занять до 10 дней. Провоз дрона осуществляется в багаже.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Демократическая социалистическая республика шри-ланка</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-16" class="text-6xl font-black mb-16 tracking-tight">Демократическая социалистическая республика шри-ланка</h2><div class="space-y-8">
 <img src="tild3339-3038-4432-b865-303437636264__shri-lanka-min.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Демократическая Социалистическая Республика Шри-Ланка — государство в Южной Азии, на одноимённом острове у юго-восточного побережья Индостана. Со времён португальского вторжения и до обретения независимости в европейских языках страна называлась Цейлон.</p>
 <img src="tild6366-6164-4130-b238-626236663539__abstract-blue-world-.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Сервисный налог</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-17" class="text-6xl font-black mb-16 tracking-tight">Сервисный налог</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">С 01.01.2024 Правительством Шри-Ланки было принято решение ввести государственный налог на сервис в размере 18%. Все дополнительные товары и услуги, приобретенные туристами на месте (покупка воды в баре отеля, приобретение сувениров, массаж, услуги ресторана и т.д.), будут облагаться налогом.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Сумма налога будет добавляться отдельно в счет.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Время</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-18" class="text-6xl font-black mb-16 tracking-tight">Время</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Разница во времени с Москвой — плюс 2,5 часа.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Климат</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-19" class="text-6xl font-black mb-16 tracking-tight">Климат</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Субэкваториальный: северо-восточный муссон длится с октября по март, юго-западный — с июня по октябрь</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Валюта</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-20" class="text-6xl font-black mb-16 tracking-tight">Валюта</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Ланкийская рупия (Rs или LKR). Кредитные карточки Master Card, Visa, American Express к оплате принимают многие отели, некоторые большие торговые центры и магазины. Вне пределов курортных зон и крупных городов расплатиться безналичными средствами расчета практически невозможно.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild6239-3738-4139-b964-316466336539__88p_ldn22.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Язык</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-22" class="text-6xl font-black mb-16 tracking-tight">Язык</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Сингальский и тамильский. Английский имеет официальный статус языка межэтнического общения.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Население</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-23" class="text-6xl font-black mb-16 tracking-tight">Население</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Приблизительная численность населения — 21,9 млн человек.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Большую часть населения острова составляют сингалы — 73,8 %.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Вторая по численности этническая группа — тамилы (11,2 %), которые делятся на две обособленные ветви: ланкийские тамилы и индийские.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Оставшуюся часть населения составляют потомки арабских торговцев — мавры (7,2 %); малайцы (0,3 %); потомки от смешанных браков коренных жителей с выходцами из Европы — бюргеры (0,2 %); коренные жители острова — веды (около 1 000 человек).</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Религия</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-24" class="text-6xl font-black mb-16 tracking-tight">Религия</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Буддизм (70 %), индуизм (12,61 %), ислам (9,71 %), христианство (7,45 %).</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Обычаи</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-25" class="text-6xl font-black mb-16 tracking-tight">Обычаи</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При посещении храмов принято оставлять головные уборы и обувь при входе; колени, спина и плечи должны быть прикрыты. Обходить храм следует по часовой стрелке, поворачиваться спиной к изображениям Будды нельзя.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Запрещено фотографироваться со статуями Будды или позировать на их фоне.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Туристам следует почтительно относиться к монахам и изображениям Будды, а также делать пожертвования в счет храмов.</p>
@@ -251,7 +314,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Нудизм запрещен, а также нельзя загорать топлес во всех отелях. На Шри-Ланке в дни полнолуния (Poya Day) запрещено употребление спиртных напитков в общественных местах. В связи с этим в ресторанах острова и отелях, в том числе работающих по системе все включено спиртные напитки не подаются. Продажа спиртного в магазинах также закрыта.</p>
 <img src="tild3435-6232-4461-b863-613263333465__1796_80c57a92e42d403.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Праздники и нерабочие дни</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-26" class="text-6xl font-black mb-16 tracking-tight">Праздники и нерабочие дни</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">На Шри-Ланке принято отмечание большого количества праздников (около 170). Кроме общегосударственных праздников на острове нерабочими днями являются религиозные праздники всех конфессий страны. Выходными днями, кроме субботы и воскресенья, являются дни полнолуния «Пойя».</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Общегосударственные праздники:</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">4 февраля — День Независимости;</p>
@@ -259,20 +322,20 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">14 апреля — Сингальский и Тамильский Новый год;</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">1 мая — День Труда.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3033-6637-4162-a262-363161663136__pera2.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Транспорт</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-28" class="text-6xl font-black mb-16 tracking-tight">Транспорт</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Движение транспорта на острове левостороннее.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Автобусы и поезда — единственные виды общественного транспорта. Стоимость проезда на частных и государственных автобусах одинакова и является одной из самых низких в мире. В городах скорость движения ограничена 56 км/ч, за городом — до 72 км/ч.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Аренда автомобиля</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-29" class="text-6xl font-black mb-16 tracking-tight">Аренда автомобиля</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Арендовать автомобиль разрешается лицам не моложе 21 года с водительскими правами международного образца и кредитной карточкой.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Автомобильные дороги на Шри-Ланке узкие, не везде даже двухполосные, а в горах — узкий серпантин. Дорожных указателей мало, кроме того, правила дорожного движения практически не соблюдаются ни местными водителями, ни пешеходами.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В целях безопасности рекомендуем арендовать автомобиль с водителем.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3865-6266-4465-b165-393831626164__3250116.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Телефон</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-31" class="text-6xl font-black mb-16 tracking-tight">Телефон</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Позвонить в Россию можно из отеля, местного пункта связи и интернет-кафе.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Международный телефонный код Шри-Ланки: +94.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Национальная справочная служба по бесплатному короткому номеру — 118 (с таксофона или стационарного аппарата) или 112 (с мобильного телефона), оператор может дать необходимую справку или перенаправит на нужный номер телефона.</p>
@@ -284,40 +347,40 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Чтобы позвонить из России на Шри-Ланку, необходимо набрать:</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">8 - 10 - 94 - код города - номер телефона.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Экстренные телефоны</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-32" class="text-6xl font-black mb-16 tracking-tight">Экстренные телефоны</h2><div class="space-y-8">
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● 119 — полиция,</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● 122 — скорая помощь,</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● 122 — пожарная служба.</p>
 <img src="tild3337-3934-4532-a536-386363633935__phone_old_year_built.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В отеле</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-33" class="text-6xl font-black mb-16 tracking-tight">В отеле</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В день приезда расселение осуществляется в соответствии с правилами, принятыми в отеле. Обычно начиная с 14:00 по местному времени. Просим ознакомиться на месте с условиями предоставления услуг в отеле и придерживаться установленных отелем правил.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В день выезда до наступления расчетного часа (как правило, 12:00) необходимо освободить свой номер и оплатить дополнительные услуги: телефонные переговоры, мини-бар, заказ питания и напитков в номер, массаж и др.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Свой багаж можно оставить в камере хранения отеля и оставаться на территории отеля до прибытия трансфера. Если вы не сдали номер до 12:00, стоимость комнаты оплачивается полностью за следующие сутки.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Питание в отелях шри-ланки</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-34" class="text-6xl font-black mb-16 tracking-tight">Питание в отелях шри-ланки</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Формат питания зависит от количества гостей в отеле.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если заполненность 50% и более – организовывается шведский стол.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если меньше – питание предоставляется по меню.</p>
 <img src="tild6237-3139-4934-a133-373564353463__the-palms-hotel.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Напряжение электросети</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-35" class="text-6xl font-black mb-16 tracking-tight">Напряжение электросети</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В городах — 220 В, 50 Гц. Ланкийские розетки имеют три входа. Для подключения привычной евророзетки необходим переходник, который можно купить на месте или попросить на ресепшн отеля. Перебоев с электричеством практически не бывает, но перепады напряжения могут быть опасны для чувствительных приборов.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Экскурсии</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-36" class="text-6xl font-black mb-16 tracking-tight">Экскурсии</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Гид компании, принимающий вас на Шри-Ланке, во время встречи в отеле сообщит перечень предлагаемых экскурсий, их содержание, график проведения и стоимость.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не рекомендуем приобретать экскурсии или прочие услуги в неизвестных вам туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, а также о качестве транспорта для ее организации. Вам может быть предоставлено для использования несертифицированное, неисправное или не соответствующее санитарно-гигиеническим нормам оборудование.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В регионах Диквелла, Тангалла, Хамбантота, а также в регионах Северо-Восточного побережья обслуживание гида происходит на удаленном доступе (посредством мессенджеров, по телефону). Гиды не приезжают в отель для проведения информационных встреч.</p>
 <img src="tild6531-3765-4365-a338-363833623239__5c3fc83d-4a19-46a5-b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Кухня</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-37" class="text-6xl font-black mb-16 tracking-tight">Кухня</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Традиционная ланкийская кухня очень острая, но большинство отелей предлагают туристам блюда как европейской, так и национальной кухни.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В туристических центрах всегда можно найти рестораны восточной и европейской кухни, пиццерии и всевозможные фаст-фуды. Питание в ресторанах дешевле, чем в большинстве европейских стран.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">На Шри-Ланке произрастает огромное количество фруктов: кокосы, авокадо, амбарелла, маракуйя, ананасы, бананы, помело, папайя, мангустины, дуриан, манго, гуава, рамбутаны, лонганы, саподиллы, персидские лимоны, мандарины, апельсины, плоды хлебного дерева и др.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3337-6132-4637-a539-393662326636__i_19.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Магазины</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-39" class="text-6xl font-black mb-16 tracking-tight">Магазины</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Совершать покупки в любой азиатской стране особенно приятно из-за низких цен на многие товары. Время работы магазинов – с 09:00 до 17:00 (понедельник-пятница).</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В Коломбо крупные магазины работают до 19:00, а туристические лавки в курортных районах закрываются еще позднее. Многие магазины работают и по субботам с 09:00 до 13:00.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Аптеки, как правило, работают с 08:00 до 20:00.</p>
@@ -327,9 +390,9 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">На рынках, в частных сувенирных и ювелирных магазинах стоит торговаться, цену можно снизить на 20-30 %.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В супермаркетах, торговых центрах и магазинах Duty Free в аэропорту цены фиксированные.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3064-3661-4337-b366-626665383739__image.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ПРАВИЛА ЛИЧНОЙ ГИГИЕНЫ И БЕЗОПАСНОСТИ:</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-41" class="text-6xl font-black mb-16 tracking-tight">Правила личной гигиены и безопасности:</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед путешествием мы советуем ознакомиться с «Полезными советами российским гражданам, выезжающим за рубеж», размещенными на сайте МИД РФ: https://www.kdmid.ru/info-for-traveling-abroad/useful-tips-for-russian-citizens-traveling-abroad/, а также с памяткой МИД РФ «Каждому, кто направляется за границу», и памяткой Роспотребнадзора выезжающим за рубеж.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не нарушайте правила безопасности, установленные авиакомпаниями, транспортными организациями, гостиницами, местными органами власти.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Категорически не рекомендуем приобретать экскурсии и дополнительные туристские услуги в неизвестных туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, вам не будет гарантирована безопасность предоставленных услуг и исправность используемого оборудования, тем самым можно подвергнуть себя серьезной опасности.</p>
@@ -343,7 +406,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Во многих отелях запрещается выносить из номера полотенца на пляж или к бассейну. Не приносите на пляж полотенца или инвентарь из номера без разрешения персонала.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если в номере стоит мини-бар, то все напитки и закуски, взятые из него, как правило, должны быть оплачены.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В СЛУЧАЕ ПОТЕРИ ПАСПОРТА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-42" class="text-6xl font-black mb-16 tracking-tight">В случае потери паспорта</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Незамедлительно обращайтесь в дипломатическое представительство, в консульское учреждение или в представительство МИД РФ, которое находится в пределах приграничной территории.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Вам необходимо получить свидетельство на въезд в РФ (REENTRY CERTIFICATE TO THE RUSSIAN FEDERATION), которое называется временным загранпаспортом. Выдается на срок до 15 дней для того, чтобы турист успел купить обратный билет и улететь на родину.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для того чтобы вам выдали свидетельство на возвращение в РФ, необходимо представить следующие документы:</p>
@@ -353,22 +416,22 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Срок выдачи свидетельства на возвращение в РФ составляет 2 рабочих дня со дня регистрации заявления. Вернувшись в РФ, в трехдневный срок необходимо сдать свидетельство в организацию, выдавшую паспорт (ОВИР, МИД).</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Все вышеперечисленные документы регламентированы пунктом 20 Приказа МИД РФ от 28.06.2012 года № 10304.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Для граждан республики беларусь</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-43" class="text-6xl font-black mb-16 tracking-tight">Для граждан республики беларусь</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В Шри-Ланке Консульство Республики Беларусь отсутствует.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Консульство Республики Беларусь расположено по адресу F6/8B,, Vasant Vihar, New Delhi, Delhi 110057, India / +91 11 4052 9338.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При утере паспорта и по дальнейшим действиям необходимо обращаться в Консульство Республики Беларусь. Консульство РФ в Шри-Ланке помочь с оформлением документов гражданину РБ не сможет.</p>
 <img src="tild6461-3537-4165-b365-363961373965__598c6e030ca3f598c6e0.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Посольство россии в коломбо</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-44" class="text-6xl font-black mb-16 tracking-tight">Посольство россии в коломбо</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Адрес: 62, Sir Ernest de Silva Mawatha, Colombo 7, Sri Lanka.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Тел.: (+94-11) 257-35-55, 257-49-59.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Факс: (+94-11) 257-49-57.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Исключительно на случай возникновения экстренной ситуации (моб.): (+94-77) 665-44-15.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Часы работы понедельник: 08:00 - 14:30, 16:00 - 19:00; вторник-пятница: 08:00 - 14:30.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Е-mail: rusemb@itmin.net</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-45" class="text-6xl font-black mb-16 tracking-tight">Е-mail: rusemb@itmin.net</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Сайт: www.sri-lanka.mid.ru</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-46" class="text-6xl font-black mb-16 tracking-tight">Сайт: www.sri-lanka.mid.ru</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Телефон горячей линии: +94775547327, +94779199806,</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Посольство Демократической Социалистической Республики Шри-Ланка в РФ</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Адрес: 129090, Россия, г. Москва, ул. Щепкина, 24.</p>
@@ -377,209 +440,108 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">E-mail: moscow@srilankaembassy.org.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Туристический департамент:</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Tourism@srilankaembassy.org, www.srilankaembassy.org</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-47" class="text-6xl font-black mb-16 tracking-tight">Tourism@srilankaembassy.org, www.srilankaembassy.org</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ЖЕЛАЕМ ВАМ ПРИЯТНОГО ПУТЕШЕСТВИЯ!</h2><div class="space-y-8">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По всем вопросам свяжитесь с нами любым удобным способом:</p>
+<section class="pt-24 border-t border-black/5"><h2 id="section-48" class="text-6xl font-black mb-16 tracking-tight">Желаем вам приятного путешествия!</h2><div class="space-y-8">
+
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">E-mail: trohin.zh@yandex.ru</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-49" class="text-6xl font-black mb-16 tracking-tight">Соцсети: вконтакте |telegram</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Телефон: +7 (963) 649-18-52</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-50" class="text-6xl font-black mb-16 tracking-tight">Индивидуальный предприниматель трохин евгений альбертович</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Соцсети: вконтакте |telegram</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-51" class="text-6xl font-black mb-16 tracking-tight">/</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Индивидуальный предприниматель трохин евгений альбертович</h2><div class="space-y-8">
-</div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ИНН 503613656680 / ОГРН ИП 315507400016056</h2><div class="space-y-8">
-</div></section>
+
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
         </div>
 
         <!-- ═══ ФОРМА (ШАБЛОН) ═══ -->
         <section id="booking-form" class="py-32 px-8 bg-surface-container-high relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
-        <div class="max-w-4xl mx-auto relative z-10">
-        <div class="text-center mb-16 space-y-4">
-        <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
-        <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
-        </div>
-        <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Шри-Ланка" type="text"/>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
-        </div>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
-        <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
-        </div>
-        </div>
-        <div class="space-y-4">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
-        <div class="flex flex-wrap gap-8">
-        <label class="flex items-center gap-3 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
-        </label>
-        <label class="flex items-center gap-3 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
-        </label>
-        <label class="flex items-center gap-4 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio" checked/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
-        </label>
-        </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
-        <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
-        </div>
-        </div>
-        <div class="pt-8 flex justify-center">
-        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
-        </div>
-        </form>
-        </div>
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
+            <div class="max-w-4xl mx-auto relative z-10">
+                <div class="text-center mb-16 space-y-4">
+                    <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
+                    <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
+                </div>
+                <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Направление</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Памятка: Шри-Ланка" type="text"/>
+                        </div>
+                    </div>
+                    <div class="pt-8 flex justify-center">
+                        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer class="bg-white py-32 px-8 border-t border-black/5 flex flex-col items-center">
-        <img src="LogoB_300x.png" alt="Emoji Tours" class="h-20">
+    <footer class="bg-[#fffcf5] w-full border-t border-black/10 pt-20 pb-12 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div class="space-y-6 max-w-sm">
+                    <img src="LogoB_300x.png" alt="Emoji Tours" class="h-16">
+                    <div class="text-black/60 font-['Manrope'] text-sm leading-relaxed">
+                        © 2024 Emoji Tours. Путешествия с душой.
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- PDF Generation Logic -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
-        async function downloadPDF() {
-            const btn = document.getElementById('download-pdf-btn');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = 'Генерируем текст...';
-            btn.disabled = true;
-
-            try {
-                // Создаем временный элемент для PDF
-                const pdfContainer = document.createElement('div');
-                pdfContainer.style.background = '#fff';
-                pdfContainer.style.padding = '20mm';
-                pdfContainer.style.fontFamily = 'Arial, sans-serif'; // Системный шрифт надежнее для PDF
-                pdfContainer.style.color = '#000';
-
-                // Добавляем заголовок
-                const header = document.createElement('div');
-                header.style.marginBottom = '10mm';
-                header.style.textAlign = 'center';
-                
-                const logo = document.getElementById('site-logo').cloneNode(true);
-                logo.style.height = '12mm';
-                logo.style.marginBottom = '5mm';
-                header.appendChild(logo);
-                
-                const title = document.createElement('h1');
-                title.innerText = document.getElementById('page-title').innerText;
-                title.style.fontSize = '24pt';
-                title.style.fontWeight = 'bold';
-                title.style.borderBottom = '2px solid #000';
-                title.style.paddingBottom = '3mm';
-                header.appendChild(title);
-                
-                pdfContainer.appendChild(header);
-
-                // Копируем контент
-                const originalContent = document.getElementById('memo-content-area');
-                const content = originalContent.cloneNode(true);
-                
-                // --- ОЧИСТКА ---
-                // 1. Удаляем все картинки
-                content.querySelectorAll('img').forEach(img => img.remove());
-                
-                // 2. Сбрасываем гигантские классы разметки Tilda/Tailwind
-                content.className = ""; // Убираем space-y-32, py-24 и т.д.
-                content.style.lineHeight = "1.5";
-                
-                // 3. Форматируем секции
-                content.querySelectorAll('section').forEach(s => {
-                    s.className = ""; 
-                    s.style.marginTop = '8mm';
-                    s.style.pageBreakInside = 'avoid';
-                    
-                    const h2 = s.querySelector('h2');
-                    if (h2) {
-                        h2.className = "";
-                        h2.style.fontSize = '18pt';
-                        h2.style.fontWeight = 'bold';
-                        h2.style.marginBottom = '4mm';
-                        h2.style.marginTop = '6mm';
-                    }
-                    
-                    const pList = s.querySelectorAll('p');
-                    pList.forEach(p => {
-                        p.className = "";
-                        p.style.fontSize = '11pt';
-                        p.style.marginBottom = '3mm';
-                        p.style.textAlign = 'justify';
+        // Плавный скролл для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 120,
+                        behavior: 'smooth'
                     });
-                });
+                }
+            });
+        });
 
-                pdfContainer.appendChild(content);
+        // ScrollSpy: подсветка активного пункта в меню при скролле
+        const sections = document.querySelectorAll('h2[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-                const opt = {
-                    margin: 10,
-                    filename: `Памятка_${document.getElementById('page-title').innerText.replace('Памятка: ', '')}.pdf`,
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { 
-                        scale: 1, 
-                        useCORS: true,
-                        scrollY: -window.scrollY // Исправляет смещение/пустые страницы
-                    },
-                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-                };
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-                await html2pdf().set(opt).from(pdfContainer).save();
-            } catch (e) {
-                console.error('PDF Error:', e);
-                alert('Ошибка при создании PDF.');
-            } finally {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }
-        }
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === "#" + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
-

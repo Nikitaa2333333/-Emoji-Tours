@@ -38,57 +38,121 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
+        
+        /* Стили навигации как в Google Docs */
+        .nav-link {
+            position: relative;
+            padding-left: 1.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            color: #4b4b4b;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            line-height: 1.25;
+            border-left: 2px solid transparent;
+        }
+        .nav-link:hover {
+            color: #000;
+        }
+        .nav-link.active {
+            color: #000;
+            font-weight: 700;
+            border-left-color: #f5e2a1; /* Цвет акцента Emoji Tours */
+        }
     </style>
 </head>
 
 <body class="bg-background text-on-surface">
 
-    <!-- ═══ ФИКСИРОВАННАЯ КНОПКА НАЗАД ═══ -->
-    <a href="index.html#countries" title="Все страны" style="
-        position: fixed;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%) rotate(180deg);
-        z-index: 100;
-        background: #f5e2a1;
-        color: #000;
-        writing-mode: vertical-lr;
-        text-orientation: mixed;
-        padding: 20px 12px;
-        border-radius: 0 14px 14px 0;
-        font-family: 'Manrope', sans-serif;
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        box-shadow: 3px 0 16px rgba(0,0,0,0.12);
-        transition: padding 0.2s;
-    " onmouseover="this.style.paddingLeft='18px'" onmouseout="this.style.paddingLeft='12px'">
-        ← Все страны
-    </a>
-
-    <nav class="p-8 max-w-6xl mx-auto flex items-center">
-        <a href="index.html#countries">
-            <img src="LogoB_300x.png" alt="Emoji Tours" class="h-12" id="site-logo">
-        </a>
+    <!-- ═══ ФИКСИРОВАННАЯ ШАПКА ═══ -->
+    <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/80 backdrop-blur-md border-b border-black/5 py-4">
+        <div class="max-w-7xl mx-auto flex justify-center items-center px-8 relative">
+            <a href="index.html" class="absolute left-8 text-sm font-bold flex items-center gap-2 hover:opacity-70 transition-opacity">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Все страны
+            </a>
+            <a href="index.html">
+                <img src="LogoB_300x.png" alt="Emoji Tours" class="h-10">
+            </a>
+        </div>
     </nav>
 
     <main>
-        <div class="max-w-4xl mx-auto px-8 pt-4 pb-12 space-y-10">
-            <h1 class="text-7xl md:text-[9rem] font-black tracking-tighter leading-none" id="page-title">Памятка: Маврикий</h1>
-            <div class="flex flex-wrap gap-4" id="action-buttons">
-                <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+        <!-- ═══ LAYOUT WITH SIDEBAR ═══ -->
+        <div class="max-w-7xl mx-auto px-8 relative flex flex-col lg:flex-row gap-12 pt-32">
+            
+            <!-- ═══ SIDEBAR NAVIGATION (LEFT, STICKY) ═══ -->
+            <aside class="hidden lg:block w-64 pt-20">
+                <div class="sticky top-32 space-y-8">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant/50 mb-6 px-6">Содержание</p>
+                        <nav id="quick-links" class="flex flex-col">
+                            <a href="#section-0" class="nav-link">Туристам, выезжающим на маврикий</a>
+<a href="#section-1" class="nav-link">Перед отъездом</a>
+<a href="#section-2" class="nav-link">Правила въезда и пребывания на маврикии</a>
+<a href="#section-3" class="nav-link">Беременным женщинам</a>
+<a href="#section-4" class="nav-link">В российском аэропорту вылета/прилета</a>
+<a href="#section-5" class="nav-link">Таможенный контроль до начала путешествия</a>
+<a href="#section-6" class="nav-link">Таможенный контроль по окончанию путешествия</a>
+<a href="#section-7" class="nav-link">Регистрация на рейс и оформление багажа</a>
+<a href="#section-9" class="nav-link">Паспортный контроль</a>
+<a href="#section-10" class="nav-link">Санитарный контроль</a>
+<a href="#section-11" class="nav-link">Ветеринарный контроль</a>
+<a href="#section-12" class="nav-link">В аэропорту прилета/вылета маврикия</a>
+<a href="#section-14" class="nav-link">Таможенный контроль на маврикии</a>
+<a href="#section-15" class="nav-link">Туристический налог</a>
+<a href="#section-16" class="nav-link">Маврикий</a>
+<a href="#section-18" class="nav-link">Время</a>
+<a href="#section-19" class="nav-link">Климат</a>
+<a href="#section-20" class="nav-link">Весна</a>
+<a href="#section-21" class="nav-link">Лето</a>
+<a href="#section-22" class="nav-link">Осень</a>
+<a href="#section-23" class="nav-link">Зима</a>
+<a href="#section-24" class="nav-link">Валюта</a>
+<a href="#section-26" class="nav-link">Чаевые</a>
+<a href="#section-27" class="nav-link">Язык</a>
+<a href="#section-28" class="nav-link">Население</a>
+<a href="#section-29" class="nav-link">Религия</a>
+<a href="#section-30" class="nav-link">Обычаи</a>
+<a href="#section-31" class="nav-link">Праздники и нерабочие дни</a>
+<a href="#section-32" class="nav-link">Транспорт</a>
+<a href="#section-33" class="nav-link">Аренда автомобиля</a>
+<a href="#section-34" class="nav-link">Телефон</a>
+<a href="#section-35" class="nav-link">Экстренные телефоны</a>
+<a href="#section-36" class="nav-link">В отеле</a>
+<a href="#section-38" class="nav-link">Напряжение электросети</a>
+<a href="#section-39" class="nav-link">Пляжи</a>
+<a href="#section-40" class="nav-link">Экскурсии</a>
+<a href="#section-42" class="nav-link">Магазины</a>
+<a href="#section-43" class="nav-link">Правила личной гигиены и безопасности:</a>
+<a href="#section-44" class="nav-link">В случае потери паспорта</a>
+<a href="#section-45" class="nav-link">Посольство россии на маврикии</a>
+<a href="#section-46" class="nav-link">Консульский отдел</a>
+<a href="#section-47" class="nav-link">Посольство маврикия в москве</a>
+<a href="#section-48" class="nav-link">Желаем вам приятного путешествия!</a>
+<a href="#section-49" class="nav-link">Соцсети: вконтакте |telegram</a>
+<a href="#section-50" class="nav-link">Индивидуальный предприниматель трохин евгений альбертович</a>
+<a href="#section-51" class="nav-link">/</a>
+
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ═══ CONTENT AREA ═══ -->
+            <div class="flex-1 py-20">
+                <p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
+                <h1 id="page-title" class="text-7xl md:text-9xl font-black tracking-tighter leading-none mb-12">Памятка: Маврикий</h1>
                 
-                <button id="download-pdf-btn" onclick="downloadPDF()" class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-2"><span class="material-symbols-outlined">download</span> Скачать PDF</button>
-            </div>
-        </div>
+                <div class="flex flex-wrap gap-4 mb-24">
+                    <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+                    <a href="memo-██slug██.html" class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
+                </div>
 
-        <img src="" class="w-full h-[80vh] object-cover" style="display:block;" id="hero-image">
-
-        <div class="max-w-4xl mx-auto px-8 py-24 space-y-32" id="memo-content-area">
-             <section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Туристам, выезжающим на маврикий</h2><div class="space-y-8">
+                <div class="space-y-32" id="memo-content-area">
+                     <section class="pt-24 border-t border-black/5"><h2 id="section-0" class="text-6xl font-black mb-16 tracking-tight">Туристам, выезжающим на маврикий</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Перед отъездом</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-1" class="text-6xl font-black mb-16 tracking-tight">Перед отъездом</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Проверьте наличие необходимых для поездки документов:</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● заграничный паспорт (действителен на момент окончания поездки, имеет не менее 2-х свободных страниц для проставления визы);</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● ксерокопия загранпаспорта (может пригодиться при утрате загранпаспорта и в случае непредвиденных обстоятельств);</p>
@@ -96,7 +160,7 @@
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● ваучер;</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● страховой медицинский полис.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Правила въезда и пребывания на маврикии</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-2" class="text-6xl font-black mb-16 tracking-tight">Правила въезда и пребывания на маврикии</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед вылетом необходимо заполнить онлайн-форму «Mauritius All-In-One Travel Form» на сайте https://safemauritius.govmu.org/. В течение одной или двух минут вы получите электронное письмо от noreply@mauritiustravelform.com с заполненным PDF-документом.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Пожалуйста, распечатайте документ на отдельном листе и подпишите. Предъявите этот документ вместе с любыми другими обязательными проездными документами в органы пограничного контроля и здравоохранения по прибытии на Маврикий, а также в вашу авиакомпанию, если это потребуется.</p>
 <img src="tild3434-6638-4437-a663-626532353762__zagranpasport-novogo.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
@@ -107,7 +171,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Выезд из РФ несовершеннолетних детей, сведения о которых внесены в паспорта сопровождающих их родителей, оформленные по старому образцу, осуществляется по срокам действия паспортов. На заграничные паспорта, оформленные по новому образцу (биометрический), распространяются нормы Постановления Правительства РФ №13 от 19 января 2010 года о том, что внесение сведений о детях в паспорт, удостоверяющий личность родителя, не дает права ребенку на выезд за пределы территории РФ без документа, удостоверяющего личность гражданина РФ за пределами территории РФ.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При следовании несовершеннолетнего российского гражданина через государственную границу РФ совместно с одним из родителей предъявлять письменное согласие второго родителя не нужно, если только от него ранее в пограничные органы не поступало заявление о несогласии на выезд из РФ своих детей. Если у несовершеннолетнего ребенка и выезжающего с ним родителя разные фамилии, то рекомендуем взять с собой нотариально заверенную копию свидетельства о рождении для подтверждения родства. На практике отсутствие такого подтверждения служило основанием для отказа ребенку в пересечении границы.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Беременным женщинам</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-3" class="text-6xl font-black mb-16 tracking-tight">Беременным женщинам</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед полетом мы рекомендуем ознакомиться с правилами авиакомпании на необходимость предоставления письменного согласия врача на полет, а также иных документов для осуществления авиаперелета. Сотрудники авиакомпании имеют полное право отказать в авиаперевозке или потребовать медицинское освидетельствование в аэропорту вылета в случае нарушения правил.</p>
 <img src="tild6234-6362-4539-b665-323137643933__komfortnyi-otdykh-s-.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Собирая багаж:</p>
@@ -115,11 +179,11 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не забывайте собрать и взять с собой аптечку первой помощи, которая поможет при легких недомоганиях, сэкономит время на поиски лекарственных средств и избавит от нежелательного общения на иностранном языке.</p>
 <img src="tild3838-6539-4365-b630-323066343866__thumb_67866_expert_b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В РОССИЙСКОМ АЭРОПОРТУ ВЫЛЕТА/ПРИЛЕТА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-4" class="text-6xl font-black mb-16 tracking-tight">В российском аэропорту вылета/прилета</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед выездом в аэропорт получите дополнительную информацию о возможно произошедших изменениях в условиях вылета, используя сайт авиакомпании, выполняющей рейс, или по телефону ее справочной службы.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рекомендуем заранее, не позднее чем за три часа до вылета, прибыть к месту регистрации пассажиров для прохождения установленных процедур регистрации, оформления багажа, и выполнения требований, связанных с пограничным, таможенным, санитарно-карантинным, ветеринарным и другими видами контроля, установленными законодательством РФ.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль до начала путешествия</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-5" class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль до начала путешествия</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед полетом рекомендуем проверять действующие правила вывоза физическими лицами наличной иностранной валюты из РФ, товаров и иных предметов на сайте Федеральной Таможенной Службы customs.gov.ru.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Обращаем внимание на то, что в настоящее время действуют ограничения. Внимание! Запрещено перемещение на выезде и въезде:</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● культурных ценностей,</p>
@@ -128,28 +192,28 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Запрещено на выезде и въезде:</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● принимать от посторонних лиц чемоданы, посылки и другие предметы для перевозки на борту воздушного судна.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль по окончанию путешествия</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-6" class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль по окончанию путешествия</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то вам следует проходить зону таможенного контроля по «Зелёному коридору».</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Актуальную информацию о ввозе валюты, товаров и иных предметов для личного пользования, вы найдете на сайте Федеральной Таможенной Службы customs.gov.ru.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Внимание!</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Недекларирование товаров в случае превышения стоимостных или весовых норм, а также наличных денежных средств и (или) денежных инструментов влечёт за собой административную или уголовную ответственность.</p>
 <img src="tild6364-3637-4261-b761-386566643134__ria_6136134hr_a91.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Регистрация на рейс и оформление багажа</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-7" class="text-6xl font-black mb-16 tracking-tight">Регистрация на рейс и оформление багажа</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">До начала поездки настоятельно рекомендуем уточнить время начала и окончания регистрации на рейс, а также время посадки на борт. Указанную информацию вы можете посмотреть на официальном сайте авиакомпании. Помните, что у разных авиакомпаний могут быть свои правила. Регистрация пассажиров и оформление багажа производятся на основании именного авиабилета или распечатанных на бумажном носителе маршрута и/или квитанции электронного билета, а также заграничного паспорта пассажира. При регистрации пассажиру выдается посадочный талон, который необходимо сохранять до момента возможного предъявления авиакомпании претензий по качеству предоставленных услуг авиаперевозки.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед посадкой на рейс рекомендуем проверить номер выхода и время начала посадки на рейс на информационном табло в аэропорту. Пассажиру, опоздавшему ко времени окончания регистрации пассажиров и оформления багажа или посадки в воздушное судно, может быть отказано в перевозке.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Каждый авиаперевозчик устанавливает свои нормы провоза багажа, а также габариты и вес ручной клади, провозимой в салоне самолета. Уточняйте данную информацию перед вылетом. За провоз багажа сверх установленной нормы бесплатного провоза багажа взимается дополнительная плата по тарифу, установленному перевозчиком. Перевозчик имеет право отказать туристу в перевозе багажа, вес или объем которого не соответствуют установленным нормам.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3039-3166-4636-b537-366535646636__secret-01.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Паспортный контроль</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-9" class="text-6xl font-black mb-16 tracking-tight">Паспортный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для прохождения пограничного контроля необходимо предъявить заграничный/внутренний российский паспорт. Пограничные органы ФСБ РФ при осуществлении пограничного контроля имеют право запрашивать у туристов дополнительные документы (авиабилет, посадочный талон, ваучер и т. п.), а также проводить опрос лиц, следующих через границу.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Санитарный контроль</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-10" class="text-6xl font-black mb-16 tracking-tight">Санитарный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Туристам сертификат о прививках не требуется. В летний период (с ноября по май) существует определенный риск заражения тропическими заболеваниями, передаваемыми через укусы комаров, — лихорадкой Денге и чикунгуньей — перед поездкой на Маврикий желательно сделать прививки против этих болезней.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Сырая вода для питья непригодна и требует очистки через фильтр с последующим кипячением.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Ветеринарный контроль</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-11" class="text-6xl font-black mb-16 tracking-tight">Ветеринарный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Животные подвергаются ветеринарному осмотру.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если вы вывозите животных, то необходимо иметь комплект документов, подтверждающих, что они здоровы. Как правило, следует иметь:</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● ветеринарный паспорт,</p>
@@ -161,7 +225,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Запрещен ввоз на территорию РФ любых грузов животного происхождения, в том числе в ручной клади и багаже, при отсутствии письменного разрешения Главного государственного ветеринарного инспектора РФ. Без разрешения уполномоченных органов РФ запрещено ввозить и вывозить объекты дикой фауны и флоры, находящиеся под угрозой исчезновения.</p>
 <img src="tild6164-3539-4236-a536-653666633263__919255ebe5775d87ea2b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В аэропорту прилета/вылета маврикия</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-12" class="text-6xl font-black mb-16 tracking-tight">В аэропорту прилета/вылета маврикия</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По прибытии в аэропорт Маврикия нужно последовательно:</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● пройти паспортный контроль,</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● получить свой багаж,</p>
@@ -171,13 +235,13 @@
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● предъявить гиду туристский ваучер.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Внимание! При осуществлении перелета стыковочными рейсами принимающая сторона осуществляет встречу только в конечном пункте прилета.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3734-6162-4266-b138-613431376435__mru-1-1920.webp</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Паспортный контроль. Виза.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При поездках на Маврикий в туристических или деловых целях на срок до 60 дней на российских граждан распространяется безвизовый режим по всем видам паспортов.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При прохождении паспортного контроля необходимо наличие обратных билетов, достаточных финансовых средств (из расчета порядка 100 долларов США в день) и документов, подтверждающих цель поездки, место проживания в период пребывания в стране.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Срок действия паспорта должен покрывать период предполагаемого нахождения на Маврикии.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль на маврикии</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-14" class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль на маврикии</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Ввоз и вывоз валюты не ограничен.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При въезде в Республику Маврикий обязательно декларирование валюты и денежных инструментов (дорожных чеков, банковских чеков, векселей и т. п.) на предъявителя, если общая сумма превышает 500 000 маврикийских рупий (около 17 200 долларов США).</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Турист может ввезти в страну:</p>
@@ -202,55 +266,55 @@
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● предметов, несанкционированно поднятых со дна моря,</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● саженцев.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Туристический налог</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-15" class="text-6xl font-black mb-16 tracking-tight">Туристический налог</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">С 01.10.2025 с каждого туриста будет взиматься сбор в размере 3 EUR за ночь. Дети до 11,99 лет освобождены от уплаты налога. Оплата будет производиться на месте, при выезде из отеля. Распространяется на все виды размещения: отели, гестхаусы, резиденции, частные виллы и другие.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Маврикий</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-16" class="text-6xl font-black mb-16 tracking-tight">Маврикий</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild6164-6563-4639-b861-333661393166__1600x1600.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Островное государство в Восточной Африке. Расположено в юго-западной части Индийского океана, примерно в 900 км к востоку от Мадагаскара. Официальное название страны: Республика Маврикий. В состав страны входят: острова Маврикий, Родригес, архипелаг Каргадос-Карахос, острова Агалега и множество мелких островков.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Время</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-18" class="text-6xl font-black mb-16 tracking-tight">Время</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Разница с Москвой в зимнее время + 1 час.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Климат</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-19" class="text-6xl font-black mb-16 tracking-tight">Климат</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Понимая, когда лететь на Маврикий, стоит внимательнее изучить его погодную карту, желательно на каждый месяц. Разница температур будет несущественная, но зато перепады влажности и вечерние похолодания могут преподнести неприятные сюрпризы. Собирая чемодан в дорогу, обязательно возьмите теплую толстовку, именно на случай внеплановых вечерних прогулок. Надо сказать, иногда весьма освежающих.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Весна</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-20" class="text-6xl font-black mb-16 tracking-tight">Весна</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Ранней весной на Маврикии делать нечего, если вы не готовы к ливневому апокалипсису каждые два дня. Ясное небо устанавливается к середине апреля, тогда же средний максимум температуры удерживается на отметке +25…+27 градусов. Ночами холода до +10 или ниже, из-за них море остывает, об утреннем купании придется на время забыть. В мае намного теплее, лето практически наступает.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Лето</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-21" class="text-6xl font-black mb-16 tracking-tight">Лето</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Наше с вами лето на Маврикии — это зима южного полушария, самые прохладные месяцы в году, но пик туристического наплыва приходится именно на них. Температура воздуха и воды примерно выравниваются до показателей +23…+24 градуса. Холоднее будет в гористых центральных районах острова. Дождей практически нет, а западное побережье остается комфортным для купания вплоть до декабря.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Осень</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-22" class="text-6xl font-black mb-16 tracking-tight">Осень</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Осенний сезон у маврикийских курортов считается золотой серединой, когда циклон пока не «расправил плечи». Температура уже приближается к среднесуточным +27…+30 градусов, дожди идут максимум раз в три-четыре дня. К ноябрю сильные ветра отступают, но ненадолго, последний осенний месяц напоминает, что впереди суровое тропическое «лето» с рекордными осадками, штормами и волнами.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Зима</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-23" class="text-6xl font-black mb-16 tracking-tight">Зима</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Маврикийская зима, она же лето южного полушария — противоречивый сезон. С одной стороны, барьерный риф защищает от цунами, с другой — ураганные ветра никто не отменял. Новый год на острове отметить успеете без происшествий, но с января начинается «цветомузыка». Помимо усиливающихся дождей, повышается температура, +28…+30 градусов становятся среднесуточным минимумом.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Валюта</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-24" class="text-6xl font-black mb-16 tracking-tight">Валюта</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Маврикийская рупия (MUR). Кредитные карты Master Card, Visa и American Express принимаются практически везде.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild6462-3930-4139-a230-316535636666__1969824_big.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Чаевые</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-26" class="text-6xl font-black mb-16 tracking-tight">Чаевые</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Чаевые приняты и обычно оставляют 10 % от общей суммы заказа, однако носят необязательный характер.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Государственный налог в размере 15 % не стоит путать с чаевыми. Как правило, налог включается в счета гостиниц и ресторанов, а также в стоимость большинства услуг и возврату не подлежит.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Язык</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-27" class="text-6xl font-black mb-16 tracking-tight">Язык</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Английский, французский и креольский.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Население</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-28" class="text-6xl font-black mb-16 tracking-tight">Население</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Примерная численность населения — 1,2 млн человека.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Религия</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-29" class="text-6xl font-black mb-16 tracking-tight">Религия</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Индуизм (48 %), католицизм (23,6 %), другие ветви христианства (8,6 %), ислам (16,6 %).</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Обычаи</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-30" class="text-6xl font-black mb-16 tracking-tight">Обычаи</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Маврикийцы имеют происхождение из трех разных континентов, поэтому национальные особенности представляют собой смешение различных культур, объединенных в единое целое. Многообразие культур проявляется в языковом разнообразии, многообразии кухонь и религий. Законодательством запрещено курение в общественных местах. ПАМЯТКА ТУРИСТУ На Маврикии повсеместно продается наркотическая трава, предназначенная для курения. Но если туриста уличат в том, что он купил вещество или носит ее с собой, полицейские вправе наложить серьезный штраф или даже выслать из страны. Нудизм, а также загорание и плавание топлесс на пляжах страны также не допускается. Перед посещением мечетей и индуистских храмов необходимо снимать обувь, при посещении экскурсий также рекомендуется скромно одеваться.</p>
 <img src="tild3166-3866-4135-b335-646637336434__shutterstock-3041477.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Праздники и нерабочие дни</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-31" class="text-6xl font-black mb-16 tracking-tight">Праздники и нерабочие дни</h2><div class="space-y-8">
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● 1 января — Новый год;</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● 12 марта — День независимости;</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● 1 мая — День Труда;</p>
@@ -262,19 +326,19 @@
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● Август-сентябрь — Ганеш Чатурти (Винаяка), день рождения Ганеши.</p>
 <img src="tild3166-3633-4734-b861-336634343565__630dfc1c27508-maurit.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Транспорт</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-32" class="text-6xl font-black mb-16 tracking-tight">Транспорт</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Движение на Маврикии левостороннее, скоростные ограничения: по городу 50 км/ч, на остальных дорогах — 80-100 км\ч. Рейсовые автобусы охватываю всю территорию острова достаточно плотной маршрутной сеткой, автовокзалы есть в каждом городе. Большинство такси не оборудовано счетчиком, поэтому следует заранее обговаривать окончательную стоимость поездки и не забывать про торг. Самым лучшим способом передвижения по острову — велосипед. В некоторых отелях для своих жильцов велосипед выдают бесплатно.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Аренда автомобиля</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-33" class="text-6xl font-black mb-16 tracking-tight">Аренда автомобиля</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для аренды автомобиля необходимо международное водительское удостоверение. Возраст водителя не моложе 23 лет.</p>
 <img src="tild3836-3830-4631-b438-316630666636__0xo4anzqla6874cde13b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Телефон</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-34" class="text-6xl font-black mb-16 tracking-tight">Телефон</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Мобильная связь на острове развита, но перед поездкой стоит уточнить информацию о стоимости роуминга у провайдера. Дешевле будет приобрести сим-карту местного мобильного оператора.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Чтобы позвонить с острова Маврикий в Россию: следует набирать 00 (международная линия) – 7 (код России) – код вашего города и номер.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Чтобы позвонить из России на остров Маврикий: нужно ввести 8, затем после гудка – 10, набрать международный телефонный код Маврикия (230), код города и номер отеля.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Экстренные телефоны</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-35" class="text-6xl font-black mb-16 tracking-tight">Экстренные телефоны</h2><div class="space-y-8">
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● единый номер экстренных служб: 999,</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● полиция: 112,</p>
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● скорая помощь: 114,</p>
@@ -283,29 +347,29 @@
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● справочная аэропорта: 603-3030.</p>
 <img src="tild3337-3934-4532-a536-386363633935__phone_old_year_built.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В отеле</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-36" class="text-6xl font-black mb-16 tracking-tight">В отеле</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В день приезда расселение осуществляется в соответствии с правилами, принятыми в отеле. Обычно начиная с 14:00 по местному времени. Просим ознакомиться на месте с условиями предоставления услуг в отеле и придерживаться установленных отелем правил.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В день выезда до наступления расчетного часа (как правило, 12:00) необходимо освободить свой номер и оплатить дополнительные услуги: телефонные переговоры, мини-бар, заказ питания и напитков в номер, массаж и др. Свой багаж можно оставить в камере хранения отеля и оставаться на территории отеля до прибытия трансфера. Если вы не сдали номер до 12:00, стоимость комнаты оплачивается полностью за следующие сутки.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3630-6365-4439-b161-633433303635__375337379.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Напряжение электросети</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-38" class="text-6xl font-black mb-16 tracking-tight">Напряжение электросети</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Напряжение сети: 230 В. Тип розетки — британский. Для электроприборов с российской и европейской вилкой необходим переходник.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Пляжи</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-39" class="text-6xl font-black mb-16 tracking-tight">Пляжи</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Побережье имеет песчаные пляжи протяженностью около 330 км. Остров окружен коралловыми рифами, которые создали вокруг него лагуны, которые обеспечивают чистейшую воду и великолепные виды. Все пляжи Маврикия являются общественными. Перед входом в воду рекомендуем ознакомиться с информационными знаками на пляже. Нудизм на Маврикии запрещен, поэтому подобных пляжей здесь нет.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Экскурсии</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-40" class="text-6xl font-black mb-16 tracking-tight">Экскурсии</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Гид принимающей вас туроператорской компании сообщит во время встречи в отеле перечень предлагаемых экскурсий, их содержание, график проведения и стоимость.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Среди наиболее популярных экскурсионных программ: обзорная экскурсия по югу острова, круиз на катамаране вдоль восточного/северного или западного побережья, сафари на подводной лодке, экскурсия «Природа Маврикия», посещение столицы Порт-Луи и ботанического сада Памплемус, посещение парка приключений, глубоководная рыбалка, охота на яванских оленей, канатная дорога в ущельях гор и т. д.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3734-3264-4637-b662-336561383365__99.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Магазины</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-42" class="text-6xl font-black mb-16 tracking-tight">Магазины</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Магазины открыты с 09:00 до 17:00 (в Порт-Луи) или с 10:00 до 18:00 (в других городах) в будни, по субботам — с 12:00 до 17:00 в столице, в других городах дольше. Универмаги работают и в воскресенье — с 9:00 до 12:00. Раз в неделю (обычно в четверг после обеда) магазины закрываются.</p>
 <img src="tild6361-3832-4364-a530-386335346434__visiter-le-marche-de.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ПРАВИЛА ЛИЧНОЙ ГИГИЕНЫ И БЕЗОПАСНОСТИ:</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-43" class="text-6xl font-black mb-16 tracking-tight">Правила личной гигиены и безопасности:</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед путешествием мы советуем ознакомиться с «Полезными советами российским гражданам, выезжающим за рубеж», размещенными на сайте МИД РФ: https://www.kdmid.ru/info-for-traveling-abroad/useful-tips-for-russian-citizens-traveling-abroad/, а также с памяткой МИД РФ «Каждому, кто направляется за границу», и памяткой Роспотребнадзора выезжающим за рубеж.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не нарушайте правила безопасности, установленные авиакомпаниями, транспортными организациями, гостиницами, местными органами власти.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Категорически не рекомендуем приобретать экскурсии и дополнительные туристские услуги в неизвестных туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, вам не будет гарантирована безопасность предоставленных услуг и исправность используемого оборудования, тем самым можно подвергнуть себя серьезной опасности.</p>
@@ -319,7 +383,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Во многих отелях запрещается выносить из номера полотенца на пляж или к бассейну. Не приносите на пляж полотенца или инвентарь из номера без разрешения персонала.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если в номере стоит мини-бар, то все напитки и закуски, взятые из него, как правило, должны быть оплачены.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В СЛУЧАЕ ПОТЕРИ ПАСПОРТА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-44" class="text-6xl font-black mb-16 tracking-tight">В случае потери паспорта</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Незамедлительно обращайтесь в дипломатическое представительство, в консульское учреждение или в представительство МИД РФ, которое находится в пределах приграничной территории.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Вам необходимо получить свидетельство на въезд в РФ (REENTRY CERTIFICATE TO THE RUSSIAN FEDERATION), которое называется временным загранпаспортом. Выдается на срок до 15 дней для того, чтобы турист успел купить обратный билет и улететь на родину.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для того чтобы вам выдали свидетельство на возвращение в РФ, необходимо представить следующие документы:</p>
@@ -330,220 +394,119 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Все вышеперечисленные документы регламентированы пунктом 20 Приказа МИД РФ от 28.06.2012 года № 10304.</p>
 <img src="tild6461-3537-4165-b365-363961373965__598c6e030ca3f598c6e0.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Посольство россии на маврикии</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-45" class="text-6xl font-black mb-16 tracking-tight">Посольство россии на маврикии</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Адрес: P.O. Box 10, Queen Mary Avenue, Floreal.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Телефон: (230) 696-1545, (230) 696-5533.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Эл. почта: rusemb.mu@intnet.mu.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Консульский отдел</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-46" class="text-6xl font-black mb-16 tracking-tight">Консульский отдел</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Эл.почта: rusemb.mu@intnet.mu.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Экстренный телефон: (230) 5729-4036.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Посольство маврикия в москве</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-47" class="text-6xl font-black mb-16 tracking-tight">Посольство маврикия в москве</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Адрес: 109240, г. Москва, ул. Николямская, 8.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Телефон: +7 (495) 915-76-17.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ЖЕЛАЕМ ВАМ ПРИЯТНОГО ПУТЕШЕСТВИЯ!</h2><div class="space-y-8">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По всем вопросам свяжитесь с нами любым удобным способом:</p>
+<section class="pt-24 border-t border-black/5"><h2 id="section-48" class="text-6xl font-black mb-16 tracking-tight">Желаем вам приятного путешествия!</h2><div class="space-y-8">
+
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">E-mail: trohin.zh@yandex.ru</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-49" class="text-6xl font-black mb-16 tracking-tight">Соцсети: вконтакте |telegram</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Телефон: +7 (963) 649-18-52</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-50" class="text-6xl font-black mb-16 tracking-tight">Индивидуальный предприниматель трохин евгений альбертович</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Соцсети: вконтакте |telegram</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-51" class="text-6xl font-black mb-16 tracking-tight">/</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Индивидуальный предприниматель трохин евгений альбертович</h2><div class="space-y-8">
-</div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ИНН 503613656680 / ОГРН ИП 315507400016056</h2><div class="space-y-8">
-</div></section>
+
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
         </div>
 
         <!-- ═══ ФОРМА (ШАБЛОН) ═══ -->
         <section id="booking-form" class="py-32 px-8 bg-surface-container-high relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
-        <div class="max-w-4xl mx-auto relative z-10">
-        <div class="text-center mb-16 space-y-4">
-        <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
-        <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
-        </div>
-        <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Маврикий" type="text"/>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
-        </div>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
-        <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
-        </div>
-        </div>
-        <div class="space-y-4">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
-        <div class="flex flex-wrap gap-8">
-        <label class="flex items-center gap-3 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
-        </label>
-        <label class="flex items-center gap-3 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
-        </label>
-        <label class="flex items-center gap-4 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio" checked/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
-        </label>
-        </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
-        <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
-        </div>
-        </div>
-        <div class="pt-8 flex justify-center">
-        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
-        </div>
-        </form>
-        </div>
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
+            <div class="max-w-4xl mx-auto relative z-10">
+                <div class="text-center mb-16 space-y-4">
+                    <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
+                    <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
+                </div>
+                <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Направление</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Памятка: Маврикий" type="text"/>
+                        </div>
+                    </div>
+                    <div class="pt-8 flex justify-center">
+                        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer class="bg-white py-32 px-8 border-t border-black/5 flex flex-col items-center">
-        <img src="LogoB_300x.png" alt="Emoji Tours" class="h-20">
+    <footer class="bg-[#fffcf5] w-full border-t border-black/10 pt-20 pb-12 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div class="space-y-6 max-w-sm">
+                    <img src="LogoB_300x.png" alt="Emoji Tours" class="h-16">
+                    <div class="text-black/60 font-['Manrope'] text-sm leading-relaxed">
+                        © 2024 Emoji Tours. Путешествия с душой.
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- PDF Generation Logic -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
-        async function downloadPDF() {
-            const btn = document.getElementById('download-pdf-btn');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = 'Генерируем текст...';
-            btn.disabled = true;
-
-            try {
-                // Создаем временный элемент для PDF
-                const pdfContainer = document.createElement('div');
-                pdfContainer.style.background = '#fff';
-                pdfContainer.style.padding = '20mm';
-                pdfContainer.style.fontFamily = 'Arial, sans-serif'; // Системный шрифт надежнее для PDF
-                pdfContainer.style.color = '#000';
-
-                // Добавляем заголовок
-                const header = document.createElement('div');
-                header.style.marginBottom = '10mm';
-                header.style.textAlign = 'center';
-                
-                const logo = document.getElementById('site-logo').cloneNode(true);
-                logo.style.height = '12mm';
-                logo.style.marginBottom = '5mm';
-                header.appendChild(logo);
-                
-                const title = document.createElement('h1');
-                title.innerText = document.getElementById('page-title').innerText;
-                title.style.fontSize = '24pt';
-                title.style.fontWeight = 'bold';
-                title.style.borderBottom = '2px solid #000';
-                title.style.paddingBottom = '3mm';
-                header.appendChild(title);
-                
-                pdfContainer.appendChild(header);
-
-                // Копируем контент
-                const originalContent = document.getElementById('memo-content-area');
-                const content = originalContent.cloneNode(true);
-                
-                // --- ОЧИСТКА ---
-                // 1. Удаляем все картинки
-                content.querySelectorAll('img').forEach(img => img.remove());
-                
-                // 2. Сбрасываем гигантские классы разметки Tilda/Tailwind
-                content.className = ""; // Убираем space-y-32, py-24 и т.д.
-                content.style.lineHeight = "1.5";
-                
-                // 3. Форматируем секции
-                content.querySelectorAll('section').forEach(s => {
-                    s.className = ""; 
-                    s.style.marginTop = '8mm';
-                    s.style.pageBreakInside = 'avoid';
-                    
-                    const h2 = s.querySelector('h2');
-                    if (h2) {
-                        h2.className = "";
-                        h2.style.fontSize = '18pt';
-                        h2.style.fontWeight = 'bold';
-                        h2.style.marginBottom = '4mm';
-                        h2.style.marginTop = '6mm';
-                    }
-                    
-                    const pList = s.querySelectorAll('p');
-                    pList.forEach(p => {
-                        p.className = "";
-                        p.style.fontSize = '11pt';
-                        p.style.marginBottom = '3mm';
-                        p.style.textAlign = 'justify';
+        // Плавный скролл для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 120,
+                        behavior: 'smooth'
                     });
-                });
+                }
+            });
+        });
 
-                pdfContainer.appendChild(content);
+        // ScrollSpy: подсветка активного пункта в меню при скролле
+        const sections = document.querySelectorAll('h2[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-                const opt = {
-                    margin: 10,
-                    filename: `Памятка_${document.getElementById('page-title').innerText.replace('Памятка: ', '')}.pdf`,
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { 
-                        scale: 1, 
-                        useCORS: true,
-                        scrollY: -window.scrollY // Исправляет смещение/пустые страницы
-                    },
-                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-                };
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-                await html2pdf().set(opt).from(pdfContainer).save();
-            } catch (e) {
-                console.error('PDF Error:', e);
-                alert('Ошибка при создании PDF.');
-            } finally {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }
-        }
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === "#" + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
-

@@ -38,57 +38,105 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
+        
+        /* Стили навигации как в Google Docs */
+        .nav-link {
+            position: relative;
+            padding-left: 1.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            color: #4b4b4b;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            line-height: 1.25;
+            border-left: 2px solid transparent;
+        }
+        .nav-link:hover {
+            color: #000;
+        }
+        .nav-link.active {
+            color: #000;
+            font-weight: 700;
+            border-left-color: #f5e2a1; /* Цвет акцента Emoji Tours */
+        }
     </style>
 </head>
 
 <body class="bg-background text-on-surface">
 
-    <!-- ═══ ФИКСИРОВАННАЯ КНОПКА НАЗАД ═══ -->
-    <a href="index.html#countries" title="Все страны" style="
-        position: fixed;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%) rotate(180deg);
-        z-index: 100;
-        background: #f5e2a1;
-        color: #000;
-        writing-mode: vertical-lr;
-        text-orientation: mixed;
-        padding: 20px 12px;
-        border-radius: 0 14px 14px 0;
-        font-family: 'Manrope', sans-serif;
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        box-shadow: 3px 0 16px rgba(0,0,0,0.12);
-        transition: padding 0.2s;
-    " onmouseover="this.style.paddingLeft='18px'" onmouseout="this.style.paddingLeft='12px'">
-        ← Все страны
-    </a>
-
-    <nav class="p-8 max-w-6xl mx-auto flex items-center">
-        <a href="index.html#countries">
-            <img src="LogoB_300x.png" alt="Emoji Tours" class="h-12" id="site-logo">
-        </a>
+    <!-- ═══ ФИКСИРОВАННАЯ ШАПКА ═══ -->
+    <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/80 backdrop-blur-md border-b border-black/5 py-4">
+        <div class="max-w-7xl mx-auto flex justify-center items-center px-8 relative">
+            <a href="index.html" class="absolute left-8 text-sm font-bold flex items-center gap-2 hover:opacity-70 transition-opacity">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Все страны
+            </a>
+            <a href="index.html">
+                <img src="LogoB_300x.png" alt="Emoji Tours" class="h-10">
+            </a>
+        </div>
     </nav>
 
     <main>
-        <div class="max-w-4xl mx-auto px-8 pt-4 pb-12 space-y-10">
-            <h1 class="text-7xl md:text-[9rem] font-black tracking-tighter leading-none" id="page-title">Памятка: ОАЭ</h1>
-            <div class="flex flex-wrap gap-4" id="action-buttons">
-                <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+        <!-- ═══ LAYOUT WITH SIDEBAR ═══ -->
+        <div class="max-w-7xl mx-auto px-8 relative flex flex-col lg:flex-row gap-12 pt-32">
+            
+            <!-- ═══ SIDEBAR NAVIGATION (LEFT, STICKY) ═══ -->
+            <aside class="hidden lg:block w-64 pt-20">
+                <div class="sticky top-32 space-y-8">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant/50 mb-6 px-6">Содержание</p>
+                        <nav id="quick-links" class="flex flex-col">
+                            <a href="#section-0" class="nav-link">Памятка  туристам, выезжающим в  оаэ</a>
+<a href="#section-1" class="nav-link">Перед отъездом</a>
+<a href="#section-2" class="nav-link">В российском аэропорту вылета/прилета</a>
+<a href="#section-3" class="nav-link">Таможенный контроль до начала путешествия</a>
+<a href="#section-4" class="nav-link">Регистрация на рейс и оформление багажа</a>
+<a href="#section-5" class="nav-link">Паспортный контроль</a>
+<a href="#section-6" class="nav-link">Санитарный контроль</a>
+<a href="#section-7" class="nav-link">Ветеринарный контроль</a>
+<a href="#section-8" class="nav-link">В дубайском аэропорту прилета/вылета</a>
+<a href="#section-9" class="nav-link">Паспортный контроль</a>
+<a href="#section-10" class="nav-link">Таможенный контроль</a>
+<a href="#section-11" class="nav-link">Запрещен ввоз: товаров, произведенных в израиле и юар</a>
+<a href="#section-12" class="nav-link">Санитарный контроль</a>
+<a href="#section-13" class="nav-link">Ветеринарный контроль</a>
+<a href="#section-14" class="nav-link">Объединенные арабские эмираты</a>
+<a href="#section-15" class="nav-link">Климат</a>
+<a href="#section-20" class="nav-link">Правила личной гигиены и безопасности:</a>
+<a href="#section-21" class="nav-link">В случае потери паспорта.</a>
+<a href="#section-22" class="nav-link">Полезная информация</a>
+<a href="#section-23" class="nav-link">Электронная почта: uaeruss@hotmail.com</a>
+<a href="#section-24" class="nav-link">Http://www.uae.mid.ru/</a>
+<a href="#section-25" class="nav-link">Факс: (971)-04-328-56-15</a>
+<a href="#section-26" class="nav-link">Http://www.gconsdubai.mid.ru/</a>
+<a href="#section-27" class="nav-link">Факс: (495) 234-40-70</a>
+<a href="#section-28" class="nav-link">Желаем вам приятного путешествия!</a>
+<a href="#section-29" class="nav-link">Телефон: +7 (977) 730 95 22</a>
+<a href="#section-30" class="nav-link">Соцсети: вконтакте | instagram | telegram</a>
+<a href="#section-31" class="nav-link">Индивидуальный предприниматель трохин евгений альбертович</a>
+<a href="#section-32" class="nav-link">/</a>
+<a href="#section-33" class="nav-link">Город москва, щербинка ул. юбилейная д.3а</a>
+
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ═══ CONTENT AREA ═══ -->
+            <div class="flex-1 py-20">
+                <p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
+                <h1 id="page-title" class="text-7xl md:text-9xl font-black tracking-tighter leading-none mb-12">Памятка: ОАЭ</h1>
                 
-                <button id="download-pdf-btn" onclick="downloadPDF()" class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-2"><span class="material-symbols-outlined">download</span> Скачать PDF</button>
-            </div>
-        </div>
+                <div class="flex flex-wrap gap-4 mb-24">
+                    <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+                    <a href="memo-██slug██.html" class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
+                </div>
 
-        <img src="" class="w-full h-[80vh] object-cover" style="display:block;" id="hero-image">
-
-        <div class="max-w-4xl mx-auto px-8 py-24 space-y-32" id="memo-content-area">
-             <section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Памятка  туристам, выезжающим в  оаэ</h2><div class="space-y-8">
+                <div class="space-y-32" id="memo-content-area">
+                     <section class="pt-24 border-t border-black/5"><h2 id="section-0" class="text-6xl font-black mb-16 tracking-tight">Памятка  туристам, выезжающим в  оаэ</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ПЕРЕД ОТЪЕЗДОМ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-1" class="text-6xl font-black mb-16 tracking-tight">Перед отъездом</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Проверьте наличие необходимых для поездки документов:</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Заграничный паспорт сроком действия не менее 6 месяцев с даты начала поездки, паспорт должен иметь не менее двух свободных страниц для проставления визы; ксерокопию загранпаспортов (могут пригодиться при утрате загранпаспорта и в случае иных непредвиденных обстоятельств); авиабилеты или маршрут/квитанции электронного билета; ваучер; страховой медицинский полис.</p>
 <img src="tild3434-6638-4437-a663-626532353762__zagranpasport-novogo.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
@@ -103,11 +151,11 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рекомендуем все ценные вещи, документы и деньги положить в ручную кладь и взять с собой в самолет. В багаж следует упаковать все металлические острые и режущие предметы (маникюрные ножницы, пилочки для ногтей, перочинный ножик и т.п.), а также любые жидкости, гели и аэрозоли (за исключением, если в этом есть необходимость, детского питания и лекарств) - проносить подобные предметы в ручной клади ЗАПРЕЩЕНО. Не забывайте собрать и взять с собой аптечку первой помощи, которая поможет Вам при легких недомоганиях, сэкономит Ваше время на поиски лекарственных средств и избавит от проблем общения на иностранном языке.</p>
 <img src="tild3838-6539-4365-b630-323066343866__thumb_67866_expert_b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В РОССИЙСКОМ АЭРОПОРТУ ВЫЛЕТА/ПРИЛЕТА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-2" class="text-6xl font-black mb-16 tracking-tight">В российском аэропорту вылета/прилета</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед выездом в аэропорт рекомендуем получить дополнительную информацию о возможно произошедших изменениях в условиях вылета Вашего рейса, используя возможности сайта авиакомпании, выполняющей рейс, или по телефону ее справочной службы.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рекомендуем заблаговременно, не позднее, чем за три часа до вылета рейса, прибыть к месту регистрации пассажиров для прохождения установленных процедур регистрации, оформления багажа, и выполнения требований, связанных с пограничным, таможенным, санитарно-карантинным, ветеринарным и другими видами контроля, установленными законодательством РФ.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль до начала путешествия</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-3" class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль до начала путешествия</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если Вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то Вам следует проходить зону таможенного контроля по «Зеленому коридору».</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Без предъявления документов и без внесения сведений о валюте в пассажирскую таможенную декларацию туристы имеют право вывезти наличную иностранную валюту и/или валюту Российской Федерации, а также дорожные чеки на сумму не более 10.000 долларов США. При вывозе физическими лицами иностранной валюты и/или валюты Российской Федерации в эквиваленте до 10.000 долларов США, либо дорожных чеков в сумме, превышающей 10.000 долларов США, эти суммы средств должны быть задекларированы в пассажирской таможенной декларации.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">На денежные средства, вывозимые с помощью банковской карты, ограничений нет. Банковскую карту декларировать не требуется.</p>
@@ -119,63 +167,63 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Физическое лицо не моложе 18 лет может ввозить без уплаты таможенных пошлин: 3 литра алкогольных напитков и пиво; 50 сигар (сигарилл) или 200 сигарет или 250 граммов табака, либо указанные изделия в ассортименте общим весом не более 250 граммов.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При единовременном ввозе в Россию физическими лицами наличной иностранной валюты и/или валюты Российской Федерации, а также дорожных чеков, внешних и/или внутренних ценных бумаг в документарной форме в сумме, в эквиваленте превышающей 10.000 долларов США, сведения о ней необходимо внести в пассажирскую таможенную декларацию. Декларации также подлежат: вывозимые драгоценные металлы, камни, культурные ценности, государственные награды РФ, редкие животные и растения, наркотические, психотропные, сильнодействующие, ядовитые, радиоактивные вещества, химикаты, высокочастотные устройства, радиоэлектронные, транспортные средства, ядерные материалы, информация, связанная с НТП для изготовления оружия массового поражения, продукция военного характера.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">РЕГИСТРАЦИЯ НА РЕЙС И ОФОРМЛЕНИЕ БАГАЖА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-4" class="text-6xl font-black mb-16 tracking-tight">Регистрация на рейс и оформление багажа</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Регистрация пассажиров и оформление багажа производятся на основании именного авиабилета или распечатанной на бумажном носителе маршрут/квитанции электронного билета, а также заграничного паспорта пассажира.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При регистрации пассажиру выдается посадочный талон, в который необходимо сохранять до момента возможного предъявления авиакомпании претензий по качеству предоставленных услуг авиаперевозки.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Помните, что регистрация на рейс заканчивается за 40 минут до времени вылета рейса, указанного в билете по местному времени. Пассажиру, опоздавшему ко времени окончания регистрации пассажиров и оформления багажа или посадки в воздушное судно, может быть отказано в перевозке.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рекомендуем отдельно уточнять в авиакомпании нормы бесплатного провоза и габариты багажа, принимаемого к перевозке.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">За провоз багажа сверх установленной нормы бесплатного провоза багажа, взимается дополнительная плата по тарифу, установленному перевозчиком. Перевозчик имеет право отказать туристу в перевозе багажа, вес или объем которого не соответствуют установленным нормам.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ПАСПОРТНЫЙ КОНТРОЛЬ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-5" class="text-6xl font-black mb-16 tracking-tight">Паспортный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для прохождения пограничного контроля необходимо предъявить заграничный паспорт. Пограничным органам ФСБ России при осуществлении пограничного контроля предоставлено право запрашивать у туристов дополнительные документы (авиабилет, посадочный талон, ваучер и т.п.), а также проводить опрос лиц, следующих через границу.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">САНИТАРНЫЙ КОНТРОЛЬ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-6" class="text-6xl font-black mb-16 tracking-tight">Санитарный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Туристам сертификат о прививках не требуется.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ВЕТЕРИНАРНЫЙ КОНТРОЛЬ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-7" class="text-6xl font-black mb-16 tracking-tight">Ветеринарный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если Вы вывозите животных, то Вам необходимо иметь комплект документов, подтверждающих, что они здоровы. Как правило, следует иметь: Ветеринарный паспорт, Справку о состоянии здоровья (выдается любой государственной ветеринарной клиникой, в справке указываются сведения о прививках по возрасту, последняя прививка от бешенства должна быть сделана не ранее, чем за год и не позднее, чем за два месяца до выезда), Справку из клуба СКОР или РКФ (в справке указывается, что собака не представляет племенной ценности, справки из других клубов вызывают вопросы на таможне). При ввозе домашних животных в ОАЭ необходимо предъявить ветеринарное свидетельство с отметкой о всех прививках, включая прививку против бешенства.. В день отлета перед регистрацией на пограничном контрольном ветеринарном пункте аэропорта необходимо получить на основании собранных ранее документов международный ветеринарный сертификат. На таможне также необходимо предъявить разрешение на вывоз животного. Животные подвергаются ветеринарному осмотру. Свидетельство не требуется при ввозе котят и щенков в возрасте до трех месяцев.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При ввозе в РФ животных и птиц Вам необходимо иметь сопровождающее ветеринарное свидетельство, полученное в Государственной ветеринарной службе страны, где приобретено животное.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Запрещен ввоз на территорию Российской Федерации любых грузов животного происхождения, в том числе в ручной клади и багаже, при отсутствии письменного разрешения Главного государственного ветеринарного инспектора Российской Федерации.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Без разрешения уполномоченных органов РФ запрещено ввозить и вывозить объекты дикой фауны и флоры, находящиеся под угрозой исчезновения.</p>
 <img src="tild6263-3236-4164-b132-313762653661__34944474314_b12b5af4.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В ДУБАЙСКОМ АЭРОПОРТУ ПРИЛЕТА/ВЫЛЕТА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-8" class="text-6xl font-black mb-16 tracking-tight">В дубайском аэропорту прилета/вылета</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По прибытию в аэропорт Дубаи Вы должны последовательно: получить визу, пройти паспортный контроль, пройти таможенный контроль, сканирование сетчатки глаза, получить свой багаж, выйти из здания аэропорта, найти встречающего гида с табличкой, предъявить гиду туристский ваучер. При въезде в ОАЭ сканируют сетчатку глаза (eye control). Это позволяет пресечь въезд в страну лиц, которые ранее были депортированы из страны и попали в «чёрные списки».</p>
 <img src="tild3938-6331-4730-b364-346235303732__landing_at_beach-wal.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ПАСПОРТНЫЙ КОНТРОЛЬ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-9" class="text-6xl font-black mb-16 tracking-tight">Паспортный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ВИЗА.  С 01 февраля 2017 года визы в ОАЭ на 30 дней пребывания для граждан РФ, прибывших в страну с туристической целью, выдаются в аэропорту прилета.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Оформление данной визы возможно в любом аэропорту ОАЭ. Сборы за визу не взимаются. В случае повторного въезда в ОАЭ необходимо каждый раз получать визу в аэропорту прилета.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ВНИМАНИЕ! Для граждан, не имеющих гражданства Российской Федерации, могут быть установлены иные правила въезда на территорию ОАЭ. Получить информацию по этому вопросу следует в посольстве ОАЭ по месту гражданства. У Вас могут потребовать предъявить туристский ваучер и обратный авиабилет. Въезд девушек до 30 лет желателен в сопровождении совершеннолетнего брата, отца или мужа. Если женатая молодая пара моложе 30 лет имеет разные фамилии, необходимо заранее подготовить копию свидетельства о браке переведенное на английский язык и заверенное нотариально. Детям с отдельным паспортом открывают визы в случае, если их сопровождает родитель с такой же фамилией. Может возникнуть задержка с открытием визы или отказ, если ребенка сопровождает взрослый с другой фамилией. Необходимо заранее подготовить копию свидетельства о рождении ребенка, переведенного на английский язык и заверенного нотариально.</p>
 <img src="tild6164-3539-4236-a536-653666633263__919255ebe5775d87ea2b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ТАМОЖЕННЫЙ КОНТРОЛЬ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-10" class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Ввоз и вывоз валюты ограничен суммой денежных средств (валюта или дорожные чеки), не превышающих 100,000 дирхам.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Разрешен беспошлинный ввоз лицам старше 20 лет (на 1 человека): 400 сигарет/50 сигар или 500 грамм табака. Лица, не исповедующие ислам, могут ввезти до 4 литров спиртных напитков.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ЗАПРЕЩЕН ввоз наркотиков, некоторых лекарств, содержащих большую дозу наркотических, психотропных веществ, оружия, фото, видеоматериалы, печатная продукция предосудительного или фривольного содержания, религиозную пропаганду.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ЗАПРЕЩЕН вывоз драгоценностей, антиквариата, исторических ценностей, оружия и боеприпасов без специального разрешения.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Запрещен ввоз: товаров, произведенных в израиле и юар</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-11" class="text-6xl font-black mb-16 tracking-tight">Запрещен ввоз: товаров, произведенных в израиле и юар</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">САНИТАРНЫЙ КОНТРОЛЬ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-12" class="text-6xl font-black mb-16 tracking-tight">Санитарный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для въезда в страну не требуется предъявление медицинского сертификата о прививках и об освидетельствовании на ВИЧ/СПИД.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ВЕТЕРИНАРНЫЙ КОНТРОЛЬ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-13" class="text-6xl font-black mb-16 tracking-tight">Ветеринарный контроль</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для ввоза/вывоза животных необходимо наличие международного сертификата установленного образца. Размещение с животными – под запрос конкретного отеля, как правило, отели в ОАЭ размещения с домашними животными не предоставляют.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ОБЪЕДИНЕННЫЕ АРАБСКИЕ ЭМИРАТЫ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-14" class="text-6xl font-black mb-16 tracking-tight">Объединенные арабские эмираты</h2><div class="space-y-8">
 <img src="tild6230-3532-4363-a362-393933356635__united_arab_emirates.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ОАЭ – государство в северной части Аравийского полуострова, омываемое водами Персидского и Оманского заливов. Граничит с Саудовской Аравией, Оманом. Северное побережье находится напротив Ирана через Персидский залив, на северо-западе – государство Катар. ОАЭ состоит из семи эмиратов, каждый из которых представляет собой микро-государство с абсолютной монархией: Абу-Даби, Аджман, Дубай, Рас эль-Хайма, Умм эль-Кайвайн, Фуджейра и Шарджа. Столица государства - г. Абу-Даби и одноименный эмират. Территория страны составляет свыше 80 000 кв.м., включая около 6000 кв.м. (около 200 прибрежных островов). На эмират Абу-Даби приходится 85 % площади всех ОАЭ; а наименьший из эмиратов — Аджман — всего 250 км². Большую часть страны занимает пустыня Руб-Эль-Хали - самая большая в мире территория, покрытая песками. Государство возглавляется президентом Объединённых Арабских Эмиратов, которым является эмир крупнейшего эмирата Абу-Даби.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Время. Нет разницы с Москвой.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Климат</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-15" class="text-6xl font-black mb-16 tracking-tight">Климат</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Климат. Климат страны очень жаркий и сухой (тропический пустынный). Часто бывают песчаные бури. Температура летом 35—40 градусов С, часто достигает 50, а зимой днём 20—25 градусов, ночью прохладнее. Наилучший сезон – с октября по май.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Валюта. Денежная единица: дирхам ОАЭ (Dh или AED по стандарту ISO). Дирхам привязан к доллару США. В местной валюте расплачиваться выгоднее. Обменять можно в любом обменном пункте, в центре города выгоднее, чем при отеле.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Язык. Официальный язык – арабский. Языки делового общения - английский.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Население. Около 5 миллионов человек. 88% горожане. Этнический состав неоднородный: 30% арабы-граждане ОАЭ, из них – 11% коренные жители, остальные – иммигранты, приехавшие из Индии, Бангладеш, Шри-Ланки, Пакистана и других стран Азии и Африки на временные заработки.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Религия. Официальная религия - ислам. Коран налагает на правоверных ряд строгих запретов, которые должны неукоснительно соблюдаться.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3838-3762-4033-a239-373361346664__12-img_0725.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Обычаи. Сдержанность и уважение - обязательны при посещении мечети, лучше всего осматривать ее, когда там нет богослужения. У входа в мечеть, в дом или квартиру полагается снимать обувь. Нежелательно входить в мечеть в шортах, коротких юбках и футболках. Женщины должны входить с покрытой головой. Следует также воздержаться от посещения мечети в пятницу, особенно утром. Выбирая одежду нужно избегать мини-юбок, глубоких декольте и просвечивающих платьев на голое тело. Особое внимание одежде нужно уделить туристам, проживающим в эмирате Шарджа, наиболее консервативном в этом отношении. Слишком откровенный наряд может создать вам проблемы не только с полицией, но и с местными ловеласами, которые тут же начнут делать вам сомнительные предложения. Рекомендуем Вам при выборе одежды для прогулок в городе учитывать нравы и обычаи восточной страны. Нельзя фотографировать женщин в черных накидках. Если Вы хотите сфотографировать мужчину, непременно спросите разрешения. В ОАЭ есть определенные ограничения и правила для женщин. Например, очередь за билетами будет разделена на две линии - мужчин и женщин. При посадке в транспорт женщины также должны становиться в отдельную очередь и занимать передние места в салоне. В метрополитене первый вагон обычно предназначен исключительно для женщин. На пляжах выделяют специальные дни для посещения только женщин и только мужчин. Заговорить с незнакомой женщиной для мужчины - нарушение этикета.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В священный месяц Рамадан мусульманам запрещается еда от восхода до заката солнца. Туристам во время Рамадана не рекомендуется употреблять в публичных местах какую-либо пищу или напитки, курить и жевать жевательную резинку. Пренебрежение этим правилом может повлечь задержание полицией за неуважение законов и традиций.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Как известно, правоверным мусульманам запрещено употреблять алкоголь, употребление алкоголя на улицах общественным мнением не одобряется, и может привести к задержанию полицией, депортации из страны. Хотя этот не распространяется на приезжих, если они не исповедуют ислам, однако помните, что в стране категорически запрещено предлагать или дарить алкоголь мусульманам, а также садиться за руль в нетрезвом виде. Если вы «приняли на грудь» в ресторане, баре или на дискотеке, постарайтесь молча дойти до выхода, поймать такси и вернуться в отель. Распитие спиртных напитков, включая пиво, в общественных местах (на уличной скамейке, в парке, на пляже) может быть наказано штрафом и тюремным заключением. Алкоголь доступен в ресторанах и барах при отелях, цены на него сопоставимы с московскими. На вынос продавать не разрешено. В ресторанах, фаст-фудах и закусочных, расположенных в городе (не при отеле), алкоголь не подаётся. В Эмиратах ограничена продажа алкоголя в магазинах, кафе и ресторанах (в Шардже, к примеру, алкоголь под полным запретом). Внимание: перевозить алкоголь из эмирата в эмират незаконно.</p>
@@ -185,11 +233,11 @@
 <img src="tild3338-3733-4330-b632-386361386565__tom-yum-goong.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Магазины. Магазины работают в будние дни с 10.00 - 24.00, в выходные – с 10.00 - 22.00. На рынках и на уличных прилавках принято торговаться. В качестве сувениров из страны везут стеклянные, деревянные или фарфоровые фигурки верблюдов, изделия из жемчуга, золота, восточные сладости и специи.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3162-3966-4837-b137-326261366261___.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Транспорт. Общественный транспорт слабо развит, представлен такси и реже автобусами (в Дубае и Абу-Даби). Такси – самый удобный для туристов вариант, оплата как по таксометру (Абу Даби, Дубаи), так и по договоренности. Такси, стоящее на улице, дешевле, чем на стоянке у отеля. Можно воспользоваться маршрутными такси, которые работают с утра до позднего вечера. Мини-басы или автобусы курсируют по расписанию (в некоторых отелях бесплатно) на пляж, до торговых центров.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Аренда автомобиля. В аэропорту, крупных отелях можно оформить аренду автомобиля минимум на 24 часа. Основные условия – наличие международных водительских прав, выданных не менее 1 года назад (при их отсутствии – временное разрешение на право вождения в ОАЭ: паспорт, нац права и 2 фото), возраст не моложе 21 года, страховка, наличие залога наличными или кредитной картой. Правила дорожного движения - западноевропейские, движение правостороннее. Если вы увидели машину с однозначным номером - это автомобиль шейха или его близких, лучше притормозите, как и в случае встречи знака "осторожно: верблюд". Водитель, сбивший верблюда, должен будет выплатить его стоимость и компенсацию за моральный ущерб. В населенных пунктах ограничение скорости - 60 км/час, на автобанах - 100 км/час. Размер штрафа зависит от превышения скорости. В случае ДТП необходимо вызвать полицию по телефону 999 и получить справку об аварии, без нее вы не сможете получить страховку и разрешение на ремонт автомобиля. При непродолжительной парковке - стоянка бесплатная, за час - плата 2 дирхама. Если вы воспользовались стоянкой с автоматом, то опустите 2 дирхама в автомат и получите талон, который крепится на лобовом стекле автомобиля.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild6538-6262-4461-a634-653037623166__jpg.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Телефон. Выгоднее звонить из телефона-автомата на улице, оплачивая карточками или монетами. Карточки продают в магазинах и на автозаправочных станциях.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Чтобы позвонить в Россию надо набрать: 00 (выход на международную связь) + 7 (код России) + код города + номер абонента.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Чтобы позвонить из России в Эмираты: 8-10-971 + код города + номер абонента. Из эмирата в эмират, или со стационарного номера на мобильный и, наоборот, следует набирать: 0 + код города + номер абонента. Из отеля в город нужно набрать «9», и, после гудка, - номер абонента. По телефонной карте «prepaid card» можно звонить с любого телефона (в том числе из отеля) по минимальному тарифу. Коды городов: Абу-Даби — 2, Дубаи — 4, Хорфаккан — 70, Рас-Аль-Хайма — 7, Аджман, Умм-Аль-Кувейн, Шарджа — 6, Фуджейра — 9.</p>
@@ -201,14 +249,14 @@
 <p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">- Для посещения ресторанов системы «A-La Carte» требуется предварительное резервирование мест и дополнительная оплата (включая многие отели с системой питания «все включено»).</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Туристам также следует иметь в виду, что в ОАЭ взимается туристический налог на проживание в отелях.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild6630-3534-4363-a166-386566646233__dubai.jpg</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Напряжение электросети. Напряжение может быть 220 V, 50 Гц. Для электроприборов, сделанных в США, может понадобиться переходник.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Экскурсии. Гид принимающей Вас в Эмиратах туроператорской компании во время встречи в отеле сообщит Вам перечень предлагаемых экскурсий, их содержание, график проведения и их стоимость. Не рекомендуем Вам приобретать экскурсии или прочие услуги в неизвестных Вам туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, а также о качестве транспорта для ее организации. Вам может быть предоставлено для использования несертифицированное, неисправное или не соответствующее санитарно-гигиеническим нормам оборудование, в том числе зараженный паразитарными, грибковыми, инфекционными заболеваниями инвентарь, включая сжатый воздух в баллонах для погружения.</p>
 <img src="tild3538-3463-4864-b563-626562613438__dubai_akvarium_v_trc.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Чаевые. Принято оставлять чаевые (бакшиш) носильщикам и официантам (в размере 5-10 % от суммы счета). Считается, что заслуживают поощрения водители автобусов, горничные в гостинице, экскурсоводы, если клиент остался доволен обслуживанием.</p>
 <img src="tild3830-6430-4139-b861-633230663935__f0bb5b1ec29efb7dfe1a.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ПРАВИЛА ЛИЧНОЙ ГИГИЕНЫ И БЕЗОПАСНОСТИ:</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-20" class="text-6xl font-black mb-16 tracking-tight">Правила личной гигиены и безопасности:</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед путешествием мы советуем ознакомиться с «Полезными советами российским гражданам, выезжающим за рубеж», размещенными на сайте МИД России: http://www.mid.ru/dks.nsf/advinf</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не нарушайте правила безопасности, установленные авиакомпаниями, транспортными организациями, гостиницами, местными органами власти. Проявлять более чем дружеские чувства в публичных местах запрещено под угрозой крупного штрафа, и даже депортации из страны.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед поездкой рекомендуется сделать ксерокопии основных страниц (с фотографией, личными данными, отметкой о регистрации) заграничного и внутреннего российского паспортов и взять их с собой. Паспорт (или ксерокопию паспорта), визитную карточку отеля носите с собой.</p>
@@ -240,7 +288,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если Вы оказались на территории иностранного государства без средств к существованию, Вы имеет право на получение помощи от дипломатических представительств и консульств РФ.</p>
 <img src="tild3264-6232-4636-b762-663061646534__0_0_1000_575_129c514.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В СЛУЧАЕ ПОТЕРИ ПАСПОРТА.</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-21" class="text-6xl font-black mb-16 tracking-tight">В случае потери паспорта.</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Как только Вы поняли, что загранпаспорт потерялся, или его украли, то незамедлительно обращайтесь в дипломатическое представительство, в консульское учреждение или в представительство МИД России, которое находится в пределах приграничной территории.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Вам необходимо получить свидетельство на въезд в РФ (REENTRY CERTIFICATE TO THE RUSSIAN FEDERATION), которое еще называется временным загранпаспортом. Выдается на срок до 15 дней, для того, чтобы Вы успели купить обратный билет и улететь на родину.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для того, чтобы Вам выдали свидетельство на возвращение в РФ, необходимо представить следующие документы:</p>
@@ -252,227 +300,128 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Все вышеперечисленные документы регламентированы пунктом 20 Приказа МИД России от 28.06.2012 года № 10304.</p>
 <img src="tild6461-3537-4165-b365-363961373965__598c6e030ca3f598c6e0.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-22" class="text-6xl font-black mb-16 tracking-tight">Полезная информация</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Посольство Российской Федерации в ОАЭ: Абу-Даби, а/я 8211, ул. Халифа, восточные участки 65/67, здание Посольства России</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Телефон: 02-672-17-97 (часы работы 11:00 — 13:00, кроме пятницы и субботы), консульский отдел: (02) 672-35-16. Факс: (971)-2-678-87-31</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Электронная почта: uaeruss@hotmail.com</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-23" class="text-6xl font-black mb-16 tracking-tight">Электронная почта: uaeruss@hotmail.com</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Http://www.uae.mid.ru/</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-24" class="text-6xl font-black mb-16 tracking-tight">Http://www.uae.mid.ru/</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Генеральное Консульство РФ в Дубае: Дубаи, Джумейра, Str.6B, Villa No 21, Community No 367–432, Um Al Sheif. (04) 328-53-47</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Факс: (971)-04-328-56-15</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-25" class="text-6xl font-black mb-16 tracking-tight">Факс: (971)-04-328-56-15</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Http://www.gconsdubai.mid.ru/</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-26" class="text-6xl font-black mb-16 tracking-tight">Http://www.gconsdubai.mid.ru/</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Посольство ОАЭ в России: г. Москва, ул. Улофа Пальме, 4;</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">тел.: (495) 147-62-86, 234-40-60,</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Факс: (495) 234-40-70</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-27" class="text-6xl font-black mb-16 tracking-tight">Факс: (495) 234-40-70</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Консульский отдел Посольства ОАЭ в РФ — тел.: (495) 147-00-66</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ЖЕЛАЕМ ВАМ ПРИЯТНОГО ПУТЕШЕСТВИЯ!</h2><div class="space-y-8">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По всем вопросам свяжитесь с нами любым удобным способом:</p>
+<section class="pt-24 border-t border-black/5"><h2 id="section-28" class="text-6xl font-black mb-16 tracking-tight">Желаем вам приятного путешествия!</h2><div class="space-y-8">
+
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">E-mail: trohin.zh@yandex.ru</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-29" class="text-6xl font-black mb-16 tracking-tight">Телефон: +7 (977) 730 95 22</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Телефон: +7 (977) 730 95 22</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-30" class="text-6xl font-black mb-16 tracking-tight">Соцсети: вконтакте | instagram | telegram</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Соцсети: вконтакте | instagram | telegram</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-31" class="text-6xl font-black mb-16 tracking-tight">Индивидуальный предприниматель трохин евгений альбертович</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Индивидуальный предприниматель трохин евгений альбертович</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-32" class="text-6xl font-black mb-16 tracking-tight">/</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ИНН 503613656680 / ОГРН ИП 315507400016056</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-33" class="text-6xl font-black mb-16 tracking-tight">Город москва, щербинка ул. юбилейная д.3а</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Город москва, щербинка ул. юбилейная д.3а</h2><div class="space-y-8">
-</div></section>
+
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
         </div>
 
         <!-- ═══ ФОРМА (ШАБЛОН) ═══ -->
         <section id="booking-form" class="py-32 px-8 bg-surface-container-high relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
-        <div class="max-w-4xl mx-auto relative z-10">
-        <div class="text-center mb-16 space-y-4">
-        <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
-        <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
-        </div>
-        <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="ОАЭ" type="text"/>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
-        </div>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
-        <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
-        </div>
-        </div>
-        <div class="space-y-4">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
-        <div class="flex flex-wrap gap-8">
-        <label class="flex items-center gap-3 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
-        </label>
-        <label class="flex items-center gap-3 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
-        </label>
-        <label class="flex items-center gap-4 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio" checked/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
-        </label>
-        </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
-        <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
-        </div>
-        </div>
-        <div class="pt-8 flex justify-center">
-        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
-        </div>
-        </form>
-        </div>
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
+            <div class="max-w-4xl mx-auto relative z-10">
+                <div class="text-center mb-16 space-y-4">
+                    <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
+                    <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
+                </div>
+                <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Направление</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Памятка: ОАЭ" type="text"/>
+                        </div>
+                    </div>
+                    <div class="pt-8 flex justify-center">
+                        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer class="bg-white py-32 px-8 border-t border-black/5 flex flex-col items-center">
-        <img src="LogoB_300x.png" alt="Emoji Tours" class="h-20">
+    <footer class="bg-[#fffcf5] w-full border-t border-black/10 pt-20 pb-12 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div class="space-y-6 max-w-sm">
+                    <img src="LogoB_300x.png" alt="Emoji Tours" class="h-16">
+                    <div class="text-black/60 font-['Manrope'] text-sm leading-relaxed">
+                        © 2024 Emoji Tours. Путешествия с душой.
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- PDF Generation Logic -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
-        async function downloadPDF() {
-            const btn = document.getElementById('download-pdf-btn');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = 'Генерируем текст...';
-            btn.disabled = true;
-
-            try {
-                // Создаем временный элемент для PDF
-                const pdfContainer = document.createElement('div');
-                pdfContainer.style.background = '#fff';
-                pdfContainer.style.padding = '20mm';
-                pdfContainer.style.fontFamily = 'Arial, sans-serif'; // Системный шрифт надежнее для PDF
-                pdfContainer.style.color = '#000';
-
-                // Добавляем заголовок
-                const header = document.createElement('div');
-                header.style.marginBottom = '10mm';
-                header.style.textAlign = 'center';
-                
-                const logo = document.getElementById('site-logo').cloneNode(true);
-                logo.style.height = '12mm';
-                logo.style.marginBottom = '5mm';
-                header.appendChild(logo);
-                
-                const title = document.createElement('h1');
-                title.innerText = document.getElementById('page-title').innerText;
-                title.style.fontSize = '24pt';
-                title.style.fontWeight = 'bold';
-                title.style.borderBottom = '2px solid #000';
-                title.style.paddingBottom = '3mm';
-                header.appendChild(title);
-                
-                pdfContainer.appendChild(header);
-
-                // Копируем контент
-                const originalContent = document.getElementById('memo-content-area');
-                const content = originalContent.cloneNode(true);
-                
-                // --- ОЧИСТКА ---
-                // 1. Удаляем все картинки
-                content.querySelectorAll('img').forEach(img => img.remove());
-                
-                // 2. Сбрасываем гигантские классы разметки Tilda/Tailwind
-                content.className = ""; // Убираем space-y-32, py-24 и т.д.
-                content.style.lineHeight = "1.5";
-                
-                // 3. Форматируем секции
-                content.querySelectorAll('section').forEach(s => {
-                    s.className = ""; 
-                    s.style.marginTop = '8mm';
-                    s.style.pageBreakInside = 'avoid';
-                    
-                    const h2 = s.querySelector('h2');
-                    if (h2) {
-                        h2.className = "";
-                        h2.style.fontSize = '18pt';
-                        h2.style.fontWeight = 'bold';
-                        h2.style.marginBottom = '4mm';
-                        h2.style.marginTop = '6mm';
-                    }
-                    
-                    const pList = s.querySelectorAll('p');
-                    pList.forEach(p => {
-                        p.className = "";
-                        p.style.fontSize = '11pt';
-                        p.style.marginBottom = '3mm';
-                        p.style.textAlign = 'justify';
+        // Плавный скролл для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 120,
+                        behavior: 'smooth'
                     });
-                });
+                }
+            });
+        });
 
-                pdfContainer.appendChild(content);
+        // ScrollSpy: подсветка активного пункта в меню при скролле
+        const sections = document.querySelectorAll('h2[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-                const opt = {
-                    margin: 10,
-                    filename: `Памятка_${document.getElementById('page-title').innerText.replace('Памятка: ', '')}.pdf`,
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { 
-                        scale: 1, 
-                        useCORS: true,
-                        scrollY: -window.scrollY // Исправляет смещение/пустые страницы
-                    },
-                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-                };
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-                await html2pdf().set(opt).from(pdfContainer).save();
-            } catch (e) {
-                console.error('PDF Error:', e);
-                alert('Ошибка при создании PDF.');
-            } finally {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }
-        }
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === "#" + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
-

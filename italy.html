@@ -43,9 +43,12 @@
         .nav-link {
             position: relative;
             padding-left: 1.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
             color: #4b4b4b;
             transition: all 0.2s ease;
             font-size: 0.875rem;
+            line-height: 1.25;
             border-left: 2px solid transparent;
         }
         .nav-link:hover {
@@ -107,19 +110,16 @@
 
             <!-- ═══ CONTENT AREA ═══ -->
             <div class="flex-1 py-20">
-                <div class="max-w-4xl space-y-24">
-                    <!-- Заголовок и кнопки -->
-                    <div class="space-y-10">
-                        <h1 class="text-7xl md:text-9xl font-black tracking-tighter leading-none" id="page-title">Италия</h1>
-                        <div class="flex flex-wrap gap-4" id="action-buttons">
-                            <a href="#booking-form" class="inline-block bg-primary text-black px-12 py-5 rounded-full text-xl font-bold shadow-xl hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
-                            <a href="memo-italy.html" class="inline-block bg-white border-2 border-primary text-black px-12 py-5 rounded-full text-xl font-bold shadow-xl hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
-                        </div>
-                    </div>
+                <p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
+                <h1 id="page-title" class="text-7xl md:text-9xl font-black tracking-tighter leading-none mb-12">Италия</h1>
+                
+                <div class="flex flex-wrap gap-4 mb-24">
+                    <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+                    <a href="memo-italy.html" class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
+                </div>
 
-                    <!-- Основной контент -->
-                    <div class="space-y-32" id="memo-content-area">
-                         <section class="pt-24 border-t border-black/5"><h2 id="section-0" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
+                <div class="space-y-32" id="memo-content-area">
+                     <section class="pt-24 border-t border-black/5"><h2 id="section-0" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Итальянская Республика – эта страна расположена в самом центре Средиземноморья. Климат здесь разнится в зависимости от региона: на севере он умеренный, а на юге и в центре страны субтропический средиземноморский. Италия – удивительная страна, в которой переплелись история и современность, различные эпохи и богатое культурное наследие, традиции, самобытность и впечатляющая природа – вот лишь часть того, что ожидает туристов по приезде в эту страну. А главное, что в Италии великолепные пляжи, которые отмечены Голубыми флагами ЮНЕСКО. Местные пейзажи отличаются контрастом: скалистые берега и густая хвойная растительность чередуются песчаными пляжами с пологим берегом, поэтому на итальянском побережье будет комфортно отдыхать даже семьям с маленькими детьми. Коренные жители регионов страны очень простые, открытые и радушные, поэтому чаще всего туристов встречают с улыбкой и охотно делятся своей культурой с приезжими.</p>
 <img src="tild3863-3864-4165-b362-636364363039__25701e156fb75372993d.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Столица: Рим</p>
@@ -182,6 +182,8 @@
                     </div>
                 </div>
             </div>
+                </div>
+            </div>
         </div>
 
         <!-- ═══ ФОРМА (ШАБЛОН) ═══ -->
@@ -207,57 +209,8 @@
                             <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
                         </div>
                         <div class="space-y-2">
-                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Направление</label>
                             <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Италия" type="text"/>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="space-y-2">
-                                <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
-                                <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
-                            </div>
-                            <div class="space-y-2">
-                                <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
-                                <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
-                            </div>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
-                            <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
-                        <div class="flex flex-wrap gap-8">
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-                                <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
-                            </label>
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-                                <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
-                            </label>
-                            <label class="flex items-center gap-4 cursor-pointer group">
-                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio" checked/>
-                                <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <div class="space-y-2">
-                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
-                            <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
                         </div>
                     </div>
                     <div class="pt-8 flex justify-center">
@@ -273,70 +226,30 @@
             <div class="flex flex-col md:flex-row justify-between items-start gap-12">
                 <div class="space-y-6 max-w-sm">
                     <img src="LogoB_300x.png" alt="Emoji Tours" class="h-16">
-                    <p class="text-black/60 font-['Manrope'] text-sm leading-relaxed">
-                        Мы верим, что путешествия — это лучший способ познать себя и окружающий мир. Позвольте нам стать вашим проводником в мир ярких эмоций.
-                    </p>
-                    <div class="flex gap-4">
-                        <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary-container transition-colors" href="#">
-                            <span class="material-symbols-outlined text-lg">public</span>
-                        </a>
-                        <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary-container transition-colors" href="#">
-                            <span class="material-symbols-outlined text-lg">alternate_email</span>
-                        </a>
+                    <div class="text-black/60 font-['Manrope'] text-sm leading-relaxed">
+                        © 2024 Emoji Tours. Путешествия с душой.
                     </div>
-                </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
-                    <div class="space-y-4">
-                        <h4 class="font-bold text-on-surface">Компания</h4>
-                        <ul class="space-y-2 text-sm text-on-surface-variant">
-                            <li><a class="hover:text-primary transition-colors" href="#">О нас</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#">Блог</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#">Партнерам</a></li>
-                        </ul>
-                    </div>
-                    <div class="space-y-4">
-                        <h4 class="font-bold text-on-surface">Помощь</h4>
-                        <ul class="space-y-2 text-sm text-on-surface-variant">
-                            <li><a class="hover:text-primary transition-colors" href="#">Контакты</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#">F.A.Q.</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#">Правила</a></li>
-                        </ul>
-                    </div>
-                    <div class="space-y-4 col-span-2 sm:col-span-1">
-                        <h4 class="font-bold text-on-surface">Локация</h4>
-                        <p class="text-sm text-on-surface-variant">Москва, <br/> ул. Тверская 12, оф. 405</p>
-                        <p class="text-sm text-on-surface-variant">+7 (495) 123-45-67</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pt-12 border-t border-on-surface/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="text-black/60 font-['Manrope'] text-sm">© 2024 Emoji Tours. Путешествия с душой.</div>
-                <div class="flex flex-wrap justify-center gap-8 text-xs font-medium text-black/60">
-                    <a class="hover:text-primary" href="#">Политика конфиденциальности</a>
-                    <a class="hover:text-primary" href="#">Условия использования</a>
-                    <a class="hover:text-primary" href="#">Контакты</a>
-                    <a class="hover:text-primary" href="#">Партнерам</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scroll for anchors
+        // Плавный скролл для навигации
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     window.scrollTo({
-                        top: target.offsetTop - 120, // Offset for fixed header
+                        top: target.offsetTop - 120,
                         behavior: 'smooth'
                     });
                 }
             });
         });
 
-        // ScrollSpy logic (Google Docs style)
+        // ScrollSpy: подсветка активного пункта в меню при скролле
         const sections = document.querySelectorAll('h2[id]');
         const navLinks = document.querySelectorAll('.nav-link');
 
@@ -344,7 +257,6 @@
             let current = "";
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (pageYOffset >= (sectionTop - 150)) {
                     current = section.getAttribute('id');
                 }
