@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html class="light" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Памятка: Тунис — Emoji Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background":              "#fffcf5",
+                        "surface":                 "#fffcf5",
+                        "on-surface":              "#000000",
+                        "primary":                 "#f5e2a1",
+                        "on-primary":              "#000000",
+                        "on-surface-variant":      "#4b4b4b",
+                        "surface-container-low":   "#fffcf5",
+                        "surface-container-high":  "#fffaf0",
+                        "primary-container":       "#f5e2a1",
+                        "on-primary-container":    "#000000",
+                    },
+                    fontFamily: { "headline": ["Manrope"], "body": ["Manrope"] },
+                },
+            },
+        }
+    </script>
+    <style>
+        body  { font-family: 'Manrope', sans-serif; }
+        a     { text-decoration: none !important; }
+        html  { scroll-behavior: smooth; }
+        p     { line-height: 1.8; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface">
+
+    <!-- ═══ ФИКСИРОВАННАЯ КНОПКА НАЗАД ═══ -->
+    <a href="index.html#countries" title="Все страны" style="
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        z-index: 100;
+        background: #f5e2a1;
+        color: #000;
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        padding: 20px 12px;
+        border-radius: 0 14px 14px 0;
+        font-family: 'Manrope', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        box-shadow: 3px 0 16px rgba(0,0,0,0.12);
+        transition: padding 0.2s;
+    " onmouseover="this.style.paddingLeft='18px'" onmouseout="this.style.paddingLeft='12px'">
+        ← Все страны
+    </a>
+
+    <nav class="p-8 max-w-6xl mx-auto flex items-center">
+        <a href="index.html#countries">
+            <img src="LogoB_300x.png" alt="Emoji Tours" class="h-12" id="site-logo">
+        </a>
+    </nav>
+
+    <main>
+        <div class="max-w-4xl mx-auto px-8 pt-4 pb-12 space-y-10">
+            <h1 class="text-7xl md:text-[9rem] font-black tracking-tighter leading-none" id="page-title">Памятка: Тунис</h1>
+            <div class="flex flex-wrap gap-4" id="action-buttons">
+                <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+                
+                <button id="download-pdf-btn" onclick="downloadPDF()" class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-2"><span class="material-symbols-outlined">download</span> Скачать PDF</button>
+            </div>
+        </div>
+
+        <img src="" class="w-full h-[80vh] object-cover" style="display:block;" id="hero-image">
+
+        <div class="max-w-4xl mx-auto px-8 py-24 space-y-32" id="memo-content-area">
+             <section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Туристам, выезжающим в тунис</h2><div class="space-y-8">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Перед отъездом</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Проверьте наличие необходимых для поездки документов:</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● загранпаспорт (паспорт должен быть действителен на весь период поездки);</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● ксерокопия загранпаспортов (могут пригодиться при утрате загранпаспорта и в случае иных непредвиденных обстоятельств);</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● авиабилеты или маршрут/квитанции электронного билета;</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● ваучер;</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● страховой медицинский полис.</p>
+<img src="tild3434-6638-4437-a663-626532353762__zagranpasport-novogo.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В случае путешествия с детьми или беременности:</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Несовершеннолетний гражданин РФ, следующий совместно хотя бы с одним из родителей, выезжает из РФ по своему загранпаспорту.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Несовершеннолетний российский гражданин, выезжающий из Российской Федерации без сопровождения родителей, должен иметь при себе кроме заграничного паспорта нотариально оформленное согласие родителей на его выезд за границу с указанием срока выезда и государство, которое он намерен посетить.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Без необходимости оформления для ребенка отдельного заграничного паспорта несовершеннолетний гражданин РФ до 14 лет может выехать совместно хотя бы с одним из родителей, если он вписан в заграничный паспорт родителя, оформленный по старому образцу (к паспорту старого образца относится паспорт не биометрический, оформленный в соответствии с постановлением Правительства Российской Федерации от 14 марта 1997 г. № 298). В паспорт родителя в этом случае обязательно должна быть вклеена фотография ребенка, независимо от его возраста, на которой должна стоять печать паспортно-визовой службы. Отсутствие фотографии или печати является основанием для отказа ребенку в пересечении границы.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Выезд из РФ несовершеннолетних детей, сведения о которых внесены в паспорта сопровождающих их родителей, оформленные по старому образцу, осуществляется по срокам действия паспортов. На заграничные паспорта, оформленные по новому образцу (биометрический), распространяются нормы Постановления Правительства РФ №13 от 19 января 2010 года о том, что внесение сведений о детях в паспорт, удостоверяющий личность родителя, не дает права ребенку на выезд за пределы территории РФ без документа, удостоверяющего личность гражданина РФ за пределами территории РФ.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При следовании несовершеннолетнего российского гражданина через государственную границу РФ совместно с одним из родителей предъявлять письменное согласие второго родителя не нужно, если только от него ранее в пограничные органы не поступало заявление о несогласии на выезд из РФ своих детей.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если у несовершеннолетнего ребенка и выезжающего с ним родителя разные фамилии, то рекомендуем взять с собой нотариально заверенную копию свидетельства о рождении для подтверждения родства. На практике отсутствие такого подтверждения служило основанием для отказа ребенку в пересечении границы.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Беременным женщинам</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Беременным женщинам, у которых роды предполагаются в течение ближайших четырех недель, необходимо предоставить письменное согласие врача на полет. Медицинское заключение должно быть оформлено не менее чем за неделю до даты перелета. Без этих документов сотрудники авиакомпании имеют полное право отказать в авиаперевозке или потребовать медицинское освидетельствование в аэропорту вылета.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перевозка беременной осуществляется при условии, что перевозчик не несет никакой ответственности перед пассажиркой, что удостоверяется ее гарантийным обязательством (распиской).</p>
+<img src="tild6234-6362-4539-b665-323137643933__komfortnyi-otdykh-s-.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Собирая багаж:</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рекомендуем все ценные вещи, документы и деньги положить в ручную кладь и взять с собой в самолет. В багаж следует упаковать все металлические острые и режущие предметы (маникюрные ножницы, пилочки для ногтей, перочинный ножик и т. п.), а также любые жидкости, гели и аэрозоли (за исключением детского питания и лекарств, если в них есть необходимость) — проносить подобные предметы в ручной клади запрещено.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не забывайте собрать и взять с собой аптечку первой помощи, которая поможет при легких недомоганиях, сэкономит время на поиски лекарственных средств и избавит от нежелательного общения на иностранном языке.</p>
+<img src="tild3838-6539-4365-b630-323066343866__thumb_67866_expert_b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В РОССИЙСКОМ АЭРОПОРТУ ВЫЛЕТА/ПРИЛЕТА</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед выездом в аэропорт получите дополнительную информацию о возможно произошедших изменениях в условиях вылета, используя сайт авиакомпании, выполняющей рейс, или по телефону ее справочной службы.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рекомендуем заранее, не позднее чем за три часа до вылета, прибыть к месту регистрации пассажиров для прохождения установленных процедур регистрации, оформления багажа, и выполнения требований, связанных с пограничным, таможенным, санитарно-карантинным, ветеринарным и другими видами контроля, установленными законодательством РФ.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль до начала путешествия</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед полетом рекомендуем проверять действующие правила вывоза физическими лицами наличной иностранной валюты из РФ, товаров и иных предметов на сайте Федеральной Таможенной Службы customs.gov.ru.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Обращаем внимание на то, что в настоящее время действуют ограничения. Внимание! Запрещено перемещение на выезде и въезде:</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● культурных ценностей,</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● объектов фауны и флоры, находящихся под угрозой исчезновения,</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● оружия и боеприпасов к нему без разрешения уполномоченных органов. Незаконное перемещение товаров или валюты через таможенную границу РФ или их недекларирование, либо недостоверное декларирование влечет за собой административную или уголовную ответственность. Внимание!</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Запрещено на выезде и въезде:</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● принимать от посторонних лиц чемоданы, посылки и другие предметы для перевозки на борту воздушного судна.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль по окончанию путешествия</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то вам следует проходить зону таможенного контроля по «Зелёному коридору».</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Актуальную информацию о ввозе валюты, товаров и иных предметов для личного пользования, вы найдете на сайте Федеральной Таможенной Службы customs.gov.ru.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Внимание!</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Недекларирование товаров в случае превышения стоимостных или весовых норм, а также наличных денежных средств и (или) денежных инструментов влечёт за собой административную или уголовную ответственность.</p>
+<img src="tild6364-3637-4261-b761-386566643134__ria_6136134hr_a91.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Регистрация на рейс и оформление багажа</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">До начала поездки настоятельно рекомендуем уточнить время начала и окончания регистрации на рейс, а также время посадки на борт. Указанную информацию вы можете посмотреть на официальном сайте авиакомпании. Помните, что у разных авиакомпаний могут быть свои правила. Регистрация пассажиров и оформление багажа производятся на основании именного авиабилета или распечатанных на бумажном носителе маршрута и/или квитанции электронного билета, а также заграничного паспорта пассажира. При регистрации пассажиру выдается посадочный талон, который необходимо сохранять до момента возможного предъявления авиакомпании претензий по качеству предоставленных услуг авиаперевозки.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед посадкой на рейс рекомендуем проверить номер выхода и время начала посадки на рейс на информационном табло в аэропорту. Пассажиру, опоздавшему ко времени окончания регистрации пассажиров и оформления багажа или посадки в воздушное судно, может быть отказано в перевозке.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Каждый авиаперевозчик устанавливает свои нормы провоза багажа, а также габариты и вес ручной клади, провозимой в салоне самолета. Уточняйте данную информацию перед вылетом. За провоз багажа сверх установленной нормы бесплатного провоза багажа взимается дополнительная плата по тарифу, установленному перевозчиком. Перевозчик имеет право отказать туристу в перевозе багажа, вес или объем которого не соответствуют установленным нормам.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3039-3166-4636-b537-366535646636__secret-01.jpg</h2><div class="space-y-8">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Паспортный контроль</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для прохождения пограничного контроля необходимо предъявить заграничный/внутренний российский паспорт. Пограничные органы ФСБ РФ при осуществлении пограничного контроля имеют право запрашивать у туристов дополнительные документы (авиабилет, посадочный талон, ваучер и т. п.), а также проводить опрос лиц, следующих через границу.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Санитарный контроль</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Туристам сертификат о прививках не требуется.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Ветеринарный контроль</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если вы вывозите животных, то вам необходимо иметь комплект документов, подтверждающих, что они здоровы. Как правило, следует иметь:</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● ветеринарный паспорт,</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● справку о состоянии здоровья (выдается любой государственной ветеринарной клиникой, в справке указываются сведения о прививках по возрасту, последняя прививка от бешенства должна быть сделана не ранее чем за 1 год и не позднее чем за 2 месяца до выезда),</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● справку из клуба СКОР или РКФ (в справке указывается, что собака не представляет племенной ценности, справки из других клубов вызывают вопросы на таможне),</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● ветеринарное свидетельство с указанием о прививке от бешенства.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При ввозе домашних животных в Тунис необходимо предъявить ветеринарное свидетельство с отметкой о всех прививках, включая прививку против бешенства.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В день отлета перед регистрацией на пограничном контрольном ветеринарном пункте аэропорта необходимо получить на основании собранных ранее документов международный ветеринарный сертификат. На таможне также необходимо предъявить разрешение на вывоз животного.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Свидетельство не требуется при ввозе котят и щенков в возрасте до 3-х месяцев.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При ввозе в РФ животных и птиц необходимо иметь сопровождающее ветеринарное свидетельство, полученное в Государственной ветеринарной службе страны, где приобретено животное.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Запрещен ввоз на территорию РФ любых грузов животного происхождения, в том числе в ручной клади и багаже, при отсутствии письменного разрешения Главного государственного ветеринарного инспектора РФ. Без разрешения уполномоченных органов РФ запрещено ввозить и вывозить объекты дикой фауны и флоры, находящиеся под угрозой исчезновения.</p>
+<img src="tild6164-3539-4236-a536-653666633263__919255ebe5775d87ea2b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В аэропорту прилета/вылета туниса</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По прибытии в аэропорт Сейшел нужно последовательно:</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● пройти паспортный контроль,</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● получить свой багаж,</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● пройти таможенный контроль,</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● выйти из здания аэропорта,</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● найти встречающего гида с табличкой,</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● предъявить гиду туристский ваучер.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild6637-6636-4164-a135-366364653030__orig_1.jpg</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Паспортный контроль. Виза.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Для граждан россии, оформивших тур в тунис через</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Внимание!</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для граждан, не имеющих гражданства РФ, могут быть установлены иные правила въезда на территорию Туниса. Получить информацию по этому вопросу следует в посольстве Туниса по месту гражданства.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Таможенный контроль в тунисе</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Ввоз и вывоз валюты не ограничен.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Разрешены к ввозу в Тунис:</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● 400 сигарет или 100 сигар, или 500 г табака,</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● 2 литра алкогольных напитков крепостью менее 25 %,</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● 1 литр алкогольных напитков крепостью выше 25 %.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Запрещен ввоз:</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● наркотиков, некоторых лекарств, содержащих большую дозу наркотических, психотропных веществ,</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● оружия,</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● фото-, видеоматериалы, печатная продукция предосудительного и фривольного содержания, ● религиозную пропаганду.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Запрещен вывоз:</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● драгоценностей, антиквариата, исторических ценностей, оружия и боеприпасов без специального разрешения.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Внимание!</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Настоятельно рекомендуем гражданам РФ воздержаться от ввоза и использования на территории Туниса любых беспилотных летательных аппаратов, любительских дронов (квадрокоптеров) и металлоискателей.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В случае незаконного ввоза вышеуказанного оборудования и другой аппаратуры, для использования которой необходимо разрешение тунисских властей, данные технические средства безвозвратно изымаются сотрудниками правоохранительных органов Туниса, а их владельцы привлекаются к административной ответственности.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Тунис</h2><div class="space-y-8">
+<img src="tild3236-6532-4738-a463-303265343535__gbp3tkmbkcnnz8crymex.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Государство на севере Африки. Омывается Средиземным морем, граничит с Алжиром и Ливией (сухопутная граница).</p>
+<img src="tild3963-3831-4665-b737-616239616264__world-map-with-magni.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Время</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Разница во времени с Москвой — минус 2 часа.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Климат</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Средиземноморский. Средние температуры января на севере +10 ºС, на юге +21 ºС, июля соответственно +26…+33 ºС, осадков в год около 100 мм на юге, до 1 500 — на севере.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Валюта</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Тунисский динар.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Купюры одинакового номинала могут быть разного образца и отличаться по размеру и цвету. Ввоз иностранной валюты не ограничен, национальной — запрещен. Разрешен вывоз ввезенной иностранной валюты.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Валюту можно обменять в отеле или обменном пункте банка. Иностранную валюту можно обменять в обменных пунктах, банках, а также в специализированных пунктах обмена в портах, аэропортах или в гостиницах.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При обмене рекомендуется брать квитанцию, которая является основным документом для обратного обмена на иностранную валюту — обмен производится только в аэропорту и только при наличии квитанции первичного обмена. Дорожные чеки и кредитные карты принимаются без ограничений во многих магазинах, ресторанах и отелях. Банкоматы также можно найти во всех крупных городах и туристических центрах.</p>
+<img src="tild6331-3038-4931-a430-666536636236__0893e0e5-cd7a-4e86-b.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Чаевые</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В Тунисе принято давать чаевые. В кафе и ресторанах чаевые составляют 10 % от стоимости заказа, но часто они уже включены в стоимость вашего заказа. Чаевые таксисту также составляют 10 % от стоимости поездки.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Язык</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Арабский.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Население</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Около 9,6 млн человек, в основном тунисцы (арабы Туниса — 98 %), а также берберы (1 %) и европейцы (1 %). Большая часть населения проживает в районе средиземноморского побережья, вся южная часть Туниса практически безлюдна.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Религия</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Ислам суннитского толкования. Его исповедуют 95 % населения. Также на территории страны можно встретить представителей христианской веры. В период французского протектората евреи считались самой зажиточной и влиятельной прослойкой населения.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Каждый верующий человек должен раз в жизни совершить паломничество в Мекку. Местные жители платят религиозный налог и часто подают милостыню нищим.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Обычаи</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Фотографирование местных жителей требует такта и предусмотрительности. А также невежливо пристально рассматривать женщин в чадре. В открытых майках лучше не ходить. В курортных зонах туристы могут одеваться легко и свободно.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не принято также здесь пить воду после жирного обеда, а хлеб обычно отламывается руками. Мелкое воровство возможно, особенно в местах скопления людей, где много карманников.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Во время Рамадана правоверные тунисцы-мусульмане от рассвета до заката не курят и не едят. Поэтому и туристам лучше воздержаться от курения, питья и еды на улицах городов. Пить и курить на территории отеля можно.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">У мусульман не принято есть стоя или на ходу, а также смотреть в лицо человека, занятого едой. К спиртному здесь относятся лояльнее, чем в странах ортодоксального ислама.</p>
+<img src="tild3861-3737-4434-a638-646262613234__b362d8e48833fc070bcd.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Праздники и нерабочие дни</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">1 января — Новый год,</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">18 января — День революции в Тунисе,</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">20 марта — День независимости Туниса,</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">21 марта — День молодежи,</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">9 апреля — День памяти мучеников,</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">25 июля — День республики,</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">13 августа — Женский день,</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">3 сентября — День движения независимости,</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">15 октября — День эвакуации,</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">7 ноября — День новой эры (обновления).</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild3335-6432-4337-a663-626232653563__i_20.jpg</h2><div class="space-y-8">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Транспорт</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Путешествовать внутри Туниса удобнее поездом, чем на автобусе, но автобусное сообщение дешевле. В городах автобусы обычно переполнены, и удобнее передвигаться на такси. Тунисские такси желтого цвета, в них установлены счетчики.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Большой популярностью среди местных жителей пользуются коллективные маршрутные такси, рассчитанные на пятерых пассажиров. Они отправляются только в том случае, когда заполнены все места.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Роль метро в Тунисе выполняет скоростной трамвай, который поможет быстро добраться из центра города до Национального музея Бардо, района Бельведер и железнодорожных вокзалов. Маршруты трамваев постоянно меняются, поэтому их следует уточнить в кассе.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Аренда автомобиля</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Машина в аренду отдается лицам старше 21 года с водительскими правами международного образца, выданными более 1 года назад. Стоимость аренды малолитражного авто составит примерно 70–90 динаров в сутки, если вы воспользуетесь известной системой проката BUDGET, AVIS или EUROCAR. Аренда автомобиля в Тунисе — дорогое удовольствие, потому что самая доступная машина обойдется в 80 динаров в сутки. К тому же стоимость аренды практически не зависит от ее продолжительности.</p>
+<img src="tild3338-3933-4930-b734-653936326238__a31edd8994e719410302.webp" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Телефон</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В Тунисе имеется множество телефонных кабин с надписью taxiphones.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для телефонного разговора из Москвы в Тунис следует набрать:</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">8-10-216 и код города.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Чтобы позвонить в Москву, необходимо набрать:</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">00, код России 7 и код города 495.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Экстренные телефоны</h2><div class="space-y-8">
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● полиция: 197;</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● скорая помощь: 190, 846, 767;</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● справочная: 12, 120;</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● пожарная служба: 198;</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● ночная скорая помощь: 717-171.</p>
+<img src="tild3337-3934-4532-a536-386363633935__phone_old_year_built.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В отеле</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Заселение в отель происходит в 13:00-15:00, освободить номер в день отъезда вы должны в 12:00.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Свой багаж можете оставить в камере хранения отеля.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Вам необходимо произвести оплату за дополнительные услуги до приезда автобуса. Во избежание различных осложнений, просим не опаздывать и подходить к месту встречи в указанное время, поэтому все дополнительные услуги (пользование мини-баром, телефоном и т. д.) лучше оплатить заранее.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild6539-3739-4566-b832-653366346630__11.jpg</h2><div class="space-y-8">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Напряжение электросети</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Напряжение сети — 220 В, розетки также привычные для российских жителей. Переходник не нужен.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Экскурсии</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Гид компании, принимающий вас в Тунисе, во время встречи в отеле сообщит перечень предлагаемых экскурсий, их содержание, график проведения и стоимость.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не рекомендуем приобретать экскурсии или прочие услуги в неизвестных вам туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, а также о качестве транспорта для ее организации. Вам может быть предоставлено для использования не сертифицированное, неисправное или не соответствующее санитарно-гигиеническим нормам оборудование.</p>
+<img src="tild3236-6231-4362-b063-643235656338__paysage_tembaibe.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Магазины</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Лучшие города для шопинга в Тунисе — Тунис (столица), Набуль, Кайруан, Сусс и Сфакс.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Магазины в Тунисе открыты с понедельника по пятницу с 07:30 до 13:00 и с 17:00 до 20:00, в субботу — с 08:00 до 12:00, воскресенье – выходной.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В Медине Хаммамета можно найти традиционную тунисскую керамику, изделия из стекла и металла, ковры.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Обязательно торгуйтесь: начните со снижения цены на 25 %, зачастую можно поторговаться до 50 %. Рынок в Набуле открыт каждую пятницу утром. Он похож на любые другие рынки Туниса, но цены на многие товары здесь ниже.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Фото: tild6231-6230-4231-b534-366464663435__tunisia5.jpg</h2><div class="space-y-8">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ПРАВИЛА ЛИЧНОЙ ГИГИЕНЫ И БЕЗОПАСНОСТИ:</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед путешествием мы советуем ознакомиться с «Полезными советами российским гражданам, выезжающим за рубеж», размещенными на сайте МИД РФ: https://www.kdmid.ru/info-for-traveling-abroad/useful-tips-for-russian-citizens-traveling-abroad/, а также с памяткой МИД РФ «Каждому, кто направляется за границу», и памяткой Роспотребнадзора выезжающим за рубеж.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не нарушайте правила безопасности, установленные авиакомпаниями, транспортными организациями, гостиницами, местными органами власти.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Категорически не рекомендуем приобретать экскурсии и дополнительные туристские услуги в неизвестных туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, вам не будет гарантирована безопасность предоставленных услуг и исправность используемого оборудования, тем самым можно подвергнуть себя серьезной опасности.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Перед поездкой рекомендуется взять с собой ксерокопии основных страниц (с фотографией, личными данными, отметкой о регистрации) заграничного и внутреннего паспортов РФ. Паспорт (или ксерокопию паспорта), визитную карточку отеля носите с собой.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">При возникновении транспортных аварий, конфликтов с полицией, другими органами местной власти необходимо поставить в известность представителя принимающей стороны или сотрудников посольства/консульства РФ.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В период путешествия турист не имеет права на коммерческую деятельность или иную оплачиваемую работу.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Мойте руки перед едой. Не пейте сырую воду, особенно из открытых водоемов. Для питья рекомендуется использовать минеральную воду, которую можно приобрести в магазинах и барах отеля.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Не рекомендуется носить с собой большие наличные суммы. Кражи денег и вещей у туристов случаются довольно часто, как и махинации с фальшивыми долларами. Не следует вынимать из кошелька на виду у всех большие суммы денег.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Покидая автобус на остановках и во время экскурсий, не оставляйте в нем ручную кладь, особенно ценные вещи и деньги. Важные документы, наличные деньги и драгоценности лучше хранить в сейфе номера. Если в номере нет сейфа, его можно взять в аренду за плату у администрации отеля или сдать на хранение портье в сейф на стойке регистрации.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рекомендуется сдавать ключ от номера на стойку регистрации отеля, в случае его утери поставить в известность администрацию.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Во многих отелях запрещается выносить из номера полотенца на пляж или к бассейну. Не приносите на пляж полотенца или инвентарь из номера без разрешения персонала.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если в номере стоит мини-бар, то все напитки и закуски, взятые из него, как правило, должны быть оплачены.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">За торговлю наркотиками, некоторыми лекарственными препаратами (содержащими кодеин) законодательство Туниса предусматривает пожизненное заключение или высшую меру наказания.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Категорически запрещено курение в постели.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">В СЛУЧАЕ ПОТЕРИ ПАСПОРТА</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Незамедлительно обращайтесь в дипломатическое представительство, в консульское учреждение или в представительство МИД РФ, которое находится в пределах приграничной территории.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Вам необходимо получить свидетельство на въезд в РФ (REENTRY CERTIFICATE TO THE RUSSIAN FEDERATION), которое называется временным загранпаспортом. Выдается на срок до 15 дней для того, чтобы турист успел купить обратный билет и улететь на родину.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для того чтобы вам выдали свидетельство на возвращение в РФ, необходимо представить следующие документы:</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● основной документ, на основании которого будут предприниматься какие-либо действия, — заявление о выдаче свидетельства (образец заявления),</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● две фотографии (цветные или ч/б, размер — 35х45 мм на однотонном фоне с четким изображением лица),</p>
+<p class="text-xl leading-relaxed text-on-surface-variant font-light mb-2">● внутренний паспорт РФ, также возможно предоставление других документов для подтверждения своей личности — водительских прав или служебного удостоверения.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Срок выдачи свидетельства на возвращение в РФ составляет 2 рабочих дня со дня регистрации заявления. Вернувшись в РФ, в трехдневный срок необходимо сдать свидетельство в организацию, выдавшую паспорт (ОВИР, МИД).</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Все вышеперечисленные документы регламентированы пунктом 20 Приказа МИД РФ от 28.06.2012 года № 10304.</p>
+<img src="tild6461-3537-4165-b365-363961373965__598c6e030ca3f598c6e0.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Посольство россии в тунисе</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Адрес: 16, Rue des Bergamottes, B.P. 48, El Mаnar 1, Tunis 2092, Tunisie.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Tел./факс: +216 71 882 757;</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">экстренные вопросы: +216 28 400 094.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Факс: +216 71 886 453.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">E-mail: tunconsul@mail.ru</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Прием посетителей по консульским вопросам:</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">вторник, среда, пятница с 9 до 11 часов.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Посольство туниса в москве</h2><div class="space-y-8">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Адрес: 121069 г. москва, ул. малая никитская, д. 28/1</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">График работы и часы приема: понедельник — пятница с 09:00 до 16:30 (перерыв с 13:00 до 14:00)</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Телефон: +7 (495) 691-28-58, +7 (495) 691-28-69</h2><div class="space-y-8">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">E-mail: ambatunis@mail.ru</h2><div class="space-y-8">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Факс: +7 (495) 691-75-88</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Информация для ознакомления: Embassy of Tunisia in Moscow, Russia (embassypages.com)</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ЖЕЛАЕМ ВАМ ПРИЯТНОГО ПУТЕШЕСТВИЯ!</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По всем вопросам свяжитесь с нами любым удобным способом:</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">E-mail: trohin.zh@yandex.ru</h2><div class="space-y-8">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Телефон: +7 (963) 649-18-52</h2><div class="space-y-8">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Соцсети: вконтакте |telegram</h2><div class="space-y-8">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Индивидуальный предприниматель трохин евгений альбертович</h2><div class="space-y-8">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ИНН 503613656680 / ОГРН ИП 315507400016056</h2><div class="space-y-8">
+</div></section>
+        </div>
+
+        <!-- ═══ ФОРМА (ШАБЛОН) ═══ -->
+        <section id="booking-form" class="py-32 px-8 bg-surface-container-high relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+        <div class="text-center mb-16 space-y-4">
+        <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
+        <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
+        </div>
+        <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Тунис" type="text"/>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
+        </div>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
+        <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
+        </div>
+        </div>
+        <div class="space-y-4">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
+        <div class="flex flex-wrap gap-8">
+        <label class="flex items-center gap-3 cursor-pointer group">
+        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
+        <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
+        </label>
+        <label class="flex items-center gap-3 cursor-pointer group">
+        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
+        <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
+        </label>
+        <label class="flex items-center gap-4 cursor-pointer group">
+        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio" checked/>
+        <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
+        </label>
+        </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
+        <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
+        </div>
+        </div>
+        <div class="pt-8 flex justify-center">
+        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
+        </div>
+        </form>
+        </div>
+        </section>
+    </main>
+
+    <footer class="bg-white py-32 px-8 border-t border-black/5 flex flex-col items-center">
+        <img src="LogoB_300x.png" alt="Emoji Tours" class="h-20">
+    </footer>
+
+    <!-- PDF Generation Logic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        async function downloadPDF() {
+            const btn = document.getElementById('download-pdf-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Генерируем текст...';
+            btn.disabled = true;
+
+            try {
+                // Создаем временный элемент для PDF
+                const pdfContainer = document.createElement('div');
+                pdfContainer.style.background = '#fff';
+                pdfContainer.style.padding = '20mm';
+                pdfContainer.style.fontFamily = 'Arial, sans-serif'; // Системный шрифт надежнее для PDF
+                pdfContainer.style.color = '#000';
+
+                // Добавляем заголовок
+                const header = document.createElement('div');
+                header.style.marginBottom = '10mm';
+                header.style.textAlign = 'center';
+                
+                const logo = document.getElementById('site-logo').cloneNode(true);
+                logo.style.height = '12mm';
+                logo.style.marginBottom = '5mm';
+                header.appendChild(logo);
+                
+                const title = document.createElement('h1');
+                title.innerText = document.getElementById('page-title').innerText;
+                title.style.fontSize = '24pt';
+                title.style.fontWeight = 'bold';
+                title.style.borderBottom = '2px solid #000';
+                title.style.paddingBottom = '3mm';
+                header.appendChild(title);
+                
+                pdfContainer.appendChild(header);
+
+                // Копируем контент
+                const originalContent = document.getElementById('memo-content-area');
+                const content = originalContent.cloneNode(true);
+                
+                // --- ОЧИСТКА ---
+                // 1. Удаляем все картинки
+                content.querySelectorAll('img').forEach(img => img.remove());
+                
+                // 2. Сбрасываем гигантские классы разметки Tilda/Tailwind
+                content.className = ""; // Убираем space-y-32, py-24 и т.д.
+                content.style.lineHeight = "1.5";
+                
+                // 3. Форматируем секции
+                content.querySelectorAll('section').forEach(s => {
+                    s.className = ""; 
+                    s.style.marginTop = '8mm';
+                    s.style.pageBreakInside = 'avoid';
+                    
+                    const h2 = s.querySelector('h2');
+                    if (h2) {
+                        h2.className = "";
+                        h2.style.fontSize = '18pt';
+                        h2.style.fontWeight = 'bold';
+                        h2.style.marginBottom = '4mm';
+                        h2.style.marginTop = '6mm';
+                    }
+                    
+                    const pList = s.querySelectorAll('p');
+                    pList.forEach(p => {
+                        p.className = "";
+                        p.style.fontSize = '11pt';
+                        p.style.marginBottom = '3mm';
+                        p.style.textAlign = 'justify';
+                    });
+                });
+
+                pdfContainer.appendChild(content);
+
+                const opt = {
+                    margin: 10,
+                    filename: `Памятка_${document.getElementById('page-title').innerText.replace('Памятка: ', '')}.pdf`,
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { 
+                        scale: 1, 
+                        useCORS: true,
+                        scrollY: -window.scrollY // Исправляет смещение/пустые страницы
+                    },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+                };
+
+                await html2pdf().set(opt).from(pdfContainer).save();
+            } catch (e) {
+                console.error('PDF Error:', e);
+                alert('Ошибка при создании PDF.');
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
+

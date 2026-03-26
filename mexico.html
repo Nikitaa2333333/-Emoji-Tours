@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="light" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Мексика — Emoji Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background":              "#fffcf5",
+                        "surface":                 "#fffcf5",
+                        "on-surface":              "#000000",
+                        "primary":                 "#f5e2a1",
+                        "on-primary":              "#000000",
+                        "on-surface-variant":      "#4b4b4b",
+                        "surface-container-low":   "#fffcf5",
+                        "surface-container-high":  "#fffaf0",
+                        "primary-container":       "#f5e2a1",
+                        "on-primary-container":    "#000000",
+                    },
+                    fontFamily: { "headline": ["Manrope"], "body": ["Manrope"] },
+                },
+            },
+        }
+    </script>
+    <style>
+        body  { font-family: 'Manrope', sans-serif; }
+        a     { text-decoration: none !important; }
+        html  { scroll-behavior: smooth; }
+        p     { line-height: 1.8; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface">
+
+    <!-- ═══ ФИКСИРОВАННАЯ КНОПКА НАЗАД ═══ -->
+    <a href="index.html#countries" title="Все страны" style="
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        z-index: 100;
+        background: #f5e2a1;
+        color: #000;
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        padding: 20px 12px;
+        border-radius: 0 14px 14px 0;
+        font-family: 'Manrope', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        box-shadow: 3px 0 16px rgba(0,0,0,0.12);
+        transition: padding 0.2s;
+    " onmouseover="this.style.paddingLeft='18px'" onmouseout="this.style.paddingLeft='12px'">
+        ← Все страны
+    </a>
+
+    <nav class="p-8 max-w-6xl mx-auto flex items-center">
+        <a href="index.html#countries">
+            <img src="LogoB_300x.png" alt="Emoji Tours" class="h-12" id="site-logo">
+        </a>
+    </nav>
+
+    <main>
+        <div class="max-w-4xl mx-auto px-8 pt-4 pb-12 space-y-10">
+            <h1 class="text-7xl md:text-[9rem] font-black tracking-tighter leading-none" id="page-title">Мексика</h1>
+            <div class="flex flex-wrap gap-4" id="action-buttons">
+                <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+                <a href="memo-mexico.html" class="inline-block bg-white border-2 border-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
+                
+            </div>
+        </div>
+
+        <img src="tild3733-3232-4261-b232-653638363439__photo.jpg" class="w-full h-[80vh] object-cover" style="display:block;" id="hero-image">
+
+        <div class="max-w-4xl mx-auto px-8 py-24 space-y-32" id="memo-content-area">
+             <section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Солнечная Мексика с латиноамериканскими ритмами, текилой и дивными тропиками – прекрасное место для отдыха от русской зимы! Помимо белоснежных пляжей, лазурных берегов Карибского моря, гости страны смогут прикоснуться к одной из древнейших мировых цивилизаций времен майя. Мексика – обладательница сочного колорита, при упоминании о стране абсолютно у каждого всплывают стойкие ассоциации: кактус, текила, маракасы, перец чили, сиеста, майя, ацтеки... Так в чем же ее особенности?</p>
+<img src="tild3132-3365-4461-a464-346563613165__grand-velas-riviera-.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Мексиканские Соединенные Штаты расположились в Северной Америке и граничат с США на севере, с Белизом и Гватемалой на юго-востоке. Западная часть Мексики омывается водами Тихого океана и Калифорнийского залива, а восточная – Карибским морем и Мексиканским заливом. Государство состоит из 31 штата и одного федерального округа – столицы Мехико, отсюда и полное название. В рейтинге самых крупных стран по территориальному признаку Мексика занимает 13-е место. Временная разница с Москвой составляет 9 часов. Родной язык мексиканцев – испанский, многолетняя колонизация страны сильно повлияла на современную Мексику.</p>
+<img src="tild3038-3733-4565-a537-373539346162__best-white-beaches-i.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Мексика относится к странам со значительными региональными климатическими различиями. Климат большей части Мексики – тропический, на севере – субтропический и очень изменчивый в зависимости от характера рельефа. С севера на юг Мексика пересечена двумя горными хребтами: Сьерра-Мадре Восточная и Сьерра-Мадре Западная, они являются продолжением Скалистых гор Северной Америки. С востока на запад в центре Мексики проходит Транс-мексиканский вулканический пояс, а четвертый горный хребет Сьерра-Мадре Южная разделяет штаты Мичоакан и Оахака.</p>
+<img src="tild3935-6263-4836-b038-623532386666__sumidero-canyon.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Что касается побережья Карибского моря, то зимой средняя температура воздуха днем составляет + 26 °C, ночью опускается до +22 °C. Средняя температура воды прибрежных вод составляет + 26 °C.</p>
+<img src="tild6233-3765-4264-b837-613633613032__hotel-caribe-9.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Оказавшись в Мексике, непременно познакомьтесь с мексиканской кухней, которая славится во всем мире своими кулинарными традициями и региональной спецификой. Мексиканцы предпочитают острую пищу, добавляя специи, как во время приготовления блюда, так и при его подаче. Обычно, блюда национальной кухни не обходятся без острого перца чили, фасоли или тортильяс. Но не пугайтесь, если вы не любите перец и остроту, в отелях, да и в местных ресторанах вам всегда предложат блюда европейской кухни. Хотя все же стоит попробовать, ведь иначе впечатления от Мексики будут не в полном объеме. Мексика славится еще одним национальным продуктом – текилой. Горячащий напиток изготавливают из сердцевины голубой агавы. В Европе существует целый ритуал о том, как пьют текилу «с лаймом и солью», однако настоящие мексиканцы пьют ее без лайма, без соли и не запивая.</p>
+<img src="tild6266-3339-4635-b461-623934336666__mexico-638.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Мексика – это целый комплекс достопримечательностей, которые непременно стоит увидеть. Страна предлагает намного больше, чем просто роскошные курорты. Это и наследие древних индейских цивилизаций, и объекты более поздней культуры страны, и природные парки с мировым именем.</p>
+<img src="tild3235-3066-4466-b562-383762303962__dennis20jarvis20.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">КУРОРТЫ МЕКСИКИ</h2><div class="space-y-8">
+<img src="tild6132-3732-4331-b262-303631396263__sunset.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">КАНКУН</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Курорт южного побережья Мексики Канкун входит в пятерку лучших курортов мира. Он расположился на полуострове Юкатан между Карибским морем и лагуной Ничупте. Развитость туристической инфраструктуры побережья курорта впечатлит огромным выбором отелей, ресторанов, развлекательных и спортивных объектов. Многие любители активного отдыха делают выбор в пользу Канкуна, где созданы все условия для занятий серфингом, яхтингом, дайвингом, виндсерфингом и другими популярными водными видами спорта.</p>
+<img src="tild6362-6337-4039-b963-663332663565__surfer-2212948.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Канкун неспроста считается одним из лучших курортов: бесконечные пляжи с белоснежным песком, лазурная морская вода, потрясающе красивая природа, отличная организация туристических путешествий, а также близкое расположение к археологическим памятникам архитектуры древних цивилизаций. Также немаловажным плюсом курорта является расположение от международного аэропорта Канкун, в 10 км от отельной полосы, который считается вторым по объему перевозок в стране.</p>
+<img src="tild6637-6336-4562-b434-623434363961__132754.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Климат в Канкуне мягкий морской, без резких температурных перепадов независимо от времени года. Средняя температура воздуха составляет около +30 °C, а воды + 29 °C. Сезон дождей здесь длится обычно с мая по ноябрь, что позволяет россиянам зимой отправиться в лето.</p>
+<img src="tild3936-3962-4266-b532-303936323832__mexico_coast_stones_.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Береговая линия курорта по форме напоминает цифру «7», что делит Канкун на две части: короткую и длинную. Со стороны короткой части море спокойное, благодаря расположившемуся неподалеку «Острову Женщин» или Исла-Мухэрес, который закрывает курорт от сильных волн. Совсем другая ситуация в «длинной части» Канкуна, которую можно назвать настоящим раем для серферов. Ведь настоящие океанские волны – здесь постоянное явление, на пути которых абсолютно нет преград. Однако в какую бы часть Канкуна вы не поехали, вас ожидает кристально чистая вода, ласковый песок и пологий вход в море.</p>
+<img src="tild6661-3431-4164-b361-303264343265__shiny-sunny-day-in-m.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Из достопримечательностей курорта стоит отметить руины Дель-Рей – останки построек периода майя. Предположительно они появились в 200 годах до н. э. Руины Дель-Рей были обнаружены еще в XVI веке, но раскопаны только в 1954 году. Еще одна особенность этого места – это большое количество игуан, которые живут в расщелинах построек. Ящерицы весьма общительны с гостями, они не только не бояться людей, но и позволяют трогать себя и подкармливать. Вы не увидите толп туристов, не придется стоять в очередях на вход, напротив малолюдность и просторность добавит вашему настроению исторической атмосферы. Тем не менее, расположение Канкуна позволяет посетить очень многие памятники древних племен ацтеков, ольмеков, майя, а также великолепные колониальные архитектурные строения и многочисленные музеи.</p>
+<img src="tild6636-3138-4234-a630-313630393830__maya-ruines-tulum-me.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Среди наиболее интересных мест стоит выделить заброшенный город Теотиуакан, с прекрасно сохранившимися до наших дней пирамидами Солнца и Луны и храмом Пернатого Змея. Бесценными памятниками древних цивилизаций также являются священный город Чичен-Ица, археологический комплекс Монте-Альбан, древняя столица тольтеков Тула, Тахин, Майяпан и многие другие.</p>
+<img src="tild3731-3739-4263-b066-336262646135__chichn-itz-_banner.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">РИВЬЕРА-МАЙЯ</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Вторым по популярности курортом мексиканского направления признан Ривьера-Майя, который расположен южнее Канкуна. Эта курортная зона представляет собой стокилометровую прибрежную полосу Карибского побережья с белоснежным песком и чистейшими водами Карибского моря. Отдыхая на этом курорте, вы можете остановиться на материковой части в городе Плайя-дель-Кармен, самом сердце Ривьеры-Майя, или же на острове Косумель. Стоит отметить, что Косумель – это самый крупный остров Мексики, протянувшийся на 14 км в ширину и 53 км в длину.</p>
+<img src="tild3939-6633-4561-b465-333566623865__rivieramaya_villalag.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Плайя-дель-Кармен расположен в 70 км от аэропорта Канкуна, этот оживленный город пользуется большой популярностью среди молодежи, ведь здесь находится огромное количество шумных развлекательных мест. Остров Косумель расположился в 19 км восточнее от Юкатана. В переводе с языка майя «косумель» означает «Остров Ласточек». Курорт славится своей уникальной природной фауной и вторым в мире по величине коралловым рифом протяженностью более 700 км! Большая часть острова Косумель – это национальный парк, но в тоже время на острове прекрасна развита туристическая инфраструктура.</p>
+<img src="tild3039-3562-4534-b966-663433343561__453937-1516540211.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Помимо пляжного отдыха Ривьера-Майя может предложить активный и культурно-исторический отдых. Для любителей водных видов спорта созданы все условия, здесь вы сможете научиться, если не было опыта раньше, и насладиться прекрасными видами Карибского побережья и великолепными коралловыми рифами, взяв в аренду все необходимое для дайвинга, серфинга, виндсерфинга и других видов спорта.</p>
+<img src="tild3863-3231-4033-b066-326230376132__1956721_726906264057.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В Ривьера-Майя и его окрестностях вы найдете не мало интересных мест, которые обязательно стоит посетить. Первой среди главных достопримечательностей района признана Чичен-Ица. Это самый крупный город древнейших цивилизаций, таких как майя и тольтеки, который внесен в список мирового культурного наследия ЮНЕСКО. Чичен-Ица является вторым по популярности местом археологических раскопок среди туристов в Мексике. Стоит заглянуть в единственный морской порт-крепость майя Тулум. Руины порта расположились на двенадцатиметровых утесах восточного берега полуострова Юкатан, и являются наиболее хорошо сохранившимся древним прибрежным городом. Заповедный парк Шель-Ха – излюбленное место отдыха императоров майя. Парк, окруженный густыми джунглями, славится своими сталактитовыми пещерами и карстовыми озерами. Заповедник прекрасно подойдет для отдыхающих с детьми и всем, кто любит экзотическую природу. Это и многое другое ждет гостей в Ривьера-Майя!</p>
+<img src="tild6337-3937-4730-a239-333738303661__tulum-4-1600x1008.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По всем вопросам свяжитесь с нами любым удобным способом:</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">E-mail: trohin.zh@yandex.ru</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Телефон: +7 (977) 730 95 22</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Соцсети: Вконтакте | Instagram | Telegram</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Индивидуальный предприниматель Трохин Евгений Альбертович</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ИНН 503613656680 / ОГРН ИП 315507400016056</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">город Москва, Щербинка ул. Юбилейная д.3а</p>
+</div></section>
+        </div>
+
+        <!-- ═══ ФОРМА (ШАБЛОН) ═══ -->
+        <section id="booking-form" class="py-32 px-8 bg-surface-container-high relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+        <div class="text-center mb-16 space-y-4">
+        <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
+        <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
+        </div>
+        <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Мексика" type="text"/>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
+        </div>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
+        <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
+        </div>
+        </div>
+        <div class="space-y-4">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
+        <div class="flex flex-wrap gap-8">
+        <label class="flex items-center gap-3 cursor-pointer group">
+        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
+        <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
+        </label>
+        <label class="flex items-center gap-3 cursor-pointer group">
+        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
+        <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
+        </label>
+        <label class="flex items-center gap-4 cursor-pointer group">
+        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio" checked/>
+        <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
+        </label>
+        </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
+        <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
+        </div>
+        </div>
+        <div class="pt-8 flex justify-center">
+        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
+        </div>
+        </form>
+        </div>
+        </section>
+    </main>
+
+    <footer class="bg-white py-32 px-8 border-t border-black/5 flex flex-col items-center">
+        <img src="LogoB_300x.png" alt="Emoji Tours" class="h-20">
+    </footer>
+
+    <!-- PDF Generation Logic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        async function downloadPDF() {
+            const btn = document.getElementById('download-pdf-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Генерируем текст...';
+            btn.disabled = true;
+
+            try {
+                // Создаем временный элемент для PDF
+                const pdfContainer = document.createElement('div');
+                pdfContainer.style.background = '#fff';
+                pdfContainer.style.padding = '20mm';
+                pdfContainer.style.fontFamily = 'Arial, sans-serif'; // Системный шрифт надежнее для PDF
+                pdfContainer.style.color = '#000';
+
+                // Добавляем заголовок
+                const header = document.createElement('div');
+                header.style.marginBottom = '10mm';
+                header.style.textAlign = 'center';
+                
+                const logo = document.getElementById('site-logo').cloneNode(true);
+                logo.style.height = '12mm';
+                logo.style.marginBottom = '5mm';
+                header.appendChild(logo);
+                
+                const title = document.createElement('h1');
+                title.innerText = document.getElementById('page-title').innerText;
+                title.style.fontSize = '24pt';
+                title.style.fontWeight = 'bold';
+                title.style.borderBottom = '2px solid #000';
+                title.style.paddingBottom = '3mm';
+                header.appendChild(title);
+                
+                pdfContainer.appendChild(header);
+
+                // Копируем контент
+                const originalContent = document.getElementById('memo-content-area');
+                const content = originalContent.cloneNode(true);
+                
+                // --- ОЧИСТКА ---
+                // 1. Удаляем все картинки
+                content.querySelectorAll('img').forEach(img => img.remove());
+                
+                // 2. Сбрасываем гигантские классы разметки Tilda/Tailwind
+                content.className = ""; // Убираем space-y-32, py-24 и т.д.
+                content.style.lineHeight = "1.5";
+                
+                // 3. Форматируем секции
+                content.querySelectorAll('section').forEach(s => {
+                    s.className = ""; 
+                    s.style.marginTop = '8mm';
+                    s.style.pageBreakInside = 'avoid';
+                    
+                    const h2 = s.querySelector('h2');
+                    if (h2) {
+                        h2.className = "";
+                        h2.style.fontSize = '18pt';
+                        h2.style.fontWeight = 'bold';
+                        h2.style.marginBottom = '4mm';
+                        h2.style.marginTop = '6mm';
+                    }
+                    
+                    const pList = s.querySelectorAll('p');
+                    pList.forEach(p => {
+                        p.className = "";
+                        p.style.fontSize = '11pt';
+                        p.style.marginBottom = '3mm';
+                        p.style.textAlign = 'justify';
+                    });
+                });
+
+                pdfContainer.appendChild(content);
+
+                const opt = {
+                    margin: 10,
+                    filename: `Памятка_${document.getElementById('page-title').innerText.replace('Памятка: ', '')}.pdf`,
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { 
+                        scale: 1, 
+                        useCORS: true,
+                        scrollY: -window.scrollY // Исправляет смещение/пустые страницы
+                    },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+                };
+
+                await html2pdf().set(opt).from(pdfContainer).save();
+            } catch (e) {
+                console.error('PDF Error:', e);
+                alert('Ошибка при создании PDF.');
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
+

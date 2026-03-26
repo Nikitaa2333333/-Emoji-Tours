@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html class="light" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Тунис — Emoji Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background":              "#fffcf5",
+                        "surface":                 "#fffcf5",
+                        "on-surface":              "#000000",
+                        "primary":                 "#f5e2a1",
+                        "on-primary":              "#000000",
+                        "on-surface-variant":      "#4b4b4b",
+                        "surface-container-low":   "#fffcf5",
+                        "surface-container-high":  "#fffaf0",
+                        "primary-container":       "#f5e2a1",
+                        "on-primary-container":    "#000000",
+                    },
+                    fontFamily: { "headline": ["Manrope"], "body": ["Manrope"] },
+                },
+            },
+        }
+    </script>
+    <style>
+        body  { font-family: 'Manrope', sans-serif; }
+        a     { text-decoration: none !important; }
+        html  { scroll-behavior: smooth; }
+        p     { line-height: 1.8; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface">
+
+    <!-- ═══ ФИКСИРОВАННАЯ КНОПКА НАЗАД ═══ -->
+    <a href="index.html#countries" title="Все страны" style="
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        z-index: 100;
+        background: #f5e2a1;
+        color: #000;
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        padding: 20px 12px;
+        border-radius: 0 14px 14px 0;
+        font-family: 'Manrope', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        box-shadow: 3px 0 16px rgba(0,0,0,0.12);
+        transition: padding 0.2s;
+    " onmouseover="this.style.paddingLeft='18px'" onmouseout="this.style.paddingLeft='12px'">
+        ← Все страны
+    </a>
+
+    <nav class="p-8 max-w-6xl mx-auto flex items-center">
+        <a href="index.html#countries">
+            <img src="LogoB_300x.png" alt="Emoji Tours" class="h-12" id="site-logo">
+        </a>
+    </nav>
+
+    <main>
+        <div class="max-w-4xl mx-auto px-8 pt-4 pb-12 space-y-10">
+            <h1 class="text-7xl md:text-[9rem] font-black tracking-tighter leading-none" id="page-title">Тунис</h1>
+            <div class="flex flex-wrap gap-4" id="action-buttons">
+                <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+                <a href="memo-tunisia.html" class="inline-block bg-white border-2 border-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
+                
+            </div>
+        </div>
+
+        <img src="tild3164-3961-4163-b464-636461613433___1.jpg" class="w-full h-[80vh] object-cover" style="display:block;" id="hero-image">
+
+        <div class="max-w-4xl mx-auto px-8 py-24 space-y-32" id="memo-content-area">
+             <section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Тунисская Республика — государство на средиземноморском побережье Северной Африки , где мягкий субтропический климат севера сменяется суровостью тропической пустыни в южной части страны. На севере и востоке омывается Средиземным морем, граничит с Алжиром, Ливией.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Здесь много памятников древности: оборонительные стены с высокими башнями, памятники мусульманской архитектуры, наследие Рима и Карфагена. Тунис — это экзотика африканской страны и комфорт европейских отелей, сотни километров прекрасно оборудованного пляжей и труднопроходимая пустыня Сахара.</p>
+<img src="tild6666-3963-4666-a633-656266633438__4f64f63c16faf3ef4d4e.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Сусс и Порт Эль Кантауи</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Суc — веселый и шумный городок с развитой туристической инфраструктурой: длинными песчаными пляжами и большим количеством отелей разной категории. Главная достопримечательность Суса — лабиринты старинных улиц Медины с постройками XI – XII веков и пёстрыми рынками, где можно приобрести оригинальные восточные сувениры. В окрестностях Суса находится порт Эль-Кантауи с прогулочными морскими судами, виллами и отелями в андалузском стиле.</p>
+<img src="tild3638-6564-4338-a135-656239383730__du7oipu-koq.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Хаммамет</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Хаммамет считается одним из самых живописных курортов в стране, который часто выбирают для семейного отдыха с детьми. Здесь построено много уютных отелей категорий 4* и 5*, обустроены парковые зоны и элегантные набережные, а в северном Хаммамете находится самый большой аквапарк Туниса — Flipper. Любители истории здесь также найдут для себя много интересного: на побережье располагается старый город Медина и крепость-монастырь Рибат — прекрасный образец исламской архитектуры и древнейшее сооружение города.</p>
+<img src="tild6330-3238-4935-b330-313037336433__hammamet_yasmine_24.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Старая Медина и крепость Рибат – главные исторические достопримечательности Хаммамета расположены на берегу моря. Самое древнее сооружение города Крепость-Монастырь Рибат является ярким образцом исламской архитектуры, арки-подковы которой опираются на колонны римских построений. Медина Хаммамет представляет собой старый город огороженный стенами, внутри которого можно обнаружить целый лабиринт узких улочек. Туристам с детьми обязательно стоит посетить самый большой аквапарк Туниса – Flipper, расположенный в северном Хаммамете.</p>
+<img src="tild3235-6261-4166-b232-346266376637__0_bc2b6_8f94e229_xxl.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Монастир</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Монастир — портовый город на скалистом полуострове центрального побережья Туниса, основанный на руинах римского города Руспина. В эпоху средневековья это был главный религиозный центр страны. С VII века в городе сохранилась крепость Рибат Хартема, с северной части которой открывается потрясающая панорама курорта.</p>
+<img src="tild3866-6462-4632-a435-653764353566__s1200.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Любителям истории и памятников архитектуры стоит посетить самое популярное место города - Рибат Хартем. Оборонительное сооружение VII века, ставшее частью мощной крепости позднее, служило защитой города в средние века. C северной части Рибата открывается впечатляющая панорама курорта. Еще одна достопримечательность Монастира – рыбный рынок, который является самым крупным и лучшим в регионе Сус – Монастир – Хаммамет – Набель.</p>
+<img src="tild3664-6235-4239-a135-336434623333__0_be010_673bc4d_xxl.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Небольшой уютный городок - прекрасный вариант для семей с детьми. Непродолжительный трансфер особенно будет удобен для туристов с маленькими детьми. С севера к городу прилегает курортная зона Сканес, рядом с которой находится международный аэропорт им. президента Хабиба Бургибы.</p>
+<img src="tild6439-3234-4839-b465-306164626532__content_hotel_5ba035.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Махдия</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Махдия — тихий городок в южной части Туниса, который получил известность благодаря необычной рыболовной традиции — ловли рыбы при свете луны. Этот курорт облюбовали ценители спокойного отдыха на белоснежных пляжах, в уютных ресторанчиках и кальянных Медины. Город также славится своими ткацкими традициями: на местных рынках можно найти шёлковые ткани, расшитые золотыми и серебряными нитями.</p>
+<img src="tild6663-3536-4032-b431-666463326633__tunisie-plage-sable-.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Город также славится своими чудесными тканями и вышивкой золотыми и серебряными нитями. Изготовление шелковых тканей здесь – традиционное занятие мужчин.</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В Махдии, как и во всех других городах, есть своя Медина – средневековый квартал, окруженный городской стеной, где к вашим услугам бесчисленное количество уютных кальянных, рыбных ресторанчиков, сувенирных лавок и торговых центров. Живописная набережная Махдии – излюбленное место прогулок отдыхающих.</p>
+<img src="tild3833-3136-4264-a465-656665313733__original.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Это идеальный курорт для тех, кто устал от суеты городской жизни, а также для поклонников тихого спокойного размеренного отдыха на великолепных белоснежных пляжах.</p>
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Джерба</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Остров в Средиземном море у берегов Туниса. Комфортабельные курортные отели Джербы предлагают туристам незабываемый отдых на ухоженных песчаных пляжах, оздоровительные процедуры в центрах талассотерапии, морские прогулки и экскурсии по историческим местам. Главный город на острове — Хумт-Сук, защищённый со стороны моря старинной крепостью Бордж-эль-Кебир. Здесь можно ощутить истинный восточный колорит, прогуливаясь в лабиринтах торговых улиц, среди тунисских ковров и национальных украшений.</p>
+<img src="tild6365-3233-4030-a234-353633653532__rgyehxhkckrwyh42grhn.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Зарзис</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Зарзис — немноголюдный тихий курорт на юге Туниса, который выбирают любители уединённого отдыха, туристы с детьми и путешественники старшего возраста. Местные пляжи с мягким песком и чистейшим морем заслуживают самых высоких оценок. А разнообразить отдых можно поездкой на остров Джерба или в пустыню Сахара, до которой от Зарзиса рукой подать.</p>
+<img src="tild6365-3233-4030-a234-353633653532__rgyehxhkckrwyh42grhn.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+</div></section>
+<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Набель</h2><div class="space-y-8">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Один из самых древних городов Туниса располагается всего в 16 км от популярного курорта Хаммамет, в окружении виноградников и апельсиновых рощ. Отличительной чертой Набеля является его размеренный образ жизни: здесь можно спокойно наслаждаться пляжным отдыхом, изумительными видами побережья, прогулками в исторических кварталах и гастрономическими изысками местной кухни.</p>
+<img src="tild6365-3233-4030-a234-353633653532__rgyehxhkckrwyh42grhn.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По всем вопросам свяжитесь с нами любым удобным способом:</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">E-mail: trohin.zh@yandex.ru</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Телефон: +7 (963) 649-18-52</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Соцсети: Вконтакте | Instagram | Telegram</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Индивидуальный предприниматель Трохин Евгений Альбертович</p>
+<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ИНН 503613656680 / ОГРН ИП 315507400016056</p>
+</div></section>
+        </div>
+
+        <!-- ═══ ФОРМА (ШАБЛОН) ═══ -->
+        <section id="booking-form" class="py-32 px-8 bg-surface-container-high relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+        <div class="text-center mb-16 space-y-4">
+        <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
+        <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
+        </div>
+        <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Тунис" type="text"/>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
+        </div>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
+        <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
+        </div>
+        </div>
+        <div class="space-y-4">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
+        <div class="flex flex-wrap gap-8">
+        <label class="flex items-center gap-3 cursor-pointer group">
+        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
+        <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
+        </label>
+        <label class="flex items-center gap-3 cursor-pointer group">
+        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
+        <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
+        </label>
+        <label class="flex items-center gap-4 cursor-pointer group">
+        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio" checked/>
+        <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
+        </label>
+        </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
+        <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
+        </div>
+        <div class="space-y-2">
+        <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
+        </div>
+        </div>
+        <div class="pt-8 flex justify-center">
+        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
+        </div>
+        </form>
+        </div>
+        </section>
+    </main>
+
+    <footer class="bg-white py-32 px-8 border-t border-black/5 flex flex-col items-center">
+        <img src="LogoB_300x.png" alt="Emoji Tours" class="h-20">
+    </footer>
+
+    <!-- PDF Generation Logic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        async function downloadPDF() {
+            const btn = document.getElementById('download-pdf-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Генерируем текст...';
+            btn.disabled = true;
+
+            try {
+                // Создаем временный элемент для PDF
+                const pdfContainer = document.createElement('div');
+                pdfContainer.style.background = '#fff';
+                pdfContainer.style.padding = '20mm';
+                pdfContainer.style.fontFamily = 'Arial, sans-serif'; // Системный шрифт надежнее для PDF
+                pdfContainer.style.color = '#000';
+
+                // Добавляем заголовок
+                const header = document.createElement('div');
+                header.style.marginBottom = '10mm';
+                header.style.textAlign = 'center';
+                
+                const logo = document.getElementById('site-logo').cloneNode(true);
+                logo.style.height = '12mm';
+                logo.style.marginBottom = '5mm';
+                header.appendChild(logo);
+                
+                const title = document.createElement('h1');
+                title.innerText = document.getElementById('page-title').innerText;
+                title.style.fontSize = '24pt';
+                title.style.fontWeight = 'bold';
+                title.style.borderBottom = '2px solid #000';
+                title.style.paddingBottom = '3mm';
+                header.appendChild(title);
+                
+                pdfContainer.appendChild(header);
+
+                // Копируем контент
+                const originalContent = document.getElementById('memo-content-area');
+                const content = originalContent.cloneNode(true);
+                
+                // --- ОЧИСТКА ---
+                // 1. Удаляем все картинки
+                content.querySelectorAll('img').forEach(img => img.remove());
+                
+                // 2. Сбрасываем гигантские классы разметки Tilda/Tailwind
+                content.className = ""; // Убираем space-y-32, py-24 и т.д.
+                content.style.lineHeight = "1.5";
+                
+                // 3. Форматируем секции
+                content.querySelectorAll('section').forEach(s => {
+                    s.className = ""; 
+                    s.style.marginTop = '8mm';
+                    s.style.pageBreakInside = 'avoid';
+                    
+                    const h2 = s.querySelector('h2');
+                    if (h2) {
+                        h2.className = "";
+                        h2.style.fontSize = '18pt';
+                        h2.style.fontWeight = 'bold';
+                        h2.style.marginBottom = '4mm';
+                        h2.style.marginTop = '6mm';
+                    }
+                    
+                    const pList = s.querySelectorAll('p');
+                    pList.forEach(p => {
+                        p.className = "";
+                        p.style.fontSize = '11pt';
+                        p.style.marginBottom = '3mm';
+                        p.style.textAlign = 'justify';
+                    });
+                });
+
+                pdfContainer.appendChild(content);
+
+                const opt = {
+                    margin: 10,
+                    filename: `Памятка_${document.getElementById('page-title').innerText.replace('Памятка: ', '')}.pdf`,
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { 
+                        scale: 1, 
+                        useCORS: true,
+                        scrollY: -window.scrollY // Исправляет смещение/пустые страницы
+                    },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+                };
+
+                await html2pdf().set(opt).from(pdfContainer).save();
+            } catch (e) {
+                console.error('PDF Error:', e);
+                alert('Ошибка при создании PDF.');
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
+
