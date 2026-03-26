@@ -38,55 +38,88 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
+        
+        /* Стили навигации как в Google Docs */
+        .nav-link {
+            position: relative;
+            padding-left: 1.5rem;
+            color: #4b4b4b;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            border-left: 2px solid transparent;
+        }
+        .nav-link:hover {
+            color: #000;
+        }
+        .nav-link.active {
+            color: #000;
+            font-weight: 700;
+            border-left-color: #f5e2a1; /* Цвет акцента Emoji Tours */
+        }
     </style>
 </head>
 
 <body class="bg-background text-on-surface">
 
-    <!-- ═══ ФИКСИРОВАННАЯ КНОПКА НАЗАД ═══ -->
-    <a href="index.html#countries" title="Все страны" style="
-        position: fixed;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%) rotate(180deg);
-        z-index: 100;
-        background: #f5e2a1;
-        color: #000;
-        writing-mode: vertical-lr;
-        text-orientation: mixed;
-        padding: 20px 12px;
-        border-radius: 0 14px 14px 0;
-        font-family: 'Manrope', sans-serif;
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        box-shadow: 3px 0 16px rgba(0,0,0,0.12);
-        transition: padding 0.2s;
-    " onmouseover="this.style.paddingLeft='18px'" onmouseout="this.style.paddingLeft='12px'">
-        ← Все страны
-    </a>
-
-    <nav class="p-8 max-w-6xl mx-auto flex items-center">
-        <a href="index.html#countries">
-            <img src="LogoB_300x.png" alt="Emoji Tours" class="h-12" id="site-logo">
-        </a>
+    <!-- ═══ ФИКСИРОВАННАЯ ШАПКА ═══ -->
+    <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/80 backdrop-blur-md border-b border-black/5 py-4">
+        <div class="max-w-7xl mx-auto flex justify-center items-center px-8 relative">
+            <a href="index.html" class="absolute left-8 text-sm font-bold flex items-center gap-2 hover:opacity-70 transition-opacity">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Все страны
+            </a>
+            <a href="index.html">
+                <img src="LogoB_300x.png" alt="Emoji Tours" class="h-10">
+            </a>
+        </div>
     </nav>
 
     <main>
-        <div class="max-w-4xl mx-auto px-8 pt-4 pb-12 space-y-10">
-            <h1 class="text-7xl md:text-[9rem] font-black tracking-tighter leading-none" id="page-title">Италия</h1>
-            <div class="flex flex-wrap gap-4" id="action-buttons">
-                <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
-                <a href="memo-italy.html" class="inline-block bg-white border-2 border-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
-                
-            </div>
-        </div>
+        <!-- ═══ HERO PHOTO (100VH) ═══ -->
+        <section class="relative h-screen w-full overflow-hidden">
+            <img src="tild3863-3864-4165-b362-636364363039__25701e156fb75372993d.jpg" class="w-full h-full object-cover" id="hero-image">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20"></div>
+        </section>
 
-        <img src="tild3665-3831-4664-a231-323065303464__photo.jpg" class="w-full h-[80vh] object-cover" style="display:block;" id="hero-image">
+        <!-- ═══ LAYOUT WITH SIDEBAR ═══ -->
+        <div class="max-w-7xl mx-auto px-8 relative flex flex-col lg:flex-row gap-12">
+            
+            <!-- ═══ SIDEBAR NAVIGATION (LEFT, STICKY) ═══ -->
+            <aside class="hidden lg:block w-64 pt-20">
+                <div class="sticky top-32 space-y-8">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant/50 mb-6 px-6">Содержание</p>
+                        <nav id="quick-links" class="flex flex-col">
+                             <a href="#section-0" class="nav-link">О стране</a>
+<a href="#section-1" class="nav-link">Лигурия</a>
+<a href="#section-2" class="nav-link">Сицилия</a>
+<a href="#section-3" class="nav-link">Тоскана</a>
+<a href="#section-4" class="nav-link">Лацио</a>
+<a href="#section-5" class="nav-link">Венето</a>
+<a href="#section-6" class="nav-link">Кампания</a>
+<a href="#section-7" class="nav-link">Остров Искья</a>
+<a href="#section-8" class="nav-link">Остров Капри</a>
 
-        <div class="max-w-4xl mx-auto px-8 py-24 space-y-32" id="memo-content-area">
-             <section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ═══ CONTENT AREA ═══ -->
+            <div class="flex-1 py-20">
+                <div class="max-w-4xl space-y-24">
+                    <!-- Заголовок и кнопки -->
+                    <div class="space-y-10">
+                        <h1 class="text-7xl md:text-9xl font-black tracking-tighter leading-none" id="page-title">Италия</h1>
+                        <div class="flex flex-wrap gap-4" id="action-buttons">
+                            <a href="#booking-form" class="inline-block bg-primary text-black px-12 py-5 rounded-full text-xl font-bold shadow-xl hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+                            <a href="memo-italy.html" class="inline-block bg-white border-2 border-primary text-black px-12 py-5 rounded-full text-xl font-bold shadow-xl hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
+                        </div>
+                    </div>
+
+                    <!-- Основной контент -->
+                    <div class="space-y-32" id="memo-content-area">
+                         <section class="pt-24 border-t border-black/5"><h2 id="section-0" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Итальянская Республика – эта страна расположена в самом центре Средиземноморья. Климат здесь разнится в зависимости от региона: на севере он умеренный, а на юге и в центре страны субтропический средиземноморский. Италия – удивительная страна, в которой переплелись история и современность, различные эпохи и богатое культурное наследие, традиции, самобытность и впечатляющая природа – вот лишь часть того, что ожидает туристов по приезде в эту страну. А главное, что в Италии великолепные пляжи, которые отмечены Голубыми флагами ЮНЕСКО. Местные пейзажи отличаются контрастом: скалистые берега и густая хвойная растительность чередуются песчаными пляжами с пологим берегом, поэтому на итальянском побережье будет комфортно отдыхать даже семьям с маленькими детьми. Коренные жители регионов страны очень простые, открытые и радушные, поэтому чаще всего туристов встречают с улыбкой и охотно делятся своей культурой с приезжими.</p>
 <img src="tild3863-3864-4165-b362-636364363039__25701e156fb75372993d.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Столица: Рим</p>
@@ -99,235 +132,231 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Итальянская кухня традиционно известна во всем мире как одна из самых оригинальных и изысканных. Основа всех национальных блюд – тесто и различные макаронные изделия, большое количество сыра и молочных продуктов, рыбы, зелени и специй, овощей, а также мяса и зерновых культур. Пиццу в Италии готовят буквально в каждом ресторане. К итальянской трапезе обязательно подают вино. В стране множество винных регионов, а количество сортов напитка идет на тысячи. Кулинария превратилась в Италии в национальный культ, а местные мастера достигают в этой области больших высот.</p>
 <img src="tild3565-3335-4461-b665-383164633638__pizza-frutti-di-mare.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Лигурия</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-1" class="text-6xl font-black mb-16 tracking-tight">Лигурия</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Лигурия – третий из самых маленьких регионов Италии, который дугой расположился на северо-западе страны от границ Франции к Тоскане. Это регион величественных гор, холмов с буйной растительностью и средиземноморского климата. Отвесный скалистый берег открывает отсюда прекрасные виды на Лигурийское море. Однако скалистое побережье чередуется с уютными бухтами, где расположились небольшие пляжи с мелким мягким песком или галькой и пологим входом в воду. За свою чистоту береговой линии пляжи Лигурии были отмечены Голубыми флагами ЮНЕСКО, поэтому здешние места заслуженно полюбились многим отдыхающим, которые часто называют их «итальянской Ривьерой».Этот регион завораживает своим разнообразием и предлагает туристам необыкновенно широкий спектр возможностей для проведения отдыха. Сложно остановить свой выбор на чём-то одном: природа, море, горы, культура, а также развлечения и светская жизнь.</p>
 <img src="tild6132-3234-4337-b664-343637313931__vernacca-vernazza-li.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Сицилия</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-2" class="text-6xl font-black mb-16 tracking-tight">Сицилия</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Крупнейший остров Италии, окутанный легендами и слухами, отделен от материка небольшим каналом Стретто-ди-Мессина и омывается сразу тремя морями – Тирренским, Средиземный и Ионическим. Когда-то Сицилия носила название Трикринария, что переводится с греческого «Три мыса» и имеет форму треугольника. Среди природных достопримечательностей острова стоит отметить крупнейший действующий вулкан Этна, или «Гора огня», — самый большой активный вулкан Италии. Невероятная природа и заповедные зоны, роскошные песочные пляжи и великолепная инфраструктура, многочисленные исторические места и взаимопроникновение различных культур – все это о самобытной Сицилии. Побережье пестрит разнообразием: мягкий золотистый песок сменяется мелкой галькой, булыжники — вулканической лавой, размолотой временем в черную пыль.</p>
 <img src="tild6437-6337-4132-b235-323832643133__0_c66f5_7992dae_orig.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Тоскана</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-3" class="text-6xl font-black mb-16 tracking-tight">Тоскана</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Область Италии, 320 км побережья которого омывается Тирренским морем. Это место можно считать одним из самых колоритных: здесь красота пейзажей Апуанских Альп граничит с бескрайними холмами и виноградниками. Тоскана по праву занимает особое место в списке исторических мест Италии, более половины которых занесены в список объектов всемирного наследия ЮНЕСКО. Тоскана – место происхождения итальянского Ренессанса, и её художественное наследие включает архитектуру, живопись и скульптуру с многими произведениями в музеях целого региона, из которых самые известные – Уффици и Барджелло во Флоренции. Тоскана была родиной Леонардо Да Винчи, Микеланджело и Данте Алигьери. Здесь будет интересно как любителям экотуризма, так и приверженцам пляжного отдыха и дайвинга.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Пляжный отдых в Тоскане славится чистым морем и комфортабельными пляжами, поэтому Тоскана предлагает большое количество морских курортов. Есть пляжи – излюбленные места итальянских знаменитостей, а есть и пляжи с весьма демократичными ценами; пляжи для тихого и семейного отдыха и пляжи с большим количеством кафе и баров.</p>
 <img src="tild3163-6632-4830-a464-373162303330__yvxce2tn8x-955.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Лацио</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-4" class="text-6xl font-black mb-16 tracking-tight">Лацио</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Область центральной части Италии, со столицей в городе Рим. В регионе расположено множество древних городов с богатой историей. Особого внимания заслуживает курорт Ривьера ди-Улиссе, береговая линия которого тянется от Рима до Неаполя и хранит в себе связь с античной историей. Эту часть курорта часто именуют «Побережьем Одиссея», так как знаменитый путешественник и герой эпоса Гомера, провел здесь несколько лет, останавливаясь в разных местах.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Ривьра-ди-Улиссе – это более 100 км прекрасных песчаных пляжей, удостоенных Голубого флага ЮНЕСКО за кристальную чистоту морской воды, а песчаные пляжи широкие и просторные, или маленькие и уютные. Здесь длинный купальный сезон, живописная природа и отличные возможности для отдыха. Побережье Одиссея - отличная отправная точка для экскурсионных путешествий по Италии. Отсюда легко добраться до Рима, о. Капри, Понтийских островов, Неаполя, Помпей и других старинных городов региона Лацио.</p>
 <img src="tild6437-6433-4533-a366-623039633564__goroda-amalfijskoe-i.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Венето</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-5" class="text-6xl font-black mb-16 tracking-tight">Венето</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Регион Италии, располагающийся на северо-востоке страны между Адриатическим морем и Альпами. Венето – еще один удивительный регион Италии: здесь находится один из самых романтических городов всего мира – Венеция и место зарождения любви Ромео и Джульеты – Верона. Для курортов этого региона характерны широкие и песчаные пляжи мелководья. Отельная база курортов чаще всего расположена на первой линии, поэтому на пляжах имеется большой выбор развлечений для семейного отдыха с детьми и молодежными компаниями. Курортная зона Венето может предложить своим гостям весь спектр и многообразие отдыха: песчаные пляжи, уютные отели, удивительные пейзажи с реками, соснами и лесными озерами, хорошая инфраструктура и интересная экскурсионная программа.</p>
 <img src="tild3038-6432-4431-b633-383562393132__8492320.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Кампания</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-6" class="text-6xl font-black mb-16 tracking-tight">Кампания</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Идеальное расположение Кампании на юге Италии, на побережье Тиренского моря, подарило этому региону комфортный средиземноморский климат и буйную растительность плодородных вулканических почв. Этот регион Италии считается одним из самых живописных и экзотических. Именно здесь находится знаменитый вулкан Везувий. Знойное солнце и лучезарное море привлекают сюда любителей пляжного отдыха, поэтому следует обратить внимание на курорты Неаполитанского залива, которые славятся хорошей инфраструктурой. Скалистое побережье в этих местах делает воду кристально прозрачной, что открывает прекрасные возможности для дайвинга.</p>
 <img src="tild3162-6264-4434-a439-373335323630__palazzo-belmonte-aer.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Остров Искья</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-7" class="text-6xl font-black mb-16 tracking-tight">Остров Искья</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Искья – считается самым большим островом в Неаполитанском заливе. Остров разделен на территории, одна из которых Искья-Порто. Она отличается насыщенной туристической жизнью. Здесь много отелей разных категорий, коммерческие центры, дискотеки, ночные клубы, таверны, рестораны, бутики. А также прекрасные песчаные пляжи, роскошные сосновые и каштановые рощи. Одна из главных достопримечательностей острова – Арагонский замок, который уместился на конусе застывшей вулканической лавы и является неотъемлемой частью истории острова. В целом ритм жизни на курорте спокойный, поэтому Искья подойдет любителям семейного отдыха, в том числе с маленькими детьми – здесь имеются песчаные пляжи с пологими спусками.</p>
 <img src="tild3564-3265-4633-a232-656237306630__ii45ovweg.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Остров Капри</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-8" class="text-6xl font-black mb-16 tracking-tight">Остров Капри</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Этот остров привлекает туристов своей красотой и неповторимостью здешних пейзажей. Остров окружен множеством небольших и укромных бухт. Пляжи здесь в основном галечные или состоят из каменных платформ, спускающихся к морю. Инфраструктура этого места предлагает большое количество магазинов, шумных баров, ресторанов и мест развлечений. А местные отели отличаются хорошим сервисом и высоким уровнем качества предоставляемых услуг, за что это место часто выбирают представители европейской и мировой элиты для своего отдыха.</p>
 <img src="tild3637-6535-4964-b234-333063303138__kapri.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По всем вопросам свяжитесь с нами любым удобным способом:</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">E-mail: trohin.zh@yandex.ru</p>
+
+
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Телефон: +7 (977) 730 95 22</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Соцсети: Вконтакте | Instagram | Telegram</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Индивидуальный предприниматель Трохин Евгений Альбертович</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ИНН 503613656680 / ОГРН ИП 315507400016056</p>
+
+
+
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">город Москва, Щербинка ул. Юбилейная д.3а</p>
 </div></section>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- ═══ ФОРМА (ШАБЛОН) ═══ -->
         <section id="booking-form" class="py-32 px-8 bg-surface-container-high relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
-        <div class="max-w-4xl mx-auto relative z-10">
-        <div class="text-center mb-16 space-y-4">
-        <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
-        <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
-        </div>
-        <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Италия" type="text"/>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
-        </div>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
-        <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
-        </div>
-        </div>
-        <div class="space-y-4">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
-        <div class="flex flex-wrap gap-8">
-        <label class="flex items-center gap-3 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
-        </label>
-        <label class="flex items-center gap-3 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
-        </label>
-        <label class="flex items-center gap-4 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio" checked/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
-        </label>
-        </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
-        <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
-        </div>
-        </div>
-        <div class="pt-8 flex justify-center">
-        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
-        </div>
-        </form>
-        </div>
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
+            <div class="max-w-4xl mx-auto relative z-10">
+                <div class="text-center mb-16 space-y-4">
+                    <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
+                    <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
+                </div>
+                <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Италия" type="text"/>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
+                                <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
+                                <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
+                            <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
+                        <div class="flex flex-wrap gap-8">
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
+                            </label>
+                            <label class="flex items-center gap-4 cursor-pointer group">
+                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio" checked/>
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
+                            <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
+                        </div>
+                    </div>
+                    <div class="pt-8 flex justify-center">
+                        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer class="bg-white py-32 px-8 border-t border-black/5 flex flex-col items-center">
-        <img src="LogoB_300x.png" alt="Emoji Tours" class="h-20">
+    <footer class="bg-[#fffcf5] w-full border-t border-black/10 pt-20 pb-12 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div class="space-y-6 max-w-sm">
+                    <img src="LogoB_300x.png" alt="Emoji Tours" class="h-16">
+                    <p class="text-black/60 font-['Manrope'] text-sm leading-relaxed">
+                        Мы верим, что путешествия — это лучший способ познать себя и окружающий мир. Позвольте нам стать вашим проводником в мир ярких эмоций.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary-container transition-colors" href="#">
+                            <span class="material-symbols-outlined text-lg">public</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary-container transition-colors" href="#">
+                            <span class="material-symbols-outlined text-lg">alternate_email</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-on-surface">Компания</h4>
+                        <ul class="space-y-2 text-sm text-on-surface-variant">
+                            <li><a class="hover:text-primary transition-colors" href="#">О нас</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Блог</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Партнерам</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-on-surface">Помощь</h4>
+                        <ul class="space-y-2 text-sm text-on-surface-variant">
+                            <li><a class="hover:text-primary transition-colors" href="#">Контакты</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">F.A.Q.</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Правила</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4 col-span-2 sm:col-span-1">
+                        <h4 class="font-bold text-on-surface">Локация</h4>
+                        <p class="text-sm text-on-surface-variant">Москва, <br/> ул. Тверская 12, оф. 405</p>
+                        <p class="text-sm text-on-surface-variant">+7 (495) 123-45-67</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-on-surface/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-black/60 font-['Manrope'] text-sm">© 2024 Emoji Tours. Путешествия с душой.</div>
+                <div class="flex flex-wrap justify-center gap-8 text-xs font-medium text-black/60">
+                    <a class="hover:text-primary" href="#">Политика конфиденциальности</a>
+                    <a class="hover:text-primary" href="#">Условия использования</a>
+                    <a class="hover:text-primary" href="#">Контакты</a>
+                    <a class="hover:text-primary" href="#">Партнерам</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- PDF Generation Logic -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
-        async function downloadPDF() {
-            const btn = document.getElementById('download-pdf-btn');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = 'Генерируем текст...';
-            btn.disabled = true;
-
-            try {
-                // Создаем временный элемент для PDF
-                const pdfContainer = document.createElement('div');
-                pdfContainer.style.background = '#fff';
-                pdfContainer.style.padding = '20mm';
-                pdfContainer.style.fontFamily = 'Arial, sans-serif'; // Системный шрифт надежнее для PDF
-                pdfContainer.style.color = '#000';
-
-                // Добавляем заголовок
-                const header = document.createElement('div');
-                header.style.marginBottom = '10mm';
-                header.style.textAlign = 'center';
-                
-                const logo = document.getElementById('site-logo').cloneNode(true);
-                logo.style.height = '12mm';
-                logo.style.marginBottom = '5mm';
-                header.appendChild(logo);
-                
-                const title = document.createElement('h1');
-                title.innerText = document.getElementById('page-title').innerText;
-                title.style.fontSize = '24pt';
-                title.style.fontWeight = 'bold';
-                title.style.borderBottom = '2px solid #000';
-                title.style.paddingBottom = '3mm';
-                header.appendChild(title);
-                
-                pdfContainer.appendChild(header);
-
-                // Копируем контент
-                const originalContent = document.getElementById('memo-content-area');
-                const content = originalContent.cloneNode(true);
-                
-                // --- ОЧИСТКА ---
-                // 1. Удаляем все картинки
-                content.querySelectorAll('img').forEach(img => img.remove());
-                
-                // 2. Сбрасываем гигантские классы разметки Tilda/Tailwind
-                content.className = ""; // Убираем space-y-32, py-24 и т.д.
-                content.style.lineHeight = "1.5";
-                
-                // 3. Форматируем секции
-                content.querySelectorAll('section').forEach(s => {
-                    s.className = ""; 
-                    s.style.marginTop = '8mm';
-                    s.style.pageBreakInside = 'avoid';
-                    
-                    const h2 = s.querySelector('h2');
-                    if (h2) {
-                        h2.className = "";
-                        h2.style.fontSize = '18pt';
-                        h2.style.fontWeight = 'bold';
-                        h2.style.marginBottom = '4mm';
-                        h2.style.marginTop = '6mm';
-                    }
-                    
-                    const pList = s.querySelectorAll('p');
-                    pList.forEach(p => {
-                        p.className = "";
-                        p.style.fontSize = '11pt';
-                        p.style.marginBottom = '3mm';
-                        p.style.textAlign = 'justify';
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 120, // Offset for fixed header
+                        behavior: 'smooth'
                     });
-                });
+                }
+            });
+        });
 
-                pdfContainer.appendChild(content);
+        // ScrollSpy logic (Google Docs style)
+        const sections = document.querySelectorAll('h2[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-                const opt = {
-                    margin: 10,
-                    filename: `Памятка_${document.getElementById('page-title').innerText.replace('Памятка: ', '')}.pdf`,
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { 
-                        scale: 1, 
-                        useCORS: true,
-                        scrollY: -window.scrollY // Исправляет смещение/пустые страницы
-                    },
-                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-                };
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-                await html2pdf().set(opt).from(pdfContainer).save();
-            } catch (e) {
-                console.error('PDF Error:', e);
-                alert('Ошибка при создании PDF.');
-            } finally {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }
-        }
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === "#" + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
-

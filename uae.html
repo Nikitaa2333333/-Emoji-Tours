@@ -38,72 +38,110 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
+        
+        /* Стили навигации как в Google Docs */
+        .nav-link {
+            position: relative;
+            padding-left: 1.5rem;
+            color: #4b4b4b;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            border-left: 2px solid transparent;
+        }
+        .nav-link:hover {
+            color: #000;
+        }
+        .nav-link.active {
+            color: #000;
+            font-weight: 700;
+            border-left-color: #f5e2a1; /* Цвет акцента Emoji Tours */
+        }
     </style>
 </head>
 
 <body class="bg-background text-on-surface">
 
-    <!-- ═══ ФИКСИРОВАННАЯ КНОПКА НАЗАД ═══ -->
-    <a href="index.html#countries" title="Все страны" style="
-        position: fixed;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%) rotate(180deg);
-        z-index: 100;
-        background: #f5e2a1;
-        color: #000;
-        writing-mode: vertical-lr;
-        text-orientation: mixed;
-        padding: 20px 12px;
-        border-radius: 0 14px 14px 0;
-        font-family: 'Manrope', sans-serif;
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        box-shadow: 3px 0 16px rgba(0,0,0,0.12);
-        transition: padding 0.2s;
-    " onmouseover="this.style.paddingLeft='18px'" onmouseout="this.style.paddingLeft='12px'">
-        ← Все страны
-    </a>
-
-    <nav class="p-8 max-w-6xl mx-auto flex items-center">
-        <a href="index.html#countries">
-            <img src="LogoB_300x.png" alt="Emoji Tours" class="h-12" id="site-logo">
-        </a>
+    <!-- ═══ ФИКСИРОВАННАЯ ШАПКА ═══ -->
+    <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/80 backdrop-blur-md border-b border-black/5 py-4">
+        <div class="max-w-7xl mx-auto flex justify-center items-center px-8 relative">
+            <a href="index.html" class="absolute left-8 text-sm font-bold flex items-center gap-2 hover:opacity-70 transition-opacity">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Все страны
+            </a>
+            <a href="index.html">
+                <img src="LogoB_300x.png" alt="Emoji Tours" class="h-10">
+            </a>
+        </div>
     </nav>
 
     <main>
-        <div class="max-w-4xl mx-auto px-8 pt-4 pb-12 space-y-10">
-            <h1 class="text-7xl md:text-[9rem] font-black tracking-tighter leading-none" id="page-title">ОАЭ</h1>
-            <div class="flex flex-wrap gap-4" id="action-buttons">
-                <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
-                <a href="memo-uae.html" class="inline-block bg-white border-2 border-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
-                
-            </div>
-        </div>
+        <!-- ═══ HERO PHOTO (100VH) ═══ -->
+        <section class="relative h-screen w-full overflow-hidden">
+            <img src="tild3536-3035-4032-b437-316265343536__314935_original.jpg" class="w-full h-full object-cover" id="hero-image">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20"></div>
+        </section>
 
-        <img src="tild3830-3961-4438-b763-386138643964__untitled.png" class="w-full h-[80vh] object-cover" style="display:block;" id="hero-image">
+        <!-- ═══ LAYOUT WITH SIDEBAR ═══ -->
+        <div class="max-w-7xl mx-auto px-8 relative flex flex-col lg:flex-row gap-12">
+            
+            <!-- ═══ SIDEBAR NAVIGATION (LEFT, STICKY) ═══ -->
+            <aside class="hidden lg:block w-64 pt-20">
+                <div class="sticky top-32 space-y-8">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant/50 mb-6 px-6">Содержание</p>
+                        <nav id="quick-links" class="flex flex-col">
+                             <a href="#section-0" class="nav-link">Объединенные Арабские Эмираты</a>
+<a href="#section-1" class="nav-link">Все о путешествии в ОАЭ</a>
+<a href="#section-2" class="nav-link">О стране</a>
+<a href="#section-3" class="nav-link">Интересные факты</a>
+<a href="#section-4" class="nav-link">КУРОРТЫ СТРАНЫ</a>
+<a href="#section-5" class="nav-link">АБУ-ДАБИ</a>
+<a href="#section-6" class="nav-link">АДЖМАН</a>
+<a href="#section-7" class="nav-link">ДЖУМЕЙРА</a>
+<a href="#section-8" class="nav-link">ПАЛЬМА ДЖУМЕЙРА</a>
+<a href="#section-9" class="nav-link">ДУБАЙ СИТИ</a>
+<a href="#section-10" class="nav-link">РАС-АЛЬ-ХАЙМА</a>
+<a href="#section-11" class="nav-link">УММ-АЛЬ-КУВЕЙН</a>
+<a href="#section-12" class="nav-link">ФУДЖЕЙРА</a>
+<a href="#section-13" class="nav-link">ШАРДЖА</a>
 
-        <div class="max-w-4xl mx-auto px-8 py-24 space-y-32" id="memo-content-area">
-             <section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Объединенные Арабские Эмираты</h2><div class="space-y-8">
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ═══ CONTENT AREA ═══ -->
+            <div class="flex-1 py-20">
+                <div class="max-w-4xl space-y-24">
+                    <!-- Заголовок и кнопки -->
+                    <div class="space-y-10">
+                        <h1 class="text-7xl md:text-9xl font-black tracking-tighter leading-none" id="page-title">ОАЭ</h1>
+                        <div class="flex flex-wrap gap-4" id="action-buttons">
+                            <a href="#booking-form" class="inline-block bg-primary text-black px-12 py-5 rounded-full text-xl font-bold shadow-xl hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
+                            <a href="memo-uae.html" class="inline-block bg-white border-2 border-primary text-black px-12 py-5 rounded-full text-xl font-bold shadow-xl hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
+                        </div>
+                    </div>
+
+                    <!-- Основной контент -->
+                    <div class="space-y-32" id="memo-content-area">
+                         <section class="pt-24 border-t border-black/5"><h2 id="section-0" class="text-6xl font-black mb-16 tracking-tight">Объединенные Арабские Эмираты</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Все о путешествии в ОАЭ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-1" class="text-6xl font-black mb-16 tracking-tight">Все о путешествии в ОАЭ</h2><div class="space-y-8">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-2" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ОАЭ - расположены в северо-восточной части Аравийского полуострова и омываются Персидским заливом. Площадь их территории составляет 83,6 км². На юге и западе страна граничит с Саудовской Аравией, на востоке – с Оманом. Северное и западное побережья находятся напротив Ирана и Катара. Государство состоит из семи независимых эмиратов: Абу-Даби, Аджман, Дубай, Рас-Аль-Хайма, Умм-Аль-Кувейн, Фуджейра и Шарджа. Столицей ОАЭ является столица самого крупного эмирата – одноименный город Абу-Даби.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Климат этой страны определяется как сухой, субтропический и пустынный. Средние температуры в туристический сезон колеблются в пределах от +20 до +35°С, в некоторых районах достигают +48°С. Температуры воды в прибрежных зонах не опускаются ниже +20°С.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">Интересные факты</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-3" class="text-6xl font-black mb-16 tracking-tight">Интересные факты</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Большую часть территории Объединенных Арабских Эмиратов занимает пустыня Руб-эль-Хали, и по праву считается самой крупной в мире областью, покрытой песком. Растительность и природное богатство страны, за исключением гористых областей Фуджейры и Рас-Аль-Хаймы, – результат кропотливой рукотворной работы местных жителей. Самые интересные представители местной фауны – аравийский леопард и ибекс, в естественной среде обитания чаще встречаются верблюды и дикие козы.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Объединенные Арабские Эмираты – рай для любителей пляжного отдыха и шоппинга. При этом государство не обделено и историческими достопримечательностями, такими как археологические парки, старинные форты и дворцы шейхов. Архитектура столицы страны Абу-Даби и посещение самого динамичного эмирата Дубай поразит гостей своей урбанизацией и размахом научно-технической мысли.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Современные Объединенные Арабские Эмираты – это множество гостиниц, ресторанов и магазинов, аквапарков, ночных клубов и дискотек, торговых и выставочных центров, экзотических рынков и современных бутиков. Ежегодно сюда приезжают сотни тысяч туристов, чтобы ощутить восточную роскошь, искупаться в теплых водах Персидского залива, понежиться на прекрасных песчаных пляжах и посетить культурно-исторические достопримечательности. Сохранив восточный колорит, Арабские Эмираты сумели не только не отстать от остального мира, но и обойти его по ряду показателей.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Вряд ли кого-то оставят равнодушным зеленые оазисы в пустыне, Зоны Красных Песков (живописные высохшие устья рек) или горный массив Аль-Хаджарс с его остроконечными вершинами. Любители особой экзотики непременно воспользуются возможностью «оторваться» от города и совершат путешествие по пустыне. Отдельного упоминания достойна арабская кухня, без дегустации которой из отелей ОАЭ не уезжает ни один турист.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">КУРОРТЫ СТРАНЫ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-4" class="text-6xl font-black mb-16 tracking-tight">КУРОРТЫ СТРАНЫ</h2><div class="space-y-8">
 <img src="tild3536-3035-4032-b437-316265343536__314935_original.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">АБУ-ДАБИ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-5" class="text-6xl font-black mb-16 tracking-tight">АБУ-ДАБИ</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Отдых в Абу-Даби – это отдых на песчаных пляжах, омываемых светло-лазурными водами Персидского залива. Курорт непременно оценят любители водных видов спорта. Здесь созданы все условия для занятий дайвингом, серфингом или сноркелингом. Отели Абу-Даби поражают своим восточным колоритом и королевским сервисом, а роскошные рестораны, ночные клубы и торговые центры удовлетворят претензии даже самых искушенных гостей.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Черта, которая отличает Абу-Даби от любого другого современного города и которая отражает его мусульманский характер, – большое количество мечетей. С любой точки города можно увидеть сразу несколько причудливо украшенных минаретов.</p>
 <img src="tild3832-3136-4238-a632-303138396564__maxresdefault.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
@@ -118,7 +156,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Об основании столицы ОАЭ существует красивая легенда. Арабы-охотники одного из оазисов преследовали газель. Газель долго петляла по пустыне, а затем вывела охотников на берег Персидского залива, где бросилась в воду и вброд перешла на остров. Охотники последовали за ней, и газель привела их к источнику с прекрасной пресной водой. В благодарность охотники даровали газели жизнь, а основанное рядом с источником поселение назвали «отцом газели», что по-арабски звучит как Абу-Даби.</p>
 <img src="tild3037-3136-4139-a630-333061616434__2.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">АДЖМАН</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-6" class="text-6xl font-black mb-16 tracking-tight">АДЖМАН</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Эмират Аджман находится на побережье Персидского залива, протяженностью 16 км, между Умм-Аль-Кувейном и Шарджой и является самым маленьким из семи эмиратов. Аджман расположен в 30 минутах езды от аэропорта Дубая.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Это небогатый эмират, отельное строительство которого ведется намного медленнее, чем на остальных курортах ОАЭ. Здесь есть торговый район и уютные ресторанчики на центральных улицах. Однако за развлечениями отсюда чаще всего отправляются в Дубай, за шоппингом – в Шарджу.</p>
 <img src="tild3862-6466-4661-b364-666565326630__1439316532_adzhman-4.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
@@ -132,7 +170,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Традиционный уклад жизни этого места хорошо уживается с надвигающимся новым миром, полным индустриальных и технологических преобразований. Для любителей экзотики рекомендуем знаменитые верблюжьи бега, устраиваемые в пустынях этого эмирата. Для любителей позагорать и искупаться – великолепные, чистые пляжи Аджмана. Здесь распространены и водные виды спорта, особенно моторизированные. С середины сентября до середины мая на курорте стоит прекрасная погода, теплые солнечные дни сменяются приятными прохладными вечерами. Лучшее время для отдыха с октября по май, когда на смену теплому солнечному дню приходит несущий прохладу вечер.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Аджман привлекает туристов, стремящихся к полному релаксу, к тишине и покою на лоне природы и наслаждению неторопливым течением жизни, свойственным этой стране много веков назад.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ДЖУМЕЙРА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-7" class="text-6xl font-black mb-16 tracking-tight">ДЖУМЕЙРА</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Джумейра – прибрежный жилой и курортный район города Дубай, расположенный на территории второго по величине эмирата ОАЭ. На протяжении своей истории арабы, живущие в Джумейре, занимались рыболовством, промыслом жемчуга и торговлей. В наше время район приобрел особую популярность среди европейских и западных эмигрантов, работающих в эмирате, и стал их основным местом заселения, что повлияло на бурный рост строительства вдоль береговой линии залива Дубай. В Джумейре расположены в основном невысокие частные жилые здания, в том числе дорогие и роскошные особняки, а также скромные городские дома, построенные в разных архитектурных стилях.</p>
 <img src="tild6166-3762-4761-b731-613264346563__22_jumeirah-beach-ho.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Арабское наследие и экономический всплеск вместе с высокоразвитой инфраструктурой создали самый колоритный курорт арабского мира. Шокирующие своим дизайном небоскребы из стекла и стали, скоростные магистрали и сложные дорожные развязки своеобразно уживаются с одноэтажными глиняными домиками старого города. Развитие торговли, обусловленное минимальным налогообложением, наличием свободной экономической зоны Джебель-Али и огромным притоком туристов со всего мира, дало толчок бурному строительству. Аквапарки, ночные клубы и дискотеки, торговые и выставочные центры, экзотические рынки и современные бутики дополняют высокоразвитую структуру курорта. Высокое качество обслуживания обеспечивает туристам полноценный отдых и отставляет незабываемые впечатления об этом удивительном курорте.</p>
@@ -143,7 +181,7 @@
 <img src="tild3364-6666-4530-a232-663636663765__jumeirah-beach-hotel.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Пристальное внимание на курорте уделяется детскому отдыху. Так, пляжи в Джумейре оборудованы с учетом максимальной безопасности и комфорта, а центральная улица представляет собой прекрасно озелененную и благоустроенную территорию. И не просто благоустроенную, а до мельчайших деталей продуманную и приспособленную для активного детского отдыха. Отзывы маленьких туристов становятся и вовсе восторженными, после посещения Дубайского зоопарка – старейшего зоопарка Аравийского полуострова.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ПАЛЬМА ДЖУМЕЙРА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-8" class="text-6xl font-black mb-16 tracking-tight">ПАЛЬМА ДЖУМЕЙРА</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Пальма Джумейра – рукотворный остров в виде финиковой пальмы, который окрестили «восьмым чудом света» у берегов города Дубай. Это, пожалуй, самый амбициозный арабский проект – сеть из трех насыпных искусственных островов (или «пальм»), которые в будущем должны превратиться в пляжный Лас-Вегас, где можно будет отдыхать и тратить деньги круглосуточно и с нешуточным размахом. Райский уголок, маленький эдем для романтиков и чувственных натур. Каждое утро жители и гости Пальма Джумейры встречают потрясающей красоты морской рассвет, чтобы насладиться еще одним днем, проведенным здесь.</p>
 <img src="tild6233-3062-4761-b961-303436636138__ic0nz4frp.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Остров построен исключительно из природных материалов, морского песка и гальки, поэтому его негативное влияние на морскую среду снижено на столько, насколько это вообще возможно. Из-за изменения морского дна произошли и изменения в мире подводной флоры и фауны. Теперь там проживают разнообразные обитатели рифов, которые привлекают любителей подводного плавания со всего мира своей необычной красотой.</p>
@@ -159,7 +197,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Для тех, кто ищет развлечения, на острове существует заповедник и современный центр обучения дельфинов Dolphin Bay. В этом дельфинарии, общей площадью в 4,5 га, посетители имеют возможность узнать больше о жизни дельфинов и даже немного поиграть с ними.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Пальма Джумейра входит в число основных туристических достопримечательностей не только в Персидском заливе, но и во всем мире.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ДУБАЙ СИТИ</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-9" class="text-6xl font-black mb-16 tracking-tight">ДУБАЙ СИТИ</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Дубай – город-мечта для любого человека. Побывав здесь, окунувшись в атмосферу изысканности, насладившись фантастическими видами и познакомившись с достопримечательностями города, турист ни за что не захочет покидать этот рай! Привлекает этот город своими обычаями и законами: политикой свободы от налогов и бюрократизма, которая способствовала стремительному развитию Дубая и превратила его в город-мечту не только для туристов, но и для инженеров-строителей и бизнесменов.</p>
 <img src="tild3334-3662-4132-a536-666561626237__4034ef84b34de1c.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Дубай – современный город с роскошными отелями, прекрасной инфраструктурой отдыха, огромными торговыми центрами и деловым центром с небоскребами. Это город развлечений, магазинов, ресторанов, ночных клубов и спортивных заведений. Здесь же туристы могут посетить различные выставки, поучаствовать в ежегодных спортивных событиях (теннис, гольф, лошадиные бега) и в научных конференциях, или просто отдохнуть на солнечном берегу Персидского залива. Отдельного внимания заслуживает сафари по пустыне – групповая экскурсия, позволяющая познакомиться с настоящей Аравией. Вы сможете побывать в горах и в песках, посетить бедуинскую деревню, козьи и верблюжьи фермы. Любителей приключений не оставит равнодушным катание на джипе по барханам пустыни, напоминающее «американские горки».</p>
@@ -171,7 +209,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Дубай известен как место проведения международных конференций и выставок, семинаров, симпозиумов. Сюда съезжаются бизнесмены со всего мира, так как в Дубае существуют превосходно налаженные деловые контакты, связывающие все отрасли промышленности и сервисного обслуживания. Город расположен на пересечении трех континентов – Европы, Азии, Африки и сочетает в себе удобства одного из самых крупных деловых центров с первоклассным туристическим отдыхом в роскошных отелях на побережье Персидского залива.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Дубай – это одновременно динамично развивающийся международный деловой центр и место спокойного отдыха; это город, где совершенство ХХI века сосуществует с простотой прошлого. Большинство туристов, решивших провести свой отдых в ОАЭ, выбирают именно этот эмират и этот город.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">РАС-АЛЬ-ХАЙМА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-10" class="text-6xl font-black mb-16 tracking-tight">РАС-АЛЬ-ХАЙМА</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рас-Аль-Хайма – место, где богатое историческое наследие, руины и достопримечательности гармонично сочетаются с уникальной топографией. Родники и древние форты, причудливые деревни со смотровыми башнями, красивые пальмовые рощи и живописные холмы, лазурное побережье и пустынные дюны – все это вы найдете в Рас-Эль-Хайме.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рас-Аль-Хайма – один из красивейших и самых древних эмиратов страны, находящийся на севере Арабских Эмиратов, в часе езды от аэропорта Дубая рядом с проливом Хормуз. Хотя Рас-Аль-Хайма обладает лишь четвертой по размеру площадью среди всех эмиратов ОАЭ, его природа необыкновенно красива и, пожалуй, наиболее разнообразна – впечатляющие пейзажи с песчаными пляжами, горы, пышная растительность, плодородные поля, где произрастает более 45 различных видов финиковых пальм. Есть в Рас-Аль-Хайме и горячие источники. А столица эмирата разделена на две части красивым заливом Аль-Хор.</p>
 <img src="tild6164-6438-4262-b561-653737623462__chistyie-plyazhi-ras.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
@@ -182,7 +220,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Рас-Аль-Хайма предоставляет возможность принять участие в двух курсах по 18-луночному гольфу под звездами – в гольф-клубе «Аль Хамра» и в гольф-клубе «Тауэр Линкс». Оба клуба известны своим участием в Региональных чемпионатах по гольфу, проходящих на их территории.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Сафари в пустыне эмирата Рас-Аль-Хайма – это целый день незабываемых впечатлений. Сафари начинается с захватывающей поездки на квадроцикле по пустыне и подъема на песчаные дюны, зачастую под углом в 45 градусов! Верблюжьи бега – часть традиционного культурно-исторического наследия эмирата Рас-Аль-Хайма. Беговая дорожка обычно бывает заполнена пестро украшенными верблюдами-самцами, шествующими взад-вперед, и тренерами верблюдов, готовящих своих подопечных для бегов. Официальные верблюжьи бега проводятся по четвергам во второй половине дня и по пятницам рано утром.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">УММ-АЛЬ-КУВЕЙН</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-11" class="text-6xl font-black mb-16 tracking-tight">УММ-АЛЬ-КУВЕЙН</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Умм-Аль-Кувейн в переводе означает «источник сил». Этот миниатюрный эмират расположен на небольшом полуострове между Аджманом и Рас-Аль-Хаймой, окруженном множеством маленьких островков. Его площадь около 780 км². Относительная территориальная изолированность позволяет этому эмирату сохранять свои традиции и жизненный уклад на протяжении многих лет.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Умм-Аль-Кувейн разделен на две части. Старый город защищали когда-то внушительные укрепления, о которых сегодня напоминают три высокие сторожевые башни и форт. В здании форта в наши дни разместилась штаб-квартира управления полиции и исторический музей. Старинные кварталы этого района еще помнят времена, когда Умм-Аль-Кувейн был процветающим торговым городом. Новый город расположился на побережье в 10 км от старой части. Здесь строятся жилые районы и богатые виллы, правительственные здания и деловые офисы.</p>
 <img src="tild6434-3561-4866-b639-313138653361__15120c7c2efaf655e7eb.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
@@ -190,7 +228,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Через пролив от Старого города находится заповедный остров Аль Синийя – птичий заповедник. Археологи из Англии, Франции, Бельгии и Дании обнаружили здесь руины двух древних городов, носящих название Ад Дур и Телль Абрак, возраст которых составляет более двух тысяч лет.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В Умм-Аль-Кувейне созданы все условия для туризма и занятий спортом. Прекрасные пляжи, лагуны, проходящие здесь верблюжьи бега, памятники истории и архитектуры, – все это привлекает сюда туристов со всего мира.</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ФУДЖЕЙРА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-12" class="text-6xl font-black mb-16 tracking-tight">ФУДЖЕЙРА</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Город Фуджейра многие именуют не иначе, как «жемчужина» арабского мира. Здесь любители спокойного времяпрепровождения могут целыми днями «валяться» на теплых пляжах и купаться в чистейших водах Оманского залива, поклонники интеллектуального отдыха – любоваться обилием достопримечательностей, а поклонники спортивного образа жизни найдут массу развлечений на воде. Кстати, сами арабы выбирают в качестве места для отдыха именно Фуджейру, ведь это поистине райское местечко.</p>
 <img src="tild3365-6462-4332-a639-386462356237__fudjeira.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Эмират Фуджейра – самый молодой из семи эмиратов. В отличие от остальных княжеств, Фуджейра располагается на берегу не Персидского залива, а Индийского океана (Оманского залива). Жителям города и отдыхающим здесь очень повезло с климатом, более мягким и влажным.</p>
@@ -202,7 +240,7 @@
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Bo Сам город Фуджейра не уступает по красоте Абу-Даби и Дубаю. Город украшен многочисленными фонтанами, скульптурными композициями с изображением соколов, курительниц, традиционных кофейников и чашек. Несмотря на свою молодость, Фуджейра имеет богатую историю. Археологические раскопки показывают, что люди живут здесь уже тысячи лет. Об этом напоминает и построенный сотни лет назад мощный форт, стоящий в центре старого города на небольшом возвышении. В 1991 году был открыт музей Фуджейры, где представлена большая коллекция археологических и этнографических находок.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В свободное время обязательно стоит посетить «пятничный рынок», который в Фуджейре отличается удивительным даже для восточного базара разнообразием. Здесь можно купить действительно все, от антикварной мебели до экзотических животных. Присмотритесь на рынке к коврам – в Фуджейре отели украшаются именно местными коврами, которые славятся на все ОАЭ качеством и богатством орнамента. На «пятничном рынке» шелковый или хлопковый ковер ручной работы, умело торгуясь, можно купить очень недорого!</p>
 </div></section>
-<section class="pt-24 border-t border-black/5"><h2 class="text-6xl font-black mb-16 tracking-tight">ШАРДЖА</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-13" class="text-6xl font-black mb-16 tracking-tight">ШАРДЖА</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Шарджу часто называют городом из «Сказок Шехерезады». По дороге из аэропорта в город вначале появляются двух- и трехэтажные особняки, купола мечетей и стрелы минаретов, затем – многоэтажные здания с магазинами на первом этаже. По вечерам витрины магазинов залиты светом так, что товары кажутся выставленными прямо на улицу. Туристический потенциал этого динамично развивающегося эмирата весьма впечатляет, так в Шардже вы найдете широчайший выбор самых разных отелей с прекрасной кухней и широкими возможностями для занятий различными видами спорта – от традиционно любимого здесь крикета до серфинга и подводного плавания.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Это очень ухоженный зеленый город с изумительной лагуной, красивыми парками и садами. Здесь много отелей, расположенных прямо на берегу моря. Шарджа – место, где отели предлагают отличный сервис и прекрасное обслуживание. За последние десятилетия город значительно обновился и расширился. Вернувшиеся сюда по прошествии 2-3 лет с удивлением отмечают невероятные темпы роста новых жилых массивов, отелей, мест отдыха и развлечений. Замысловатые абстрактные скульптуры, фонтаны, огненное буйство рекламы тянутся на километры. Сугубо современный облик сочетается с восточным колоритом.</p>
 <img src="tild3733-6436-4236-a434-663438393562__232e24c6242a7591dee5.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
@@ -211,202 +249,198 @@
 <img src="tild3831-3362-4834-b938-646435613838__1120144.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В вольерах уникального заповедника Wildlife Center, расположенном в эмирате, вы откроете для себя множество видов животных и растений Аравийского полуострова, находящихся на грани исчезновения, в том числе знаменитого аравийского леопарда.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Шарджа – единственный эмират, который имеет территорию и в восточной, и в западной частях страны. Благодаря этому, очень интересен его ландшафт, который варьируется от огромных пустынь до горных цепей и прибрежных территорий. Общая территория составляет приблизительно 2600 км². Он лежит всего в 13 км от города Дубай. Эти два города уже «соприкоснулись» своими окраинами, и, судя по всему, очень скоро превратятся в один большой мегаполис.</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По всем вопросам свяжитесь с нами любым удобным способом:</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">E-mail: trohin.zh@yandex.ru</p>
+
+
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Телефон: +7 (977) 730 95 22</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Соцсети: Вконтакте | Instagram | Telegram</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Индивидуальный предприниматель Трохин Евгений Альбертович</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ИНН 503613656680 / ОГРН ИП 315507400016056</p>
+
+
+
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">город Москва, Щербинка ул. Юбилейная д.3а</p>
 </div></section>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- ═══ ФОРМА (ШАБЛОН) ═══ -->
         <section id="booking-form" class="py-32 px-8 bg-surface-container-high relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
-        <div class="max-w-4xl mx-auto relative z-10">
-        <div class="text-center mb-16 space-y-4">
-        <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
-        <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
-        </div>
-        <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="ОАЭ" type="text"/>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
-        </div>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
-        <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
-        </div>
-        </div>
-        <div class="space-y-4">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
-        <div class="flex flex-wrap gap-8">
-        <label class="flex items-center gap-3 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
-        </label>
-        <label class="flex items-center gap-3 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
-        </label>
-        <label class="flex items-center gap-4 cursor-pointer group">
-        <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio" checked/>
-        <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
-        </label>
-        </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
-        <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
-        </div>
-        <div class="space-y-2">
-        <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
-        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
-        </div>
-        </div>
-        <div class="pt-8 flex justify-center">
-        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
-        </div>
-        </form>
-        </div>
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
+            <div class="max-w-4xl mx-auto relative z-10">
+                <div class="text-center mb-16 space-y-4">
+                    <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
+                    <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
+                </div>
+                <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="ОАЭ" type="text"/>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
+                                <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
+                                <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
+                            <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
+                        <div class="flex flex-wrap gap-8">
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
+                            </label>
+                            <label class="flex items-center gap-4 cursor-pointer group">
+                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio" checked/>
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
+                            <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
+                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
+                        </div>
+                    </div>
+                    <div class="pt-8 flex justify-center">
+                        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer class="bg-white py-32 px-8 border-t border-black/5 flex flex-col items-center">
-        <img src="LogoB_300x.png" alt="Emoji Tours" class="h-20">
+    <footer class="bg-[#fffcf5] w-full border-t border-black/10 pt-20 pb-12 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div class="space-y-6 max-w-sm">
+                    <img src="LogoB_300x.png" alt="Emoji Tours" class="h-16">
+                    <p class="text-black/60 font-['Manrope'] text-sm leading-relaxed">
+                        Мы верим, что путешествия — это лучший способ познать себя и окружающий мир. Позвольте нам стать вашим проводником в мир ярких эмоций.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary-container transition-colors" href="#">
+                            <span class="material-symbols-outlined text-lg">public</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary-container transition-colors" href="#">
+                            <span class="material-symbols-outlined text-lg">alternate_email</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-on-surface">Компания</h4>
+                        <ul class="space-y-2 text-sm text-on-surface-variant">
+                            <li><a class="hover:text-primary transition-colors" href="#">О нас</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Блог</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Партнерам</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-on-surface">Помощь</h4>
+                        <ul class="space-y-2 text-sm text-on-surface-variant">
+                            <li><a class="hover:text-primary transition-colors" href="#">Контакты</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">F.A.Q.</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Правила</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4 col-span-2 sm:col-span-1">
+                        <h4 class="font-bold text-on-surface">Локация</h4>
+                        <p class="text-sm text-on-surface-variant">Москва, <br/> ул. Тверская 12, оф. 405</p>
+                        <p class="text-sm text-on-surface-variant">+7 (495) 123-45-67</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-on-surface/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-black/60 font-['Manrope'] text-sm">© 2024 Emoji Tours. Путешествия с душой.</div>
+                <div class="flex flex-wrap justify-center gap-8 text-xs font-medium text-black/60">
+                    <a class="hover:text-primary" href="#">Политика конфиденциальности</a>
+                    <a class="hover:text-primary" href="#">Условия использования</a>
+                    <a class="hover:text-primary" href="#">Контакты</a>
+                    <a class="hover:text-primary" href="#">Партнерам</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- PDF Generation Logic -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
-        async function downloadPDF() {
-            const btn = document.getElementById('download-pdf-btn');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = 'Генерируем текст...';
-            btn.disabled = true;
-
-            try {
-                // Создаем временный элемент для PDF
-                const pdfContainer = document.createElement('div');
-                pdfContainer.style.background = '#fff';
-                pdfContainer.style.padding = '20mm';
-                pdfContainer.style.fontFamily = 'Arial, sans-serif'; // Системный шрифт надежнее для PDF
-                pdfContainer.style.color = '#000';
-
-                // Добавляем заголовок
-                const header = document.createElement('div');
-                header.style.marginBottom = '10mm';
-                header.style.textAlign = 'center';
-                
-                const logo = document.getElementById('site-logo').cloneNode(true);
-                logo.style.height = '12mm';
-                logo.style.marginBottom = '5mm';
-                header.appendChild(logo);
-                
-                const title = document.createElement('h1');
-                title.innerText = document.getElementById('page-title').innerText;
-                title.style.fontSize = '24pt';
-                title.style.fontWeight = 'bold';
-                title.style.borderBottom = '2px solid #000';
-                title.style.paddingBottom = '3mm';
-                header.appendChild(title);
-                
-                pdfContainer.appendChild(header);
-
-                // Копируем контент
-                const originalContent = document.getElementById('memo-content-area');
-                const content = originalContent.cloneNode(true);
-                
-                // --- ОЧИСТКА ---
-                // 1. Удаляем все картинки
-                content.querySelectorAll('img').forEach(img => img.remove());
-                
-                // 2. Сбрасываем гигантские классы разметки Tilda/Tailwind
-                content.className = ""; // Убираем space-y-32, py-24 и т.д.
-                content.style.lineHeight = "1.5";
-                
-                // 3. Форматируем секции
-                content.querySelectorAll('section').forEach(s => {
-                    s.className = ""; 
-                    s.style.marginTop = '8mm';
-                    s.style.pageBreakInside = 'avoid';
-                    
-                    const h2 = s.querySelector('h2');
-                    if (h2) {
-                        h2.className = "";
-                        h2.style.fontSize = '18pt';
-                        h2.style.fontWeight = 'bold';
-                        h2.style.marginBottom = '4mm';
-                        h2.style.marginTop = '6mm';
-                    }
-                    
-                    const pList = s.querySelectorAll('p');
-                    pList.forEach(p => {
-                        p.className = "";
-                        p.style.fontSize = '11pt';
-                        p.style.marginBottom = '3mm';
-                        p.style.textAlign = 'justify';
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 120, // Offset for fixed header
+                        behavior: 'smooth'
                     });
-                });
+                }
+            });
+        });
 
-                pdfContainer.appendChild(content);
+        // ScrollSpy logic (Google Docs style)
+        const sections = document.querySelectorAll('h2[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-                const opt = {
-                    margin: 10,
-                    filename: `Памятка_${document.getElementById('page-title').innerText.replace('Памятка: ', '')}.pdf`,
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { 
-                        scale: 1, 
-                        useCORS: true,
-                        scrollY: -window.scrollY // Исправляет смещение/пустые страницы
-                    },
-                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-                };
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-                await html2pdf().set(opt).from(pdfContainer).save();
-            } catch (e) {
-                console.error('PDF Error:', e);
-                alert('Ошибка при создании PDF.');
-            } finally {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }
-        }
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === "#" + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
-
