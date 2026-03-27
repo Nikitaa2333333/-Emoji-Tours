@@ -32,7 +32,7 @@
     <style>
         body  { font-family: 'Manrope', sans-serif; }
         a     { text-decoration: none !important; }
-        html  { scroll-behavior: smooth; }
+        html  { scroll-behavior: smooth; scroll-padding-top: 110px; }
         p     { line-height: 1.8; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -134,7 +134,7 @@
 
                 <div class="space-y-32" id="memo-content-area">
                      <section class="pt-24 border-t border-black/5"><h2 id="section-все-о-путешествии-в-таиланд" class="text-6xl font-black mb-16 tracking-tight">Все о путешествии в Таиланд</h2></section>
-<section class="pt-24 border-t border-black/5"><h2 id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-о-стране" id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Королевство Таиланд — государство с самой протяженной береговой линией во всей Азии, растянувшееся более чем на 1800 километров с севера на юг; омывается водами Андаманского моря и Сиамского залива.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Таиланд — одно из самых популярных туристических направлений в Юго-Восточной Азии. Эта экзотическая страна покоряет своим гостеприимством, удивительной природой и разнообразием развлечений на любой вкус, от шумных дискотек в Паттайе до медитации в древних буддийских храмах. Береговая линия страны протянулась более чем на 3 000 км. Здесь находится огромное количество курортов с комфортабельными отелями, яркими городскими кварталами, уединенными бунгало на островах и чистейшими пляжами, защищенными коралловыми рифами.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Свой отдых в Таиланде рекомендуем начать со знакомства с Бангкоком, являющегося столицей этого государства. Здесь Вы увидите множество уникальных и прославленных на весь мир достопримечательностей, ключевыми из которых являются Королевский Дворец и статуя лежащего будды. Продолжая тур по Таиланду, можно отправиться в древнюю столицу Сиама, расположенную в 86 км севернее Бангкока, где находится знаменитый парк Аюттхая с развалинами старинных храмов и руинами дворца Банг-Па-Ин.</p>
@@ -351,10 +351,7 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 120,
-                        behavior: 'smooth'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });

@@ -32,7 +32,7 @@
     <style>
         body  { font-family: 'Manrope', sans-serif; }
         a     { text-decoration: none !important; }
-        html  { scroll-behavior: smooth; }
+        html  { scroll-behavior: smooth; scroll-padding-top: 110px; }
         p     { line-height: 1.8; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -131,7 +131,7 @@
 
                 <div class="space-y-32" id="memo-content-area">
                      <section class="pt-24 border-t border-black/5"><h2 id="section-все-о-путешествии-на-кипр" class="text-6xl font-black mb-16 tracking-tight">Все о путешествии на Кипр</h2></section>
-<section class="pt-24 border-t border-black/5"><h2 id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-о-стране" id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Официальное название страны: Республика Кипр.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Небольшое государство восточного побережья Средиземного моря является третьим по величине островом Средиземноморья. На Кипре гостей ждет классический средиземноморский отдых с развитой туристической инфраструктурой, теплым морем и хорошим сервисом. Туризм является наиболее значимой составляющей страны, гостеприимные жители Кипра принимают гостей со всем радушием и добросердечностью.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">На территории Кипра располагается множество бухт и заливов, зеленые долины обрамляют горы. Ландшафтные особенности острова определяются горными цепями, которые находятся параллельно друг другу. Вдоль северного побережья протянулась Киренийская гряда, откуда в ясную погоду открывается вид на побережье Анатолии (80 км от острова). Юго-западную часть Кипра занимает горный массив Троодос. Здесь находится Олимп (1951 м) – высочайшая точка острова.</p>
@@ -340,10 +340,7 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 120,
-                        behavior: 'smooth'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });

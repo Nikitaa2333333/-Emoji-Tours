@@ -32,7 +32,7 @@
     <style>
         body  { font-family: 'Manrope', sans-serif; }
         a     { text-decoration: none !important; }
-        html  { scroll-behavior: smooth; }
+        html  { scroll-behavior: smooth; scroll-padding-top: 110px; }
         p     { line-height: 1.8; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -138,7 +138,7 @@
                 <div class="space-y-32" id="memo-content-area">
                      <section class="pt-24 border-t border-black/5"><h2 id="section-объединенные-арабские-эмираты" class="text-6xl font-black mb-16 tracking-tight">Объединенные Арабские Эмираты</h2></section>
 <section class="pt-24 border-t border-black/5"><h2 id="section-все-о-путешествии-в-оаэ" class="text-6xl font-black mb-16 tracking-tight">Все о путешествии в ОАЭ</h2></section>
-<section class="pt-24 border-t border-black/5"><h2 id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
+<section class="pt-24 border-t border-black/5"><h2 id="section-о-стране" id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">ОАЭ - расположены в северо-восточной части Аравийского полуострова и омываются Персидским заливом. Площадь их территории составляет 83,6 км². На юге и западе страна граничит с Саудовской Аравией, на востоке – с Оманом. Северное и западное побережья находятся напротив Ирана и Катара. Государство состоит из семи независимых эмиратов: Абу-Даби, Аджман, Дубай, Рас-Аль-Хайма, Умм-Аль-Кувейн, Фуджейра и Шарджа. Столицей ОАЭ является столица самого крупного эмирата – одноименный город Абу-Даби.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Климат этой страны определяется как сухой, субтропический и пустынный. Средние температуры в туристический сезон колеблются в пределах от +20 до +35°С, в некоторых районах достигают +48°С. Температуры воды в прибрежных зонах не опускаются ниже +20°С.</p>
 </div></section>
@@ -428,10 +428,7 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 120,
-                        behavior: 'smooth'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });

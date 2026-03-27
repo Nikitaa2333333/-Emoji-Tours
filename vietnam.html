@@ -32,7 +32,7 @@
     <style>
         body  { font-family: 'Manrope', sans-serif; }
         a     { text-decoration: none !important; }
-        html  { scroll-behavior: smooth; }
+        html  { scroll-behavior: smooth; scroll-padding-top: 110px; }
         p     { line-height: 1.8; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -131,7 +131,7 @@
                 </div>
 
                 <div class="space-y-32" id="memo-content-area">
-                     <section class="pt-24 border-t border-black/5"><h2 id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
+                     <section class="pt-24 border-t border-black/5"><h2 id="section-о-стране" id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Вьетнам - Азиатская жемчужина расположена в Юго-Восточной Азии, на полуострове Индокитай. На севере страна граничит с Китаем, на западе – с Лаосом и Камбоджой. На востоке Вьетнам омывается Южно-Китайским морем и заливом Бакбо, а на юго-западе – Сиамским заливом. Вьетнам является Социалистической Республикой и делится на 58 провинций и 5 городов центрального подчинения: Ханой (столица), Хошимин (бывший Сайгон), Хайфон, Дананг и Кантхо. В стране проживают 90 млн. человек.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Разнообразный этнический состав делает культуру Вьетнама многогранной и колоритной. Языки, организация быта, национальная одежда и искусство отражают его долгую и сложную историю. Религиозные культы вьетнамцев отправляются согласно канонам даосизма и буддизма.</p>
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Спокойный пляжный отдых, сёрфинг, азиатская экзотика, а также уникальные исторические памятники, храмы и архитектурные комплексы ждут туристов во Вьетнаме.</p>
@@ -360,10 +360,7 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 120,
-                        behavior: 'smooth'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });

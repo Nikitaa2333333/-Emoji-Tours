@@ -32,7 +32,7 @@
     <style>
         body  { font-family: 'Manrope', sans-serif; }
         a     { text-decoration: none !important; }
-        html  { scroll-behavior: smooth; }
+        html  { scroll-behavior: smooth; scroll-padding-top: 110px; }
         p     { line-height: 1.8; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -128,7 +128,7 @@
                 </div>
 
                 <div class="space-y-32" id="memo-content-area">
-                     <section class="pt-24 border-t border-black/5"><h2 id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
+                     <section class="pt-24 border-t border-black/5"><h2 id="section-о-стране" id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Гоа – популярный курорт Индии, где нет места обыденности, эксцентричность царит повсюду. Здесь свои законы и жизненный уклад, экзотический микрокосм, погружающий туристов в атмосферу безмятежности и полного расслабления.</p>
 <img src="tild6636-3239-4333-a432-623436346235__00f0372a.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Гоа – самый маленький штат Индии, расположенный на западном побережье Аравийского моря. Общая площадь штата всего 659 км², за пару часов вы сможете проехать его целиком на автомобиле. В регионе много рек и все они судоходные, поэтому здесь развита такая туристическая услуга как водные прогулки на лодках и кораблях. В центре побережья находятся острова Святого Георгия и Большой, около которых проходят погружения дайверов и сноркелеров. На востоке протянулся горный массив Западные Гаты, покрытый густыми тропическими лесами.</p>
@@ -354,10 +354,7 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 120,
-                        behavior: 'smooth'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
