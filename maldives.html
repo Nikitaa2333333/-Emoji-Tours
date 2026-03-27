@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html class="light" lang="ru">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Мальдивы — Emoji Tours</title>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -13,16 +16,16 @@
             theme: {
                 extend: {
                     colors: {
-                        "background":              "#fffcf5",
-                        "surface":                 "#fffcf5",
-                        "on-surface":              "#000000",
-                        "primary":                 "#f5e2a1",
-                        "on-primary":              "#000000",
-                        "on-surface-variant":      "#4b4b4b",
-                        "surface-container-low":   "#fffcf5",
-                        "surface-container-high":  "#fffaf0",
-                        "primary-container":       "#f5e2a1",
-                        "on-primary-container":    "#000000",
+                        "background": "#fffcf5",
+                        "surface": "#fffcf5",
+                        "on-surface": "#000000",
+                        "primary": "#f5e2a1",
+                        "on-primary": "#000000",
+                        "on-surface-variant": "#4b4b4b",
+                        "surface-container-low": "#fffcf5",
+                        "surface-container-high": "#fffaf0",
+                        "primary-container": "#f5e2a1",
+                        "on-primary-container": "#000000",
                     },
                     fontFamily: { "headline": ["Manrope"], "body": ["Manrope"] },
                 },
@@ -30,23 +33,37 @@
         }
     </script>
     <style>
-        body  { font-family: 'Manrope', sans-serif; }
-        a     { text-decoration: none !important; }
-        html  { scroll-behavior: smooth; }
-        p     { line-height: 1.8; }
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
-        
+
         /* Стили навигации как в Google Docs */
         /* Исправление для содержания */
         #quick-links {
-            max-height: calc(100vh - 220px); /* Ограничиваем высоту */
+            max-height: calc(100vh - 220px);
+            /* Ограничиваем высоту */
             overflow-y: auto;
             scrollbar-width: none;
             -ms-overflow-style: none;
         }
+
         #quick-links::-webkit-scrollbar {
             display: none;
         }
@@ -80,7 +97,8 @@
     <!-- ═══ ФИКСИРОВАННАЯ ШАПКА ═══ -->
     <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/80 backdrop-blur-md border-b border-black/5 py-4">
         <div class="max-w-7xl mx-auto flex justify-center items-center px-8 relative">
-            <a href="index.html" class="absolute left-8 text-sm font-bold flex items-center gap-2 hover:opacity-70 transition-opacity">
+            <a href="index.html"
+                class="absolute left-8 text-sm font-bold flex items-center gap-2 hover:opacity-70 transition-opacity">
                 <span class="material-symbols-outlined">arrow_back</span>
                 Все страны
             </a>
@@ -94,148 +112,257 @@
         <!-- ═══ HERO PHOTO (100VH) ═══ -->
         <section class="relative h-screen w-full overflow-hidden">
             <img src="tild3739-3336-4131-a166-623838346636__i_1.jpg" class="w-full h-full object-cover" id="hero-image">
-            
+
         </section>
 
         <!-- ═══ LAYOUT WITH SIDEBAR ═══ -->
         <div class="max-w-7xl mx-auto px-8 relative flex flex-col lg:flex-row gap-12">
-            
+
             <!-- ═══ SIDEBAR NAVIGATION (LEFT, STICKY) ═══ -->
             <aside class="hidden lg:block w-64 pt-20">
                 <div class="sticky top-24 h-fit max-h-screen pb-10">
                     <div>
-                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-black/40 mb-6 px-6">Содержание</p>       
+                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-black/40 mb-6 px-6">Содержание
+                        </p>
                         <nav id="quick-links" class="flex flex-col border-l border-black/5">
-<a href="#section-все-о-путешествии-на-райские-мальдивы" class="nav-link">Все о путешествии на райские Мальдивы</a>
-<a href="#section-о-стране" class="nav-link">О стране</a>
-<a href="#section-атолл-северный-мале" class="nav-link">Атолл Северный Мале</a>
-<a href="#section-атолл-южный-мале" class="nav-link">Атолл Южный Мале</a>
-<a href="#section-атолл-ари" class="nav-link">Атолл Ари</a>
-<a href="#section-атолл-баа" class="nav-link">Атолл Баа</a>
-<a href="#section-атолл-даалу" class="nav-link">Атолл Даалу</a>
-<a href="#section-атолл-раа" class="nav-link">Атолл Раа</a>
-<a href="#section-атолл-лавияни" class="nav-link">Атолл Лавияни</a>
-</nav>
+                            <a href="#section-все-о-путешествии-на-райские-мальдивы" class="nav-link">Все о путешествии
+                                на райские Мальдивы</a>
+                            <a href="#section-о-стране" class="nav-link">О стране</a>
+                            <a href="#section-атолл-северный-мале" class="nav-link">Атолл Северный Мале</a>
+                            <a href="#section-атолл-южный-мале" class="nav-link">Атолл Южный Мале</a>
+                            <a href="#section-атолл-ари" class="nav-link">Атолл Ари</a>
+                            <a href="#section-атолл-баа" class="nav-link">Атолл Баа</a>
+                            <a href="#section-атолл-даалу" class="nav-link">Атолл Даалу</a>
+                            <a href="#section-атолл-раа" class="nav-link">Атолл Раа</a>
+                            <a href="#section-атолл-лавияни" class="nav-link">Атолл Лавияни</a>
+                        </nav>
                     </div>
                 </div>
             </aside>
 
             <!-- ═══ CONTENT AREA ═══ -->
-            <div class="flex-1 py-20">
-                <p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
-                <h1 id="page-title" class="text-7xl md:text-9xl font-black tracking-tighter leading-none mb-12">Мальдивы</h1>
-                
+            <div class="flex-1 py-10">
+                <h1 id="page-title" class="text-7xl md:text-9xl font-black tracking-tighter leading-none mb-12">Мальдивы
+                </h1>
+
                 <div class="flex flex-wrap gap-4 mb-24">
-                    <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
-                    <a href="memo-maldives.html" class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
+                    <a href="#booking-form"
+                        class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Выбрать
+                        направление</a>
+                    <a href="memo-maldives.html"
+                        class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка
+                        туристу</a>
                 </div>
 
                 <div class="space-y-32" id="memo-content-area">
-                     <section class="pt-24 border-t border-black/5"><h2 id="section-все-о-путешествии-на-райские-мальдивы" class="text-6xl font-black mb-16 tracking-tight">Все о путешествии на райские Мальдивы</h2></section>
-<section class="pt-24 border-t border-black/5"><h2 id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Общая информация</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Живописные белоснежные пляжи, чистейший Индийский океан, красочный подводный мир, богатый коралловыми рифами и морскими обитателями. Это настоящий рай для дайверов со всего мира. Здесь можно увидеть гигантских скатов Манта Рэй и рифовых акул. Именно на Мальдивы предпочитают приезжать молодожёны, поскольку тут царит атмосфера романтики. Здесь каждого ждет первоклассный отдых, насыщенный яркими впечатлениями.</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Мальдивская республика представляет собой природные атоллы, бесчисленное количество коралловых островов, на которых путешественников ждут как превосходные пятизвездочные отели с высококлассным сервисом, так и бюджетные варианты размещения, а главное, полное единение с природой вдали от городской суеты.</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Спа-центры, полный релакс, песчаные пляжи с мелким бархатистым песком, возможность выхода в океан прямо из забронированной виллы и отели с подводными ресторанами — всё это становится реалиями для туристов, которые предпочли отдых на Мальдивах.</p>
-</div></section>
-<section class="pt-24 border-t border-black/5"><h2 id="section-атолл-северный-мале" class="text-6xl font-black mb-16 tracking-tight">Атолл Северный Мале</h2><div class="space-y-8">
-<img src="tild3739-3336-4131-a166-623838346636__i_1.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Туристы чаще всего выбирают этот атолл из-за близкого расположения к аэропорту. Трансфер до отеля занимает минимальное время и осуществляется на традиционных лодках и катерах. В атолле Северный Мале широкий выбор отелей для размеренного спа-отдыха, множество развлечений, а также все необходимые условия для сноркелинга и серфинга.</p>
-</div></section>
-<section class="pt-24 border-t border-black/5"><h2 id="section-атолл-южный-мале" class="text-6xl font-black mb-16 tracking-tight">Атолл Южный Мале</h2><div class="space-y-8">
-<img src="tild3038-3438-4564-a234-663266653436__8q1a7167.webp" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Более 20 сказочных коралловых рифов, дайв-центры, подходящие новичкам, национальный заповедник, где можно повстречать скатов и рифовых акул, ждут туристов в атолле Южный Мале. Опытным ныряльщикам предлагается погружение на глубину 20-30 метров, на которой находятся затонувшие корабли. А близ природного заповедника Гураиду расположен популярный у серфингистов курорт Кандума, у берегов которого нередко бывают хорошие волны.</p>
-</div></section>
-<section class="pt-24 border-t border-black/5"><h2 id="section-атолл-ари" class="text-6xl font-black mb-16 tracking-tight">Атолл Ари</h2><div class="space-y-8">
-<img src="tild6630-6538-4330-b464-393463393134__yv9ruhd5mvt7khn3uw60.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В составе атолла насчитывается 70 островов, из которых только 28 - туристические. Между некоторыми островками проложены мостики, по которым можно покататься на велосипеде или прогуляться. Считается, здесь находится лучшее место для наблюдения за китовыми акулами.</p>
-</div></section>
-<section class="pt-24 border-t border-black/5"><h2 id="section-атолл-баа" class="text-6xl font-black mb-16 tracking-tight">Атолл Баа</h2><div class="space-y-8">
-<img src="tild6331-3531-4436-a431-353735636630__anantara_kihavah_-_a.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Особо охраняемый биосферный заповедник ЮНЕСКО с очень разнообразной подводной фауной, коралловыми рифами, морскими черепахами и большими фрегатами, птицами с причудливым окрасом, обитающими только в этих местах. Атолл является жемчужиной Мальдивских островов и местом паломничества дайверов со всего мира.</p>
-</div></section>
-<section class="pt-24 border-t border-black/5"><h2 id="section-атолл-даалу" class="text-6xl font-black mb-16 tracking-tight">Атолл Даалу</h2><div class="space-y-8">
-<img src="tild6139-6437-4131-b637-363137333330__photo.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Первозданный атолл был открыт туристами сравнительно недавно и является образцом тропического рая нетронутого рукой человека. В настоящий момент лишь три из 56 островов готовы предложить гостям отдых и являются курортными зонами. На одном из островов можно посмотреть древнюю мечеть из резного коралла и развалины старинных буддийских монастырей. Еще одно любопытное место – «черепаший остров» Велавару, окруженный лагунами, дивными пляжами и местами подводного погружения.</p>
-</div></section>
-<section class="pt-24 border-t border-black/5"><h2 id="section-атолл-раа" class="text-6xl font-black mb-16 tracking-tight">Атолл Раа</h2><div class="space-y-8">
-<img src="tild6263-3564-4536-b135-396134623436__hbr-maldives-excursi.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Несмотря на удаленность от столицы, атолл считается одним из наиболее популярных мест Мальдив. Один из 15 островов атолла известен мастерами национальных лодок дони. А остров Расгетииму предлагает познакомиться с историей, овеянной десятками мифов и легенд, которые непременно поведают местные жители.</p>
-</div></section>
-<section class="pt-24 border-t border-black/5"><h2 id="section-атолл-лавияни" class="text-6xl font-black mb-16 tracking-tight">Атолл Лавияни</h2><div class="space-y-8">
-<img src="tild6463-6337-4131-a432-626631353861__i_2.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Отличительной особенностью этого атолла являются размеры островов - все 63 из них слишком крошечные по сравнению с другими Мальдивскими островами. Сюда едут любители гольфа, ведь только на острове Куреду работают 9 гольф-клубов.</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Этот список неполный — существует целый ряд других удивительных атоллов со своими особенностями.</p>
+                    <section class="pt-24 border-t border-black/5">
+                        <h2 id="section-все-о-путешествии-на-райские-мальдивы"
+                            class="text-6xl font-black mb-16 tracking-tight">Все о путешествии на райские Мальдивы</h2>
+                    </section>
+                    <section class="pt-24 border-t border-black/5">
+                        <h2 id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2>
+                        <div class="space-y-8">
+                            <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Общая информация
+                            </p>
+                            <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Живописные
+                                белоснежные пляжи, чистейший Индийский океан, красочный подводный мир, богатый
+                                коралловыми рифами и морскими обитателями. Это настоящий рай для дайверов со всего мира.
+                                Здесь можно увидеть гигантских скатов Манта Рэй и рифовых акул. Именно на Мальдивы
+                                предпочитают приезжать молодожёны, поскольку тут царит атмосфера романтики. Здесь
+                                каждого ждет первоклассный отдых, насыщенный яркими впечатлениями.</p>
+                            <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Мальдивская
+                                республика представляет собой природные атоллы, бесчисленное количество коралловых
+                                островов, на которых путешественников ждут как превосходные пятизвездочные отели с
+                                высококлассным сервисом, так и бюджетные варианты размещения, а главное, полное единение
+                                с природой вдали от городской суеты.</p>
+                            <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Спа-центры,
+                                полный релакс, песчаные пляжи с мелким бархатистым песком, возможность выхода в океан
+                                прямо из забронированной виллы и отели с подводными ресторанами — всё это становится
+                                реалиями для туристов, которые предпочли отдых на Мальдивах.</p>
+                        </div>
+                    </section>
+                    <section class="pt-24 border-t border-black/5">
+                        <h2 id="section-атолл-северный-мале" class="text-6xl font-black mb-16 tracking-tight">Атолл
+                            Северный Мале</h2>
+                        <div class="space-y-8">
+                            <img src="tild3739-3336-4131-a166-623838346636__i_1.jpg"
+                                class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                            <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Туристы чаще
+                                всего выбирают этот атолл из-за близкого расположения к аэропорту. Трансфер до отеля
+                                занимает минимальное время и осуществляется на традиционных лодках и катерах. В атолле
+                                Северный Мале широкий выбор отелей для размеренного спа-отдыха, множество развлечений, а
+                                также все необходимые условия для сноркелинга и серфинга.</p>
+                        </div>
+                    </section>
+                    <section class="pt-24 border-t border-black/5">
+                        <h2 id="section-атолл-южный-мале" class="text-6xl font-black mb-16 tracking-tight">Атолл Южный
+                            Мале</h2>
+                        <div class="space-y-8">
+                            <img src="tild3038-3438-4564-a234-663266653436__8q1a7167.webp"
+                                class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                            <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Более 20
+                                сказочных коралловых рифов, дайв-центры, подходящие новичкам, национальный заповедник,
+                                где можно повстречать скатов и рифовых акул, ждут туристов в атолле Южный Мале. Опытным
+                                ныряльщикам предлагается погружение на глубину 20-30 метров, на которой находятся
+                                затонувшие корабли. А близ природного заповедника Гураиду расположен популярный у
+                                серфингистов курорт Кандума, у берегов которого нередко бывают хорошие волны.</p>
+                        </div>
+                    </section>
+                    <section class="pt-24 border-t border-black/5">
+                        <h2 id="section-атолл-ари" class="text-6xl font-black mb-16 tracking-tight">Атолл Ари</h2>
+                        <div class="space-y-8">
+                            <img src="tild6630-6538-4330-b464-393463393134__yv9ruhd5mvt7khn3uw60.jpg"
+                                class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                            <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">В составе атолла
+                                насчитывается 70 островов, из которых только 28 - туристические. Между некоторыми
+                                островками проложены мостики, по которым можно покататься на велосипеде или прогуляться.
+                                Считается, здесь находится лучшее место для наблюдения за китовыми акулами.</p>
+                        </div>
+                    </section>
+                    <section class="pt-24 border-t border-black/5">
+                        <h2 id="section-атолл-баа" class="text-6xl font-black mb-16 tracking-tight">Атолл Баа</h2>
+                        <div class="space-y-8">
+                            <img src="tild6331-3531-4436-a431-353735636630__anantara_kihavah_-_a.jpg"
+                                class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                            <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Особо охраняемый
+                                биосферный заповедник ЮНЕСКО с очень разнообразной подводной фауной, коралловыми рифами,
+                                морскими черепахами и большими фрегатами, птицами с причудливым окрасом, обитающими
+                                только в этих местах. Атолл является жемчужиной Мальдивских островов и местом
+                                паломничества дайверов со всего мира.</p>
+                        </div>
+                    </section>
+                    <section class="pt-24 border-t border-black/5">
+                        <h2 id="section-атолл-даалу" class="text-6xl font-black mb-16 tracking-tight">Атолл Даалу</h2>
+                        <div class="space-y-8">
+                            <img src="tild6139-6437-4131-b637-363137333330__photo.jpg"
+                                class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                            <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Первозданный
+                                атолл был открыт туристами сравнительно недавно и является образцом тропического рая
+                                нетронутого рукой человека. В настоящий момент лишь три из 56 островов готовы предложить
+                                гостям отдых и являются курортными зонами. На одном из островов можно посмотреть древнюю
+                                мечеть из резного коралла и развалины старинных буддийских монастырей. Еще одно
+                                любопытное место – «черепаший остров» Велавару, окруженный лагунами, дивными пляжами и
+                                местами подводного погружения.</p>
+                        </div>
+                    </section>
+                    <section class="pt-24 border-t border-black/5">
+                        <h2 id="section-атолл-раа" class="text-6xl font-black mb-16 tracking-tight">Атолл Раа</h2>
+                        <div class="space-y-8">
+                            <img src="tild6263-3564-4536-b135-396134623436__hbr-maldives-excursi.jpg"
+                                class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                            <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Несмотря на
+                                удаленность от столицы, атолл считается одним из наиболее популярных мест Мальдив. Один
+                                из 15 островов атолла известен мастерами национальных лодок дони. А остров Расгетииму
+                                предлагает познакомиться с историей, овеянной десятками мифов и легенд, которые
+                                непременно поведают местные жители.</p>
+                        </div>
+                    </section>
+                    <section class="pt-24 border-t border-black/5">
+                        <h2 id="section-атолл-лавияни" class="text-6xl font-black mb-16 tracking-tight">Атолл Лавияни
+                        </h2>
+                        <div class="space-y-8">
+                            <img src="tild6463-6337-4131-a432-626631353861__i_2.jpg"
+                                class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                            <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Отличительной
+                                особенностью этого атолла являются размеры островов - все 63 из них слишком крошечные по
+                                сравнению с другими Мальдивскими островами. Сюда едут любители гольфа, ведь только на
+                                острове Куреду работают 9 гольф-клубов.</p>
+                            <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Этот список
+                                неполный — существует целый ряд других удивительных атоллов со своими особенностями.</p>
 
 
 
 
 
 
-</div></section>
-                    </div>
-                </div>
-            </div>
-                    </div>
-                </div>
-            </div>
-                    </div>
-                </div>
-            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
 
         <!-- ═══ ФОРМА (ШАБЛОН) ═══ -->
-        
+
         <section id="booking-form" class="py-32 px-8 bg-surface-container-high relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
+            <div
+                class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0">
+            </div>
             <div class="max-w-4xl mx-auto relative z-10">
                 <div class="text-center mb-16 space-y-4">
                     <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
-                    <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
+                    <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших
+                        желаний и эмоционального настроя.</p>
                 </div>
                 <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                         <!-- Personal Info -->
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="Иван Иванов" type="text" />
                         </div>
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="hello@example.com" type="email" />
                         </div>
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="+7 (___) ___-__-__" type="tel" />
                         </div>
                         <div class="space-y-2">
-                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Мальдивы" type="text"/>
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое
+                                направление</label>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                value="Мальдивы" type="text" />
                         </div>
                         <!-- Trip Specs -->
                         <div class="grid grid-cols-2 gap-4">
                             <div class="space-y-2">
                                 <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
-                                <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
+                                <input
+                                    class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                    min="1" type="number" value="2" />
                             </div>
                             <div class="space-y-2">
-                                <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
-                                <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
+                                <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и
+                                    возраст)</label>
+                                <input
+                                    class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                    placeholder="1 реб, 5 лет" type="text" />
                             </div>
                         </div>
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
-                            <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
+                            <input
+                                class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="От 200 000" type="text" />
                         </div>
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                min="1" type="number" value="7" />
                         </div>
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                type="date" />
                         </div>
                     </div>
                     <!-- Radio Buttons -->
@@ -243,78 +370,102 @@
                         <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
                         <div class="flex flex-wrap gap-8">
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-                                <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
+                                <input
+                                    class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none"
+                                    name="excursion" type="radio" />
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Да,
+                                    обязательно</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-                                <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
+                                <input
+                                    class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none"
+                                    name="excursion" type="radio" />
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только
+                                    отдых</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-                                <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
+                                <input
+                                    class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none"
+                                    name="excursion" type="radio" />
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Пока не
+                                    знаю</span>
                             </label>
                         </div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <div class="space-y-2">
-                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
-                            <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по
+                                отелю</label>
+                            <textarea
+                                class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="Напр. первая линия, только 5*, наличие детского клуба..."
+                                rows="3"></textarea>
                         </div>
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="Шереметьево, Пулково..." type="text" />
                         </div>
                     </div>
                     <div class="pt-8 flex justify-center">
-                        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
+                        <button
+                            class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all"
+                            type="submit">Отправить заявку на мечту</button>
                     </div>
                 </form>
             </div>
         </section>
     </main>
 
-    
-    
+
+
     <footer class="bg-[#fffcf5] w-full border-t border-black/10 pt-20 pb-12 px-8">
         <div class="max-w-7xl mx-auto flex flex-col gap-12">
             <div class="flex flex-col md:flex-row justify-between items-start gap-12">
                 <div class="space-y-6 max-w-md">
                     <img src="LogoB_300x.png" alt="Emoji Tours" class="h-16">
                     <p class="text-black/60 font-['Manrope'] text-sm leading-relaxed">
-                        Мы верим, что путешествия — это лучший способ познать себя и окружающий мир. Позвольте нам стать вашим проводником в мир ярких эмоций.
+                        Мы верим, что путешествия — это лучший способ познать себя и окружающий мир. Позвольте нам стать
+                        вашим проводником в мир ярких эмоций.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary transition-colors">
                             <span class="material-symbols-outlined text-lg">public</span>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary transition-colors">
                             <span class="material-symbols-outlined text-lg">chat</span>
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
                     <div class="space-y-4">
-                        <h4 class="font-bold text-on-surface uppercase tracking-widest text-[10px] opacity-50">Связаться с нами</h4>
+                        <h4 class="font-bold text-on-surface uppercase tracking-widest text-[10px] opacity-50">Связаться
+                            с нами</h4>
                         <div class="space-y-3 text-lg">
-                            <a href="tel:+79636491852" class="block font-black hover:text-primary transition-all">+7 963-649-18-52</a>
-                            <a href="mailto:trohin.zh@yandex.ru" class="block text-on-surface-variant hover:text-primary transition-all text-sm">trohin.zh@yandex.ru</a>
+                            <a href="tel:+79636491852" class="block font-black hover:text-primary transition-all">+7
+                                963-649-18-52</a>
+                            <a href="mailto:trohin.zh@yandex.ru"
+                                class="block text-on-surface-variant hover:text-primary transition-all text-sm">trohin.zh@yandex.ru</a>
                         </div>
                     </div>
-                    
+
                     <div class="space-y-4">
-                        <h4 class="font-bold text-on-surface uppercase tracking-widest text-[10px] opacity-50">Юридическая информация</h4>
+                        <h4 class="font-bold text-on-surface uppercase tracking-widest text-[10px] opacity-50">
+                            Юридическая информация</h4>
                         <div class="text-xs text-on-surface-variant leading-relaxed">
                             Индивидуальный предприниматель <br>
                             <strong>Трохин Евгений Альбертович</strong><br>
-                            ИНН 503613656680 <br> 
+                            ИНН 503613656680 <br>
                             ОГРН ИП 315507400016056
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="text-black/40 font-['Manrope'] text-xs">© 2026 Emoji Tours. Путешествия с душой.</div>
                 <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-black/40">
@@ -359,13 +510,13 @@
                 link.classList.remove('active');
                 if (link.getAttribute('href') === "#" + current) {
                     link.classList.add('active');
-                    
+
                     const parent = document.getElementById('quick-links');
                     if (parent) {
                         const linkTop = link.offsetTop;
                         const parentHeight = parent.offsetHeight;
                         const parentScroll = parent.scrollTop;
-                        
+
                         if (linkTop > (parentScroll + parentHeight - 50) || linkTop < parentScroll) {
                             parent.scrollTo({
                                 top: linkTop - 100,
@@ -378,4 +529,5 @@
         });
     </script>
 </body>
+
 </html>

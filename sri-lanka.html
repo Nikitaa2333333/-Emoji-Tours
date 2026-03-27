@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html class="light" lang="ru">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Шри-Ланка — Emoji Tours</title>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -13,16 +16,16 @@
             theme: {
                 extend: {
                     colors: {
-                        "background":              "#fffcf5",
-                        "surface":                 "#fffcf5",
-                        "on-surface":              "#000000",
-                        "primary":                 "#f5e2a1",
-                        "on-primary":              "#000000",
-                        "on-surface-variant":      "#4b4b4b",
-                        "surface-container-low":   "#fffcf5",
-                        "surface-container-high":  "#fffaf0",
-                        "primary-container":       "#f5e2a1",
-                        "on-primary-container":    "#000000",
+                        "background": "#fffcf5",
+                        "surface": "#fffcf5",
+                        "on-surface": "#000000",
+                        "primary": "#f5e2a1",
+                        "on-primary": "#000000",
+                        "on-surface-variant": "#4b4b4b",
+                        "surface-container-low": "#fffcf5",
+                        "surface-container-high": "#fffaf0",
+                        "primary-container": "#f5e2a1",
+                        "on-primary-container": "#000000",
                     },
                     fontFamily: { "headline": ["Manrope"], "body": ["Manrope"] },
                 },
@@ -30,23 +33,38 @@
         }
     </script>
     <style>
-        body  { font-family: 'Manrope', sans-serif; }
-        a     { text-decoration: none !important; }
-        html  { scroll-behavior: smooth; }
-        p     { line-height: 1.8; }
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
-        
+
         /* Стили навигации как в Google Docs */
         /* Исправление для содержания */
         #quick-links {
-            max-height: calc(100vh - 220px); /* Ограничиваем высоту */
+            max-height: calc(100vh - 220px);
+            /* Ограничиваем высоту */
             overflow-y: auto;
             scrollbar-width: none;
             -ms-overflow-style: none;
         }
+
         #quick-links::-webkit-scrollbar {
             display: none;
         }
@@ -80,7 +98,8 @@
     <!-- ═══ ФИКСИРОВАННАЯ ШАПКА ═══ -->
     <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/80 backdrop-blur-md border-b border-black/5 py-4">
         <div class="max-w-7xl mx-auto flex justify-center items-center px-8 relative">
-            <a href="index.html" class="absolute left-8 text-sm font-bold flex items-center gap-2 hover:opacity-70 transition-opacity">
+            <a href="index.html"
+                class="absolute left-8 text-sm font-bold flex items-center gap-2 hover:opacity-70 transition-opacity">
                 <span class="material-symbols-outlined">arrow_back</span>
                 Все страны
             </a>
@@ -93,21 +112,26 @@
     <main>
         <!-- ═══ HERO PHOTO (100VH) ═══ -->
         <section class="relative h-screen w-full overflow-hidden">
-            <img src="tild6664-6631-4935-b962-636531333631__shri-lan-plyazh.jpg" class="w-full h-full object-cover" id="hero-image">
-            
+            <img src="tild6664-6631-4935-b962-636531333631__shri-lan-plyazh.jpg" class="w-full h-full object-cover"
+                id="hero-image">
+
         </section>
 
         <!-- ═══ LAYOUT WITH SIDEBAR ═══ -->
         <div class="max-w-7xl mx-auto px-8 relative flex flex-col lg:flex-row gap-12">
-            
+
             <!-- ═══ SIDEBAR NAVIGATION (LEFT, STICKY) ═══ -->
             <aside class="hidden lg:block w-64 pt-20">
                 <div class="sticky top-24 h-fit max-h-screen pb-10">
                     <div>
-                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-black/40 mb-6 px-6">Содержание</p>       
+                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-black/40 mb-6 px-6">Содержание
+                        </p>
                         <nav id="quick-links" class="flex flex-col border-l border-black/5">
-<a href="#section-о-стране" class="nav-link">О стране</a>
-</nav>
+                            <a href="#section-о-стране" class="nav-link">О стране</a>
+                            <a href="#section-западное-побережье" class="nav-link">Западное побережье</a>
+                            <a href="#section-южное-побережье" class="nav-link">Южное побережье</a>
+                            <a href="#section-восточное-побережье" class="nav-link">Восточное побережье</a>
+                        </nav>
                     </div>
                 </div>
             </aside>
@@ -115,112 +139,185 @@
             <!-- ═══ CONTENT AREA ═══ -->
             <div class="flex-1 py-20">
                 <p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
-                <h1 id="page-title" class="text-7xl md:text-9xl font-black tracking-tighter leading-none mb-12">Шри-Ланка</h1>
-                
+                <h1 id="page-title" class="text-7xl md:text-9xl font-black tracking-tighter leading-none mb-12">
+                    Шри-Ланка</h1>
+
                 <div class="flex flex-wrap gap-4 mb-24">
-                    <a href="#booking-form" class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу туда</a>
-                    <a href="memo-sri-lanka.html" class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка туристу</a>
+                    <a href="#booking-form"
+                        class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу
+                        туда</a>
+                    <a href="memo-sri-lanka.html"
+                        class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка
+                        туристу</a>
                 </div>
 
                 <div class="space-y-32" id="memo-content-area">
-                     <section class="pt-24 border-t border-black/5"><h2 id="section-о-стране" class="text-6xl font-black mb-16 tracking-tight">О стране</h2><div class="space-y-8">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Шри-Ланка – удивительный остров, расположенный в Индийском океане, где гармонично сочетаются спокойный пляж и активные экскурсионные маршруты. Государство с древней историей, яркой разнообразной флорой и фауной, песчаными пляжами и дружелюбными жителями. Остров отделен от полуострова Индостан Полкским проливом и Манарским заливом, между которыми находится Адамов мост – цепь отмелей и коралловых островов длиной 30 км. Согласно легенде Адам, изгнанный из рая на землю (на о. Шри-Ланка), прошел по Адамову мосту на материк, а затем, по этому мосту на Шри-Ланку пришли первые люди.</p>
-<img src="tild6664-6631-4935-b962-636531333631__shri-lan-plyazh.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Туристический сезон здесь длится круглогодично, и в какое бы время года вы не решили посетить страну, Шри-Ланка встретит вас солнечной погодой и теплым океаном. Температура воздуха большинства районов в диапазоне 25-30 °С, а воды круглый год – 25-27 °С.</p>
-<img src="tild6431-3532-4332-b232-373339646533__1.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Зелень чайных плантаций, шум Индийского океана, мудрость аюрведы и тишина древних буддийских монастырей - все это ждет туристов на острове. Независимо от того, желаете ли вы насладиться отдыхом в пятизвездочном отеле или понырять с аквалангом среди разноцветных тропических рыб в поисках затонувшего средневекового корабля, Шри-Ланка предложит подходящее место для удовлетворения любого вашего желания и каприза.</p>
-<img src="tild3635-6534-4136-b662-343762643435__nuwara_eliya_tea_pla.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Шри-Ланка – круглогодичное направление. Благодаря близости к экватору и климатическим особенностям отдых на острове доступен в любое время года, но на разных побережьях, таких как: Западное, Южное и Восточное. Приглашаем вас совершить удивительное путешествие в страну вечного праздника и теплого солнца!</p>
-<img src="tild3331-3937-4632-b666-633831306331__shri-lanka-1.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Западное побережье</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По праву считается зимним курортом. Самая развитая во всех отношениях часть острова, откуда начинается большинство туров. Здесь располагается международный аэропорт Коломбо и много крупных курортов, которые находятся в непосредственной близости друг от друга. Песчаные пляжи, прозрачные воды океана с коралловыми садами, пышная тропическая зелень, множество отелей с отличной инфраструктурой, ресторанов, ночных клубов, магазинов и сувенирных лавок — всем этим может похвастаться Западное побережье острова Шри-Ланка.</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Курорты запада страны многочисленны и находятся недалеко друг от друга. Любителям экзотической рыбалки и местной кухни побережье также подойдет. Пышная тропическая зелень, пальмы, свисающие над водой, прекрасная погода и теплое море круглый год – все это делает отдых здесь незабываемым. Западное побережье Шри-Ланки – это непрерывные золотые пляжи и отели, расположенные в довольно крупных городах: Негомбо, Ваддува, Калутара, Берувела, Маунт-Лавиния.</p>
-<img src="tild6139-3864-4361-b333-366137326637__03-2000x925-swimming.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Во всем царит атмосфера курорта - полотно песчаных пляжей, кристально чистая вода цвета сапфира, подводные коралловые сады, останки затонувших кораблей и мелководья, усеянные рыбами невиданной окраски… Это лишь немногое из того, что обещает отдых на побережьях Индийского океана.</p>
-<img src="tild3638-6264-4236-b033-643866633061__accomod-pict-min.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Великолепная инфраструктура привлекает туристов, которые, прежде всего, хотят насладиться тишиной, красотой природы и спокойствием. Для любителей шоппинга существует пестрый и многоголосый рынок, на котором купить можно абсолютно всё!</p>
-<img src="tild3837-3238-4438-b362-366466366230__wpid-img_20141011_15.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Южное побережье</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Наиболее интересный в познавательном плане регион Шри-Ланки. Здесь сосредоточено много культурных и природных достопримечательностей: буддийские монастыри, колониальный город Гелле, датский форт в Матаре, национальные парки, кокосовые и рисовые плантации. В этой части острова каждый найдёт для себя развлечения по вкусу, будь то спокойный отдых в живописной бухте, весёлое времяпровождение с друзьями в сёрф-кемпе, сафари по заповедным дорогам, изучение подводного мира океана или зажигательные вечеринки в ночных клубах.</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Защищённость береговой линии от океанской волны позволяет в этих местах заниматься водными видами спорта круглый год! Южное побережье является подходящим местом для серфинга и дайвинга, а также уникальным местом, куда приплывают морские черепахи. Рай для любителей снорклинга и дайвинга – Хиккадува и Велигама. Хиккадува является также излюбленным местом серфингистов. Побережье славится не только своими песчаными пляжами и красивыми бухтами, но и прекрасными ресторанчиками, в которых можно отведать свежайшие морепродукты недавно выловленные специально для вас.</p>
-<img src="tild3738-3231-4131-a236-323361343232__s1200151454.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если вы устали от пляжного отдыха, можно отвлечься — посетить национальные парки, природные заповедники, известные храмы, и знаменитый Голландский форт в Галле. Юг считается самым развитым в плане курортной инфраструктуры, и ежегодно привлекает туристов со всего мира. Он славится не только своими пляжами, но и разнообразием ночной жизни. Здесь находятся самые развитые туристические регионы, такие как: Бентота, Хиккадува, Унаватуна, Велигама, Тангалла.</p>
-<img src="tild6566-6238-4766-a665-363866643634__0_130016_7bfc4ed5_or.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Лучшее время для посещения курортов западного и южного побережья – период с ноября по апрель, когда ярко светит солнце, которое заставляет забыть о немногочисленных дождях, оставшихся на восточном побережье.</p>
-<img src="tild3435-3666-4136-b337-393063346537__img_8533.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Восточное побережье</p>
-<p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Курорты Восточного побережья с широкими песчаными пляжами идеально подойдут для ценителей уединённого отдыха на фоне дивных тропических пейзажей. Понравится в этих краях и семьям с детьми: океан здесь достаточно спокойный благодаря коралловым рифам, защищающим лагуны от больших волн. Это относительно новое для туристического бизнеса направление, но на побережье уже появилось много уютных отелей, открывается всё больше центров дайвинга и снорклинга. Туристам предлагаются интересные экскурсионные маршруты: к старинным храмам и фортам, коралловым островам и сказочным бухтам, а также в удивительный природный мир Национального парка Ялла.</p>
-<img src="tild6438-3932-4464-b964-613830666535__i_17.jpg" class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                    <img src="tild3635-6534-4136-b662-343762643435__nuwara_eliya_tea_pla.jpg"
+                        class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                    <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Шри-Ланка –
+                        круглогодичное направление. Благодаря близости к экватору и климатическим особенностям отдых на
+                        острове доступен в любое время года, но на разных побережьях, таких как: Западное, Южное и
+                        Восточное. Приглашаем вас совершить удивительное путешествие в страну вечного праздника и
+                        теплого солнца!</p>
+                    <h2 id="section-о-стране" class="text-4xl font-black tracking-tight mb-8">О стране</h2>
+                    <img src="tild3331-3937-4632-b666-633831306331__shri-lanka-1.jpg"
+                        class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                    <h2 id="section-западное-побережье" class="text-4xl font-black tracking-tight mb-8">Западное побережье</h2>
+                    <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">По праву считается
+                        зимним курортом. Самая развитая во всех отношениях часть острова, откуда начинается большинство
+                        туров. Здесь располагается международный аэропорт Коломбо и много крупных курортов, которые
+                        находятся в непосредственной близости друг от друга. Песчаные пляжи, прозрачные воды океана с
+                        коралловыми садами, пышная тропическая зелень, множество отелей с отличной инфраструктурой,
+                        ресторанов, ночных клубов, магазинов и сувенирных лавок — всем этим может похвастаться Западное
+                        побережье острова Шри-Ланка.</p>
+                    <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Курорты запада страны
+                        многочисленны и находятся недалеко друг от друга. Любителям экзотической рыбалки и местной кухни
+                        побережье также подойдет. Пышная тропическая зелень, пальмы, свисающие над водой, прекрасная
+                        погода и теплое море круглый год – все это делает отдых здесь незабываемым. Западное побережье
+                        Шри-Ланки – это непрерывные золотые пляжи и отели, расположенные в довольно крупных городах:
+                        Негомбо, Ваддува, Калутара, Берувела, Маунт-Лавиния.</p>
+                    <img src="tild6139-3864-4361-b333-366137326637__03-2000x925-swimming.jpg"
+                        class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                    <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Во всем царит атмосфера
+                        курорта - полотно песчаных пляжей, кристально чистая вода цвета сапфира, подводные коралловые
+                        сады, останки затонувших кораблей и мелководья, усеянные рыбами невиданной окраски… Это лишь
+                        немногое из того, что обещает отдых на побережьях Индийского океана.</p>
+                    <img src="tild3638-6264-4236-b033-643866633061__accomod-pict-min.jpg"
+                        class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                    <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Великолепная
+                        инфраструктура привлекает туристов, которые, прежде всего, хотят насладиться тишиной, красотой
+                        природы и спокойствием. Для любителей шоппинга существует пестрый и многоголосый рынок, на
+                        котором купить можно абсолютно всё!</p>
+                    <img src="tild3837-3238-4438-b362-366466366230__wpid-img_20141011_15.jpg"
+                        class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                    <h2 id="section-южное-побережье" class="text-4xl font-black tracking-tight mb-8">Южное побережье</h2>
+                    <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Наиболее интересный в
+                        познавательном плане регион Шри-Ланки. Здесь сосредоточено много культурных и природных
+                        достопримечательностей: буддийские монастыри, колониальный город Гелле, датский форт в Матаре,
+                        национальные парки, кокосовые и рисовые плантации. В этой части острова каждый найдёт для себя
+                        развлечения по вкусу, будь то спокойный отдых в живописной бухте, весёлое времяпровождение с
+                        друзьями в сёрф-кемпе, сафари по заповедным дорогам, изучение подводного мира океана или
+                        зажигательные вечеринки в ночных клубах.</p>
+                    <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Защищённость береговой
+                        линии от океанской волны позволяет в этих местах заниматься водными видами спорта круглый год!
+                        Южное побережье является подходящим местом для серфинга и дайвинга, а также уникальным местом,
+                        куда приплывают морские черепахи. Рай для любителей снорклинга и дайвинга – Хиккадува и
+                        Велигама. Хиккадува является также излюбленным местом серфингистов. Побережье славится не только
+                        своими песчаными пляжами и красивыми бухтами, но и прекрасными ресторанчиками, в которых можно
+                        отведать свежайшие морепродукты недавно выловленные специально для вас.</p>
+                    <img src="tild3738-3231-4131-a236-323361343232__s1200151454.jpg"
+                        class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                    <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Если вы устали от
+                        пляжного отдыха, можно отвлечься — посетить национальные парки, природные заповедники, известные
+                        храмы, и знаменитый Голландский форт в Галле. Юг считается самым развитым в плане курортной
+                        инфраструктуры, и ежегодно привлекает туристов со всего мира. Он славится не только своими
+                        пляжами, но и разнообразием ночной жизни. Здесь находятся самые развитые туристические регионы,
+                        такие как: Бентота, Хиккадува, Унаватуна, Велигама, Тангалла.</p>
+                    <img src="tild6566-6238-4766-a665-363866643634__0_130016_7bfc4ed5_or.jpg"
+                        class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                    <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Лучшее время для
+                        посещения курортов западного и южного побережья – период с ноября по апрель, когда ярко светит
+                        солнце, которое заставляет забыть о немногочисленных дождях, оставшихся на восточном побережье.
+                    </p>
+                    <img src="tild3435-3666-4136-b337-393063346537__img_8533.jpg"
+                        class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
+                    <h2 id="section-восточное-побережье" class="text-4xl font-black tracking-tight mb-8">Восточное побережье</h2>
+                    <p class="text-2xl leading-relaxed text-on-surface-variant font-light mb-8">Курорты Восточного
+                        побережья с широкими песчаными пляжами идеально подойдут для ценителей уединённого отдыха на
+                        фоне дивных тропических пейзажей. Понравится в этих краях и семьям с детьми: океан здесь
+                        достаточно спокойный благодаря коралловым рифам, защищающим лагуны от больших волн. Это
+                        относительно новое для туристического бизнеса направление, но на побережье уже появилось много
+                        уютных отелей, открывается всё больше центров дайвинга и снорклинга. Туристам предлагаются
+                        интересные экскурсионные маршруты: к старинным храмам и фортам, коралловым островам и сказочным
+                        бухтам, а также в удивительный природный мир Национального парка Ялла.</p>
+                    <img src="tild6438-3932-4464-b964-613830666535__i_17.jpg"
+                        class="w-full h-[500px] object-cover rounded-[3rem] shadow-xl mb-4" loading="lazy">
 
 
 
 
 
 
-</div></section>
-                    </div>
                 </div>
+                </section>
             </div>
-                    </div>
-                </div>
-            </div>
-                    </div>
-                </div>
-            </div>
-                </div>
-            </div>
+        </div>
+        </div>
         </div>
 
         <!-- ═══ ФОРМА (ШАБЛОН) ═══ -->
-        
+
         <section id="booking-form" class="py-32 px-8 bg-surface-container-high relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0"></div>
+            <div
+                class="absolute top-0 right-0 w-1/3 h-full bg-primary-container/10 -skew-x-12 transform translate-x-1/2 -z-0">
+            </div>
             <div class="max-w-4xl mx-auto relative z-10">
                 <div class="text-center mb-16 space-y-4">
                     <h2 class="text-5xl font-headline font-extrabold text-on-surface">Заполните анкету</h2>
-                    <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших желаний и эмоционального настроя.</p>
+                    <p class="text-on-surface-variant text-lg font-light">Мы подберем идеальный тур, исходя из ваших
+                        желаний и эмоционального настроя.</p>
                 </div>
                 <form class="bg-surface rounded-3xl p-10 md:p-16 shadow-2xl space-y-12">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                         <!-- Personal Info -->
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Иван Иванов" type="text"/>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="Иван Иванов" type="text" />
                         </div>
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="hello@example.com" type="email"/>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="hello@example.com" type="email" />
                         </div>
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="+7 (___) ___-__-__" type="tel"/>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="+7 (___) ___-__-__" type="tel" />
                         </div>
                         <div class="space-y-2">
-                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое направление</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" value="Шри-Ланка" type="text"/>
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое
+                                направление</label>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                value="Шри-Ланка" type="text" />
                         </div>
                         <!-- Trip Specs -->
                         <div class="grid grid-cols-2 gap-4">
                             <div class="space-y-2">
                                 <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
-                                <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="2"/>
+                                <input
+                                    class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                    min="1" type="number" value="2" />
                             </div>
                             <div class="space-y-2">
-                                <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
-                                <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="1 реб, 5 лет" type="text"/>
+                                <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и
+                                    возраст)</label>
+                                <input
+                                    class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                    placeholder="1 реб, 5 лет" type="text" />
                             </div>
                         </div>
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
-                            <input class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="От 200 000" type="text"/>
+                            <input
+                                class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="От 200 000" type="text" />
                         </div>
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" min="1" type="number" value="7"/>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                min="1" type="number" value="7" />
                         </div>
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" type="date"/>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                type="date" />
                         </div>
                     </div>
                     <!-- Radio Buttons -->
@@ -228,78 +325,102 @@
                         <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
                         <div class="flex flex-wrap gap-8">
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-                                <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
+                                <input
+                                    class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none"
+                                    name="excursion" type="radio" />
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Да,
+                                    обязательно</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-                                <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
+                                <input
+                                    class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none"
+                                    name="excursion" type="radio" />
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только
+                                    отдых</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none" name="excursion" type="radio"/>
-                                <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
+                                <input
+                                    class="w-5 h-5 text-primary focus:ring-primary bg-surface-container-low border-none"
+                                    name="excursion" type="radio" />
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Пока не
+                                    знаю</span>
                             </label>
                         </div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <div class="space-y-2">
-                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
-                            <textarea class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
+                            <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по
+                                отелю</label>
+                            <textarea
+                                class="w-full bg-[#fff9ed] border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="Напр. первая линия, только 5*, наличие детского клуба..."
+                                rows="3"></textarea>
                         </div>
                         <div class="space-y-2">
                             <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Шереметьево, Пулково..." type="text"/>
+                            <input
+                                class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="Шереметьево, Пулково..." type="text" />
                         </div>
                     </div>
                     <div class="pt-8 flex justify-center">
-                        <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all" type="submit">Отправить заявку на мечту</button>
+                        <button
+                            class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all"
+                            type="submit">Отправить заявку на мечту</button>
                     </div>
                 </form>
             </div>
         </section>
     </main>
 
-    
-    
+
+
     <footer class="bg-[#fffcf5] w-full border-t border-black/10 pt-20 pb-12 px-8">
         <div class="max-w-7xl mx-auto flex flex-col gap-12">
             <div class="flex flex-col md:flex-row justify-between items-start gap-12">
                 <div class="space-y-6 max-w-md">
                     <img src="LogoB_300x.png" alt="Emoji Tours" class="h-16">
                     <p class="text-black/60 font-['Manrope'] text-sm leading-relaxed">
-                        Мы верим, что путешествия — это лучший способ познать себя и окружающий мир. Позвольте нам стать вашим проводником в мир ярких эмоций.
+                        Мы верим, что путешествия — это лучший способ познать себя и окружающий мир. Позвольте нам стать
+                        вашим проводником в мир ярких эмоций.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary transition-colors">
                             <span class="material-symbols-outlined text-lg">public</span>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary transition-colors">
                             <span class="material-symbols-outlined text-lg">chat</span>
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
                     <div class="space-y-4">
-                        <h4 class="font-bold text-on-surface uppercase tracking-widest text-[10px] opacity-50">Связаться с нами</h4>
+                        <h4 class="font-bold text-on-surface uppercase tracking-widest text-[10px] opacity-50">Связаться
+                            с нами</h4>
                         <div class="space-y-3 text-lg">
-                            <a href="tel:+79636491852" class="block font-black hover:text-primary transition-all">+7 963-649-18-52</a>
-                            <a href="mailto:trohin.zh@yandex.ru" class="block text-on-surface-variant hover:text-primary transition-all text-sm">trohin.zh@yandex.ru</a>
+                            <a href="tel:+79636491852" class="block font-black hover:text-primary transition-all">+7
+                                963-649-18-52</a>
+                            <a href="mailto:trohin.zh@yandex.ru"
+                                class="block text-on-surface-variant hover:text-primary transition-all text-sm">trohin.zh@yandex.ru</a>
                         </div>
                     </div>
-                    
+
                     <div class="space-y-4">
-                        <h4 class="font-bold text-on-surface uppercase tracking-widest text-[10px] opacity-50">Юридическая информация</h4>
+                        <h4 class="font-bold text-on-surface uppercase tracking-widest text-[10px] opacity-50">
+                            Юридическая информация</h4>
                         <div class="text-xs text-on-surface-variant leading-relaxed">
                             Индивидуальный предприниматель <br>
                             <strong>Трохин Евгений Альбертович</strong><br>
-                            ИНН 503613656680 <br> 
+                            ИНН 503613656680 <br>
                             ОГРН ИП 315507400016056
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="text-black/40 font-['Manrope'] text-xs">© 2026 Emoji Tours. Путешествия с душой.</div>
                 <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-black/40">
@@ -319,8 +440,7 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 120,
+                    target.scrollIntoView({
                         behavior: 'smooth'
                     });
                 }
@@ -344,13 +464,13 @@
                 link.classList.remove('active');
                 if (link.getAttribute('href') === "#" + current) {
                     link.classList.add('active');
-                    
+
                     const parent = document.getElementById('quick-links');
                     if (parent) {
                         const linkTop = link.offsetTop;
                         const parentHeight = parent.offsetHeight;
                         const parentScroll = parent.scrollTop;
-                        
+
                         if (linkTop > (parentScroll + parentHeight - 50) || linkTop < parentScroll) {
                             parent.scrollTo({
                                 top: linkTop - 100,
@@ -363,4 +483,5 @@
         });
     </script>
 </body>
+
 </html>
