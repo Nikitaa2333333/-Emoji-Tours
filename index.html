@@ -185,24 +185,34 @@
         </div>
     </nav>
     <!-- Hero Section -->
-    <header class="pt-52 pb-12 flex flex-col items-center justify-center px-8 text-center bg-primary relative">
-        <div class="max-w-6xl mx-auto space-y-6">
-            <span class="text-black/40 font-bold tracking-[0.2em] text-xs block animate-fade-up opacity-0"
-                style="animation-delay: 0.2s;">
-                Путешествия с душой
-            </span>
-            <h1 class="text-7xl md:text-[11rem] font-black tracking-tighter leading-[0.9] text-on-surface animate-fade-up opacity-0"
-                style="animation-delay: 0.4s;">
-                Эмоджи турс
+    <header class="pt-48 pb-16 flex flex-col items-center justify-center px-8 text-center bg-primary relative overflow-hidden">
+        <!-- Декоративные световые пятна (Aura glow) -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] max-w-[1200px] h-[400px] bg-white opacity-50 blur-[100px] rounded-[100%] pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10 flex flex-col items-center">
+            
+            <!-- Chic Ticket Badge -->
+            <div class="inline-flex items-center justify-center px-8 py-3 bg-primary text-black font-bold tracking-[0.2em] text-[11px] uppercase mb-10 animate-fade-up opacity-0"
+                style="animation-delay: 0.1s; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05)); -webkit-mask-image: radial-gradient(circle at 0 50%, transparent 6px, black 6.5px), radial-gradient(circle at 100% 50%, transparent 6px, black 6.5px); -webkit-mask-size: 51% 100%; -webkit-mask-repeat: no-repeat; -webkit-mask-position: left, right; mask-image: radial-gradient(circle at 0 50%, transparent 6px, black 6.5px), radial-gradient(circle at 100% 50%, transparent 6px, black 6.5px); mask-size: 51% 100%; mask-repeat: no-repeat; mask-position: left, right;">
+                <span class="mt-px">Путешествия с душой</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-7xl md:text-[11.5rem] font-black tracking-tighter leading-[0.85] text-on-surface animate-fade-up opacity-0"
+                style="animation-delay: 0.3s;">
+                Эмоджи<br class="hidden md:block">турс
             </h1>
-            <h2 class="text-3xl md:text-5xl font-medium text-on-surface-variant max-w-4xl mx-auto leading-tight pt-2 opacity-0 animate-fade-up"
-                style="animation-delay: 0.6s;">
-                Туры, полные эмоций
+
+            <!-- Subheadline -->
+            <h2 class="text-2xl md:text-3xl font-medium text-black max-w-2xl mx-auto leading-normal mt-14 mb-14 opacity-0 animate-fade-up"
+                style="animation-delay: 0.5s;">
+                Мы создаем туры,<br class="hidden sm:block"> полные настоящих эмоций
             </h2>
-            <div class="pt-12 flex flex-wrap justify-center gap-4 animate-fade-up opacity-0"
-                style="animation-delay: 0.8s;">
+
+            <!-- CTA Area -->
+            <div class="flex justify-center animate-fade-up opacity-0" style="animation-delay: 0.7s;">
                 <a href="#countries"
-                    class="bg-black text-white px-14 py-6 rounded-full text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all">
+                    class="inline-flex items-center justify-center bg-black text-white px-12 py-5 rounded-full text-xl font-bold transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-2xl">
                     Выбрать направление
                 </a>
             </div>
