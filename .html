@@ -35,7 +35,7 @@
         html  { scroll-behavior: smooth; scroll-padding-top: 110px; }
         p     { line-height: 1.8; }
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
         
@@ -78,15 +78,16 @@
 <body class="bg-background text-on-surface">
 
     <!-- ═══ ФИКСИРОВАННАЯ ШАПКА ═══ -->
-    <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/80 backdrop-blur-md border-b border-black/5 py-4">
-        <div class="max-w-7xl mx-auto flex justify-center items-center px-8 relative">
-            <a href="index.html" class="absolute left-8 text-sm font-bold flex items-center gap-2 hover:opacity-70 transition-opacity">
-                <span class="material-symbols-outlined">arrow_back</span>
+    <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/90 backdrop-blur-md border-b border-black/5 py-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between md:justify-center items-center px-4 md:px-8 relative">
+            <a href="index.html" class="flex md:absolute md:left-8 text-xs md:text-sm font-bold items-center gap-1 md:gap-2 hover:opacity-70 transition-opacity whitespace-nowrap bg-black/5 px-3 py-2 rounded-full md:bg-transparent md:px-0 md:py-0">
+                <span class="material-symbols-outlined text-[18px] md:text-[24px]">arrow_back</span>
                 Все страны
             </a>
-            <a href="index.html">
-                <img src="LogoB_300x.png" alt="Emoji Tours" class="h-10">
+            <a href="index.html" class="flex-shrink-0 mx-auto md:mx-0">
+                <img src="LogoB_300x.png" alt="Emoji Tours" class="h-8 md:h-10">
             </a>
+            <div class="w-24 md:hidden"></div>
         </div>
     </nav>
 
@@ -227,54 +228,60 @@
 
     
     
-    <footer class="bg-[#fffcf5] w-full border-t border-black/10 pt-20 pb-12 px-8">
-        <div class="max-w-7xl mx-auto flex flex-col gap-12">
+    <footer class="bg-surface-container-low w-full border-t border-black/5 pt-16 pb-10 px-4 md:px-8 mt-8">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12 md:gap-16">
             <div class="flex flex-col md:flex-row justify-between items-start gap-12">
-                <div class="space-y-6 max-w-md">
-                    <img src="LogoB_300x.png" alt="Emoji Tours" class="h-16">
-                    <p class="text-black/60 font-['Manrope'] text-sm leading-relaxed">
-                        Мы верим, что путешествия — это лучший способ познать себя и окружающий мир. Позвольте нам стать вашим проводником в мир ярких эмоций.
+                <div class="space-y-6 max-w-sm text-center md:text-left mx-auto md:mx-0">
+                    <img src="LogoB_300x.png" alt="Emoji Tours" class="h-12 md:h-14 mx-auto md:mx-0">
+                    <p class="text-on-surface-variant font-medium text-sm leading-relaxed px-4 md:px-0">
+                        Мы верим, что путешествия — это лучший способ познать себя и окружающий мир.
                     </p>
-                    <div class="flex gap-6">
+                    <div class="flex gap-4 justify-center md:justify-start">
                         <a href="https://max.ru/join/0haRr-rt5CMasX93mYrj_DuaLtUNy7gLfKyjXIdKFys" target="_blank"
-                            class="w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform group">
+                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group">
                             <img src="Логотип_MAX.svg" alt="MAX"
-                                class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                                class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all">
                         </a>
                         <a href="https://vk.com/emoji_tours" target="_blank"
-                            class="w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform group">
+                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group">
                             <img src="VK_Compact_Logo_(2021-present).svg.png" alt="VK"
-                                class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all">
+                                class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all">
                         </a>
                     </div>
                 </div>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-16 w-full md:w-auto text-center md:text-left">
                     <div class="space-y-4">
-                        <h4 class="font-bold text-on-surface uppercase tracking-widest text-[10px] opacity-50">Связаться с нами</h4>
+                        <h4 class="font-bold text-on-surface-variant text-sm">Связаться
+                            с нами</h4>
                         <div class="space-y-3 text-lg">
-                            <a href="tel:+79636491852" class="block font-black hover:text-primary transition-all">+7 963-649-18-52</a>
-                            <a href="mailto:trohin.zh@yandex.ru" class="block text-on-surface-variant hover:text-primary transition-all text-sm">trohin.zh@yandex.ru</a>
+                            <a href="tel:+79636491852" class="block font-black text-on-surface hover:text-primary transition-colors">+7
+                                963-649-18-52</a>
+                            <a href="mailto:trohin.zh@yandex.ru"
+                                class="block text-on-surface-variant hover:text-black transition-colors text-sm font-medium">trohin.zh@yandex.ru</a>
                         </div>
                     </div>
-                    
+
                     <div class="space-y-4">
-                        <h4 class="font-bold text-on-surface uppercase tracking-widest text-[10px] opacity-50">Юридическая информация</h4>
-                        <div class="text-xs text-on-surface-variant leading-relaxed">
+                        <h4 class="font-bold text-on-surface-variant text-sm">
+                            Юридическая информация</h4>
+                        <div class="text-xs text-on-surface-variant leading-relaxed opacity-80">
                             Индивидуальный предприниматель <br>
-                            <strong>Трохин Евгений Альбертович</strong><br>
-                            ИНН 503613656680 <br> 
+                            <strong class="text-on-surface">Трохин Евгений Альбертович</strong><br>
+                            ИНН 503613656680 <br>
                             ОГРН ИП 315507400016056
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="text-black/40 font-['Manrope'] text-xs">© 2026 Emoji Tours. Путешествия с душой.</div>
-                <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-black/40">
-                    <a href="#" class="hover:text-black transition-colors">Политика конфиденциальности</a>
-                    <a href="index.html" class="hover:text-black transition-colors">Все страны</a>
+
+            <div class="pt-8 md:pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-on-surface-variant/60 font-medium text-[11px] md:text-xs text-center md:text-left w-full md:w-auto">© 2026 Emoji Tours. Путешествия с душой.</div>
+                <div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-on-surface-variant/80">
+                    <a href="index.html#countries" class="hover:text-black transition-colors">Страны</a>
+                    <a href="index.html#calendar" class="hover:text-black transition-colors">Календарь</a>
+                    <a href="index.html#testimonials" class="hover:text-black transition-colors">Отзывы</a>
+                    <a href="index.html#journey" class="hover:text-black transition-colors">Начать путешествие</a>
                 </div>
             </div>
         </div>
