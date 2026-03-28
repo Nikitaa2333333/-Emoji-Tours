@@ -166,6 +166,15 @@
                 transform: translateY(0);
             }
         }
+
+        #drawer-overlay.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #mobile-drawer.open {
+            transform: translateX(0);
+        }
     </style>
 </head>
 
@@ -186,6 +195,7 @@
             </div>
             <!-- Mobile Menu Button -->
             <button
+                onclick="toggleMenu()"
                 class="md:hidden w-11 h-11 flex items-center justify-center rounded-full bg-surface-variant/30 text-on-surface hover:bg-surface-variant/70 transition-colors active:scale-95">
                 <span class="material-symbols-outlined">menu</span>
             </button>
@@ -1050,8 +1060,6 @@
     </section>
 
     <!-- Footer -->
-
-
     <footer class="bg-surface-container-low w-full border-t border-black/5 pt-16 pb-10 px-4 md:px-8 mt-8">
         <div class="max-w-7xl mx-auto flex flex-col gap-12 md:gap-16">
             <div class="flex flex-col md:flex-row justify-between items-start gap-12">
@@ -1116,8 +1124,47 @@
         </div>
     </footer>
 
+    <!-- Mobile Drawer (Hamburger Menu) -->
+    <div id="drawer-overlay" onclick="toggleMenu()" class="fixed inset-0 bg-black/40 z-[100] transition-opacity duration-300 opacity-0 pointer-events-none backdrop-blur-sm"></div>
+    <div id="mobile-drawer" class="fixed top-0 right-0 w-[85%] max-w-sm h-full bg-[#fffcf5] z-[110] transform translate-x-full transition-transform duration-500 ease-out shadow-2xl p-8 flex flex-col">
+        <div class="flex justify-between items-center mb-12">
+            <img src="LogoB_300x.png" alt="Emoji Tours" class="h-8">
+            <button onclick="toggleMenu()" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-variant/30 text-on-surface active:scale-90 transition-transform">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-6 font-['Manrope'] font-bold text-xl tracking-tight">
+            <a class="text-on-surface hover:text-black transition-colors py-3 border-b border-black/5 flex items-center justify-between group" href="#countries" onclick="toggleMenu()">
+                Страны
+                <span class="material-symbols-outlined opacity-20 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+            </a>
+            <a class="text-on-surface hover:text-black transition-colors py-3 border-b border-black/5 flex items-center justify-between group" href="#calendar" onclick="toggleMenu()">
+                Календарь
+                <span class="material-symbols-outlined opacity-20 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+            </a>
+            <a class="text-on-surface hover:text-black transition-colors py-3 border-b border-black/5 flex items-center justify-between group" href="#testimonials" onclick="toggleMenu()">
+                Отзывы
+                <span class="material-symbols-outlined opacity-20 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+            </a>
+            <a class="text-on-surface hover:text-black transition-colors py-3 flex items-center justify-between group" href="#journey" onclick="toggleMenu()">
+                Начать путешествие
+                <span class="material-symbols-outlined opacity-20 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+            </a>
+        </nav>
+        <div class="mt-auto pt-10 border-t border-black/10">
+            <p class="text-[11px] text-on-surface-variant/60 font-bold uppercase tracking-[0.1em]">© 2026 Emoji Tours. <br>Путешествия с душой.</p>
+        </div>
+    </div>
 
-
+    <script>
+        function toggleMenu() {
+            const drw = document.getElementById('mobile-drawer');
+            const ovl = document.getElementById('drawer-overlay');
+            if(!drw || !ovl) return;
+            const isOpen = drw.classList.toggle('open');
+            ovl.classList.toggle('visible');
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
     </script>
 </body>
 
