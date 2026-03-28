@@ -80,14 +80,7 @@
             background: rgba(245, 226, 161, 0.2);
         }
     
-    /* --- Premium Mobile Navigation Pro Max (Mobile Only) --- */
-    @media (max-width: 1023px) {
-        #scroll-progress {
-            position: fixed; top: 0; left: 0; height: 3px;
-            background: #f5e2a1; width: 0%; z-index: 1000;
-            transition: width 0.1s ease-out;
-            box-shadow: 0 0 10px rgba(245, 226, 161, 0.5);
-        }
+    
 
         .header-hidden { transform: translateY(-100%) !important; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important; }
         .header-visible { transform: translateY(0) !important; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important; }
@@ -134,61 +127,8 @@
 <body class="text-on-surface h-screen overflow-hidden flex">
     <!-- Premium Mobile Elements (Pro Max) -->
     <div id="scroll-progress"></div>
-    <div id="drawer-overlay" onclick="toggleTOC()"></div>
-    <div id="mobile-drawer">
-        <div class="w-16 h-1.5 bg-black/10 rounded-full mx-auto mb-10" onclick="toggleTOC()"></div>
-        <p class="text-[10px] font-black uppercase tracking-[0.4em] text-black/20 mb-8 text-center italic">Маршрут путешествия</p>
-        <nav id="mobile-nav-list" class="overflow-y-auto pb-12 px-2"></nav>
-    </div>
-    <button id="mobile-toc-button" onclick="toggleTOC()" class="lg:hidden">
-        <span class="material-symbols-outlined text-[30px]">explore</span>
-    </button>
-
-
-    <!-- Sidebar -->
-    <aside class="w-72 bg-admin-sidebar text-admin-sidebar-text flex flex-col transition-all duration-300 relative z-20 shadow-2xl">
-        <!-- Logo -->
-        <div class="h-24 flex items-center px-8 border-b border-white/10">
-            <h1 class="text-2xl font-black text-white tracking-tighter leading-none flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary">admin_panel_settings</span>
-                Emoji<br>Admin
-            </h1>
-        </div>
-
-        <!-- Navigation -->
-        <nav class="flex-1 overflow-y-auto py-8 px-4 space-y-2" id="sidebar-nav">
-            <button onclick="switchTab('tab-main')" class="nav-btn w-full flex items-center gap-4 px-4 py-3.5 rounded-2xl bg-admin-sidebar-active text-black font-bold transition-all" data-target="tab-main">
-                <span class="material-symbols-outlined">dashboard</span>
-                Главный экран
-            </button>
-            <button onclick="switchTab('tab-countries')" class="nav-btn w-full flex items-center gap-4 px-4 py-3.5 rounded-2xl hover:bg-white/5 text-admin-sidebar-text font-medium transition-all" data-target="tab-countries">
-                <span class="material-symbols-outlined">public</span>
-                Страны
-            </button>
-            <button onclick="switchTab('tab-calendar')" class="nav-btn w-full flex items-center gap-4 px-4 py-3.5 rounded-2xl hover:bg-white/5 text-admin-sidebar-text font-medium transition-all" data-target="tab-calendar">
-                <span class="material-symbols-outlined">calendar_month</span>
-                Календарь
-            </button>
-            <button onclick="switchTab('tab-reviews')" class="nav-btn w-full flex items-center gap-4 px-4 py-3.5 rounded-2xl hover:bg-white/5 text-admin-sidebar-text font-medium transition-all" data-target="tab-reviews">
-                <span class="material-symbols-outlined">reviews</span>
-                Отзывы
-            </button>
-            
-            <div class="pt-8 pb-2 px-4 text-xs font-bold text-white/30 uppercase tracking-widest">Система</div>
-            <button onclick="switchTab('tab-settings')" class="nav-btn w-full flex items-center gap-4 px-4 py-3.5 rounded-2xl hover:bg-white/5 text-admin-sidebar-text font-medium transition-all" data-target="tab-settings">
-                <span class="material-symbols-outlined">settings</span>
-                Настройки
-            </button>
-        </nav>
-
-        <!-- User profile -->
-        <div class="p-6 border-t border-white/10">
-            <div class="flex items-center gap-4">
-                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black font-bold">A</div>
-                <div>
-                    <div class="text-sm font-bold text-white">Администратор</div>
-                    <div class="text-xs text-white/50">В сети</div>
-                </div>
+    
+    
             </div>
             <div class="mt-6">
                 <a href="index.html" class="flex justify-center items-center gap-2 w-full py-2 rounded-xl border border-white/20 text-white/70 hover:bg-white/10 hover:text-white transition-colors text-sm">
@@ -741,27 +681,7 @@
         });
 
         // Sync Sidebar to Bottom Sheet
-        function toggleTOC() {
-            const drw = document.getElementById('mobile-drawer');
-            const ovl = document.getElementById('drawer-overlay');
-            const isOpen = drw.classList.toggle('open');
-            ovl.classList.toggle('visible');
-            document.body.style.overflow = isOpen ? 'hidden' : '';
-
-            if (isOpen) {
-                const src = document.getElementById('quick-links');
-                const dst = document.getElementById('mobile-nav-list');
-                if (src && dst) {
-                    dst.innerHTML = '';
-                    src.querySelectorAll('.nav-link').forEach(l => {
-                        const cln = l.cloneNode(true);
-                        cln.className = 'drawer-link';
-                        cln.onclick = (e) => {
-                           toggleTOC();
-                           // Ждем закрытия анимации и скроллим
-                           setTimeout(() => {
-                               const targetId = cln.getAttribute('href');
-                               document.querySelector(targetId).scrollIntoView({behavior: 'smooth'});
+        );
                            }, 300);
                         };
                         dst.appendChild(cln);
@@ -770,5 +690,193 @@
             }
         }
     </script>
+
+
+
+
+<!-- Навигационная плашка -->
+<div id="nav-navigation-container">
+    <button id="nav-navigation-trigger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-compass"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        <span>Навигация</span>
+    </button>
+
+    <div id="nav-bottom-sheet">
+        <div class="sheet-handle"></div>
+        <div class="sheet-title">Навигация</div>
+        <div id="nav-links-list">
+            <!-- Сюда JS добавит ссылки из h2 -->
+        </div>
+    </div>
+    <div id="nav-overlay"></div>
+</div>
+
+<style>
+/* Кнопка-плашка */
+#nav-navigation-trigger {
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 999;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#nav-navigation-trigger:hover { 
+    transform: translateX(-50%) translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+#nav-navigation-trigger svg { transition: transform 0.5s; }
+#nav-navigation-trigger:hover svg { transform: rotate(45deg); }
+
+/* Шторка (Bottom Sheet) */
+#nav-bottom-sheet {
+    position: fixed;
+    bottom: -110%;
+    left: 0;
+    width: 100%;
+    background: #fffcf5;
+    border-radius: 3.5rem 3.5rem 0 0;
+    padding: 2.5rem 2rem;
+    z-index: 10001;
+    transition: bottom 0.6s cubic-bezier(0.32, 0.72, 0, 1);
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 -20px 50px rgba(0,0,0,0.15);
+}
+
+#nav-bottom-sheet.open { bottom: 0; }
+
+.sheet-handle {
+    width: 50px;
+    height: 5px;
+    background: #e5e0d4;
+    border-radius: 10px;
+    margin: 0 auto 2rem;
+}
+
+.sheet-title {
+    font-size: 13px;
+    color: #8c887d;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+#nav-links-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.8rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.nav-link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.2rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: rgba(0,0,0,0.02);
+    border-radius: 1.2rem;
+    transition: all 0.2s;
+}
+
+.nav-link-item:hover { 
+    background: #f5e2a1; 
+    transform: translateX(5px);
+}
+
+.nav-link-item svg { opacity: 0.3; transition: 0.2s; }
+.nav-link-item:hover svg { opacity: 1; transform: translateX(5px); }
+
+/* Оверлей */
+#nav-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0; visibility: hidden;
+    z-index: 10000;
+    transition: all 0.4s;
+    backdrop-filter: blur(8px);
+}
+
+#nav-overlay.visible { opacity: 1; visibility: visible; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const trigger = document.getElementById('nav-navigation-trigger');
+    const sheet = document.getElementById('nav-bottom-sheet');
+    const overlay = document.getElementById('nav-overlay');
+    const list = document.getElementById('nav-links-list');
+
+    // Находим все H2 (регионы)
+    const headings = document.querySelectorAll('h2');
+    
+    function generateLinks(elements) {
+        list.innerHTML = ''; // Очистка перед генерацией
+        elements.forEach((h, index) => {
+            if (!h.id) h.id = 'section-' + index;
+            const link = document.createElement('a');
+            link.className = 'nav-link-item';
+            link.href = '#' + h.id;
+            
+            // Чистим текст заголовка
+            const titleText = h.innerText.trim();
+            
+            link.innerHTML = `<span>${titleText}</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>`;
+            
+            link.onclick = (e) => {
+                e.preventDefault();
+                const target = document.getElementById(h.id);
+                // Плавный скролл с отступом
+                const yOffset = -100; 
+                const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+                toggleMenu();
+            };
+            list.appendChild(link);
+        });
+    }
+
+    if (headings.length > 0) {
+        generateLinks(headings);
+    } else {
+        // Если H2 нет (например в памятке), ищем H1
+        const titleLink = document.querySelectorAll('h1');
+        if (titleLink.length > 0) generateLinks(titleLink);
+    }
+
+    function toggleMenu() {
+        const isOpen = sheet.classList.toggle('open');
+        overlay.classList.toggle('visible');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+
+    trigger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+});
+</script>
+
 </body>
 </html>
