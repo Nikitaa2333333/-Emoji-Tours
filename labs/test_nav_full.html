@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>FINAL VERSION: 38+ POINTS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; background: #fffcf5; }
+        .nav-link { display: block; padding: 0.45rem 1.5rem; font-size: 0.85rem; font-weight: 700; color: rgba(0,0,0,0.3); border-left: 2px solid transparent; transition: 0.2s; }
+        .nav-link.active { color: #000; border-left-color: #000; background: #fff; font-weight: 800; }
+        .section-card { background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 4rem; padding: 5rem; margin-bottom: 3.5rem; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="pt-32 px-12">
+    <nav class="fixed top-0 left-0 w-full h-24 bg-white/80 backdrop-blur-md z-[100] border-b border-black/5 flex items-center px-12 justify-between">
+        <div class="font-black text-2xl tracking-tighter uppercase">Emoji Tours</div>
+    </nav>
+    <div class="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-4 gap-20">
+        <aside class="hidden lg:block sticky top-32 h-[calc(100vh-160px)] overflow-y-auto scrollbar-hide"> <div class="mb-10"><a href="#intro" class="nav-link !text-black active">НАЧАЛО</a></div> </aside>
+        <main class="lg:col-span-3"> 
+    <section id="intro" class="section-card !border-none !shadow-none p-0 !mb-32 bg-transparent">
+        <h1 class="text-9xl font-black tracking-tighter leading-[0.8] mb-12">Памятка<br/>Египет.</h1>
+        <p class="text-2xl text-black/40 font-bold uppercase tracking-widest leading-none mt-4">Emoji Tours / Technical Preview</p>
+    </section> </main>
+    </div>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.querySelectorAll('.nav-link').forEach(l => {
+                        l.classList.toggle('active', l.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: '-10% 0% -80% 0%' });
+        document.querySelectorAll('section').forEach(s => observer.observe(s));
+    </script>
+</body></html>

@@ -98,6 +98,28 @@
       border-bottom-left-radius: 1rem;
     }
 
+    /* Списки с желтыми галочками */
+    .check-list {
+      list-style-type: none !important;
+      padding-left: 0 !important;
+    }
+    .check-list li {
+      position: relative;
+      padding-left: 2.2rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+    .check-list li::before {
+      content: 'check_circle';
+      font-family: 'Material Symbols Outlined';
+      position: absolute;
+      left: 0;
+      top: 0.1rem;
+      color: #f5e2a1;
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 1.4rem;
+    }
+
     /* Эффект аккордеона для фото-ленты */
     .photo-strip-item {
       transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -183,7 +205,7 @@
   <!-- TopNavBar -->
   <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/95 backdrop-blur-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto flex justify-between items-center w-full px-4 md:px-8 py-4 relative">
-      <a href="index.html" class="flex-shrink-0"><img src="LogoB_300x.png" alt="Emoji Tours"
+      <a href="index.html" class="flex-shrink-0"><img src="images/LogoB_300x.png" alt="Emoji Tours"
           class="h-8 md:h-10"></a>
       <div
         class="hidden md:flex gap-10 items-center font-['Manrope'] font-bold text-sm tracking-tight absolute left-1/2 -translate-x-1/2">
@@ -250,60 +272,60 @@
         <!-- Photo 1 Egypt -->
         <div
           class="w-[260px] md:w-[340px] h-[360px] md:h-[440px] flex-shrink-0 -rotate-3 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl shadow-[#5f531a]/15 hover:rotate-0 transition-transform duration-500">
-          <img src="tild3762-6537-4136-a532-303036666635__photo.jpg" class="w-full h-full object-cover object-center">
+          <img src="images/tild3762-6537-4136-a532-303036666635__photo.jpg" class="w-full h-full object-cover object-center">
         </div>
         <!-- Photo 2 Maldives -->
         <div
           class="w-[260px] md:w-[340px] h-[380px] md:h-[460px] flex-shrink-0 rotate-2 mt-8 md:mt-16 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl shadow-[#5f531a]/15 hover:rotate-0 transition-transform duration-500">
-          <img src="tild3665-3434-4139-b532-643238666163__i.jpg" class="w-full h-full object-cover object-center">
+          <img src="images/tild3665-3434-4139-b532-643238666163__i.jpg" class="w-full h-full object-cover object-center">
         </div>
         <!-- Photo 3 Turkey -->
         <div
           class="w-[260px] md:w-[340px] h-[340px] md:h-[410px] flex-shrink-0 -rotate-2 mt-4 md:mt-8 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl shadow-[#5f531a]/15 hover:rotate-0 transition-transform duration-500">
-          <img src="tild6535-3137-4666-b538-306136303863__photo.jpg" class="w-full h-full object-cover object-center">
+          <img src="images/tild6535-3137-4666-b538-306136303863__photo.jpg" class="w-full h-full object-cover object-center">
         </div>
         <!-- Photo 4 Vietnam -->
         <div
           class="w-[260px] md:w-[340px] h-[400px] md:h-[480px] flex-shrink-0 rotate-3 mt-12 md:mt-24 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl shadow-[#5f531a]/15 hover:rotate-0 transition-transform duration-500">
-          <img src="tild6461-3834-4562-b136-356534333432__the_anam_beach_sun_r.jpg"
+          <img src="images/tild6461-3834-4562-b136-356534333432__the_anam_beach_sun_r.jpg"
             class="w-full h-full object-cover object-center">
         </div>
         <!-- Photo 5 Indonesia -->
         <div
           class="w-[260px] md:w-[340px] h-[350px] md:h-[430px] flex-shrink-0 -rotate-1 mt-6 md:mt-12 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl shadow-[#5f531a]/15 hover:rotate-0 transition-transform duration-500">
-          <img src="tild6138-3637-4333-a565-646530333233__bali-4.jpg" class="w-full h-full object-cover object-center">
+          <img src="images/tild6138-3637-4333-a565-646530333233__bali-4.jpg" class="w-full h-full object-cover object-center">
         </div>
         <!-- Photo 6 Sri Lanka -->
         <div
           class="w-[260px] md:w-[340px] h-[390px] md:h-[470px] flex-shrink-0 rotate-2 mt-10 md:mt-20 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl shadow-[#5f531a]/15 hover:rotate-0 transition-transform duration-500">
-          <img src="tild6561-3433-4332-b830-333634313563__6.jpg" class="w-full h-full object-cover object-center">
+          <img src="images/tild6561-3433-4332-b830-333634313563__6.jpg" class="w-full h-full object-cover object-center">
         </div>
 
         <!-- Duplicate for seamless loop -->
         <div
           class="w-[260px] md:w-[340px] h-[360px] md:h-[440px] flex-shrink-0 -rotate-3 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl shadow-[#5f531a]/15 hover:rotate-0 transition-transform duration-500">
-          <img src="tild3762-6537-4136-a532-303036666635__photo.jpg" class="w-full h-full object-cover object-center">
+          <img src="images/tild3762-6537-4136-a532-303036666635__photo.jpg" class="w-full h-full object-cover object-center">
         </div>
         <div
           class="w-[260px] md:w-[340px] h-[380px] md:h-[460px] flex-shrink-0 rotate-2 mt-8 md:mt-16 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl shadow-[#5f531a]/15 hover:rotate-0 transition-transform duration-500">
-          <img src="tild3665-3434-4139-b532-643238666163__i.jpg" class="w-full h-full object-cover object-center">
+          <img src="images/tild3665-3434-4139-b532-643238666163__i.jpg" class="w-full h-full object-cover object-center">
         </div>
         <div
           class="w-[260px] md:w-[340px] h-[340px] md:h-[410px] flex-shrink-0 -rotate-2 mt-4 md:mt-8 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl shadow-[#5f531a]/15 hover:rotate-0 transition-transform duration-500">
-          <img src="tild6535-3137-4666-b538-306136303863__photo.jpg" class="w-full h-full object-cover object-center">
+          <img src="images/tild6535-3137-4666-b538-306136303863__photo.jpg" class="w-full h-full object-cover object-center">
         </div>
         <div
           class="w-[260px] md:w-[340px] h-[400px] md:h-[480px] flex-shrink-0 rotate-3 mt-12 md:mt-24 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl shadow-[#5f531a]/15 hover:rotate-0 transition-transform duration-500">
-          <img src="tild6461-3834-4562-b136-356534333432__the_anam_beach_sun_r.jpg"
+          <img src="images/tild6461-3834-4562-b136-356534333432__the_anam_beach_sun_r.jpg"
             class="w-full h-full object-cover object-center">
         </div>
         <div
           class="w-[260px] md:w-[340px] h-[350px] md:h-[430px] flex-shrink-0 -rotate-1 mt-6 md:mt-12 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl shadow-[#5f531a]/15 hover:rotate-0 transition-transform duration-500">
-          <img src="tild6138-3637-4333-a565-646530333233__bali-4.jpg" class="w-full h-full object-cover object-center">
+          <img src="images/tild6138-3637-4333-a565-646530333233__bali-4.jpg" class="w-full h-full object-cover object-center">
         </div>
         <div
           class="w-[260px] md:w-[340px] h-[390px] md:h-[470px] flex-shrink-0 rotate-2 mt-10 md:mt-20 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-xl shadow-[#5f531a]/15 hover:rotate-0 transition-transform duration-500">
-          <img src="tild6561-3433-4332-b830-333634313563__6.jpg" class="w-full h-full object-cover object-center">
+          <img src="images/tild6561-3433-4332-b830-333634313563__6.jpg" class="w-full h-full object-cover object-center">
         </div>
       </div>
     </div>
@@ -319,7 +341,7 @@
 
       <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8 relative z-10 text-white w-full">
         <div class="flex-shrink-0">
-          <img src="Логотип_MAX.svg" alt="MAX"
+          <img src="images/Логотип_MAX.svg" alt="MAX"
             class="w-20 md:w-24 h-20 md:h-24 object-contain brightness-100 drop-shadow-md">
         </div>
         <div class="text-center md:text-left space-y-3">
@@ -401,10 +423,10 @@
       <!-- Bento Grid of Countries -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-2 md:px-0">
 
-        <a href="egypt.html"
+        <a href="pages/countries/egypt.html"
           class="block relative group h-[400px] overflow-hidden card-asymmetric cursor-pointer shadow-lg">
           <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-            src="tild3762-6537-4136-a532-303036666635__photo.jpg" alt="Египет">
+            src="images/tild3762-6537-4136-a532-303036666635__photo.jpg" alt="Египет">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
           </div>
@@ -414,10 +436,10 @@
           </div>
         </a>
 
-        <a href="maldives.html"
+        <a href="pages/countries/maldives.html"
           class="block relative group h-[400px] overflow-hidden card-asymmetric cursor-pointer shadow-lg">
           <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-            src="tild3665-3434-4139-b532-643238666163__i.jpg" alt="Мальдивы">
+            src="images/tild3665-3434-4139-b532-643238666163__i.jpg" alt="Мальдивы">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
           </div>
@@ -427,10 +449,10 @@
           </div>
         </a>
 
-        <a href="turkey.html"
+        <a href="pages/countries/turkey.html"
           class="block relative group h-[400px] overflow-hidden card-asymmetric cursor-pointer shadow-lg">
           <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-            src="tild6535-3137-4666-b538-306136303863__photo.jpg" alt="Турция">
+            src="images/tild6535-3137-4666-b538-306136303863__photo.jpg" alt="Турция">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
           </div>
@@ -440,10 +462,10 @@
           </div>
         </a>
 
-        <a href="vietnam.html"
+        <a href="pages/countries/vietnam.html"
           class="block relative group h-[400px] overflow-hidden card-asymmetric cursor-pointer shadow-lg">
           <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-            src="tild6461-3834-4562-b136-356534333432__the_anam_beach_sun_r.jpg" alt="Вьетнам">
+            src="images/tild6461-3834-4562-b136-356534333432__the_anam_beach_sun_r.jpg" alt="Вьетнам">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
           </div>
@@ -453,10 +475,10 @@
           </div>
         </a>
 
-        <a href="china.html"
+        <a href="pages/countries/china.html"
           class="block relative group h-[400px] overflow-hidden card-asymmetric cursor-pointer shadow-lg">
           <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-            src="tild3038-6262-4536-b139-333363633238__ib16831975734107.webp" alt="Китай">
+            src="images/tild3038-6262-4536-b139-333363633238__ib16831975734107.webp" alt="Китай">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
           </div>
@@ -466,10 +488,10 @@
           </div>
         </a>
 
-        <a href="mauritius.html"
+        <a href="pages/countries/mauritius.html"
           class="block relative group h-[400px] overflow-hidden card-asymmetric cursor-pointer shadow-lg">
           <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-            src="tild6533-3363-4233-b635-353930633965__ff934824-e1b5-4d03-9.jpg" alt="Маврикий">
+            src="images/tild6533-3363-4233-b635-353930633965__ff934824-e1b5-4d03-9.jpg" alt="Маврикий">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
           </div>
@@ -479,10 +501,10 @@
           </div>
         </a>
 
-        <a href="thailand.html"
+        <a href="pages/countries/thailand.html"
           class="block relative group h-[400px] overflow-hidden card-asymmetric cursor-pointer shadow-lg">
           <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-            src="tild3037-3831-4439-a333-393831306231__resim_4958688795265.webp" alt="Таиланд">
+            src="images/tild3037-3831-4439-a333-393831306231__resim_4958688795265.webp" alt="Таиланд">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
           </div>
@@ -492,10 +514,10 @@
           </div>
         </a>
 
-        <a href="seychelles.html"
+        <a href="pages/countries/seychelles.html"
           class="block relative group h-[400px] overflow-hidden card-asymmetric cursor-pointer shadow-lg">
           <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-            src="tild3031-6261-4266-a162-356163663139__a6177d29-2ecf-45cd-a.webp" alt="Сейшелы">
+            src="images/tild3031-6261-4266-a162-356163663139__a6177d29-2ecf-45cd-a.webp" alt="Сейшелы">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
           </div>
@@ -505,10 +527,10 @@
           </div>
         </a>
 
-        <a href="indonesia.html"
+        <a href="pages/countries/indonesia.html"
           class="block relative group h-[400px] overflow-hidden card-asymmetric cursor-pointer shadow-lg">
           <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-            src="tild6138-3637-4333-a565-646530333233__bali-4.jpg" alt="Индонезия">
+            src="images/tild6138-3637-4333-a565-646530333233__bali-4.jpg" alt="Индонезия">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
           </div>
@@ -518,10 +540,10 @@
           </div>
         </a>
 
-        <a href="sri-lanka.html"
+        <a href="pages/countries/sri-lanka.html"
           class="block relative group h-[400px] overflow-hidden card-asymmetric cursor-pointer shadow-lg">
           <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-            src="tild6561-3433-4332-b830-333634313563__6.jpg" alt="Шри-Ланка">
+            src="images/tild6561-3433-4332-b830-333634313563__6.jpg" alt="Шри-Ланка">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
           </div>
@@ -531,10 +553,10 @@
           </div>
         </a>
 
-        <a href="tanzania.html"
+        <a href="pages/countries/tanzania.html"
           class="block relative group h-[400px] overflow-hidden card-asymmetric cursor-pointer shadow-lg">
           <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-            src="tild6462-6433-4637-b230-623462323765__nungwi-zanzibar.jpg" alt="Танзания">
+            src="images/tild6462-6433-4637-b230-623462323765__nungwi-zanzibar.jpg" alt="Танзания">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
           </div>
@@ -544,10 +566,10 @@
           </div>
         </a>
 
-        <a href="tunisia.html"
+        <a href="pages/countries/tunisia.html"
           class="block relative group h-[400px] overflow-hidden card-asymmetric cursor-pointer shadow-lg">
           <img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-            src="tild3164-3961-4163-b464-636461613433___1.webp" alt="Тунис">
+            src="images/tild3164-3961-4163-b464-636461613433___1.webp" alt="Тунис">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
           </div>
@@ -565,7 +587,7 @@
     <div class="max-w-7xl mx-auto space-y-12">
       <div class="text-center space-y-4 px-4">
         <span
-          class="text-on-surface-variant/60 font-bold tracking-[0.2em] text-[11px] md:text-sm uppercase">Туристический
+          class="text-on-surface-variant font-bold tracking-[0.2em] text-[11px] md:text-sm uppercase">Туристический
           календарь</span>
         <h2 class="text-4xl md:text-5xl font-headline font-black text-on-surface tracking-tight leading-none">
           Когда и куда лететь?</h2>
@@ -666,18 +688,18 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const countries = [
-        { name: "Египет", emoji: "🇪🇬", code: "eg", link: "egypt.html", schedule: [[], [], [], ['beach'], ['beach'], [], [], [], ['beach'], ['beach'], ['beach'], []] },
-        { name: "Мальдивы", emoji: "🇲🇻", code: "mv", link: "maldives.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], [], [], [], [], [], [], ['beach'], ['beach']] },
-        { name: "Турция", emoji: "🇹🇷", code: "tr", link: "turkey.html", schedule: [['excursion'], ['excursion'], ['excursion'], ['excursion'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['excursion'], ['excursion']] },
-        { name: "Вьетнам", emoji: "🇻🇳", code: "vn", link: "vietnam.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], [], [], [], [], [], [], [], ['beach']] },
-        { name: "Китай", emoji: "🇨🇳", code: "cn", link: "china.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], ['excursion'], ['excursion'], ['excursion'], ['excursion'], ['excursion'], ['beach'], ['beach'], ['beach']] },
-        { name: "Маврикий", emoji: "🇲🇺", code: "mu", link: "mauritius.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], ['beach'], [], [], [], ['beach'], ['beach'], ['beach'], ['beach']] },
-        { name: "Таиланд", emoji: "🇹🇭", code: "th", link: "thailand.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], [], [], [], [], [], [], ['beach'], ['beach']] },
-        { name: "Сейшелы", emoji: "🇸🇨", code: "sc", link: "seychelles.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach']] },
-        { name: "Индонезия", emoji: "🇮🇩", code: "id", link: "indonesia.html", schedule: [[], [], [], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], [], [], []] },
-        { name: "Шри-Ланка", emoji: "🇱🇰", code: "lk", link: "sri-lanka.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], [], [], [], [], [], [], ['beach'], ['beach']] },
-        { name: "Танзания", emoji: "🇹🇿", code: "tz", link: "tanzania.html", schedule: [['beach'], ['beach'], [], [], [], [], ['beach'], ['beach'], ['beach'], ['beach'], [], ['beach']] },
-        { name: "Тунис", emoji: "🇹🇳", code: "tn", link: "tunisia.html", schedule: [[], [], [], [], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], [], []] }
+        { name: "Египет", emoji: "🇪🇬", code: "eg", link: "pages/countries/egypt.html", schedule: [[], [], [], ['beach'], ['beach'], [], [], [], ['beach'], ['beach'], ['beach'], []] },
+        { name: "Мальдивы", emoji: "🇲🇻", code: "mv", link: "pages/countries/maldives.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], [], [], [], [], [], [], ['beach'], ['beach']] },
+        { name: "Турция", emoji: "🇹🇷", code: "tr", link: "pages/countries/turkey.html", schedule: [['excursion'], ['excursion'], ['excursion'], ['excursion'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['excursion'], ['excursion']] },
+        { name: "Вьетнам", emoji: "🇻🇳", code: "vn", link: "pages/countries/vietnam.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], [], [], [], [], [], [], [], ['beach']] },
+        { name: "Китай", emoji: "🇨🇳", code: "cn", link: "pages/countries/china.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], ['excursion'], ['excursion'], ['excursion'], ['excursion'], ['excursion'], ['beach'], ['beach'], ['beach']] },
+        { name: "Маврикий", emoji: "🇲🇺", code: "mu", link: "pages/countries/mauritius.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], ['beach'], [], [], [], ['beach'], ['beach'], ['beach'], ['beach']] },
+        { name: "Таиланд", emoji: "🇹🇭", code: "th", link: "pages/countries/thailand.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], [], [], [], [], [], [], ['beach'], ['beach']] },
+        { name: "Сейшелы", emoji: "🇸🇨", code: "sc", link: "pages/countries/seychelles.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach']] },
+        { name: "Индонезия", emoji: "🇮🇩", code: "id", link: "pages/countries/indonesia.html", schedule: [[], [], [], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], [], [], []] },
+        { name: "Шри-Ланка", emoji: "🇱🇰", code: "lk", link: "pages/countries/sri-lanka.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], [], [], [], [], [], [], ['beach'], ['beach']] },
+        { name: "Танзания", emoji: "🇹🇿", code: "tz", link: "pages/countries/tanzania.html", schedule: [['beach'], ['beach'], [], [], [], [], ['beach'], ['beach'], ['beach'], ['beach'], [], ['beach']] },
+        { name: "Тунис", emoji: "🇹🇳", code: "tn", link: "pages/countries/tunisia.html", schedule: [[], [], [], [], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], [], []] }
       ];
 
       const icons = {
@@ -953,26 +975,26 @@
           <div class="space-y-2">
             <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
             <input
-              class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+              class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
               name="userName" placeholder="Иван Иванов" type="text" required />
           </div>
           <div class="space-y-2">
             <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
             <input
-              class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+              class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
               name="userEmail" placeholder="hello@example.com" type="email" required />
           </div>
           <div class="space-y-2">
             <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
             <input
-              class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+              class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
               name="userPhone" placeholder="+7 (___) ___-__-__" type="tel" required />
           </div>
           <div class="space-y-2">
             <label class="block text-sm font-bold text-on-surface-variant ml-1">Ожидаемое
               направление</label>
             <input
-              class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+              class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
               name="destination" placeholder="Напр. Таиланд или Море" type="text" />
           </div>
           <!-- Trip Specs -->
@@ -980,33 +1002,33 @@
             <div class="space-y-2">
               <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
               <input
-                class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                 min="1" type="number" value="2" name="adults">
             </div>
             <div class="space-y-2">
               <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и
                 возраст)</label>
               <input
-                class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                 placeholder="1 реб, 5 лет" type="text" name="children">
             </div>
           </div>
           <div class="space-y-2">
             <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
             <input
-              class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+              class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
               name="budget" placeholder="От 200 000" type="text" />
           </div>
           <div class="space-y-2">
             <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
             <input
-              class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+              class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
               min="1" type="number" value="7" name="nights">
           </div>
           <div class="space-y-2">
             <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
             <input
-              class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+              class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
               name="startDate" type="date" />
           </div>
         </div>
@@ -1016,21 +1038,21 @@
           <div class="flex flex-wrap gap-8">
             <label class="flex items-center gap-3 cursor-pointer group">
               <input
-                class="w-5 h-5 text-primary border-black/20 rounded focus:ring-primary focus:ring-offset-0 transition-colors cursor-pointer"
+                class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
                 name="excursions" type="radio" />
               <span class="text-on-surface group-hover:text-primary transition-colors">Да,
                 обязательно</span>
             </label>
             <label class="flex items-center gap-3 cursor-pointer group">
               <input
-                class="w-5 h-5 text-primary border-black/20 rounded focus:ring-primary focus:ring-offset-0 transition-colors cursor-pointer"
+                class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
                 name="excursions" type="radio" />
               <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только
                 отдых</span>
             </label>
             <label class="flex items-center gap-3 cursor-pointer group">
               <input
-                class="w-5 h-5 text-primary border-black/20 rounded focus:ring-primary focus:ring-offset-0 transition-colors cursor-pointer"
+                class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
                 name="excursions" type="radio" />
               <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
             </label>
@@ -1041,13 +1063,13 @@
             <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по
               отелю</label>
             <textarea
-              class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+              class="w-full bg-transparent border border-black/15 rounded-[2.5rem] p-6 md:p-8 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
               name="hotelPrefs" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
           </div>
           <div class="space-y-2">
             <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
             <input
-              class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+              class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
               placeholder="Шереметьево, Пулково..." type="text" name="airport">
           </div>
         </div>
@@ -1067,19 +1089,19 @@
     <div class="max-w-7xl mx-auto flex flex-col gap-12 md:gap-16">
       <div class="flex flex-col md:flex-row justify-between items-start gap-12">
         <div class="space-y-6 max-w-sm text-center md:text-left mx-auto md:mx-0">
-          <img src="LogoB_300x.png" alt="Emoji Tours" class="h-12 md:h-14 mx-auto md:mx-0">
+          <img src="images/LogoB_300x.png" alt="Emoji Tours" class="h-12 md:h-14 mx-auto md:mx-0">
           <p class="text-on-surface-variant font-medium text-sm leading-relaxed px-4 md:px-0">
             Мы верим, что путешествия — это лучший способ познать себя и окружающий мир.
           </p>
           <div class="flex gap-4 justify-center md:justify-start">
             <a href="https://max.ru/join/0haRr-rt5CMasX93mYrj_DuaLtUNy7gLfKyjXIdKFys" target="_blank"
               class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group">
-              <img src="Логотип_MAX.svg" alt="MAX"
+              <img src="images/Логотип_MAX.svg" alt="MAX"
                 class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all">
             </a>
             <a href="https://vk.com/emoji_tours" target="_blank"
               class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group">
-              <img src="VK_Compact_Logo_(2021-present).svg.png" alt="VK"
+              <img src="images/VK_Compact_Logo_(2021-present).svg.png" alt="VK"
                 class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all">
             </a>
           </div>
@@ -1101,7 +1123,7 @@
           <div class="space-y-4">
             <h4 class="font-bold text-on-surface-variant text-sm">
               Юридическая информация</h4>
-            <div class="text-xs text-on-surface-variant leading-relaxed opacity-80">
+            <div class="text-xs text-on-surface-variant leading-relaxed">
               Индивидуальный предприниматель <br>
               <strong class="text-on-surface">Трохин Евгений Альбертович</strong><br>
               ИНН 503613656680 <br>
@@ -1114,10 +1136,10 @@
       <div
         class="pt-8 md:pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
         <div
-          class="text-on-surface-variant/60 font-medium text-[11px] md:text-xs text-center md:text-left w-full md:w-auto">
+          class="text-on-surface-variant font-medium text-[11px] md:text-xs text-center md:text-left w-full md:w-auto">
           © 2026 Emoji Tours. Путешествия с душой.</div>
         <div
-          class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-on-surface-variant/80">
+          class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-on-surface-variant">
           <a href="#countries" class="hover:text-black transition-colors">Страны</a>
           <a href="#calendar" class="hover:text-black transition-colors">Календарь</a>
           <a href="#testimonials" class="hover:text-black transition-colors">Отзывы</a>
@@ -1134,7 +1156,7 @@
   <div id="mobile-drawer"
     class="fixed top-0 right-0 w-[85%] max-w-sm h-full bg-[#fffcf5] z-[110] transform translate-x-full transition-transform duration-500 ease-out shadow-2xl p-8 flex flex-col">
     <div class="flex justify-between items-center mb-12">
-      <img src="LogoB_300x.png" alt="Emoji Tours" class="h-8">
+      <img src="images/LogoB_300x.png" alt="Emoji Tours" class="h-8">
       <button onclick="toggleMenu()"
         class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-variant/30 text-on-surface active:scale-90 transition-transform">
         <span class="material-symbols-outlined">close</span>
@@ -1167,7 +1189,7 @@
       </a>
     </nav>
     <div class="mt-auto pt-10 border-t border-black/10">
-      <p class="text-[11px] text-on-surface-variant/60 font-bold uppercase tracking-[0.1em]">© 2026 Emoji Tours.
+      <p class="text-[11px] text-on-surface-variant font-bold uppercase tracking-[0.1em]">© 2026 Emoji Tours.
         <br>Путешествия с душой.</p>
     </div>
   </div>
