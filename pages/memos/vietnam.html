@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html class="light" lang="ru">
 
+<html class="light" lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Памятка: Вьетнам — Emoji Tours</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-    rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script id="tailwind-config">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Памятка: Вьетнам — Emoji Tours</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
@@ -33,7 +31,7 @@
       },
     }
   </script>
-  <style>
+<style>
     body {
       font-family: 'Manrope', sans-serif;
       opacity: 1 !important;
@@ -161,608 +159,525 @@
     }
   </style>
 </head>
-
 <body class="bg-background text-on-surface">
-
-  <!-- ШАПКА -->
-  <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/90 backdrop-blur-md border-b border-black/5 py-4">
-    <div class="max-w-7xl mx-auto flex justify-between md:justify-center items-center px-4 md:px-8 relative">
-      <a href="../../index.html"
-        class="flex md:absolute md:left-8 text-xs md:text-sm font-bold items-center gap-1 md:gap-2 hover:opacity-70 transition-opacity whitespace-nowrap bg-black/5 px-3 py-2 rounded-full md:bg-transparent">
-        <span class="material-symbols-outlined text-[18px] md:text-[24px]">arrow_back</span>
+<!-- ШАПКА -->
+<nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/90 backdrop-blur-md border-b border-black/5 py-4">
+<div class="max-w-7xl mx-auto flex justify-between md:justify-center items-center px-4 md:px-8 relative">
+<a class="flex md:absolute md:left-8 text-xs md:text-sm font-bold items-center gap-1 md:gap-2 hover:opacity-70 transition-opacity whitespace-nowrap bg-black/5 px-3 py-2 rounded-full md:bg-transparent" href="../../index.html">
+<span class="material-symbols-outlined text-[18px] md:text-[24px]">arrow_back</span>
         Все страны
       </a>
-      <a href="../../index.html" class="flex-shrink-0 mx-auto md:mx-0">
-        <img src="../../images/LogoB_300x.png" alt="Emoji Tours" class="h-8 md:h-10"
-          onerror="this.src='https://via.placeholder.com/150?text=Emoji+Tours'">
-      </a>
-    </div>
-  </nav>
-
-  <!-- Кнопка навигации мобильная (Floating) -->
-  <button onclick="toggleMenu()"
-    class="md:hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-[90] flex items-center gap-2 bg-black text-white px-6 py-4 rounded-full font-bold shadow-2xl active:scale-95 transition-all">
-    <span class="material-symbols-outlined text-[20px]">menu</span>
+<a class="flex-shrink-0 mx-auto md:mx-0" href="../../index.html">
+<img alt="Emoji Tours" class="h-8 md:h-10" onerror="this.src='https://via.placeholder.com/150?text=Emoji+Tours'" src="../../images/LogoB_300x.png"/>
+</a>
+</div>
+</nav>
+<!-- Кнопка навигации мобильная (Floating) -->
+<button class="md:hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-[90] flex items-center gap-2 bg-black text-white px-6 py-4 rounded-full font-bold shadow-2xl active:scale-95 transition-all" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-[20px]">menu</span>
     Содержание
   </button>
-
-  <!-- Mobile Drawer (Navigation) -->
-  <div id="drawer-overlay" onclick="toggleMenu()"
-    class="fixed inset-0 bg-black/40 z-[100] transition-opacity duration-300 opacity-0 pointer-events-none backdrop-blur-sm">
-  </div>
-  <div id="mobile-drawer"
-    class="fixed top-0 right-0 w-[85%] max-w-sm h-full bg-[#fffcf5] z-[110] transform translate-x-full transition-transform duration-500 ease-out shadow-2xl p-8 flex flex-col">
-    <div class="flex justify-between items-center mb-10">
-      <p class="text-[13px] font-black text-black/40">Содержание</p>
-      <button onclick="toggleMenu()"
-        class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-variant/30 text-on-surface active:scale-90 transition-transform">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-    </div>
-    <nav id="mobile-quick-links"
-      class="flex flex-col gap-2 font-['Manrope'] font-bold text-lg tracking-tight overflow-y-auto">
-      <!-- Мобильные ссылки -->
-    </nav>
-    <div class="mt-auto pt-10 border-t border-black/10">
-      <p class="text-[11px] text-on-surface-variant font-bold uppercase tracking-[0.1em]">© 2026 Emoji Tours.
-        <br>Путешествия с душой.
-      </p>
-    </div>
-  </div>
-
-  <main class="pt-24">
-    <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col lg:flex-row gap-12">
-
-      <!-- БОКОВАЯ НАВИГАЦИЯ -->
-      <aside class="hidden lg:block w-64 self-start sticky top-24 h-fit pb-10">
-        <div>
-          <p class="text-[13px] font-black text-black/40 mb-6 px-6">Содержание</p>
-          <nav id="quick-links" class="flex flex-col border-l border-black/5">
-            <a href="#pered-otezdom" class="nav-link">Перед отъездом</a>
-<a href="#sobiraya-bagazh" class="nav-link">Собирая багаж</a>
-<a href="#v-rossijskom-aeroportu-vyleta-prileta" class="nav-link">В российском аэропорту вылета/прилета</a>
-<a href="#tamozhennyj-kontrol-v-aeroportu-vetnama" class="nav-link">Таможенный контроль в аэропорту Вьетнама</a>
-<a href="#registratsiya-na-rejs-i-oformlenie-bagazha" class="nav-link">Регистрация на рейс и оформление багажа</a>
-<a href="#pasportnyj-kontrol" class="nav-link">Паспортный контроль</a>
-<a href="#sanitarnyj-kontrol" class="nav-link">Санитарный контроль</a>
-<a href="#veterinarnyj-kontrol" class="nav-link">Ветеринарный контроль</a>
-<a href="#v-aeroportu-prilyota-vyleta-vetnama" class="nav-link">В аэропорту прилёта/вылета Вьетнама</a>
-<a href="#pasportnyj-kontrol-viza" class="nav-link">Паспортный контроль. Виза</a>
-<a href="#pravila-provoza-i-ispolzovaniya-dronov-vo-vetname" class="nav-link">Правила провоза и использования дронов во Вьетнаме</a>
-<a href="#vetnam" class="nav-link">Вьетнам</a>
-<a href="#pravila-lichnoj-gigieny-i-bezopasnosti" class="nav-link">Правила личной гигиены и безопасности</a>
-<a href="#v-sluchae-poteri-pasporta" class="nav-link">В случае потери паспорта</a>
-<a href="#poleznaya-informatsiya" class="nav-link">Полезная информация</a>
-
-          </nav>
-        </div>
-      </aside>
-
-      <!-- КОНТЕНТНАЯ ОБЛАСТЬ -->
-      <div class="flex-1 py-10">
-        <p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
-        <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-10">Памятка: Вьетнам</h1>
-
-        <div class="flex flex-wrap gap-4 mb-14">
-          <a href="../countries/vietnam.html"
-            class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">О
-            стране</a>
-          <a href="#section-form"
-            class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу
-            туда</a>
-        </div>
-
-        <div class="space-y-16" id="main-content">
-          <section id="pered-otezdom" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Перед отъездом</h2>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Проверьте наличие необходимых для поездки документов:</h3>
-  <ul class="check-list mb-8">
-    <li>заграничный паспорт (должен быть действителен в течение не менее 6-ти месяцев с даты въезда в страну и иметь чистую страницу для проставления визы);</li>
-    <li>ксерокопия загранпаспорта (может пригодиться при утрате загранпаспорта и в случае непредвиденных обстоятельств);</li>
-    <li>авиабилеты или маршрут/квитанции электронного билета;</li>
-    <li>ваучер;</li>
-    <li>страховой медицинский полис.</li>
-</ul>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">В случае путешествия с детьми</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Несовершеннолетний гражданин РФ, следующий совместно хотя бы с одним из родителей, выезжает из РФ по своему загранпаспорту.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Несовершеннолетний российский гражданин, выезжающий из Российской Федерации без сопровождения родителей, должен иметь при себе кроме заграничного паспорта нотариально оформленное согласие родителей на его выезд за границу с указанием срока выезда и государство, которое он намерен посетить.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Без необходимости оформления для ребенка отдельного заграничного паспорта несовершеннолетний гражданин РФ до 14 лет может выехать совместно хотя бы с одним из родителей, если он вписан в заграничный паспорт родителя, оформленный по старому образцу (к паспорту старого образца относится паспорт не биометрический, оформленный в соответствии с постановлением Правительства Российской Федерации от 14 марта 1997 г. № 298). В паспорт родителя в этом случае обязательно должна быть вклеена фотография ребенка, независимо от его возраста, на которой должна стоять печать паспортно-визовой службы. Отсутствие фотографии или печати является основанием для отказа ребенку в пересечении границы. Выезд из РФ несовершеннолетних детей, сведения о которых внесены в паспорта сопровождающих их родителей, оформленные по старому образцу, осуществляется по срокам действия паспортов.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">На заграничные паспорта, оформленные по новому образцу (биометрический), распространяются нормы Постановления Правительства РФ №13 от 19 января 2010 года о том, что внесение сведений о детях в паспорт, удостоверяющий личность родителя, не дает права ребенку на выезд за пределы территории РФ без документа, удостоверяющего личность гражданина РФ за пределами территории РФ.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При следовании несовершеннолетнего российского гражданина через государственную границу РФ совместно с одним из родителей предъявлять письменное согласие второго родителя не нужно, если только от него ранее в пограничные органы не поступало заявление о несогласии на выезд из РФ своих детей.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если у несовершеннолетнего ребенка и выезжающего с ним родителя разные фамилии, то рекомендуем взять с собой нотариально заверенную копию свидетельства о рождении для подтверждения родства. На практике отсутствие такого подтверждения служило основанием для отказа ребенку в пересечении границы.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Беременным женщинам</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед полетом мы рекомендуем ознакомиться с правилами авиакомпании на необходимость предоставления письменного согласия врача на полет, а также иных документов для осуществления авиаперелета. Сотрудники авиакомпании имеют полное право отказать в авиаперевозке или потребовать медицинское освидетельствование в аэропорту вылета в случае нарушения правил.</p>
-<section id="sobiraya-bagazh" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Собирая багаж</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Рекомендуем все ценные вещи, документы и деньги положить в ручную кладь и взять с собой в самолет.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В багаж следует упаковать все металлические острые и режущие предметы (маникюрные ножницы, пилочки для ногтей, перочинный ножик и т. п.), а также любые жидкости, гели и аэрозоли (за исключением детского питания и лекарств, если в них есть необходимость) — проносить подобные предметы в ручной клади запрещено .</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не забывайте собрать и взять с собой аптечку первой помощи , которая поможет при легких недомоганиях, сэкономит время на поиски лекарственных средств и избавит от нежелательного общения на иностранном языке.</p>
-<section id="v-rossijskom-aeroportu-vyleta-prileta" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">В российском аэропорту вылета/прилета</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед выездом в аэропорт получите дополнительную информацию о возможно произошедших изменениях в условиях вылета, используя сайт авиакомпании, выполняющей рейс, или по телефону ее справочной службы.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Рекомендуем заранее, не позднее чем за три часа до вылета, прибыть к месту регистрации пассажиров для прохождения установленных процедур регистрации, оформления багажа, и выполнения требований, связанных с пограничным, таможенным, санитарно-карантинным, ветеринарным и другими видами контроля, установленными законодательством РФ.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Таможенный контроль до начала путешествия</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед полетом рекомендуем проверять действующие правила вывоза физическими лицами наличной иностранной валюты из РФ, товаров и иных предметов на сайте Федеральной Таможенной Службы customs.gov.ru. Обращаем внимание на то, что в настоящее время действуют ограничения.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">С 1.01.2025 во Вьетнаме запрещено любое использование электронных сигарет (все виды электронных сигарет и курительных смесей, в том числе Iqos) — ввоз во Вьетнам, курение на всей территории страны, продажа. Также запрещен ввоз кальянов, угля, табака и их использование на территории Вьетнама.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Запрещено перемещение на выезде и въезде:</span></p>
-  <ul class="check-list mb-8">
-    <li>культурных ценностей,</li>
-    <li>объектов фауны и флоры, находящихся под угрозой исчезновения,</li>
-    <li>оружия и боеприпасов к нему без разрешения уполномоченных органов.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Незаконное перемещение товаров или валюты через таможенную границу РФ или их недекларирование,</span> <span class="font-bold text-black">либо недостоверное декларирование влечет за собой административную или уголовную ответственность.</span></p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Запрещено на выезде и въезде:</span></p>
-  <ul class="check-list mb-8">
-    <li>принимать от посторонних лиц чемоданы, посылки и другие предметы для перевозки на борту воздушного судна.</li>
-</ul>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Таможенный контроль по окончании путешествия</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то вам следует проходить зону таможенного контроля по «Зеленому коридору».</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Актуальную информацию о ввозе валюты, товаров и иных предметов для личного пользования, вы найдете на сайте Федеральной Таможенной Службы customs.gov.ru.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Недекларирование товаров в случае превышения стоимостных или весовых норм, а также наличных</span> денежных средств и (или) денежных инструментов влечет за собой административную или уголовную ответственность.</p>
-<section id="tamozhennyj-kontrol-v-aeroportu-vetnama" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Таможенный контроль в аэропорту Вьетнама</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Ввоз иностранной валюты не ограничен, но необходимо декларировать сумму свыше 5 000 долларов США, вывоз</span> валюты разрешается только в пределах декларации.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Разрешен беспошлинный ввоз:</p>
-  <ul class="check-list mb-8">
-    <li>400 сигарет или 0,5 кг табака, или 100 сигар,</li>
-    <li>2 л алкогольных напитков крепостью до 22 градусов или 1,5 л крепких алкогольных напитков (общий объем ввозимого алкоголя не должен превышать 3 л),</li>
-    <li>до 5 кг чая,</li>
-    <li>до 3 кг кофе,</li>
-    <li>косметики, парфюмерии,</li>
-    <li>продуктов питания в пределах личной потребности и общей стоимостью не более 5 млн донг.</li>
-    <li>аудио-, видео-, теле- и фотоаппаратуру необходимо указывать в декларации.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Запрещен ввоз:</span></p>
-  <ul class="check-list mb-8">
-    <li>наркотиков,</li>
-    <li>лекарств, содержащих большую дозу наркотических веществ,</li>
-    <li>оружия.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Из Вьетнама можно вывозить иностранную валюту в эквиваленте до 5 000 долларов США без декларирования. Если сумма превышает 5 000 долларов США, необходимо задекларировать её при въезде и предоставить документы, подтверждающие законное происхождение средств при вывозе.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Запрещен вывоз:</p>
-  <ul class="check-list mb-8">
-    <li>предметов искусства и антиквариата,</li>
-    <li>ювелирных украшений и предметов народного промысла без соответствующего документального оформления,</li>
-    <li>национальной валюты.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! С 21 августа 2019 года Управление гражданской авиации СРВ приняло решение о запрете на перевозку</span> на борту самолетов (как в ручной клади, так и в багаже) 15-дюймовых моделей MacBook Pro, выпущенных с сентября 2015 года по февраль 2017 года из-за риска возгорания их аккумуляторных батарей.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вьетнамские власти ужесточили соответствующий контроль за портативной компьютерной техникой при прохождении досмотра во всех аэропортах страны. Данный запрет касается всех международных авиарейсов, вылетающих из Вьетнама, а также внутренних рейсов, осуществляемых вьетнамскими и зарубежными авиакомпаниями по территории СРВ.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">За нарушение этого запрета пассажир может быть не допущен на рейс, а также оштрафован.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Проверить модель MacBook Pro можно на официальном сайте компании Apple по адресу: https://support.apple.com/15-inch-macbook-pro-battery-recall .</p>
-<section id="registratsiya-na-rejs-i-oformlenie-bagazha" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Регистрация на рейс и оформление багажа</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">До начала поездки настоятельно рекомендуем уточнить время начала и окончания регистрации на рейс, а также время посадки на борт. Указанную информацию вы можете посмотреть на официальном сайте авиакомпании. Помните, что у разных авиакомпаний могут быть свои правила.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Регистрация пассажиров и оформление багажа производятся на основании именного авиабилета или распечатанных на бумажном носителе маршрута и/или квитанции электронного билета, а также заграничного паспорта пассажира.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При регистрации пассажиру выдается посадочный талон, который необходимо сохранять до момента возможного предъявления авиакомпании претензий по качеству предоставленных услуг авиаперевозки.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед посадкой на рейс рекомендуем проверить номер выхода и время начала посадки на рейс на информационном табло в аэропорту.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Пассажиру, опоздавшему ко времени окончания регистрации пассажиров и оформления багажа или посадки в воздушное судно, может быть отказано в перевозке.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Каждый авиаперевозчик устанавливает свои нормы провоза багажа, а также габариты и вес ручной клади, провозимой в салоне самолета. Уточняйте данную информацию перед вылетом.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">За провоз багажа сверх установленной нормы бесплатного провоза багажа взимается дополнительная плата по тарифу, установленному перевозчиком.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перевозчик имеет право отказать туристу в перевозе багажа, вес или объем которого не соответствуют установленным нормам.</p>
-<section id="pasportnyj-kontrol" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Паспортный контроль</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для прохождения пограничного контроля необходимо предъявить заграничный/внутренний российский паспорт. Пограничные органы ФСБ РФ при осуществлении пограничного контроля имеют право запрашивать у туристов дополнительные документы (авиабилет, посадочный талон, ваучер и т. п.), а также проводить опрос лиц, следующих через границу.</p>
-<section id="sanitarnyj-kontrol" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Санитарный контроль</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При совершении путешествия по Вьетнаму риска заражения особо опасными инфекционными заболеваниями нет, делать прививки официально не требуются. Можно рекомендовать в профилактических целях сделать противостолбнячные инъекции и прививку против гепатита А и В.</p>
-<section id="veterinarnyj-kontrol" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Ветеринарный контроль</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если вы вывозите животных во Вьетнам, то необходимо иметь комплект документов, подтверждающих, что они здоровы. Как правило, следует иметь:</p>
-  <ul class="check-list mb-8">
-    <li>ветеринарный паспорт ,</li>
-    <li>справку о состоянии здоровья (выдается любой государственной ветеринарной клиникой),</li>
-    <li>справку из клуба СКОР или РКФ (в справке указывается, что животное не представляет племенной ценности, справки из других клубов вызывают вопросы на таможне),</li>
-    <li>сертификат ветеринарной службы с отметкой о всех прививках, включая прививку против бешенства.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание ! Отели Вьетнама размещения с домашними животными, как правило, не предоставляют .</span></p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При ввозе в РФ животных и птиц необходимо иметь сопровождающее ветеринарное свидетельство, полученное в Государственной ветеринарной службе страны, где приобретено животное.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Запрещен ввоз на территорию РФ любых грузов животного происхождения, в том числе в ручной клади и багаже, при отсутствии письменного разрешения Главного государственного ветеринарного инспектора РФ.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Без разрешения уполномоченных органов РФ запрещено ввозить и вывозить объекты дикой фауны и флоры, <span class="font-bold text-black">находящиеся под угрозой исчезновения.</span></p>
-<section id="v-aeroportu-prilyota-vyleta-vetnama" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">В аэропорту прилёта/вылета Вьетнама</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">По прибытии в аэропорт Вьетнама нужно последовательно:</p>
-  <ul class="check-list mb-8">
-    <li>пройти паспортный контроль,</li>
-    <li>получить свой багаж,</li>
-    <li>пройти таможенный контроль,</li>
-    <li>выйти из здания аэропорта,</li>
-    <li>найти встречающего гида с табличкой «ANEX»,</li>
-    <li>предъявить гиду туристский ваучер.</li>
-</ul>
-<section id="pasportnyj-kontrol-viza" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Паспортный контроль. Виза</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Правила въезда во Вьетнам для граждан России, Беларуси и Киргизии:</p>
-  <ul class="check-list mb-8">
-    <li>При въезде во Вьетнам разрешен безвизовый въезд на срок до 45 дней пребывания, включая день въезда и день выезда. Для граждан Киргизии разрешен безвизовый въезд на срок до 30 дней пребывания.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Условия для безвизового посещения Вьетнама:</p>
-  <ul class="check-list mb-8">
-    <li>Турист не находится в списке лиц, запрещённых к въезду во Вьетнам.</li>
-    <li>Турист должен иметь загранпаспорт, срок действия которого не менее 6-ти месяцев со дня окончания поездки.</li>
-    <li>Турист должен иметь обратный билет.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если планируется пребывание во Вьетнаме более 45 дней, необходимо предварительное оформление визового приглашения.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">За превышение срока пребывания 45 дней без визы или срока действия визы вьетнамскими законами предусмотрен штраф.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Правила въезда во Вьетнам для иностранных граждан:</p>
-  <ul class="check-list mb-8">
-    <li>Для иностранных граждан необходимо оформление визы в аэропорту прилета, на основании заранее оформленной визовой поддержки.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Правила оформления визовой поддержки можно найти в разделе «Оформление визового приглашения через</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Anex». Правила въезда во Вьетнам с несовершеннолетними:</p>
-  <ul class="check-list mb-8">
-    <li>Для несовершеннолетних выезжающих в сопровождении третьих лиц, на границе необходимо предоставить согласие на выезд от одного из родителей, с нотариально заверенным переводом на английский язык + обычную копию свидетельства о рождении.</li>
-    <li>Для несовершеннолетних выезжающих в сопровождении одного из родителей, на границе необходимо предоставить обычную копию свидетельства о рождении.</li>
-</ul>
-<section id="pravila-provoza-i-ispolzovaniya-dronov-vo-vetname" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Правила провоза и использования дронов во Вьетнаме</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Согласно CAAV, беспилотные летательные аппараты разрешены во Вьетнаме в соответствии с правилами CAAV. Туристы могут привезти свой беспилотник во Вьетнам, но для этого им потребуется разрешение Министерства обороны.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для использования беспилотных летательных аппаратов в туристических целях во Вьетнаме требуется разрешение. Туристам необходимо отправить запрос в соответствующий отдел компании для дальнейшего получения разрешения Вьетнамской стороны (Вьетнамская сторона будет заниматься получением разрешения). Перед отправкой запроса на получение разрешения в компанию туристу необходимо подготовить следующие документы:</p>
-  <ul class="check-list mb-8">
-    <li>Заявление на получение лётной лицензии. Подготовьте заявление по форме, указанной в Указе 79/2011/ND-CP (APPLICATION FORM FOR REQUEST OF FLIGHT AUTHORIZATION). Место подачи заявления — оперативный департамент Генерального штаба — дом № 1 Нгуен Три Фуонг, район Ба Динь, город Ханой (Department of Operations - General Staff - No. 1 Nguyen Tri Phuong, Ba Dinh District, Hanoi City);</li>
-    <li>Удостоверение личности/карта, удостоверяющая личность гражданина/паспорт представителя или заявителя (требуется нотариально заверенная ксерокопия). Если вы являетесь компанией, подающей заявку на получение лицензии, вам потребуется свидетельство о регистрации бизнеса (требуется нотариально заверенная ксерокопия);</li>
-    <li>Фотография беспилотника. Требуется цветная печать (фото-скан для отправки), минимальный размер 18 х 24 см;</li>
-    <li>Фотография района, в котором выдаётся разрешение на полёты. Требуется цветная фотография Google Maps;</li>
-    <li>Техническая документация на ваш беспилотник включает фотографии данного типа и письменное описание его технических характеристик;</li>
-    <li>Лицензия или другой юридический документ, разрешающий вашему беспилотнику взлетать с аэродрома, поверхности суши или воды или садиться на них;</li>
-    <li>Все остальные имеющиеся документы на беспилотник.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Подайте заявку как минимум за 14 дней до запланированного рейса (никаких изменений не вносите менее, чем за десять дней).</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Стоимость разрешения варьируется 350-700 долларов за 1 локацию полёта дрона / за день / за одноразовое использование дрона. Конечная стоимость будет озвучена Вьетнамской стороной после получения заявления на использование дрона, так как цена зависит от района использования и количества вылетов.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если для использования дрона запрашиваются разные локации или разные дни использования, турист будет использовать дрон несколько раз в день — цена будет рассчитываться за каждую фактическую указанную в заявлении локацию (район использования, за один взлёт дрона).</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Если вы хотите использовать беспилотник во Вьетнаме, не проходя сложный процесс подачи заявки на</span> <span class="font-bold text-black">получение лицензии, можно арендовать беспилотник во Вьетнаме. Процесс будет менее сложным.</span></p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Документы для подачи заявления на получение лицензии на полеты беспилотных летательных аппаратов:</p>
-  <ul class="check-list mb-8">
-    <li>Заявление на получение лицензии на полеты. Подготовьте заявление по форме, указанной в Постановлении 79/2011/ND-CP ( APPLICATION FORM FOR REQUEST OF FLIGHT <span class="font-bold text-black">AUTHORIZATION). В данном случае заполнять информацию про дрон в анкете не нужно;</span></li>
-    <li>Паспорт представителя или заявителя (требуется нотариально заверенная ксерокопия);</li>
-    <li>Фотография района, в котором применяется лицензия на полеты. Требуется цветная фотография Google Maps.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Стоимость: 200 долларов США за каждый район полета/ за раз.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Все документы и запрос отправлять в соответствующий отдел компании (обратите внимание: отправлять документы и запрос необходимо минимум за 3 недели до рейса, для подготовки).</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Самые важные правила, которые необходимо знать при управлении беспилотником во Вьетнаме:</span></p>
-  <ul class="check-list mb-8">
-    <li>Для каждого полета беспилотника, проводимого во Вьетнаме, требуется специальная летная лицензия. Заявки должны подаваться в Оперативное бюро Главного командного пункта Министерства обороны не позднее, чем за 14 дней до запланированной даты полета;</li>
-    <li>Беспилотным летательным аппаратам запрещено перевозить радиоактивные, легковоспламеняющиеся или взрывоопасные материалы;</li>
-    <li>Беспилотные летательные аппараты не могут использоваться для запуска, отстрела или сброса за борт потенциально опасных объектов или веществ;</li>
-    <li>Беспилотные летательные аппараты могут летать на максимальной высоте 492 фута;</li>
-    <li>Дроны должны весить менее 26 фунтов;</li>
-    <li>Полеты беспилотных летательных аппаратов над военными базами или правительственными зданиями запрещены;</li>
-    <li>Полеты беспилотных летательных аппаратов разрешены только в светлое время суток;</li>
-    <li>Без лицензии, выданной для этой цели, беспилотные летательные аппараты не могут устанавливаться на воздушное оборудование или использоваться для аэрофотосъемки или фотосъемки с воздуха;</li>
-    <li>Беспилотным летательным аппаратам не разрешается поднимать флаги или транспаранты, распространять листовки или участвовать в какой-либо другой форме пропаганды.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Туристу необходимо заполнить форму и ответить на подробные вопросы о его пребывании и категории беспилотного летательного аппарата, включая зону, в которой разрешены полеты, направление и маршрут полета, время и продолжительность полета, правила, касающиеся уведомления о координации полета и контроля за полетом. На утверждение данной формы может уйти до 3 недель.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Запрещенные и ограниченные зоны полетов беспилотных летательных аппаратов во Вьетнаме:</span></p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Зоны, ограниченные для полетов:</p>
-  <ul class="check-list mb-8">
-    <li>Воздушное пространство на высоте более 120 м над уровнем местности (за исключением зон, запрещенных для полетов);</li>
-    <li>Густонаселенный район с большим скоплением людей;</li>
-    <li>Пограничная зона с Китаем находится на расстоянии 25 000 м от границы на всех высотах. Пограничная зона с Лаосом и Камбоджей находится на расстоянии 10 000 м от границы на всех высотах;</li>
-    <li>Зоны, прилегающие к запрещенным зонам в аэропортах и на аэродромах, где летают самолеты гражданской авиации и военные самолеты (шириной 3000 м, длиной 5000 м) от границы запрещенной зоны полетов в аэропортах и на аэродромах на высоте менее 120 м над уровнем местности.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В некоторых случаях беспилотным летательным аппаратам может быть разрешено летать в зонах ограниченного доступа, если они соответствуют требованиям организации, выдающей лицензии на полеты.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Зоны, запрещенные для полетов:</p>
-  <ul class="check-list mb-8">
-    <li>В зону входят оборонительные сооружения или специальные военные зоны, находящиеся под непосредственным руководством, управлением и защитой Министерства национальной обороны (беспилотникам разрешается летать на расстоянии не менее 500 м по горизонтали от границы этой запрещенной зоны на всех высотах);</li>
-    <li>Район, где находятся рабочие штаб-квартиры министерств, агентств, департаментов и отделений партии, государства, правительства, центрального аппарата на уровне провинций и городов, дипломатических представительств и консульств, представительств международных организаций, базирующихся во Вьетнаме (беспилотнику разрешается летать на расстоянии не менее 200 м по горизонтали от границы этой запрещенной зоны на всех высотах);</li>
-    <li>Зоны обороны и безопасности (беспилотнику разрешается летать на расстоянии не менее 500 м по горизонтали от границы этой запрещенной зоны на всех высотах);</li>
-    <li>Аэропортовые зоны и аэропорты, в которых эксплуатируются гражданские и военные воздушные суда (подробности приведены в решении 18/2020/QD-TTg);</li>
-    <li>Зоны, находящиеся в пределах действия воздушных линий, маршруты полетов, полетные коридоры, которые были лицензированы в воздушном пространстве Вьетнама, и ограниченный диапазон воздушных линий, которые были перечислены авиационным управлением Вьетнама в разделе новостей авиации Вьетнама «AIP Vietnam».</li>
-</ul>
-<section id="vetnam" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Вьетнам</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Вьетнам расположен на полуострове Индокитай. Общая площадь территории составляет 331 км². На севере</span> страна граничит с Китаем, на западе – с Лаосом и Камбоджой, на востоке омывается Южно-Китайским морем и заливом Бакбо, на юго-западе — Сиамским заливом. Вьетнам является Социалистической Республикой и делится на 58 провинций и 5 городов центрального подчинения: Ханой, Хошимин (бывший Сайгон), Хайфон, Дананг и Кантхо.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Леса занимают около 20 % территории страны, многие регионы объявлены заповедными. В них обитают олени, обезьяны, тапиры и дикие свиньи. Морские и речные воды страны богаты многообразием видов рыб, мидий и креветок.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Белоснежные и золотистые песчаные пляжи, лазурные воды Южно-Китайского моря и возможность круглогодичного отдыха делают Вьетнам необыкновенно привлекательным для туристов. Здесь можно заняться дайвингом, серфингом, яхтингом, отправиться исследовать дюны, посетить близлежащие острова или углубиться в джунгли, чтобы увидеть величественные водопады.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Время</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Разница во времени Вьетнама с Москвой — минус 4 часа.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Климат</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Климат большей части Вьетнама — тропический муссонный, средняя температура практически не меняется в течение года и колеблется в пределах +26 … +29 °С.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Валюта</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Имейте в виду, что обменивать купюры в 50 и 100 долларов США выгоднее, чем более мелкие купюры.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Кредитные карточки распространяются все больше, особенно это касается крупных городов, отелей и ресторанов, где бывают иностранцы. А вот в магазинах расплачиваться карточкой, как правило, невозможно.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Язык</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вьетнамский, представлен тремя диалектами: северным, центральным и южным. Универсальным языком общения является английский.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Население</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Примерная численность населения — 94,6 млн человек. Титульная нация — вьеты. Национальные меньшинства представлены кхмерами, таями, мео, манн, чамами и китайцами.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Религия</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Когда вьетнамцев спрашивают об их вероисповедании, они затруднятся с ответом. Местные жители верят в духов, к которым обращаются в различных жизненных ситуациях. Общины сами принимают решение о том, какие духи им будут покровительствовать. Существует культ предков.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Обычаи</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">У вьетнамцев не принято в знак приветствия пожимать друг другу руки. Во Вьетнаме также не принято громко говорить, активно жестикулировать и шумно себя вести. Махать рукой официанту в ресторане с целью подозвать его к столику тоже считается плохим тоном. Во время еды не стоит оставлять свои палочки в еде или прикасаться ими к палочкам сотрапезников. Передавать или принимать что-то нужно обеими руками, либо подавать правой, но придерживать правую руку левой в области запястья. В ресторане не принято делить счет пополам, его оплачивает тот, кто занимает более высокий социальный статус.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">У вьетнамцев не принято прикасаться друг к другу во время разговора: похлопывать по плечу или колену, прикасаться к голове другого человека, поскольку это может быть воспринято как скрытая угроза или оскорбление. При этом сами они любят дотрагиваться до иностранцев, поскольку считается, что это приносит удачу. Кроме того, будьте готовы, что при разговоре вьетнамцы не смотрят собеседнику в глаза — это проявление уважения.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При входе в буддистский храм нужно снимать обувь. Обходят храм только по часовой стрелке. Ваше небольшое пожертвование в пользу храма будет воспринято как знак уважения. В некоторые пагоды разрешен вход только в одежде с закрытыми плечами и в брюках, для женщин — юбки и платья не выше колен.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Праздники и нерабочие дни</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Банки и учреждения закрыты по всей стране в указанные дни, но большинство магазинов работают. Исключением является праздник Tet, когда закрываются даже частные рестораны.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">1 января — Новый год;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">3 февраля — День создания Коммунистической партии, 1930;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Tet — вьетнамский Новый год по лунному календарю, отмечается в течение 4-х дней между серединой января и серединой февраля, точных дат нет, так как каждый год даты сдвигаются;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">30 апреля — День освобождения Сайгона;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">1 мая — День международной солидарности трудящихся;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">19 мая — День рождения Хо Ши Мина, 1890;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">2 сентября — День независимости, 1945;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">3 сентября — День смерти Хо Ши Мина.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">В отеле</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В день приезда расселение осуществляется в соответствии с правилами, принятыми в отеле. Обычно начиная с 14:00 по местному времени. Просим ознакомиться на месте с условиями предоставления услуг в отеле и придерживаться установленных отелем правил.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В день выезда до наступления расчетного часа (как правило, 12:00) необходимо освободить свой номер и оплатить дополнительные услуги: телефонные переговоры, мини-бар, заказ питания и напитков в номер, массаж и др. Свой</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">багаж можно оставить в камере хранения отеля и оставаться на территории отеля до прибытия трансфера. Если вы не сдали номер до 12:00, стоимость комнаты оплачивается полностью за следующие сутки.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Правила бронирования доп. кроватей во Вьетнаме:</h3>
-  <ul class="check-list mb-8">
-    <li>При бронировании типа размещения 2 + 1 — дополнительная кровать не предоставляется.</li>
-    <li>При бронировании типа размещения 2 + 1 (ex.bed) — предоставляется 1 дополнительное место (кровать или раскладушка, в зависимости от отеля).</li>
-    <li>При бронировании типа размещения 2 + 1 (ex.bed) + 1 (no ex.bed) — предоставляется 1 дополнительное место (кровать или раскладушка, в зависимости от отеля). Второй ребенок спит с родителями.</li>
-    <li>При бронировании типа размещения TRPL — предоставляется 1 дополнительное место (кровать или раскладушка, в зависимости от отеля).</li>
-    <li>При бронировании 3+1 – предоставляется только одна доп. кровать, ребенок спит с родителями.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При бронировании размещения с припиской WITHOUT EX BED постельные и банные принадлежности не предоставляются.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вторая доп. кровать не предоставляется ни в каком варианте размещения.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Правила предоставления лежаков в отелях Вьетнама</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Обращаем внимание, что количество лежаков в городских отелях не соответствует номерному фонду, а регламентируется муниципалитетом. Количество лежаков может варьироваться от 4 до 18. В связи с этим, некоторые отели могут вводить временные ограничения для бесплатного пользования лежаками (3-4 часа в день), чтобы все гости отеля имели возможность воспользоваться услугой.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Напряжение электросети</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Напряжение в сети: 220 В, но в некоторых регионах — 110 В. Имеет смысл взять с собой универсальный адаптер, потому что розетки бывают разной формы.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Экскурсии</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Гид компании, принимающий вас во Вьетнаме, во время встречи в отеле сообщит перечень предлагаемых экскурсий, их содержание, график проведения и стоимость. Не рекомендуем приобретать экскурсии или прочие услуги в неизвестных вам туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, а также о качестве транспорта для ее организации. Вам может быть предоставлено для использования несертифицированное, неисправное или не соответствующее санитарно-гигиеническим нормам оборудование.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Кухня</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вьетнамцы обычно начинают день с супа из лапши. Лапша бывает двух видов: белая рисовая или желтая из пшеничной муки. Ее кладут в пиалу, посыпают зеленью, добавляют овощи, куриное мясо или говядину, заливают мясным бульоном. Даже с утра блюдо обильно посыпают перцем и мелко нарезанным чили. На обед или ужин обычно готовят рис, к нему — мясо, рыбу, овощи. Почти всегда в конце трапезы подают суп.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">На вьетнамском столе непременно стоит тарелочка со смесью соли и перца, рыбный соус, миска с листьями салата (без заправки) и свежей зеленью — лимонной мелиссой, мятой, кинзой. На десерт принято подавать фрукты: ананасы, дыни, личи, манго, папайю, грейпфруты. Экзотические блюда — мясо питона, удава и крокодила, блюда</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">из насекомых. Здесь также готовят мясо полевых крыс и собак. Если вы увидите в меню название «маленький тигр», то это мясо домашней кошки.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Национальным напитком во Вьетнаме считается зеленый чай, его пьют из маленьких 50-граммовых чашечек. А вот черный чай вьетнамцы почти не пьют. Страна славится прекрасным и ароматным кофе.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Магазины</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Во Вьетнаме низкие цены на многие товары. Магазины Вьетнама самые разные: современные торговые центры, бутики, супермаркеты, шумные открытые рынки, целые торговые деревни, лавки, ларьки, галереи. В торговых центрах цены в магазинах одежды приблизительно такие же, как в европейских странах. Самые лучшие покупки во Вьетнаме для туристов — это одежда из шелка, жемчуг, ювелирные украшения и ремесленные поделки.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не забывайте торговаться! На вьетнамском языке покупка будет «муа», а скидка «зам за». Если цена на товар произносится устно, это означает, что обязательно нужно торговаться. Как правильно, цену можно скинуть на 30-50 %, а в некоторых туристических местах, например, возле известных достопримечательностей, цену могут снизить в 5 раз и более.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Транспорт</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Существует ежедневное железнодорожное сообщение между Ханоем и Хошимином. Трижды в день поезд-экспресс отправляется с севера на юг и обратно. Иностранцы оплачивают билеты в долларах США и платят больше, чем местные жители. Имеются поезда повышенной комфортности.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Многие отели и фирмы на местах предлагают поездки на микроавтобусах по фиксированным ценам. Этот способ передвижения дешевле и быстрее, чем поезд. Существует два типа междугородних автобусов: с кондиционером и указанным в билете местом и мини-бас (без кондиционера и без места).</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В больших городах активно используется такси со счетчиком. Такси, как правило, стоят у международных отелей, но можно и просто остановить машину на улице, махнув рукой.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Важно ! Такси — самый проблемный вид транспорта во Вьетнаме. Водители постоянно завышают цены. Типичные</span> для Вьетнама велорикши теперь встречаются реже, зато появились такси-мопеды. Никакой лицензии у них нет и о цене нужно договариваться.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Аренда автомобиля</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Машину напрокат можно взять только с шофером (иногда еще и с переводчиком). Самостоятельно управлять автомобилем туристам запрещено, так как вьетнамская дорожная служба не признает международные водительские права.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Почти во всех городах, где бывают туристы, можно взять велосипед напрокат в отеле или велосипедном магазине.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Телефон</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Телефонные карточки для автоматов продаются не только на почте, но и в большинстве магазинов, ларьков.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Звонок из Вьетнама в Россию: (007) + код города + телефонный номер.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Звонок из России во Вьетнам: 8 910 (84) + код города + телефонный номер.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Код Ханоя: 4.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Код Хошимина: 8.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Код Нячанга: 58.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Код Фантхиета: 62.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Код Фукуока: 92.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Звонить по международной связи можно практически из любого крупного города или поселка, но только через переговорный пункт.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Экстренные телефоны</h3>
-  <ul class="check-list mb-8">
-    <li>полиция: 113,</li>
-    <li>скорая помощь: 115,</li>
-    <li>пожарная служба: 114.</li>
-</ul>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Чаевые</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Официально давать чаевые во Вьетнаме не принято, но во многих ресторанах это уже стало обычной практикой.</p>
-<section id="pravila-lichnoj-gigieny-i-bezopasnosti" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Правила личной гигиены и безопасности</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед путешествием мы советуем ознакомиться с «Полезными советами российским гражданам, выезжающим за рубеж», размещенными на сайте МИД РФ: https://www.kdmid.ru/info-for-traveling-abroad/useful-tips-for-russian-citizens-traveling-abroad/, а также с памяткой МИД РФ «Каждому, кто направляется за границу», и памяткой Роспотребнадзора выезжающим за рубеж.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не нарушайте правила безопасности, установленные авиакомпаниями, транспортными организациями, гостиницами, местными органами власти.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Категорически не рекомендуем приобретать экскурсии и дополнительные туристские услуги в неизвестных туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, вам не будет гарантирована безопасность предоставленных услуг и исправность используемого оборудования, тем самым можно подвергнуть себя серьезной опасности.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед поездкой рекомендуется взять с собой ксерокопии основных страниц (с фотографией, личными данными, отметкой о регистрации) заграничного и внутреннего паспортов РФ. Паспорт (или ксерокопию паспорта), визитную карточку отеля носите с собой.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При возникновении транспортных аварий, конфликтов с полицией, другими органами местной власти необходимо поставить в известность представителя принимающей стороны или сотрудников посольства/консульства РФ.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В период путешествия турист не имеет права на коммерческую деятельность или иную оплачиваемую работу.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вы обязаны покинуть Вьетнам до истечения срока безвизового пребывания, в противном случае вы можете быть подвергнуты штрафу, аресту и высланы из страны в принудительном порядке.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не оставляйте детей одних без присмотра на пляже, у бассейна, на водных горках и аттракционах.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Мойте руки перед едой. Не пейте сырую воду, особенно из открытых водоемов. Для питья рекомендуется использовать минеральную воду, которую можно приобрести в магазинах и барах отеля.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Возьмите в путешествие индивидуальную аптечку с необходимым набором лекарств.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Помните, что многообразные представители животного и растительного мира могут быть не только красивыми, но и опасными. При укусах и ранах немедленно обратитесь к врачу.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не бродите босиком по протокам или стоячим водоемам, не мойте в них руки. Не ложитесь на землю без подстилки на берегах рек.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не рекомендуется носить с собой большие наличные суммы. Кражи денег и вещей у туристов случаются довольно часто, как и махинации с фальшивыми долларами. Не следует вынимать из кошелька на виду у всех большие суммы денег.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Покидая автобус на остановках и во время экскурсий, не оставляйте в нем ручную кладь, особенно ценные вещи и деньги.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Важные документы, наличные деньги и драгоценности лучше хранить в сейфе номера. Если в номере нет сейфа, его можно взять в аренду за плату у администрации отеля или сдать на хранение портье в сейф на стойке регистрации.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Рекомендуется сдавать ключ от номера на стойку регистрации отеля, в случае его утери поставить в известность администрацию.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Во многих отелях запрещается выносить из номера полотенца на пляж или к бассейну. Не приносите на пляж полотенца или инвентарь из номера без разрешения персонала.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если в номере стоит мини-бар, то все напитки и закуски, взятые из него, как правило, должны быть оплачены.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Категорически запрещается курить в постели.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для россиян ограничений на передвижение по стране нет.</p>
-<section id="v-sluchae-poteri-pasporta" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">В случае потери паспорта</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Незамедлительно обращайтесь в дипломатическое представительство, в консульское учреждение или в представительство МИД РФ, которое находится в пределах приграничной территории.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вам необходимо получить свидетельство на въезд в РФ (REENTRY CERTIFICATE TO THE RUSSIAN FEDERATION), которое называется временным загранпаспортом. Выдается на срок до 15 дней для того, чтобы турист успел купить обратный билет и улететь на родину.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для того чтобы вам выдали свидетельство на возвращение в РФ, необходимо представить следующие документы:</p>
-  <ul class="check-list mb-8">
-    <li>основной документ, на основании которого будут предприниматься какие-либо действия, — заявление о выдаче свидетельства ( образец заявления ),</li>
-    <li>две фотографии (цветные или ч/б, размер — 35х45 мм на однотонном фоне с четким изображением лица),</li>
-    <li>внутренний паспорт РФ, также возможно предоставление других документов для подтверждения своей личности — водительских прав или служебного удостоверения.</li>
-</ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Срок выдачи свидетельства на возвращение в РФ составляет 2 рабочих дня со дня регистрации заявления.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вернувшись в РФ, в трехдневный срок необходимо сдать свидетельство в организацию, выдавшую паспорт (ОВИР, МИД).</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Все вышеперечисленные документы регламентированы пунктом 20 Приказа МИД РФ от 28.06.2012 года № 10304.</p>
-<section id="poleznaya-informatsiya" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Полезная информация</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
-  <div class="bg-gray-50/50 p-8 rounded-3xl border border-gray-100 h-full shadow-sm"> <div class="text-xl font-bold mb-4 text-black">Тел.: +84-4-3833-69-91/92 (при</div> <div class="text-lg text-black/70 leading-relaxed font-manrope">Тел.: (04) 3833-69-91/92 (при<br>Факс: +84-4-3833-69-95.<br>E-mail:<br>rusemb.vietnam@gmail.com</div> </div>
-  <div class="bg-gray-50/50 p-8 rounded-3xl border border-gray-100 h-full shadow-sm"> <div class="text-xl font-bold mb-4 text-black"><span class="font-bold text-black">Консульский</span> <span class="font-bold text-black">отдел</span> <span class="font-bold text-black">посольства</span> <span class="font-bold text-black">Посольство</span> <span class="font-bold text-black">РФ</span> <span class="font-bold text-black">в</span> <span class="font-bold text-black">г.</span> <span class="font-bold text-black">Ханой</span> <span class="font-bold text-black">Генконсульство</span> <span class="font-bold text-black">России</span> <span class="font-bold text-black">в</span> <span class="font-bold text-black">г.</span> Адрес: г. Ханой, ул. Латхань, 191. <span class="font-bold text-black">Дананге</span></div> <div class="text-lg text-black/70 leading-relaxed font-manrope">Адрес: г. Ханой, ул. Латхань, 191. звонках из России). Адрес: Чанфу, 22. Тел.: +84-4-3833-69-96 (при звонках<br>из России). Тел.: +84-511-382-23-80/381-85-28 звонках по Вьетнаму). (при звонках из России). Тел.: (04) 3833-69-96 (при звонках по<br>Вьетнаму). Тел.: (0511) 382-23-80/381-85-28 (при звонках по Вьетнаму).<br>Факс: +84-4-3833-69-96. moscow-vietnam@yandex.ru, Факс: +84-511-381-85-27.<br>Email: kons_hanoi@inbox.ru, kons_hanoi@hn.vnn.vn E-mail: consdanang@gmail.com Посол: Ковтун Андрей</div> </div>
+<!-- Mobile Drawer (Navigation) -->
+<div class="fixed inset-0 bg-black/40 z-[100] transition-opacity duration-300 opacity-0 pointer-events-none backdrop-blur-sm" id="drawer-overlay" onclick="toggleMenu()">
 </div>
-
-        </div>
-
-        <div class="h-px bg-black/5 my-16"></div>
-
-        <!-- СЕКЦИЯ: ФОРМА -->
-        <section id="section-form" class="scroll-mt-32 py-12">
-          <h2 class="text-3xl md:text-4xl font-black mb-8 tracking-tight">Отправить заявку</h2>
-          <form id="booking-form"
-            class="bg-[#fffcf5] border border-black/5 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-10 md:p-16 shadow-2xl shadow-[#5f531a]/10 space-y-10 md:space-y-12 relative overflow-hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 md:gap-y-8 mt-2">
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="userName" placeholder="Иван Иванов" type="text" required />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="userEmail" placeholder="hello@example.com" type="email" required />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="userPhone" placeholder="+7 (___) ___-__-__" type="tel" required />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Направление</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="destination" value="Вьетнам" type="text" />
-              </div>
-              <div class="grid grid-cols-2 gap-4">
-                <div class="space-y-2">
-                  <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
-                  <input
-                    class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                    name="adults" min="1" type="number" value="2" />
-                </div>
-                <div class="space-y-2">
-                  <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
-                  <input
-                    class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                    name="children" placeholder="1 реб, 5 лет" type="text" />
-                </div>
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="budget" placeholder="От 200 000" type="text" />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="nights" min="1" type="number" value="7" />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="startDate" type="date" />
-              </div>
-            </div>
-            <div class="space-y-4">
-              <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
-              <div class="flex flex-wrap gap-8">
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
-                    name="excursions" type="radio" value="Да" />
-                  <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
-                </label>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
-                    name="excursions" type="radio" value="Нет" />
-                  <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
-                </label>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
-                    name="excursions" type="radio" value="Пока не знаю" />
-                  <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
-                </label>
-              </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
-                <textarea
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="hotelPrefs" placeholder="Напр. первая линия, только 5*, наличие детского клуба..."
-                  rows="3"></textarea>
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="airport" placeholder="Шереметьево, Пулково..." type="text" />
-              </div>
-            </div>
-            <div class="pt-8 flex justify-center w-full">
-              <button
-                class="w-full sm:w-auto bg-black text-white px-10 md:px-14 py-5 rounded-full text-lg md:text-xl font-bold shadow-xl shadow-black/15 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center"
-                type="submit">Отправить заявку</button>
-            </div>
-          </form>
-        </section>
-
-      </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-surface-container-low w-full border-t border-black/5 pt-16 pb-10 px-4 md:px-8 mt-8">
-    <div class="max-w-7xl mx-auto flex flex-col gap-12 md:gap-16">
-      <div class="flex flex-col md:flex-row justify-between items-start gap-12">
-        <div class="space-y-6 max-w-sm text-center md:text-left mx-auto md:mx-0">
-          <img src="../../images/LogoB_300x.png" alt="Emoji Tours" class="h-12 md:h-14 mx-auto md:mx-0">
-          <p class="text-on-surface-variant font-medium text-sm leading-relaxed px-4 md:px-0">
+<main class="pt-24">
+<div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col lg:flex-row gap-12">
+<!-- БОКОВАЯ НАВИГАЦИЯ -->
+<aside class="hidden lg:block w-64 self-start sticky top-24 h-fit pb-10">
+<div>
+<p class="text-[13px] font-black text-black/40 mb-6 px-6">Содержание</p>
+<nav class="flex flex-col border-l border-black/5" id="quick-links">
+<a class="nav-link" href="#pered-otezdom">Перед отъездом</a>
+<a class="nav-link" href="#sobiraya-bagazh">Собирая багаж</a>
+<a class="nav-link" href="#v-rossijskom-aeroportu-vyleta-prileta">В российском аэропорту вылета/прилета</a>
+<a class="nav-link" href="#tamozhennyj-kontrol-v-aeroportu-vetnama">Таможенный контроль в аэропорту Вьетнама</a>
+<a class="nav-link" href="#registratsiya-na-rejs-i-oformlenie-bagazha">Регистрация на рейс и оформление багажа</a>
+<a class="nav-link" href="#pasportnyj-kontrol">Паспортный контроль</a>
+<a class="nav-link" href="#sanitarnyj-kontrol">Санитарный контроль</a>
+<a class="nav-link" href="#veterinarnyj-kontrol">Ветеринарный контроль</a>
+<a class="nav-link" href="#v-aeroportu-prilyota-vyleta-vetnama">В аэропорту прилёта/вылета Вьетнама</a>
+<a class="nav-link" href="#pasportnyj-kontrol-viza">Паспортный контроль. Виза</a>
+<a class="nav-link" href="#pravila-provoza-i-ispolzovaniya-dronov-vo-vetname">Правила провоза и использования дронов во Вьетнаме</a>
+<a class="nav-link" href="#vetnam">Вьетнам</a>
+<a class="nav-link" href="#pravila-lichnoj-gigieny-i-bezopasnosti">Правила личной гигиены и безопасности</a>
+<a class="nav-link" href="#v-sluchae-poteri-pasporta">В случае потери паспорта</a>
+<a class="nav-link" href="#poleznaya-informatsiya">Полезная информация</a>
+</nav>
+</div>
+</aside>
+<!-- КОНТЕНТНАЯ ОБЛАСТЬ -->
+<div class="flex-1 py-10">
+<p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-10">Памятка: Вьетнам</h1>
+<div class="flex flex-wrap gap-4 mb-14">
+<a class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all" href="../countries/vietnam.html">О
+            стране</a>
+<a class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all" href="#section-form">Хочу
+            туда</a>
+</div>
+<div class="space-y-16" id="main-content">
+<section class="scroll-mt-32 mb-20" id="pered-otezdom">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Перед отъездом</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3434-6638-4437-a663-626532353762__zagranpasport-novogo.jpg"/></div>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Проверьте наличие необходимых для поездки документов:</h3>
+<ul class="check-list mb-8">
+<li>заграничный паспорт (должен быть действителен в течение не менее 6-ти месяцев с даты въезда в страну и иметь чистую страницу для проставления визы);</li>
+<li>ксерокопия загранпаспорта (может пригодиться при утрате загранпаспорта и в случае непредвиденных обстоятельств);</li>
+<li>авиабилеты или маршрут/квитанции электронного билета;</li>
+<li>ваучер;</li>
+<li>страховой медицинский полис.</li>
+</ul>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">В случае путешествия с детьми</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6234-6362-4539-b665-323137643933__komfortnyi-otdykh-s-.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Несовершеннолетний гражданин РФ, следующий совместно хотя бы с одним из родителей, выезжает из РФ по своему загранпаспорту.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Несовершеннолетний российский гражданин, выезжающий из Российской Федерации без сопровождения родителей, должен иметь при себе кроме заграничного паспорта нотариально оформленное согласие родителей на его выезд за границу с указанием срока выезда и государство, которое он намерен посетить.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Без необходимости оформления для ребенка отдельного заграничного паспорта несовершеннолетний гражданин РФ до 14 лет может выехать совместно хотя бы с одним из родителей, если он вписан в заграничный паспорт родителя, оформленный по старому образцу (к паспорту старого образца относится паспорт не биометрический, оформленный в соответствии с постановлением Правительства Российской Федерации от 14 марта 1997 г. № 298). В паспорт родителя в этом случае обязательно должна быть вклеена фотография ребенка, независимо от его возраста, на которой должна стоять печать паспортно-визовой службы. Отсутствие фотографии или печати является основанием для отказа ребенку в пересечении границы. Выезд из РФ несовершеннолетних детей, сведения о которых внесены в паспорта сопровождающих их родителей, оформленные по старому образцу, осуществляется по срокам действия паспортов.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">На заграничные паспорта, оформленные по новому образцу (биометрический), распространяются нормы Постановления Правительства РФ №13 от 19 января 2010 года о том, что внесение сведений о детях в паспорт, удостоверяющий личность родителя, не дает права ребенку на выезд за пределы территории РФ без документа, удостоверяющего личность гражданина РФ за пределами территории РФ.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При следовании несовершеннолетнего российского гражданина через государственную границу РФ совместно с одним из родителей предъявлять письменное согласие второго родителя не нужно, если только от него ранее в пограничные органы не поступало заявление о несогласии на выезд из РФ своих детей.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если у несовершеннолетнего ребенка и выезжающего с ним родителя разные фамилии, то рекомендуем взять с собой нотариально заверенную копию свидетельства о рождении для подтверждения родства. На практике отсутствие такого подтверждения служило основанием для отказа ребенку в пересечении границы.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Беременным женщинам</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед полетом мы рекомендуем ознакомиться с правилами авиакомпании на необходимость предоставления письменного согласия врача на полет, а также иных документов для осуществления авиаперелета. Сотрудники авиакомпании имеют полное право отказать в авиаперевозке или потребовать медицинское освидетельствование в аэропорту вылета в случае нарушения правил.</p>
+<section class="scroll-mt-32 mb-20" id="sobiraya-bagazh">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Собирая багаж</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3838-6539-4365-b630-323066343866__thumb_67866_expert_b.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Рекомендуем все ценные вещи, документы и деньги положить в ручную кладь и взять с собой в самолет.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В багаж следует упаковать все металлические острые и режущие предметы (маникюрные ножницы, пилочки для ногтей, перочинный ножик и т. п.), а также любые жидкости, гели и аэрозоли (за исключением детского питания и лекарств, если в них есть необходимость) — проносить подобные предметы в ручной клади запрещено .</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не забывайте собрать и взять с собой аптечку первой помощи , которая поможет при легких недомоганиях, сэкономит время на поиски лекарственных средств и избавит от нежелательного общения на иностранном языке.</p>
+<section class="scroll-mt-32 mb-20" id="v-rossijskom-aeroportu-vyleta-prileta">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">В российском аэропорту вылета/прилета</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед выездом в аэропорт получите дополнительную информацию о возможно произошедших изменениях в условиях вылета, используя сайт авиакомпании, выполняющей рейс, или по телефону ее справочной службы.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Рекомендуем заранее, не позднее чем за три часа до вылета, прибыть к месту регистрации пассажиров для прохождения установленных процедур регистрации, оформления багажа, и выполнения требований, связанных с пограничным, таможенным, санитарно-карантинным, ветеринарным и другими видами контроля, установленными законодательством РФ.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Таможенный контроль до начала путешествия</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед полетом рекомендуем проверять действующие правила вывоза физическими лицами наличной иностранной валюты из РФ, товаров и иных предметов на сайте Федеральной Таможенной Службы customs.gov.ru. Обращаем внимание на то, что в настоящее время действуют ограничения.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">С 1.01.2025 во Вьетнаме запрещено любое использование электронных сигарет (все виды электронных сигарет и курительных смесей, в том числе Iqos) — ввоз во Вьетнам, курение на всей территории страны, продажа. Также запрещен ввоз кальянов, угля, табака и их использование на территории Вьетнама.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Запрещено перемещение на выезде и въезде:</span></p>
+<ul class="check-list mb-8">
+<li>культурных ценностей,</li>
+<li>объектов фауны и флоры, находящихся под угрозой исчезновения,</li>
+<li>оружия и боеприпасов к нему без разрешения уполномоченных органов.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Незаконное перемещение товаров или валюты через таможенную границу РФ или их недекларирование,</span> <span class="font-bold text-black">либо недостоверное декларирование влечет за собой административную или уголовную ответственность.</span></p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Запрещено на выезде и въезде:</span></p>
+<ul class="check-list mb-8">
+<li>принимать от посторонних лиц чемоданы, посылки и другие предметы для перевозки на борту воздушного судна.</li>
+</ul>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Таможенный контроль по окончании путешествия</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то вам следует проходить зону таможенного контроля по «Зеленому коридору».</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Актуальную информацию о ввозе валюты, товаров и иных предметов для личного пользования, вы найдете на сайте Федеральной Таможенной Службы customs.gov.ru.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Недекларирование товаров в случае превышения стоимостных или весовых норм, а также наличных</span> денежных средств и (или) денежных инструментов влечет за собой административную или уголовную ответственность.</p>
+<section class="scroll-mt-32 mb-20" id="tamozhennyj-kontrol-v-aeroportu-vetnama">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Таможенный контроль в аэропорту Вьетнама</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Ввоз иностранной валюты не ограничен, но необходимо декларировать сумму свыше 5 000 долларов США, вывоз</span> валюты разрешается только в пределах декларации.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Разрешен беспошлинный ввоз:</p>
+<ul class="check-list mb-8">
+<li>400 сигарет или 0,5 кг табака, или 100 сигар,</li>
+<li>2 л алкогольных напитков крепостью до 22 градусов или 1,5 л крепких алкогольных напитков (общий объем ввозимого алкоголя не должен превышать 3 л),</li>
+<li>до 5 кг чая,</li>
+<li>до 3 кг кофе,</li>
+<li>косметики, парфюмерии,</li>
+<li>продуктов питания в пределах личной потребности и общей стоимостью не более 5 млн донг.</li>
+<li>аудио-, видео-, теле- и фотоаппаратуру необходимо указывать в декларации.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Запрещен ввоз:</span></p>
+<ul class="check-list mb-8">
+<li>наркотиков,</li>
+<li>лекарств, содержащих большую дозу наркотических веществ,</li>
+<li>оружия.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Из Вьетнама можно вывозить иностранную валюту в эквиваленте до 5 000 долларов США без декларирования. Если сумма превышает 5 000 долларов США, необходимо задекларировать её при въезде и предоставить документы, подтверждающие законное происхождение средств при вывозе.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Запрещен вывоз:</p>
+<ul class="check-list mb-8">
+<li>предметов искусства и антиквариата,</li>
+<li>ювелирных украшений и предметов народного промысла без соответствующего документального оформления,</li>
+<li>национальной валюты.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! С 21 августа 2019 года Управление гражданской авиации СРВ приняло решение о запрете на перевозку</span> на борту самолетов (как в ручной клади, так и в багаже) 15-дюймовых моделей MacBook Pro, выпущенных с сентября 2015 года по февраль 2017 года из-за риска возгорания их аккумуляторных батарей.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вьетнамские власти ужесточили соответствующий контроль за портативной компьютерной техникой при прохождении досмотра во всех аэропортах страны. Данный запрет касается всех международных авиарейсов, вылетающих из Вьетнама, а также внутренних рейсов, осуществляемых вьетнамскими и зарубежными авиакомпаниями по территории СРВ.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">За нарушение этого запрета пассажир может быть не допущен на рейс, а также оштрафован.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Проверить модель MacBook Pro можно на официальном сайте компании Apple по адресу: https://support.apple.com/15-inch-macbook-pro-battery-recall .</p>
+<section class="scroll-mt-32 mb-20" id="registratsiya-na-rejs-i-oformlenie-bagazha">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Регистрация на рейс и оформление багажа</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3039-3166-4636-b537-366535646636__secret-01.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">До начала поездки настоятельно рекомендуем уточнить время начала и окончания регистрации на рейс, а также время посадки на борт. Указанную информацию вы можете посмотреть на официальном сайте авиакомпании. Помните, что у разных авиакомпаний могут быть свои правила.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Регистрация пассажиров и оформление багажа производятся на основании именного авиабилета или распечатанных на бумажном носителе маршрута и/или квитанции электронного билета, а также заграничного паспорта пассажира.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При регистрации пассажиру выдается посадочный талон, который необходимо сохранять до момента возможного предъявления авиакомпании претензий по качеству предоставленных услуг авиаперевозки.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед посадкой на рейс рекомендуем проверить номер выхода и время начала посадки на рейс на информационном табло в аэропорту.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Пассажиру, опоздавшему ко времени окончания регистрации пассажиров и оформления багажа или посадки в воздушное судно, может быть отказано в перевозке.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Каждый авиаперевозчик устанавливает свои нормы провоза багажа, а также габариты и вес ручной клади, провозимой в салоне самолета. Уточняйте данную информацию перед вылетом.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">За провоз багажа сверх установленной нормы бесплатного провоза багажа взимается дополнительная плата по тарифу, установленному перевозчиком.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перевозчик имеет право отказать туристу в перевозе багажа, вес или объем которого не соответствуют установленным нормам.</p>
+<section class="scroll-mt-32 mb-20" id="pasportnyj-kontrol">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Паспортный контроль</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6164-3539-4236-a536-653666633263__919255ebe5775d87ea2b.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для прохождения пограничного контроля необходимо предъявить заграничный/внутренний российский паспорт. Пограничные органы ФСБ РФ при осуществлении пограничного контроля имеют право запрашивать у туристов дополнительные документы (авиабилет, посадочный талон, ваучер и т. п.), а также проводить опрос лиц, следующих через границу.</p>
+<section class="scroll-mt-32 mb-20" id="sanitarnyj-kontrol">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Санитарный контроль</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При совершении путешествия по Вьетнаму риска заражения особо опасными инфекционными заболеваниями нет, делать прививки официально не требуются. Можно рекомендовать в профилактических целях сделать противостолбнячные инъекции и прививку против гепатита А и В.</p>
+<section class="scroll-mt-32 mb-20" id="veterinarnyj-kontrol">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Ветеринарный контроль</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если вы вывозите животных во Вьетнам, то необходимо иметь комплект документов, подтверждающих, что они здоровы. Как правило, следует иметь:</p>
+<ul class="check-list mb-8">
+<li>ветеринарный паспорт ,</li>
+<li>справку о состоянии здоровья (выдается любой государственной ветеринарной клиникой),</li>
+<li>справку из клуба СКОР или РКФ (в справке указывается, что животное не представляет племенной ценности, справки из других клубов вызывают вопросы на таможне),</li>
+<li>сертификат ветеринарной службы с отметкой о всех прививках, включая прививку против бешенства.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание ! Отели Вьетнама размещения с домашними животными, как правило, не предоставляют .</span></p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При ввозе в РФ животных и птиц необходимо иметь сопровождающее ветеринарное свидетельство, полученное в Государственной ветеринарной службе страны, где приобретено животное.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Запрещен ввоз на территорию РФ любых грузов животного происхождения, в том числе в ручной клади и багаже, при отсутствии письменного разрешения Главного государственного ветеринарного инспектора РФ.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Без разрешения уполномоченных органов РФ запрещено ввозить и вывозить объекты дикой фауны и флоры, <span class="font-bold text-black">находящиеся под угрозой исчезновения.</span></p>
+<section class="scroll-mt-32 mb-20" id="v-aeroportu-prilyota-vyleta-vetnama">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">В аэропорту прилёта/вылета Вьетнама</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">По прибытии в аэропорт Вьетнама нужно последовательно:</p>
+<ul class="check-list mb-8">
+<li>пройти паспортный контроль,</li>
+<li>получить свой багаж,</li>
+<li>пройти таможенный контроль,</li>
+<li>выйти из здания аэропорта,</li>
+<li>найти встречающего гида с табличкой «ANEX»,</li>
+<li>предъявить гиду туристский ваучер.</li>
+</ul>
+<section class="scroll-mt-32 mb-20" id="pasportnyj-kontrol-viza">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Паспортный контроль. Виза</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Правила въезда во Вьетнам для граждан России, Беларуси и Киргизии:</p>
+<ul class="check-list mb-8">
+<li>При въезде во Вьетнам разрешен безвизовый въезд на срок до 45 дней пребывания, включая день въезда и день выезда. Для граждан Киргизии разрешен безвизовый въезд на срок до 30 дней пребывания.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Условия для безвизового посещения Вьетнама:</p>
+<ul class="check-list mb-8">
+<li>Турист не находится в списке лиц, запрещённых к въезду во Вьетнам.</li>
+<li>Турист должен иметь загранпаспорт, срок действия которого не менее 6-ти месяцев со дня окончания поездки.</li>
+<li>Турист должен иметь обратный билет.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если планируется пребывание во Вьетнаме более 45 дней, необходимо предварительное оформление визового приглашения.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">За превышение срока пребывания 45 дней без визы или срока действия визы вьетнамскими законами предусмотрен штраф.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Правила въезда во Вьетнам для иностранных граждан:</p>
+<ul class="check-list mb-8">
+<li>Для иностранных граждан необходимо оформление визы в аэропорту прилета, на основании заранее оформленной визовой поддержки.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Правила оформления визовой поддержки можно найти в разделе «Оформление визового приглашения через</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Anex». Правила въезда во Вьетнам с несовершеннолетними:</p>
+<ul class="check-list mb-8">
+<li>Для несовершеннолетних выезжающих в сопровождении третьих лиц, на границе необходимо предоставить согласие на выезд от одного из родителей, с нотариально заверенным переводом на английский язык + обычную копию свидетельства о рождении.</li>
+<li>Для несовершеннолетних выезжающих в сопровождении одного из родителей, на границе необходимо предоставить обычную копию свидетельства о рождении.</li>
+</ul>
+<section class="scroll-mt-32 mb-20" id="pravila-provoza-i-ispolzovaniya-dronov-vo-vetname">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Правила провоза и использования дронов во Вьетнаме</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Согласно CAAV, беспилотные летательные аппараты разрешены во Вьетнаме в соответствии с правилами CAAV. Туристы могут привезти свой беспилотник во Вьетнам, но для этого им потребуется разрешение Министерства обороны.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для использования беспилотных летательных аппаратов в туристических целях во Вьетнаме требуется разрешение. Туристам необходимо отправить запрос в соответствующий отдел компании для дальнейшего получения разрешения Вьетнамской стороны (Вьетнамская сторона будет заниматься получением разрешения). Перед отправкой запроса на получение разрешения в компанию туристу необходимо подготовить следующие документы:</p>
+<ul class="check-list mb-8">
+<li>Заявление на получение лётной лицензии. Подготовьте заявление по форме, указанной в Указе 79/2011/ND-CP (APPLICATION FORM FOR REQUEST OF FLIGHT AUTHORIZATION). Место подачи заявления — оперативный департамент Генерального штаба — дом № 1 Нгуен Три Фуонг, район Ба Динь, город Ханой (Department of Operations - General Staff - No. 1 Nguyen Tri Phuong, Ba Dinh District, Hanoi City);</li>
+<li>Удостоверение личности/карта, удостоверяющая личность гражданина/паспорт представителя или заявителя (требуется нотариально заверенная ксерокопия). Если вы являетесь компанией, подающей заявку на получение лицензии, вам потребуется свидетельство о регистрации бизнеса (требуется нотариально заверенная ксерокопия);</li>
+<li>Фотография беспилотника. Требуется цветная печать (фото-скан для отправки), минимальный размер 18 х 24 см;</li>
+<li>Фотография района, в котором выдаётся разрешение на полёты. Требуется цветная фотография Google Maps;</li>
+<li>Техническая документация на ваш беспилотник включает фотографии данного типа и письменное описание его технических характеристик;</li>
+<li>Лицензия или другой юридический документ, разрешающий вашему беспилотнику взлетать с аэродрома, поверхности суши или воды или садиться на них;</li>
+<li>Все остальные имеющиеся документы на беспилотник.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Подайте заявку как минимум за 14 дней до запланированного рейса (никаких изменений не вносите менее, чем за десять дней).</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Стоимость разрешения варьируется 350-700 долларов за 1 локацию полёта дрона / за день / за одноразовое использование дрона. Конечная стоимость будет озвучена Вьетнамской стороной после получения заявления на использование дрона, так как цена зависит от района использования и количества вылетов.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если для использования дрона запрашиваются разные локации или разные дни использования, турист будет использовать дрон несколько раз в день — цена будет рассчитываться за каждую фактическую указанную в заявлении локацию (район использования, за один взлёт дрона).</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Если вы хотите использовать беспилотник во Вьетнаме, не проходя сложный процесс подачи заявки на</span> <span class="font-bold text-black">получение лицензии, можно арендовать беспилотник во Вьетнаме. Процесс будет менее сложным.</span></p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Документы для подачи заявления на получение лицензии на полеты беспилотных летательных аппаратов:</p>
+<ul class="check-list mb-8">
+<li>Заявление на получение лицензии на полеты. Подготовьте заявление по форме, указанной в Постановлении 79/2011/ND-CP ( APPLICATION FORM FOR REQUEST OF FLIGHT <span class="font-bold text-black">AUTHORIZATION). В данном случае заполнять информацию про дрон в анкете не нужно;</span></li>
+<li>Паспорт представителя или заявителя (требуется нотариально заверенная ксерокопия);</li>
+<li>Фотография района, в котором применяется лицензия на полеты. Требуется цветная фотография Google Maps.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Стоимость: 200 долларов США за каждый район полета/ за раз.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Все документы и запрос отправлять в соответствующий отдел компании (обратите внимание: отправлять документы и запрос необходимо минимум за 3 недели до рейса, для подготовки).</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Самые важные правила, которые необходимо знать при управлении беспилотником во Вьетнаме:</span></p>
+<ul class="check-list mb-8">
+<li>Для каждого полета беспилотника, проводимого во Вьетнаме, требуется специальная летная лицензия. Заявки должны подаваться в Оперативное бюро Главного командного пункта Министерства обороны не позднее, чем за 14 дней до запланированной даты полета;</li>
+<li>Беспилотным летательным аппаратам запрещено перевозить радиоактивные, легковоспламеняющиеся или взрывоопасные материалы;</li>
+<li>Беспилотные летательные аппараты не могут использоваться для запуска, отстрела или сброса за борт потенциально опасных объектов или веществ;</li>
+<li>Беспилотные летательные аппараты могут летать на максимальной высоте 492 фута;</li>
+<li>Дроны должны весить менее 26 фунтов;</li>
+<li>Полеты беспилотных летательных аппаратов над военными базами или правительственными зданиями запрещены;</li>
+<li>Полеты беспилотных летательных аппаратов разрешены только в светлое время суток;</li>
+<li>Без лицензии, выданной для этой цели, беспилотные летательные аппараты не могут устанавливаться на воздушное оборудование или использоваться для аэрофотосъемки или фотосъемки с воздуха;</li>
+<li>Беспилотным летательным аппаратам не разрешается поднимать флаги или транспаранты, распространять листовки или участвовать в какой-либо другой форме пропаганды.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Туристу необходимо заполнить форму и ответить на подробные вопросы о его пребывании и категории беспилотного летательного аппарата, включая зону, в которой разрешены полеты, направление и маршрут полета, время и продолжительность полета, правила, касающиеся уведомления о координации полета и контроля за полетом. На утверждение данной формы может уйти до 3 недель.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Запрещенные и ограниченные зоны полетов беспилотных летательных аппаратов во Вьетнаме:</span></p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Зоны, ограниченные для полетов:</p>
+<ul class="check-list mb-8">
+<li>Воздушное пространство на высоте более 120 м над уровнем местности (за исключением зон, запрещенных для полетов);</li>
+<li>Густонаселенный район с большим скоплением людей;</li>
+<li>Пограничная зона с Китаем находится на расстоянии 25 000 м от границы на всех высотах. Пограничная зона с Лаосом и Камбоджей находится на расстоянии 10 000 м от границы на всех высотах;</li>
+<li>Зоны, прилегающие к запрещенным зонам в аэропортах и на аэродромах, где летают самолеты гражданской авиации и военные самолеты (шириной 3000 м, длиной 5000 м) от границы запрещенной зоны полетов в аэропортах и на аэродромах на высоте менее 120 м над уровнем местности.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В некоторых случаях беспилотным летательным аппаратам может быть разрешено летать в зонах ограниченного доступа, если они соответствуют требованиям организации, выдающей лицензии на полеты.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Зоны, запрещенные для полетов:</p>
+<ul class="check-list mb-8">
+<li>В зону входят оборонительные сооружения или специальные военные зоны, находящиеся под непосредственным руководством, управлением и защитой Министерства национальной обороны (беспилотникам разрешается летать на расстоянии не менее 500 м по горизонтали от границы этой запрещенной зоны на всех высотах);</li>
+<li>Район, где находятся рабочие штаб-квартиры министерств, агентств, департаментов и отделений партии, государства, правительства, центрального аппарата на уровне провинций и городов, дипломатических представительств и консульств, представительств международных организаций, базирующихся во Вьетнаме (беспилотнику разрешается летать на расстоянии не менее 200 м по горизонтали от границы этой запрещенной зоны на всех высотах);</li>
+<li>Зоны обороны и безопасности (беспилотнику разрешается летать на расстоянии не менее 500 м по горизонтали от границы этой запрещенной зоны на всех высотах);</li>
+<li>Аэропортовые зоны и аэропорты, в которых эксплуатируются гражданские и военные воздушные суда (подробности приведены в решении 18/2020/QD-TTg);</li>
+<li>Зоны, находящиеся в пределах действия воздушных линий, маршруты полетов, полетные коридоры, которые были лицензированы в воздушном пространстве Вьетнама, и ограниченный диапазон воздушных линий, которые были перечислены авиационным управлением Вьетнама в разделе новостей авиации Вьетнама «AIP Vietnam».</li>
+</ul>
+<section class="scroll-mt-32 mb-20" id="vetnam">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Вьетнам</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3266-6161-4135-b162-656565643632__nen-12.jpg"/></div><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6138-3063-4530-a632-343730656432__i_16.jpg"/></div><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3933-6631-4365-a532-633563636161__mobile-fruiterers-ha.jpg"/></div><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3061-6237-4333-b938-373965303962__money_in_vietnam.jpg"/></div><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3933-6362-4436-a532-613233323536__world-map-with-magni.jpg"/></div><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3166-3636-4466-b637-643866313261__54358a3c3b497bda83b8.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Вьетнам расположен на полуострове Индокитай. Общая площадь территории составляет 331 км². На севере</span> страна граничит с Китаем, на западе – с Лаосом и Камбоджой, на востоке омывается Южно-Китайским морем и заливом Бакбо, на юго-западе — Сиамским заливом. Вьетнам является Социалистической Республикой и делится на 58 провинций и 5 городов центрального подчинения: Ханой, Хошимин (бывший Сайгон), Хайфон, Дананг и Кантхо.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Леса занимают около 20 % территории страны, многие регионы объявлены заповедными. В них обитают олени, обезьяны, тапиры и дикие свиньи. Морские и речные воды страны богаты многообразием видов рыб, мидий и креветок.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Белоснежные и золотистые песчаные пляжи, лазурные воды Южно-Китайского моря и возможность круглогодичного отдыха делают Вьетнам необыкновенно привлекательным для туристов. Здесь можно заняться дайвингом, серфингом, яхтингом, отправиться исследовать дюны, посетить близлежащие острова или углубиться в джунгли, чтобы увидеть величественные водопады.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Время</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Разница во времени Вьетнама с Москвой — минус 4 часа.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Климат</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Климат большей части Вьетнама — тропический муссонный, средняя температура практически не меняется в течение года и колеблется в пределах +26 … +29 °С.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Валюта</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Имейте в виду, что обменивать купюры в 50 и 100 долларов США выгоднее, чем более мелкие купюры.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Кредитные карточки распространяются все больше, особенно это касается крупных городов, отелей и ресторанов, где бывают иностранцы. А вот в магазинах расплачиваться карточкой, как правило, невозможно.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Язык</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вьетнамский, представлен тремя диалектами: северным, центральным и южным. Универсальным языком общения является английский.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Население</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Примерная численность населения — 94,6 млн человек. Титульная нация — вьеты. Национальные меньшинства представлены кхмерами, таями, мео, манн, чамами и китайцами.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Религия</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Когда вьетнамцев спрашивают об их вероисповедании, они затруднятся с ответом. Местные жители верят в духов, к которым обращаются в различных жизненных ситуациях. Общины сами принимают решение о том, какие духи им будут покровительствовать. Существует культ предков.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Обычаи</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">У вьетнамцев не принято в знак приветствия пожимать друг другу руки. Во Вьетнаме также не принято громко говорить, активно жестикулировать и шумно себя вести. Махать рукой официанту в ресторане с целью подозвать его к столику тоже считается плохим тоном. Во время еды не стоит оставлять свои палочки в еде или прикасаться ими к палочкам сотрапезников. Передавать или принимать что-то нужно обеими руками, либо подавать правой, но придерживать правую руку левой в области запястья. В ресторане не принято делить счет пополам, его оплачивает тот, кто занимает более высокий социальный статус.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">У вьетнамцев не принято прикасаться друг к другу во время разговора: похлопывать по плечу или колену, прикасаться к голове другого человека, поскольку это может быть воспринято как скрытая угроза или оскорбление. При этом сами они любят дотрагиваться до иностранцев, поскольку считается, что это приносит удачу. Кроме того, будьте готовы, что при разговоре вьетнамцы не смотрят собеседнику в глаза — это проявление уважения.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При входе в буддистский храм нужно снимать обувь. Обходят храм только по часовой стрелке. Ваше небольшое пожертвование в пользу храма будет воспринято как знак уважения. В некоторые пагоды разрешен вход только в одежде с закрытыми плечами и в брюках, для женщин — юбки и платья не выше колен.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Праздники и нерабочие дни</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3865-6638-4830-a232-326362623232__hi_lim_bc_ninh_resiz.jpeg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Банки и учреждения закрыты по всей стране в указанные дни, но большинство магазинов работают. Исключением является праздник Tet, когда закрываются даже частные рестораны.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">1 января — Новый год;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">3 февраля — День создания Коммунистической партии, 1930;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Tet — вьетнамский Новый год по лунному календарю, отмечается в течение 4-х дней между серединой января и серединой февраля, точных дат нет, так как каждый год даты сдвигаются;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">30 апреля — День освобождения Сайгона;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">1 мая — День международной солидарности трудящихся;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">19 мая — День рождения Хо Ши Мина, 1890;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">2 сентября — День независимости, 1945;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">3 сентября — День смерти Хо Ши Мина.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">В отеле</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6663-3564-4564-a639-353164623163__ba2a4facaedc822e37dd.png"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В день приезда расселение осуществляется в соответствии с правилами, принятыми в отеле. Обычно начиная с 14:00 по местному времени. Просим ознакомиться на месте с условиями предоставления услуг в отеле и придерживаться установленных отелем правил.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В день выезда до наступления расчетного часа (как правило, 12:00) необходимо освободить свой номер и оплатить дополнительные услуги: телефонные переговоры, мини-бар, заказ питания и напитков в номер, массаж и др. Свой</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">багаж можно оставить в камере хранения отеля и оставаться на территории отеля до прибытия трансфера. Если вы не сдали номер до 12:00, стоимость комнаты оплачивается полностью за следующие сутки.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Правила бронирования доп. кроватей во Вьетнаме:</h3>
+<ul class="check-list mb-8">
+<li>При бронировании типа размещения 2 + 1 — дополнительная кровать не предоставляется.</li>
+<li>При бронировании типа размещения 2 + 1 (ex.bed) — предоставляется 1 дополнительное место (кровать или раскладушка, в зависимости от отеля).</li>
+<li>При бронировании типа размещения 2 + 1 (ex.bed) + 1 (no ex.bed) — предоставляется 1 дополнительное место (кровать или раскладушка, в зависимости от отеля). Второй ребенок спит с родителями.</li>
+<li>При бронировании типа размещения TRPL — предоставляется 1 дополнительное место (кровать или раскладушка, в зависимости от отеля).</li>
+<li>При бронировании 3+1 – предоставляется только одна доп. кровать, ребенок спит с родителями.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При бронировании размещения с припиской WITHOUT EX BED постельные и банные принадлежности не предоставляются.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вторая доп. кровать не предоставляется ни в каком варианте размещения.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Правила предоставления лежаков в отелях Вьетнама</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Обращаем внимание, что количество лежаков в городских отелях не соответствует номерному фонду, а регламентируется муниципалитетом. Количество лежаков может варьироваться от 4 до 18. В связи с этим, некоторые отели могут вводить временные ограничения для бесплатного пользования лежаками (3-4 часа в день), чтобы все гости отеля имели возможность воспользоваться услугой.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Напряжение электросети</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Напряжение в сети: 220 В, но в некоторых регионах — 110 В. Имеет смысл взять с собой универсальный адаптер, потому что розетки бывают разной формы.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Экскурсии</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6631-6630-4064-a234-353663373038__iudf6eubnfcjus140jew.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Гид компании, принимающий вас во Вьетнаме, во время встречи в отеле сообщит перечень предлагаемых экскурсий, их содержание, график проведения и стоимость. Не рекомендуем приобретать экскурсии или прочие услуги в неизвестных вам туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, а также о качестве транспорта для ее организации. Вам может быть предоставлено для использования несертифицированное, неисправное или не соответствующее санитарно-гигиеническим нормам оборудование.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Кухня</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вьетнамцы обычно начинают день с супа из лапши. Лапша бывает двух видов: белая рисовая или желтая из пшеничной муки. Ее кладут в пиалу, посыпают зеленью, добавляют овощи, куриное мясо или говядину, заливают мясным бульоном. Даже с утра блюдо обильно посыпают перцем и мелко нарезанным чили. На обед или ужин обычно готовят рис, к нему — мясо, рыбу, овощи. Почти всегда в конце трапезы подают суп.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">На вьетнамском столе непременно стоит тарелочка со смесью соли и перца, рыбный соус, миска с листьями салата (без заправки) и свежей зеленью — лимонной мелиссой, мятой, кинзой. На десерт принято подавать фрукты: ананасы, дыни, личи, манго, папайю, грейпфруты. Экзотические блюда — мясо питона, удава и крокодила, блюда</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">из насекомых. Здесь также готовят мясо полевых крыс и собак. Если вы увидите в меню название «маленький тигр», то это мясо домашней кошки.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Национальным напитком во Вьетнаме считается зеленый чай, его пьют из маленьких 50-граммовых чашечек. А вот черный чай вьетнамцы почти не пьют. Страна славится прекрасным и ароматным кофе.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Магазины</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Во Вьетнаме низкие цены на многие товары. Магазины Вьетнама самые разные: современные торговые центры, бутики, супермаркеты, шумные открытые рынки, целые торговые деревни, лавки, ларьки, галереи. В торговых центрах цены в магазинах одежды приблизительно такие же, как в европейских странах. Самые лучшие покупки во Вьетнаме для туристов — это одежда из шелка, жемчуг, ювелирные украшения и ремесленные поделки.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не забывайте торговаться! На вьетнамском языке покупка будет «муа», а скидка «зам за». Если цена на товар произносится устно, это означает, что обязательно нужно торговаться. Как правильно, цену можно скинуть на 30-50 %, а в некоторых туристических местах, например, возле известных достопримечательностей, цену могут снизить в 5 раз и более.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Транспорт</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3731-6666-4636-b062-666530353037__i_15.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Существует ежедневное железнодорожное сообщение между Ханоем и Хошимином. Трижды в день поезд-экспресс отправляется с севера на юг и обратно. Иностранцы оплачивают билеты в долларах США и платят больше, чем местные жители. Имеются поезда повышенной комфортности.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Многие отели и фирмы на местах предлагают поездки на микроавтобусах по фиксированным ценам. Этот способ передвижения дешевле и быстрее, чем поезд. Существует два типа междугородних автобусов: с кондиционером и указанным в билете местом и мини-бас (без кондиционера и без места).</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В больших городах активно используется такси со счетчиком. Такси, как правило, стоят у международных отелей, но можно и просто остановить машину на улице, махнув рукой.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Важно ! Такси — самый проблемный вид транспорта во Вьетнаме. Водители постоянно завышают цены. Типичные</span> для Вьетнама велорикши теперь встречаются реже, зато появились такси-мопеды. Никакой лицензии у них нет и о цене нужно договариваться.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Аренда автомобиля</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Машину напрокат можно взять только с шофером (иногда еще и с переводчиком). Самостоятельно управлять автомобилем туристам запрещено, так как вьетнамская дорожная служба не признает международные водительские права.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Почти во всех городах, где бывают туристы, можно взять велосипед напрокат в отеле или велосипедном магазине.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Телефон</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3337-3934-4532-a536-386363633935__phone_old_year_built.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Телефонные карточки для автоматов продаются не только на почте, но и в большинстве магазинов, ларьков.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Звонок из Вьетнама в Россию: (007) + код города + телефонный номер.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Звонок из России во Вьетнам: 8 910 (84) + код города + телефонный номер.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Код Ханоя: 4.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Код Хошимина: 8.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Код Нячанга: 58.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Код Фантхиета: 62.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Код Фукуока: 92.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Звонить по международной связи можно практически из любого крупного города или поселка, но только через переговорный пункт.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Экстренные телефоны</h3>
+<ul class="check-list mb-8">
+<li>полиция: 113,</li>
+<li>скорая помощь: 115,</li>
+<li>пожарная служба: 114.</li>
+</ul>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Чаевые</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Официально давать чаевые во Вьетнаме не принято, но во многих ресторанах это уже стало обычной практикой.</p>
+<section class="scroll-mt-32 mb-20" id="pravila-lichnoj-gigieny-i-bezopasnosti">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Правила личной гигиены и безопасности</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед путешествием мы советуем ознакомиться с «Полезными советами российским гражданам, выезжающим за рубеж», размещенными на сайте МИД РФ: https://www.kdmid.ru/info-for-traveling-abroad/useful-tips-for-russian-citizens-traveling-abroad/, а также с памяткой МИД РФ «Каждому, кто направляется за границу», и памяткой Роспотребнадзора выезжающим за рубеж.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не нарушайте правила безопасности, установленные авиакомпаниями, транспортными организациями, гостиницами, местными органами власти.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Категорически не рекомендуем приобретать экскурсии и дополнительные туристские услуги в неизвестных туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, вам не будет гарантирована безопасность предоставленных услуг и исправность используемого оборудования, тем самым можно подвергнуть себя серьезной опасности.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед поездкой рекомендуется взять с собой ксерокопии основных страниц (с фотографией, личными данными, отметкой о регистрации) заграничного и внутреннего паспортов РФ. Паспорт (или ксерокопию паспорта), визитную карточку отеля носите с собой.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При возникновении транспортных аварий, конфликтов с полицией, другими органами местной власти необходимо поставить в известность представителя принимающей стороны или сотрудников посольства/консульства РФ.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В период путешествия турист не имеет права на коммерческую деятельность или иную оплачиваемую работу.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вы обязаны покинуть Вьетнам до истечения срока безвизового пребывания, в противном случае вы можете быть подвергнуты штрафу, аресту и высланы из страны в принудительном порядке.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не оставляйте детей одних без присмотра на пляже, у бассейна, на водных горках и аттракционах.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Мойте руки перед едой. Не пейте сырую воду, особенно из открытых водоемов. Для питья рекомендуется использовать минеральную воду, которую можно приобрести в магазинах и барах отеля.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Возьмите в путешествие индивидуальную аптечку с необходимым набором лекарств.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Помните, что многообразные представители животного и растительного мира могут быть не только красивыми, но и опасными. При укусах и ранах немедленно обратитесь к врачу.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не бродите босиком по протокам или стоячим водоемам, не мойте в них руки. Не ложитесь на землю без подстилки на берегах рек.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не рекомендуется носить с собой большие наличные суммы. Кражи денег и вещей у туристов случаются довольно часто, как и махинации с фальшивыми долларами. Не следует вынимать из кошелька на виду у всех большие суммы денег.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Покидая автобус на остановках и во время экскурсий, не оставляйте в нем ручную кладь, особенно ценные вещи и деньги.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Важные документы, наличные деньги и драгоценности лучше хранить в сейфе номера. Если в номере нет сейфа, его можно взять в аренду за плату у администрации отеля или сдать на хранение портье в сейф на стойке регистрации.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Рекомендуется сдавать ключ от номера на стойку регистрации отеля, в случае его утери поставить в известность администрацию.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Во многих отелях запрещается выносить из номера полотенца на пляж или к бассейну. Не приносите на пляж полотенца или инвентарь из номера без разрешения персонала.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если в номере стоит мини-бар, то все напитки и закуски, взятые из него, как правило, должны быть оплачены.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Категорически запрещается курить в постели.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для россиян ограничений на передвижение по стране нет.</p>
+<section class="scroll-mt-32 mb-20" id="v-sluchae-poteri-pasporta">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">В случае потери паспорта</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6461-3537-4165-b365-363961373965__598c6e030ca3f598c6e0.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Незамедлительно обращайтесь в дипломатическое представительство, в консульское учреждение или в представительство МИД РФ, которое находится в пределах приграничной территории.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вам необходимо получить свидетельство на въезд в РФ (REENTRY CERTIFICATE TO THE RUSSIAN FEDERATION), которое называется временным загранпаспортом. Выдается на срок до 15 дней для того, чтобы турист успел купить обратный билет и улететь на родину.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для того чтобы вам выдали свидетельство на возвращение в РФ, необходимо представить следующие документы:</p>
+<ul class="check-list mb-8">
+<li>основной документ, на основании которого будут предприниматься какие-либо действия, — заявление о выдаче свидетельства ( образец заявления ),</li>
+<li>две фотографии (цветные или ч/б, размер — 35х45 мм на однотонном фоне с четким изображением лица),</li>
+<li>внутренний паспорт РФ, также возможно предоставление других документов для подтверждения своей личности — водительских прав или служебного удостоверения.</li>
+</ul>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Срок выдачи свидетельства на возвращение в РФ составляет 2 рабочих дня со дня регистрации заявления.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вернувшись в РФ, в трехдневный срок необходимо сдать свидетельство в организацию, выдавшую паспорт (ОВИР, МИД).</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Все вышеперечисленные документы регламентированы пунктом 20 Приказа МИД РФ от 28.06.2012 года № 10304.</p>
+<section class="scroll-mt-32 mb-20" id="poleznaya-informatsiya">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Полезная информация</h2>
+<div class="space-y-12 my-10">
+<div>
+<h3 class="text-2xl font-black mb-4 text-black">Тел.: +84-4-3833-69-91/92 (при</h3>
+<p class="text-lg text-black/80 leading-relaxed font-manrope">Тел.: (04) 3833-69-91/92 (при<br/>
+Факс: +84-4-3833-69-95.<br/>
+E-mail:<br/>
+rusemb.vietnam@gmail.com</p>
+</div>
+<div>
+<h3 class="text-2xl font-black mb-4 text-black"><span class="font-bold text-black">Консульский</span> <span class="font-bold text-black">отдел</span> <span class="font-bold text-black">посольства</span> <span class="font-bold text-black">Посольство</span> <span class="font-bold text-black">РФ</span> <span class="font-bold text-black">в</span> <span class="font-bold text-black">г.</span> <span class="font-bold text-black">Ханой</span> <span class="font-bold text-black">Генконсульство</span> <span class="font-bold text-black">России</span> <span class="font-bold text-black">в</span> <span class="font-bold text-black">г.</span> Адрес: г. Ханой, ул. Латхань, 191. <span class="font-bold text-black">Дананге</span></h3>
+<p class="text-lg text-black/80 leading-relaxed font-manrope">Адрес: г. Ханой, ул. Латхань, 191. звонках из России). Адрес: Чанфу, 22. Тел.: +84-4-3833-69-96 (при звонках<br/>
+из России). Тел.: +84-511-382-23-80/381-85-28 звонках по Вьетнаму). (при звонках из России). Тел.: (04) 3833-69-96 (при звонках по<br/>
+Вьетнаму). Тел.: (0511) 382-23-80/381-85-28 (при звонках по Вьетнаму).<br/>
+Факс: +84-4-3833-69-96. moscow-vietnam@yandex.ru, Факс: +84-511-381-85-27.<br/>
+Email: kons_hanoi@inbox.ru, kons_hanoi@hn.vnn.vn E-mail: consdanang@gmail.com Посол: Ковтун Андрей</p>
+</div>
+</div>
+</section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></div>
+<div class="h-px bg-black/5 my-16"></div>
+<!-- СЕКЦИЯ: ФОРМА -->
+<section class="scroll-mt-32 py-12" id="section-form">
+<h2 class="text-3xl md:text-4xl font-black mb-8 tracking-tight">Отправить заявку</h2>
+<form class="bg-[#fffcf5] border border-black/5 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-10 md:p-16 shadow-2xl shadow-[#5f531a]/10 space-y-10 md:space-y-12 relative overflow-hidden" id="booking-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 md:gap-y-8 mt-2">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="userName" placeholder="Иван Иванов" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="userEmail" placeholder="hello@example.com" required="" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="userPhone" placeholder="+7 (___) ___-__-__" required="" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Направление</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="destination" type="text" value="Вьетнам"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" min="1" name="adults" type="number" value="2"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="children" placeholder="1 реб, 5 лет" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="budget" placeholder="От 200 000" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" min="1" name="nights" type="number" value="7"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="startDate" type="date"/>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
+<div class="flex flex-wrap gap-8">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer" name="excursions" type="radio" value="Да"/>
+<span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer" name="excursions" type="radio" value="Нет"/>
+<span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer" name="excursions" type="radio" value="Пока не знаю"/>
+<span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
+<textarea class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="hotelPrefs" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
+<input class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="airport" placeholder="Шереметьево, Пулково..." type="text"/>
+</div>
+</div>
+<div class="pt-8 flex justify-center w-full">
+<button class="w-full sm:w-auto bg-black text-white px-10 md:px-14 py-5 rounded-full text-lg md:text-xl font-bold shadow-xl shadow-black/15 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center" type="submit">Отправить заявку</button>
+</div>
+</form>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full border-t border-black/5 pt-16 pb-10 px-4 md:px-8 mt-8">
+<div class="max-w-7xl mx-auto flex flex-col gap-12 md:gap-16">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="space-y-6 max-w-sm text-center md:text-left mx-auto md:mx-0">
+<img alt="Emoji Tours" class="h-12 md:h-14 mx-auto md:mx-0" src="../../images/LogoB_300x.png"/>
+<p class="text-on-surface-variant font-medium text-sm leading-relaxed px-4 md:px-0">
             Мы верим, что путешествия — это лучший способ познать себя и окружающий мир.
           </p>
-          <div class="flex gap-4 justify-center md:justify-start">
-            <a href="https://max.ru/join/0haRr-rt5CMasX93mYrj_DuaLtUNy7gLfKyjXIdKFys" target="_blank"
-              class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group">
-              <img src="../../images/Логотип_MAX.svg" alt="MAX"
-                class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all">
-            </a>
-            <a href="https://vk.com/emoji_tours" target="_blank"
-              class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group">
-              <img src="../../images/VK_Compact_Logo_(2021-present).svg.png" alt="VK"
-                class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all">
-            </a>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-16 w-full md:w-auto text-center md:text-left">
-          <div class="space-y-4">
-            <h4 class="font-bold text-on-surface-variant text-sm">Связаться с нами</h4>
-            <div class="space-y-3 text-lg">
-              <a href="tel:+79636491852"
-                class="block font-black text-on-surface hover:text-primary transition-colors">+7 963-649-18-52</a>
-              <a href="mailto:trohin.zh@yandex.ru"
-                class="block text-on-surface-variant hover:text-black transition-colors text-sm font-medium">trohin.zh@yandex.ru</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="pt-8 md:pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div
-          class="text-on-surface-variant font-medium text-[11px] md:text-xs text-center md:text-left w-full md:w-auto">©
+<div class="flex gap-4 justify-center md:justify-start">
+<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group" href="https://max.ru/join/0haRr-rt5CMasX93mYrj_DuaLtUNy7gLfKyjXIdKFys" target="_blank">
+<img alt="MAX" class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all" src="../../images/Логотип_MAX.svg"/>
+</a>
+<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group" href="https://vk.com/emoji_tours" target="_blank">
+<img alt="VK" class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all" src="../../images/VK_Compact_Logo_(2021-present).svg.png"/>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-16 w-full md:w-auto text-center md:text-left">
+<div class="space-y-4">
+<h4 class="font-bold text-on-surface-variant text-sm">Связаться с нами</h4>
+<div class="space-y-3 text-lg">
+<a class="block font-black text-on-surface hover:text-primary transition-colors" href="tel:+79636491852">+7 963-649-18-52</a>
+<a class="block text-on-surface-variant hover:text-black transition-colors text-sm font-medium" href="mailto:trohin.zh@yandex.ru">trohin.zh@yandex.ru</a>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 md:pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-on-surface-variant font-medium text-[11px] md:text-xs text-center md:text-left w-full md:w-auto">©
           2026 Emoji Tours. Путешествия с душой.</div>
-        <div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-on-surface-variant">
-          <a href="../../index.html#countries" class="hover:text-black transition-colors">Страны</a>
-          <a href="../../index.html#calendar" class="hover:text-black transition-colors">Календарь</a>
-          <a href="../../index.html#testimonials" class="hover:text-black transition-colors">Отзывы</a>
-          <a href="../../index.html#journey" class="hover:text-black transition-colors">Начать путешествие</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Success Modal -->
-  <div id="success-modal"
-    class="fixed inset-0 z-[200] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
-    <div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
-    <div
-      class="bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl relative z-10 max-w-sm w-full text-center space-y-6 transform scale-90 transition-transform duration-500"
-      id="success-card">
-      <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-        <span class="material-symbols-outlined text-5xl">check</span>
-      </div>
-      <h3 class="text-3xl font-black tracking-tight">Заявка принята!</h3>
-      <p class="text-on-surface-variant font-medium leading-relaxed">
-        Мы уже получили ваши данные и начали подбор идеального тура. Наш эксперт свяжется с вами в ближайшее время!
-      </p>
-      <button onclick="closeModal()"
-        class="w-full bg-black text-white py-5 rounded-full text-xl font-bold hover:scale-105 active:scale-95 transition-all shadow-xl shadow-black/10 mt-4">
-        Супер!
-      </button>
-    </div>
-  </div>
-
-  <script src="https://unpkg.com/imask"></script>
-  <script>
+<div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-on-surface-variant">
+<a class="hover:text-black transition-colors" href="../../index.html#countries">Страны</a>
+<a class="hover:text-black transition-colors" href="../../index.html#calendar">Календарь</a>
+<a class="hover:text-black transition-colors" href="../../index.html#testimonials">Отзывы</a>
+<a class="hover:text-black transition-colors" href="../../index.html#journey">Начать путешествие</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Success Modal -->
+<div class="fixed inset-0 z-[200] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500" id="success-modal">
+<div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+</div>
+<script src="https://unpkg.com/imask"></script>
+<script>
     // ScrollSpy
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -830,7 +745,7 @@
       // 1. Популяция мобильного меню из десктопного
       const mobileQuickLinks = document.getElementById('mobile-quick-links');
       const desktopLinksSource = document.querySelectorAll('#quick-links .nav-link');
-      
+
       if (mobileQuickLinks && desktopLinksSource.length > 0) {
         mobileQuickLinks.innerHTML = '';
         desktopLinksSource.forEach(link => {
@@ -903,5 +818,4 @@
     }
   </script>
 </body>
-
 </html>

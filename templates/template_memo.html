@@ -493,7 +493,7 @@
       // 1. Популяция мобильного меню из десктопного
       const mobileQuickLinks = document.getElementById('mobile-quick-links');
       const desktopLinksSource = document.querySelectorAll('#quick-links .nav-link');
-      
+
       if (mobileQuickLinks && desktopLinksSource.length > 0) {
         mobileQuickLinks.innerHTML = '';
         desktopLinksSource.forEach(link => {

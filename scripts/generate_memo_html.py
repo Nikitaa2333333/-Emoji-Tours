@@ -22,16 +22,19 @@ def render_table_block(table_lines):
         col1_content.append(parts[0] if len(parts) > 0 else "")
         col2_content.append(parts[1] if len(parts) > 1 else "")
 
-    html = '<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">\n'
+    html = '<div class="space-y-12 my-10">\n'
     for col in [col1_content, col2_content]:
         clean_col = [p for p in col if p.strip()]
         if not clean_col: continue
-        header = re.sub(r'</?b>', '', clean_col[0])
-        body = "<br>".join(clean_col[1:])
-        body = body.replace("<b>", '<span class="font-bold text-black">').replace("</b>", '</span>')
-        html += f'  <div class="bg-gray-50/50 p-8 rounded-2xl border border-gray-100 shadow-sm h-full">\n'
-        html += f'    <div class="text-xl font-bold mb-4 text-black">{header}</div>\n'
-        html += f'    <div class="text-lg text-black/70 leading-relaxed">{body}</div>\n'
+        header = re.sub(r'</?b>', '', clean_col[0]).strip()
+        body_lines = []
+        for p in clean_col[1:]:
+            p = p.replace("<b>", '<span class="font-bold text-black">').replace("</b>", '</span>')
+            body_lines.append(p)
+        body = "<br>\n".join(body_lines)
+        html += f'  <div>\n'
+        html += f'    <h3 class="text-2xl font-black mb-4 text-black">{header}</h3>\n'
+        html += f'    <p class="text-lg text-black/80 leading-relaxed font-manrope">{body}</p>\n'
         html += f'  </div>\n'
     html += '</div>\n'
     return html

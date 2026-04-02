@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html class="light" lang="ru">
 
+<html class="light" lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Памятка: Тайланд — Emoji Tours</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-    rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script id="tailwind-config">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Памятка: Тайланд — Emoji Tours</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
@@ -33,7 +31,7 @@
       },
     }
   </script>
-  <style>
+<style>
     body {
       font-family: 'Manrope', sans-serif;
       opacity: 1 !important;
@@ -161,598 +159,502 @@
     }
   </style>
 </head>
-
 <body class="bg-background text-on-surface">
-
-  <!-- ШАПКА -->
-  <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/90 backdrop-blur-md border-b border-black/5 py-4">
-    <div class="max-w-7xl mx-auto flex justify-between md:justify-center items-center px-4 md:px-8 relative">
-      <a href="../../index.html"
-        class="flex md:absolute md:left-8 text-xs md:text-sm font-bold items-center gap-1 md:gap-2 hover:opacity-70 transition-opacity whitespace-nowrap bg-black/5 px-3 py-2 rounded-full md:bg-transparent">
-        <span class="material-symbols-outlined text-[18px] md:text-[24px]">arrow_back</span>
+<!-- ШАПКА -->
+<nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/90 backdrop-blur-md border-b border-black/5 py-4">
+<div class="max-w-7xl mx-auto flex justify-between md:justify-center items-center px-4 md:px-8 relative">
+<a class="flex md:absolute md:left-8 text-xs md:text-sm font-bold items-center gap-1 md:gap-2 hover:opacity-70 transition-opacity whitespace-nowrap bg-black/5 px-3 py-2 rounded-full md:bg-transparent" href="../../index.html">
+<span class="material-symbols-outlined text-[18px] md:text-[24px]">arrow_back</span>
         Все страны
       </a>
-      <a href="../../index.html" class="flex-shrink-0 mx-auto md:mx-0">
-        <img src="../../images/LogoB_300x.png" alt="Emoji Tours" class="h-8 md:h-10"
-          onerror="this.src='https://via.placeholder.com/150?text=Emoji+Tours'">
-      </a>
-    </div>
-  </nav>
-
-  <!-- Кнопка навигации мобильная (Floating) -->
-  <button onclick="toggleMenu()"
-    class="md:hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-[90] flex items-center gap-2 bg-black text-white px-6 py-4 rounded-full font-bold shadow-2xl active:scale-95 transition-all">
-    <span class="material-symbols-outlined text-[20px]">menu</span>
+<a class="flex-shrink-0 mx-auto md:mx-0" href="../../index.html">
+<img alt="Emoji Tours" class="h-8 md:h-10" onerror="this.src='https://via.placeholder.com/150?text=Emoji+Tours'" src="../../images/LogoB_300x.png"/>
+</a>
+</div>
+</nav>
+<!-- Кнопка навигации мобильная (Floating) -->
+<button class="md:hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-[90] flex items-center gap-2 bg-black text-white px-6 py-4 rounded-full font-bold shadow-2xl active:scale-95 transition-all" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-[20px]">menu</span>
     Содержание
   </button>
-
-  <!-- Mobile Drawer (Navigation) -->
-  <div id="drawer-overlay" onclick="toggleMenu()"
-    class="fixed inset-0 bg-black/40 z-[100] transition-opacity duration-300 opacity-0 pointer-events-none backdrop-blur-sm">
-  </div>
-  <div id="mobile-drawer"
-    class="fixed top-0 right-0 w-[85%] max-w-sm h-full bg-[#fffcf5] z-[110] transform translate-x-full transition-transform duration-500 ease-out shadow-2xl p-8 flex flex-col">
-    <div class="flex justify-between items-center mb-10">
-      <p class="text-[13px] font-black text-black/40">Содержание</p>
-      <button onclick="toggleMenu()"
-        class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-variant/30 text-on-surface active:scale-90 transition-transform">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-    </div>
-    <nav id="mobile-quick-links"
-      class="flex flex-col gap-2 font-['Manrope'] font-bold text-lg tracking-tight overflow-y-auto">
-      <!-- Мобильные ссылки -->
-    </nav>
-    <div class="mt-auto pt-10 border-t border-black/10">
-      <p class="text-[11px] text-on-surface-variant font-bold uppercase tracking-[0.1em]">© 2026 Emoji Tours.
-        <br>Путешествия с душой.
-      </p>
-    </div>
-  </div>
-
-  <main class="pt-24">
-    <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col lg:flex-row gap-12">
-
-      <!-- БОКОВАЯ НАВИГАЦИЯ -->
-      <aside class="hidden lg:block w-64 self-start sticky top-24 h-fit pb-10">
-        <div>
-          <p class="text-[13px] font-black text-black/40 mb-6 px-6">Содержание</p>
-          <nav id="quick-links" class="flex flex-col border-l border-black/5">
-            <a href="#pered-otezdom" class="nav-link">Перед отъездом</a>
-<a href="#sobiraya-bagazh" class="nav-link">Собирая багаж</a>
-<a href="#v-rossijskom-aeroportu-vyleta-prileta" class="nav-link">В российском аэропорту вылета/прилета</a>
-<a href="#tamozhennyj-kontrol-v-tailande" class="nav-link">Таможенный контроль в Таиланде</a>
-<a href="#pravila-vvoza-elektronnykh-sigaret" class="nav-link">Правила ввоза электронных сигарет</a>
-<a href="#perevozka-portativnykh-elektronnykh-ustrojstv-ped-soderzhashchikh-batarei" class="nav-link">Перевозка портативных электронных устройств (PED), содержащих батареи:</a>
-<a href="#pravila-vvoza-dronov-v-tailand" class="nav-link">Правила ввоза дронов в Таиланд</a>
-<a href="#registratsiya-na-rejs-i-oformlenie-bagazha" class="nav-link">Регистрация на рейс и оформление багажа</a>
-<a href="#pasportnyj-kontrol" class="nav-link">Паспортный контроль</a>
-<a href="#sanitarnyj-kontrol" class="nav-link">Санитарный контроль</a>
-<a href="#veterinarnyj-kontrol" class="nav-link">Ветеринарный контроль</a>
-<a href="#v-aeroportu-prileta-vyleta-tailanda" class="nav-link">В аэропорту прилета/вылета Таиланда</a>
-<a href="#mesto-vstrechi-v-aeroportakh" class="nav-link">Место встречи в аэропортах</a>
-<a href="#pasportnyj-kontrol-viza" class="nav-link">Паспортный контроль. Виза</a>
-<a href="#korolevstvo-tailand" class="nav-link">Королевство Таиланд</a>
-<a href="#pravila-lichnoj-gigieny-i-bezopasnosti" class="nav-link">Правила личной гигиены и безопасности</a>
-<a href="#v-sluchae-poteri-pasporta" class="nav-link">В случае потери паспорта</a>
-<a href="#poleznaya-informatsiya-span-class-font-bold-text-black-goryachaya-span-span-class-font-bold-text-black-liniya-span-span-class-font-bold-text-black-prinimayushchej-span-span-class-font-bold-text-black-kompanii-span-90-850-549-07-07" class="nav-link">Полезная информация <span class="font-bold text-black">Горячая</span> <span class="font-bold text-black">линия</span> <span class="font-bold text-black">принимающей</span> <span class="font-bold text-black">компании:</span> +90 850 549 07 07.</a>
-
-          </nav>
-        </div>
-      </aside>
-
-      <!-- КОНТЕНТНАЯ ОБЛАСТЬ -->
-      <div class="flex-1 py-10">
-        <p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
-        <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-10">Памятка: Тайланд</h1>
-
-        <div class="flex flex-wrap gap-4 mb-14">
-          <a href="../countries/thailand.html"
-            class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">О
+<!-- Mobile Drawer (Navigation) -->
+<div class="fixed inset-0 bg-black/40 z-[100] transition-opacity duration-300 opacity-0 pointer-events-none backdrop-blur-sm" id="drawer-overlay" onclick="toggleMenu()">
+</div>
+<main class="pt-24">
+<div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col lg:flex-row gap-12">
+<!-- БОКОВАЯ НАВИГАЦИЯ -->
+<aside class="hidden lg:block w-64 self-start sticky top-24 h-fit pb-10">
+<div>
+<p class="text-[13px] font-black text-black/40 mb-6 px-6">Содержание</p>
+<nav class="flex flex-col border-l border-black/5" id="quick-links">
+<a class="nav-link" href="#pered-otezdom">Перед отъездом</a>
+<a class="nav-link" href="#sobiraya-bagazh">Собирая багаж</a>
+<a class="nav-link" href="#v-rossijskom-aeroportu-vyleta-prileta">В российском аэропорту вылета/прилета</a>
+<a class="nav-link" href="#tamozhennyj-kontrol-v-tailande">Таможенный контроль в Таиланде</a>
+<a class="nav-link" href="#pravila-vvoza-elektronnykh-sigaret">Правила ввоза электронных сигарет</a>
+<a class="nav-link" href="#perevozka-portativnykh-elektronnykh-ustrojstv-ped-soderzhashchikh-batarei">Перевозка портативных электронных устройств (PED), содержащих батареи:</a>
+<a class="nav-link" href="#pravila-vvoza-dronov-v-tailand">Правила ввоза дронов в Таиланд</a>
+<a class="nav-link" href="#registratsiya-na-rejs-i-oformlenie-bagazha">Регистрация на рейс и оформление багажа</a>
+<a class="nav-link" href="#pasportnyj-kontrol">Паспортный контроль</a>
+<a class="nav-link" href="#sanitarnyj-kontrol">Санитарный контроль</a>
+<a class="nav-link" href="#veterinarnyj-kontrol">Ветеринарный контроль</a>
+<a class="nav-link" href="#v-aeroportu-prileta-vyleta-tailanda">В аэропорту прилета/вылета Таиланда</a>
+<a class="nav-link" href="#mesto-vstrechi-v-aeroportakh">Место встречи в аэропортах</a>
+<a class="nav-link" href="#pasportnyj-kontrol-viza">Паспортный контроль. Виза</a>
+<a class="nav-link" href="#korolevstvo-tailand">Королевство Таиланд</a>
+<a class="nav-link" href="#pravila-lichnoj-gigieny-i-bezopasnosti">Правила личной гигиены и безопасности</a>
+<a class="nav-link" href="#v-sluchae-poteri-pasporta">В случае потери паспорта</a>
+<a class="nav-link" href="#poleznaya-informatsiya-span-class-font-bold-text-black-goryachaya-span-span-class-font-bold-text-black-liniya-span-span-class-font-bold-text-black-prinimayushchej-span-span-class-font-bold-text-black-kompanii-span-90-850-549-07-07">Полезная информация <span class="font-bold text-black">Горячая</span> <span class="font-bold text-black">линия</span> <span class="font-bold text-black">принимающей</span> <span class="font-bold text-black">компании:</span> +90 850 549 07 07.</a>
+</nav>
+</div>
+</aside>
+<!-- КОНТЕНТНАЯ ОБЛАСТЬ -->
+<div class="flex-1 py-10">
+<p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-10">Памятка: Тайланд</h1>
+<div class="flex flex-wrap gap-4 mb-14">
+<a class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all" href="../countries/thailand.html">О
             стране</a>
-          <a href="#section-form"
-            class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу
+<a class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all" href="#section-form">Хочу
             туда</a>
-        </div>
-
-        <div class="space-y-16" id="main-content">
-          <section id="pered-otezdom" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Перед отъездом</h2>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Проверьте наличие необходимых для поездки документов:</h3>
-  <ul class="check-list mb-8">
-    <li>заграничный паспорт (действителен в течение не менее шести месяцев с даты начала поездки, имеет не менее 2-х свободных страниц для проставления визы);</li>
-    <li>ксерокопия загранпаспорта (может пригодиться при утрате загранпаспорта и в случае непредвиденных обстоятельств);</li>
-    <li>авиабилеты или маршрут/квитанции электронного билета;</li>
-    <li>ваучер;</li>
-    <li>страховой медицинский полис.</li>
+</div>
+<div class="space-y-16" id="main-content">
+<section class="scroll-mt-32 mb-20" id="pered-otezdom">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Перед отъездом</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3434-6638-4437-a663-626532353762__zagranpasport-novogo.jpg"/></div>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Проверьте наличие необходимых для поездки документов:</h3>
+<ul class="check-list mb-8">
+<li>заграничный паспорт (действителен в течение не менее шести месяцев с даты начала поездки, имеет не менее 2-х свободных страниц для проставления визы);</li>
+<li>ксерокопия загранпаспорта (может пригодиться при утрате загранпаспорта и в случае непредвиденных обстоятельств);</li>
+<li>авиабилеты или маршрут/квитанции электронного билета;</li>
+<li>ваучер;</li>
+<li>страховой медицинский полис.</li>
 </ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">предварительно заполнить цифровую карту прибытия TDAC (Thailand Digital Arrival Card). Отсутствие подобной формы будет являться основанием для отказа во въезде в страну.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Важно:</span></p>
-  <ul class="check-list mb-8">
-    <li>Документ не является визой.</li>
-    <li>Сайт для оформления онлайн-формы работает на пяти языках, в том числе на русском. Несмотря на то, что онлайн-форма на русском, вводить данные в графы необходимо латиницей.</li>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">предварительно заполнить цифровую карту прибытия TDAC (Thailand Digital Arrival Card). Отсутствие подобной формы будет являться основанием для отказа во въезде в страну.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Важно:</span></p>
+<ul class="check-list mb-8">
+<li>Документ не является визой.</li>
+<li>Сайт для оформления онлайн-формы работает на пяти языках, в том числе на русском. Несмотря на то, что онлайн-форма на русском, вводить данные в графы необходимо латиницей.</li>
 </ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Данные, которые необходимо ввести:</span></p>
-  <ul class="check-list mb-8">
-    <li>Личные (ФИО, гражданство, номер загранпаспорта, дата рождения, род деятельности).</li>
-    <li>Контактные (страна и город проживания, телефон).</li>
-    <li>О прибытии (даты приезда и отъезда, вид транспорта — воздушный, наземный, морской; для самолёта — номер рейса).</li>
-    <li>Точный адрес места пребывания в Таиланде (тип размещения — отель, хостел, в гостях и другое).</li>
-    <li>Список стран, в которых вы были за последние 2 недели.</li>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Данные, которые необходимо ввести:</span></p>
+<ul class="check-list mb-8">
+<li>Личные (ФИО, гражданство, номер загранпаспорта, дата рождения, род деятельности).</li>
+<li>Контактные (страна и город проживания, телефон).</li>
+<li>О прибытии (даты приезда и отъезда, вид транспорта — воздушный, наземный, морской; для самолёта — номер рейса).</li>
+<li>Точный адрес места пребывания в Таиланде (тип размещения — отель, хостел, в гостях и другое).</li>
+<li>Список стран, в которых вы были за последние 2 недели.</li>
 </ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">После заполнения формы сайт сгенерирует цифровую миграционную карту с номером и QR-кодом. Её следует предъявить при пересечении границы. Карту необходимо сохранить на телефоне (можно предварительно распечатать, но необязательно).</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для внесения изменений после заполнения необходимо пройти по тому же QR-коду (например, при изменении отеля или даты вылета). Заполнить форму необходимо в течение 3 дней перед прибытием в Таиланд (включая день прилёта).</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Обращаем ваше внимание на то, что по требованиям некоторых авиакомпаний указанная выше форма должна быть заполнена до прибытия в аэропорт вылета. Невыполнение этого условия может привести к отказу в посадке на рейс. С актуальной информацией вы можете ознакомиться на сайте авиаперевозчика.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">В случае путешествия с детьми</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Несовершеннолетний гражданин РФ, следующий совместно хотя бы с одним из родителей, выезжает из РФ по своему загранпаспорту.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Несовершеннолетний российский гражданин, выезжающий из Российской Федерации без сопровождения родителей, должен иметь при себе кроме заграничного паспорта нотариально оформленное согласие родителей на его выезд за границу с указанием срока выезда и государство, которое он намерен посетить.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При следовании несовершеннолетнего российского гражданина через государственную границу РФ совместно с одним из родителей предъявлять письменное согласие второго родителя не нужно, если только от него ранее в пограничные органы не поступало заявление о несогласии на выезд из РФ своих детей.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если у несовершеннолетнего ребенка и выезжающего с ним родителя разные фамилии, то рекомендуем взять с собой нотариально заверенную копию свидетельства о рождении для подтверждения родства. На практике отсутствие такого подтверждения служило основанием для отказа ребенку в пересечении границы.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Беременным женщинам</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед полетом мы рекомендуем ознакомиться с правилами авиакомпании на необходимость предоставления письменного согласия врача на полет, а также иных документов для осуществления авиаперелета. Сотрудники авиакомпании имеют полное право отказать в авиаперевозке или потребовать медицинское освидетельствование в аэропорту вылета в случае нарушения правил.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Важно</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В Таиланде нет официальных сертификатов звездности отелей, как и четких унифицированных критериев ее определения. Рекомендуем пользоваться сайтом туроператора с описанием отеля (категория отеля указана ориентировочно по усмотрению поставщика услуг с учетом объема и качества оказываемых услуг) и официальным сайтом самого отеля, а так же заранее уточнять объем предоставляемых в нем услуг в целях выбора оптимального варианта отдыха.</p>
-<section id="sobiraya-bagazh" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Собирая багаж</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Рекомендуем все ценные вещи, документы и деньги положить в ручную кладь и взять с собой в самолет.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В багаж следует упаковать все металлические острые и режущие предметы (маникюрные ножницы, пилочки для ногтей, перочинный ножик и т. п.), а также любые жидкости, гели и аэрозоли (за исключением детского питания и лекарств, если в них есть необходимость) — проносить подобные предметы в ручной клади запрещено .</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не забывайте собрать и взять с собой аптечку первой помощи , которая поможет при легких недомоганиях, сэкономит время на поиски лекарственных средств и избавит от нежелательного общения на иностранном языке.</p>
-<section id="v-rossijskom-aeroportu-vyleta-prileta" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">В российском аэропорту вылета/прилета</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед выездом в аэропорт получите дополнительную информацию о возможно произошедших изменениях в условиях вылета, используя сайт авиакомпании, выполняющей рейс, или по телефону ее справочной службы.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Рекомендуем заранее, не позднее чем за три часа до вылета, прибыть к месту регистрации пассажиров для прохождения установленных процедур регистрации, оформления багажа, и выполнения требований, связанных с пограничным, таможенным, санитарно-карантинным, ветеринарным и другими видами контроля, установленными законодательством РФ.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Таможенный контроль до начала путешествия</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед полетом рекомендуем проверять действующие правила вывоза физическими лицами наличной иностранной валюты из РФ, товаров и иных предметов на сайте Федеральной Таможенной Службы customs.gov.ru. Обращаем внимание на то, что в настоящее время действуют ограничения.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Запрещено перемещение на выезде и въезде:</span></p>
-  <ul class="check-list mb-8">
-    <li>культурных ценностей,</li>
-    <li>объектов фауны и флоры, находящихся под угрозой исчезновения,</li>
-    <li>оружия и боеприпасов к нему без разрешения уполномоченных органов.</li>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">После заполнения формы сайт сгенерирует цифровую миграционную карту с номером и QR-кодом. Её следует предъявить при пересечении границы. Карту необходимо сохранить на телефоне (можно предварительно распечатать, но необязательно).</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для внесения изменений после заполнения необходимо пройти по тому же QR-коду (например, при изменении отеля или даты вылета). Заполнить форму необходимо в течение 3 дней перед прибытием в Таиланд (включая день прилёта).</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Обращаем ваше внимание на то, что по требованиям некоторых авиакомпаний указанная выше форма должна быть заполнена до прибытия в аэропорт вылета. Невыполнение этого условия может привести к отказу в посадке на рейс. С актуальной информацией вы можете ознакомиться на сайте авиаперевозчика.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">В случае путешествия с детьми</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6234-6362-4539-b665-323137643933__komfortnyi-otdykh-s-.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Несовершеннолетний гражданин РФ, следующий совместно хотя бы с одним из родителей, выезжает из РФ по своему загранпаспорту.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Несовершеннолетний российский гражданин, выезжающий из Российской Федерации без сопровождения родителей, должен иметь при себе кроме заграничного паспорта нотариально оформленное согласие родителей на его выезд за границу с указанием срока выезда и государство, которое он намерен посетить.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При следовании несовершеннолетнего российского гражданина через государственную границу РФ совместно с одним из родителей предъявлять письменное согласие второго родителя не нужно, если только от него ранее в пограничные органы не поступало заявление о несогласии на выезд из РФ своих детей.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если у несовершеннолетнего ребенка и выезжающего с ним родителя разные фамилии, то рекомендуем взять с собой нотариально заверенную копию свидетельства о рождении для подтверждения родства. На практике отсутствие такого подтверждения служило основанием для отказа ребенку в пересечении границы.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Беременным женщинам</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед полетом мы рекомендуем ознакомиться с правилами авиакомпании на необходимость предоставления письменного согласия врача на полет, а также иных документов для осуществления авиаперелета. Сотрудники авиакомпании имеют полное право отказать в авиаперевозке или потребовать медицинское освидетельствование в аэропорту вылета в случае нарушения правил.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Важно</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В Таиланде нет официальных сертификатов звездности отелей, как и четких унифицированных критериев ее определения. Рекомендуем пользоваться сайтом туроператора с описанием отеля (категория отеля указана ориентировочно по усмотрению поставщика услуг с учетом объема и качества оказываемых услуг) и официальным сайтом самого отеля, а так же заранее уточнять объем предоставляемых в нем услуг в целях выбора оптимального варианта отдыха.</p>
+<section class="scroll-mt-32 mb-20" id="sobiraya-bagazh">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Собирая багаж</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3838-6539-4365-b630-323066343866__thumb_67866_expert_b.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Рекомендуем все ценные вещи, документы и деньги положить в ручную кладь и взять с собой в самолет.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В багаж следует упаковать все металлические острые и режущие предметы (маникюрные ножницы, пилочки для ногтей, перочинный ножик и т. п.), а также любые жидкости, гели и аэрозоли (за исключением детского питания и лекарств, если в них есть необходимость) — проносить подобные предметы в ручной клади запрещено .</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не забывайте собрать и взять с собой аптечку первой помощи , которая поможет при легких недомоганиях, сэкономит время на поиски лекарственных средств и избавит от нежелательного общения на иностранном языке.</p>
+<section class="scroll-mt-32 mb-20" id="v-rossijskom-aeroportu-vyleta-prileta">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">В российском аэропорту вылета/прилета</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед выездом в аэропорт получите дополнительную информацию о возможно произошедших изменениях в условиях вылета, используя сайт авиакомпании, выполняющей рейс, или по телефону ее справочной службы.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Рекомендуем заранее, не позднее чем за три часа до вылета, прибыть к месту регистрации пассажиров для прохождения установленных процедур регистрации, оформления багажа, и выполнения требований, связанных с пограничным, таможенным, санитарно-карантинным, ветеринарным и другими видами контроля, установленными законодательством РФ.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Таможенный контроль до начала путешествия</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед полетом рекомендуем проверять действующие правила вывоза физическими лицами наличной иностранной валюты из РФ, товаров и иных предметов на сайте Федеральной Таможенной Службы customs.gov.ru. Обращаем внимание на то, что в настоящее время действуют ограничения.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Запрещено перемещение на выезде и въезде:</span></p>
+<ul class="check-list mb-8">
+<li>культурных ценностей,</li>
+<li>объектов фауны и флоры, находящихся под угрозой исчезновения,</li>
+<li>оружия и боеприпасов к нему без разрешения уполномоченных органов.</li>
 </ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Незаконное перемещение товаров или валюты через таможенную границу РФ или их недекларирование, либо</span> <span class="font-bold text-black">недостоверное декларирование влечет за собой административную или уголовную ответственность.</span></p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Запрещено на выезде и въезде:</span></p>
-  <ul class="check-list mb-8">
-    <li>принимать от посторонних лиц чемоданы, посылки и другие предметы для перевозки на борту воздушного судна.</li>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Незаконное перемещение товаров или валюты через таможенную границу РФ или их недекларирование, либо</span> <span class="font-bold text-black">недостоверное декларирование влечет за собой административную или уголовную ответственность.</span></p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Запрещено на выезде и въезде:</span></p>
+<ul class="check-list mb-8">
+<li>принимать от посторонних лиц чемоданы, посылки и другие предметы для перевозки на борту воздушного судна.</li>
 </ul>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Таможенный контроль по окончании путешествия</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то вам следует проходить зону таможенного контроля по «Зелёному коридору».</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Актуальную информацию о ввозе валюты, товаров и иных предметов для личного пользования, вы найдете на сайте Федеральной Таможенной Службы customs.gov.ru.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Недекларирование товаров в случае превышения стоимостных или весовых норм, а также наличных</span> денежных средств и (или) денежных инструментов влечёт за собой административную или уголовную ответственность.</p>
-<section id="tamozhennyj-kontrol-v-tailande" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Таможенный контроль в Таиланде</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Ввоз любой валюты, за исключением национальной, в Таиланд свободный. Ввоз национальной валюты ограничен</span> суммой не более 50 000 бат на человека.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Вывоз ввезенной валюты неограничен, однако сумму вывозимой валюты, эквивалентной 20 000 долларам США и</span> более, необходимо декларировать. Национальную валюту можно вывезти на сумму не более 50 000 бат на человека.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Разрешен беспошлинный ввоз :</p>
-  <ul class="check-list mb-8">
-    <li>200 шт. сигарет или 50 шт. сигар, или 250 г табака;</li>
-    <li>1 л спиртных напитков;</li>
-    <li>фото-, аудио- и видеоаппаратуры — по одному предмету каждого наименования;</li>
-    <li>предметов и вещей домашнего обихода (в пределах личных потребностей).</li>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Таможенный контроль по окончании путешествия</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то вам следует проходить зону таможенного контроля по «Зелёному коридору».</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Актуальную информацию о ввозе валюты, товаров и иных предметов для личного пользования, вы найдете на сайте Федеральной Таможенной Службы customs.gov.ru.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Недекларирование товаров в случае превышения стоимостных или весовых норм, а также наличных</span> денежных средств и (или) денежных инструментов влечёт за собой административную или уголовную ответственность.</p>
+<section class="scroll-mt-32 mb-20" id="tamozhennyj-kontrol-v-tailande">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Таможенный контроль в Таиланде</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Ввоз любой валюты, за исключением национальной, в Таиланд свободный. Ввоз национальной валюты ограничен</span> суммой не более 50 000 бат на человека.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Вывоз ввезенной валюты неограничен, однако сумму вывозимой валюты, эквивалентной 20 000 долларам США и</span> более, необходимо декларировать. Национальную валюту можно вывезти на сумму не более 50 000 бат на человека.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Разрешен беспошлинный ввоз :</p>
+<ul class="check-list mb-8">
+<li>200 шт. сигарет или 50 шт. сигар, или 250 г табака;</li>
+<li>1 л спиртных напитков;</li>
+<li>фото-, аудио- и видеоаппаратуры — по одному предмету каждого наименования;</li>
+<li>предметов и вещей домашнего обихода (в пределах личных потребностей).</li>
 </ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Запрещен и уголовно наказуем ввоз и вывоз:</span></p>
-  <ul class="check-list mb-8">
-    <li>наркотических средств и психотропных веществ;</li>
-    <li>предметов и изданий непристойного содержания;</li>
-    <li>контрафактной и пиратской продукции;</li>
-    <li>фальшивых монет и банкнот;</li>
-    <li>оружия, боеприпасов (без разрешения Управления национальной полиции (Office of National Police);</li>
-    <li>охраняемых диких животных (в т. ч. и чучел).</li>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Запрещен и уголовно наказуем ввоз и вывоз:</span></p>
+<ul class="check-list mb-8">
+<li>наркотических средств и психотропных веществ;</li>
+<li>предметов и изданий непристойного содержания;</li>
+<li>контрафактной и пиратской продукции;</li>
+<li>фальшивых монет и банкнот;</li>
+<li>оружия, боеприпасов (без разрешения Управления национальной полиции (Office of National Police);</li>
+<li>охраняемых диких животных (в т. ч. и чучел).</li>
 </ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Запрещен вывоз :</span></p>
-  <ul class="check-list mb-8">
-    <li>дуриана;</li>
-    <li>кораллов в необработанном виде (можно вывозить оформленными в качестве сувенира или фрагмента украшения);</li>
-    <li>живых растений и их частей, способных к вегетации, а также семян (можно вывозить орхидеи, они продаются уже срезанными (без корня);</li>
-    <li>золотых слитков;</li>
-    <li>статуэток и изображения Будды, предметов религиозного и древнего искусства, антиквариата (кроме небольших по размеру статуэток Будды (до 13 см), не представляющих антикварной ценности и продающихся на всех рынках Таиланда);</li>
-    <li>драгоценных камней, платиновых украшений, слоновой кости, любых изделий из кожи и кости охраняемых животных, антиквариата (без сертификата).</li>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Запрещен вывоз :</span></p>
+<ul class="check-list mb-8">
+<li>дуриана;</li>
+<li>кораллов в необработанном виде (можно вывозить оформленными в качестве сувенира или фрагмента украшения);</li>
+<li>живых растений и их частей, способных к вегетации, а также семян (можно вывозить орхидеи, они продаются уже срезанными (без корня);</li>
+<li>золотых слитков;</li>
+<li>статуэток и изображения Будды, предметов религиозного и древнего искусства, антиквариата (кроме небольших по размеру статуэток Будды (до 13 см), не представляющих антикварной ценности и продающихся на всех рынках Таиланда);</li>
+<li>драгоценных камней, платиновых украшений, слоновой кости, любых изделий из кожи и кости охраняемых животных, антиквариата (без сертификата).</li>
 </ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">За ввоз и вывоз наркотических средств и психотропных веществ законами Таиланда предусмотрены особенно суровые меры пресечения — вплоть до смертной казни.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Жидкости, гели и аэрозоли не следует вывозить в ручной клади, их надо упаковать в багаж. Жидкости, приобретенные в магазинах беспошлинной торговли в аэропорту вылета, должны быть упакованы в запечатанный пластиковый пакет.</p>
-<section id="pravila-vvoza-elektronnykh-sigaret" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Правила ввоза электронных сигарет</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Провоз, хранение и использование всех видов электронных сигарет – запрещён.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Запрет распространяется на все виды электронных устройств, включая вейпы и жидкости для них и на системы нагревания табака (IQOS).</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Нарушителям грозит штраф и/или лишение свободы.</p>
-<section id="perevozka-portativnykh-elektronnykh-ustrojstv-ped-soderzhashchikh-batarei" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Перевозка портативных электронных устройств (PED), содержащих батареи:</h2>
-  <ul class="check-list mb-8">
-    <li>Перевозка портативных электронных устройств, содержащих литиевые и другие типы батарей (включая медицинские устройства, кислородные концентраторы и бытовую электронную технику, такие как: камеры, мобильные телефоны, ноутбуки, планшеты и зарядные устройства) осуществляются только в пассажирском салоне воздушного судна (ручной клади). Рекомендуется не пользоваться портативными электронными устройствами и не заряжать их в салоне воздушного судна.</li>
-    <li>Запасные батареи должны перевозиться только в ручной клади.</li>
-    <li>Пассажир может перевозить только одну вставленную или запасную литий–ионную батарею энергоемкостью не более 100Втч. Литий-ионные и литий-металлические батареи, извлеченные из средств передвижения, и любые запасные батареи перевозятся в салоне воздушного судна. Извлеченные или запасные батареи должны быть защищены от повреждений (например, путем размещения каждой батареи в защитный пакет).</li>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">За ввоз и вывоз наркотических средств и психотропных веществ законами Таиланда предусмотрены особенно суровые меры пресечения — вплоть до смертной казни.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Жидкости, гели и аэрозоли не следует вывозить в ручной клади, их надо упаковать в багаж. Жидкости, приобретенные в магазинах беспошлинной торговли в аэропорту вылета, должны быть упакованы в запечатанный пластиковый пакет.</p>
+<section class="scroll-mt-32 mb-20" id="pravila-vvoza-elektronnykh-sigaret">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Правила ввоза электронных сигарет</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Провоз, хранение и использование всех видов электронных сигарет – запрещён.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Запрет распространяется на все виды электронных устройств, включая вейпы и жидкости для них и на системы нагревания табака (IQOS).</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Нарушителям грозит штраф и/или лишение свободы.</p>
+<section class="scroll-mt-32 mb-20" id="perevozka-portativnykh-elektronnykh-ustrojstv-ped-soderzhashchikh-batarei">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Перевозка портативных электронных устройств (PED), содержащих батареи:</h2>
+<ul class="check-list mb-8">
+<li>Перевозка портативных электронных устройств, содержащих литиевые и другие типы батарей (включая медицинские устройства, кислородные концентраторы и бытовую электронную технику, такие как: камеры, мобильные телефоны, ноутбуки, планшеты и зарядные устройства) осуществляются только в пассажирском салоне воздушного судна (ручной клади). Рекомендуется не пользоваться портативными электронными устройствами и не заряжать их в салоне воздушного судна.</li>
+<li>Запасные батареи должны перевозиться только в ручной клади.</li>
+<li>Пассажир может перевозить только одну вставленную или запасную литий–ионную батарею энергоемкостью не более 100Втч. Литий-ионные и литий-металлические батареи, извлеченные из средств передвижения, и любые запасные батареи перевозятся в салоне воздушного судна. Извлеченные или запасные батареи должны быть защищены от повреждений (например, путем размещения каждой батареи в защитный пакет).</li>
 </ul>
-<section id="pravila-vvoza-dronov-v-tailand" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Правила ввоза дронов в Таиланд</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Провоз дронов на территорию Таиланда разрешен только при наличии официальной регистрации.</p>
-<section id="registratsiya-na-rejs-i-oformlenie-bagazha" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Регистрация на рейс и оформление багажа</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">До начала поездки настоятельно рекомендуем уточнить время начала и окончания регистрации на рейс, а также время посадки на борт. Указанную информацию вы можете посмотреть на официальном сайте авиакомпании. Помните, что у разных авиакомпаний могут быть свои правила.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Регистрация пассажиров и оформление багажа производятся на основании именного авиабилета или распечатанных на бумажном носителе маршрута и/или квитанции электронного билета, а также заграничного паспорта пассажира.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При регистрации пассажиру выдается посадочный талон, который необходимо сохранять до момента возможного предъявления авиакомпании претензий по качеству предоставленных услуг авиаперевозки.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед посадкой на рейс рекомендуем проверить номер выхода и время начала посадки на рейс на информационном табло в аэропорту.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Пассажиру, опоздавшему ко времени окончания регистрации пассажиров и оформления багажа или посадки в воздушное судно, может быть отказано в перевозке.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Каждый авиаперевозчик устанавливает свои нормы провоза багажа, а также габариты и вес ручной клади, провозимой в салоне самолета. Уточняйте данную информацию перед вылетом.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">За провоз багажа сверх установленной нормы бесплатного провоза багажа взимается дополнительная плата по тарифу, установленному перевозчиком.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перевозчик имеет право отказать туристу в перевозе багажа, вес или объем которого не соответствуют установленным нормам.</p>
-<section id="pasportnyj-kontrol" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Паспортный контроль</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для прохождения пограничного контроля необходимо предъявить заграничный/внутренний российский паспорт. Пограничные органы ФСБ РФ при осуществлении пограничного контроля имеют право запрашивать у туристов дополнительные документы (авиабилет, посадочный талон, ваучер и т. п.), а также проводить опрос лиц, следующих через границу.</p>
-<section id="sanitarnyj-kontrol" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Санитарный контроль</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При совершении путешествия по Таиланду риска заражения особо опасными инфекционными заболеваниями нет, делать прививки официально не требуются. Можно рекомендовать в профилактических целях сделать противостолбнячные инъекции и прививку против гепатита А и В.</p>
-<section id="veterinarnyj-kontrol" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Ветеринарный контроль</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если вы вывозите животных, то необходимо иметь комплект документов, подтверждающих, что они здоровы. Как правило, следует иметь:</p>
-  <ul class="check-list mb-8">
-    <li>ветеринарный паспорт с указанием имени, возраста, пола, породы и иных отличительных признаков;</li>
-    <li>справку о состоянии здоровья (выдается любой государственной ветеринарной клиникой);</li>
-    <li>справку из клуба СКОР или РКФ (в справке указывается, что собака не представляет племенной ценности, справки из других клубов вызывают вопросы на таможне);</li>
-    <li>сертификаты о прививках от бешенства и лептоспироза, сделанные как минимум за 21 день до выезда в Таиланд;</li>
-    <li>животные должны находиться в стране вывоза с рождения или не менее 6 месяцев до выезда в Таиланд;</li>
+<section class="scroll-mt-32 mb-20" id="pravila-vvoza-dronov-v-tailand">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Правила ввоза дронов в Таиланд</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Провоз дронов на территорию Таиланда разрешен только при наличии официальной регистрации.</p>
+<section class="scroll-mt-32 mb-20" id="registratsiya-na-rejs-i-oformlenie-bagazha">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Регистрация на рейс и оформление багажа</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3039-3166-4636-b537-366535646636__secret-01.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">До начала поездки настоятельно рекомендуем уточнить время начала и окончания регистрации на рейс, а также время посадки на борт. Указанную информацию вы можете посмотреть на официальном сайте авиакомпании. Помните, что у разных авиакомпаний могут быть свои правила.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Регистрация пассажиров и оформление багажа производятся на основании именного авиабилета или распечатанных на бумажном носителе маршрута и/или квитанции электронного билета, а также заграничного паспорта пассажира.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При регистрации пассажиру выдается посадочный талон, который необходимо сохранять до момента возможного предъявления авиакомпании претензий по качеству предоставленных услуг авиаперевозки.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед посадкой на рейс рекомендуем проверить номер выхода и время начала посадки на рейс на информационном табло в аэропорту.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Пассажиру, опоздавшему ко времени окончания регистрации пассажиров и оформления багажа или посадки в воздушное судно, может быть отказано в перевозке.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Каждый авиаперевозчик устанавливает свои нормы провоза багажа, а также габариты и вес ручной клади, провозимой в салоне самолета. Уточняйте данную информацию перед вылетом.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">За провоз багажа сверх установленной нормы бесплатного провоза багажа взимается дополнительная плата по тарифу, установленному перевозчиком.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перевозчик имеет право отказать туристу в перевозе багажа, вес или объем которого не соответствуют установленным нормам.</p>
+<section class="scroll-mt-32 mb-20" id="pasportnyj-kontrol">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Паспортный контроль</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6164-3539-4236-a536-653666633263__919255ebe5775d87ea2b.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для прохождения пограничного контроля необходимо предъявить заграничный/внутренний российский паспорт. Пограничные органы ФСБ РФ при осуществлении пограничного контроля имеют право запрашивать у туристов дополнительные документы (авиабилет, посадочный талон, ваучер и т. п.), а также проводить опрос лиц, следующих через границу.</p>
+<section class="scroll-mt-32 mb-20" id="sanitarnyj-kontrol">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Санитарный контроль</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При совершении путешествия по Таиланду риска заражения особо опасными инфекционными заболеваниями нет, делать прививки официально не требуются. Можно рекомендовать в профилактических целях сделать противостолбнячные инъекции и прививку против гепатита А и В.</p>
+<section class="scroll-mt-32 mb-20" id="veterinarnyj-kontrol">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Ветеринарный контроль</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если вы вывозите животных, то необходимо иметь комплект документов, подтверждающих, что они здоровы. Как правило, следует иметь:</p>
+<ul class="check-list mb-8">
+<li>ветеринарный паспорт с указанием имени, возраста, пола, породы и иных отличительных признаков;</li>
+<li>справку о состоянии здоровья (выдается любой государственной ветеринарной клиникой);</li>
+<li>справку из клуба СКОР или РКФ (в справке указывается, что собака не представляет племенной ценности, справки из других клубов вызывают вопросы на таможне);</li>
+<li>сертификаты о прививках от бешенства и лептоспироза, сделанные как минимум за 21 день до выезда в Таиланд;</li>
+<li>животные должны находиться в стране вывоза с рождения или не менее 6 месяцев до выезда в Таиланд;</li>
 </ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Отели Таиланда размещения с домашними животными, как правило, не предоставляют.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для вывоза домашнего животного из Таиланда необходимо получить у местного ветеринара справку о состоянии <span class="font-bold text-black">здоровья животного для последующего представления вместе с его удостоверением (паспортом) и сертификатами о</span> прививках в карантинную службу аэропорта (пункта пограничного контроля) при выезде из Таиланда.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При ввозе в РФ животных и птиц необходимо иметь сопровождающее ветеринарное свидетельство, полученное в Государственной ветеринарной службе страны, где приобретено животное.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Запрещен ввоз на территорию РФ любых грузов животного происхождения, в том числе в ручной клади и багаже, при отсутствии письменного разрешения Главного государственного ветеринарного инспектора РФ.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Без разрешения уполномоченных органов РФ запрещено ввозить и вывозить объекты дикой фауны и флоры, <span class="font-bold text-black">находящиеся под угрозой исчезновения.</span></p>
-<section id="v-aeroportu-prileta-vyleta-tailanda" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">В аэропорту прилета/вылета Таиланда</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">По прибытии в аэропорт Таиланда нужно последовательно:</p>
-  <ul class="check-list mb-8">
-    <li>пройти паспортный контроль,</li>
-    <li>получить свой багаж,</li>
-    <li>пройти таможенный контроль,</li>
-    <li>выйти из здания аэропорта,</li>
-    <li>найти встречающего гида с табличкой «ANEX»,</li>
-    <li>предъявить гиду туристский ваучер.</li>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Отели Таиланда размещения с домашними животными, как правило, не предоставляют.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для вывоза домашнего животного из Таиланда необходимо получить у местного ветеринара справку о состоянии <span class="font-bold text-black">здоровья животного для последующего представления вместе с его удостоверением (паспортом) и сертификатами о</span> прививках в карантинную службу аэропорта (пункта пограничного контроля) при выезде из Таиланда.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При ввозе в РФ животных и птиц необходимо иметь сопровождающее ветеринарное свидетельство, полученное в Государственной ветеринарной службе страны, где приобретено животное.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Запрещен ввоз на территорию РФ любых грузов животного происхождения, в том числе в ручной клади и багаже, при отсутствии письменного разрешения Главного государственного ветеринарного инспектора РФ.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Без разрешения уполномоченных органов РФ запрещено ввозить и вывозить объекты дикой фауны и флоры, <span class="font-bold text-black">находящиеся под угрозой исчезновения.</span></p>
+<section class="scroll-mt-32 mb-20" id="v-aeroportu-prileta-vyleta-tailanda">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">В аэропорту прилета/вылета Таиланда</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">По прибытии в аэропорт Таиланда нужно последовательно:</p>
+<ul class="check-list mb-8">
+<li>пройти паспортный контроль,</li>
+<li>получить свой багаж,</li>
+<li>пройти таможенный контроль,</li>
+<li>выйти из здания аэропорта,</li>
+<li>найти встречающего гида с табличкой «ANEX»,</li>
+<li>предъявить гиду туристский ваучер.</li>
 </ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! При осуществлении перелета стыковочными рейсами принимающая сторона осуществляет встречу</span> только в конечном пункте прилета.</p>
-<section id="mesto-vstrechi-v-aeroportakh" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Место встречи в аэропортах</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Сотрудники Anex встретят вас в аэропорту и проводят до трансфера. Чтобы не потеряться, предлагаем ознакомиться с местами встречи в разных городах и странах.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Пхукет:</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Гостей встречают внутри международного терминала у выходов 1\2. Сотрудник в униформе компании с табличкой с логотипом Анекс. После выхода повернуть налево, 10 – 13 м стойка Анекс.</p>
-  <ul class="check-list mb-8">
-    <li>Время ожидания группового трансфера с момента посадки самолёта — около 1,5 часа в зависимости от загруженности аэропорта.</li>
-    <li>Время ожидания индивидуального трансфера с момента посадки самолёта — около 2-х часов.</li>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! При осуществлении перелета стыковочными рейсами принимающая сторона осуществляет встречу</span> только в конечном пункте прилета.</p>
+<section class="scroll-mt-32 mb-20" id="mesto-vstrechi-v-aeroportakh">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Место встречи в аэропортах</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Сотрудники Anex встретят вас в аэропорту и проводят до трансфера. Чтобы не потеряться, предлагаем ознакомиться с местами встречи в разных городах и странах.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Пхукет:</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Гостей встречают внутри международного терминала у выходов 1\2. Сотрудник в униформе компании с табличкой с логотипом Анекс. После выхода повернуть налево, 10 – 13 м стойка Анекс.</p>
+<ul class="check-list mb-8">
+<li>Время ожидания группового трансфера с момента посадки самолёта — около 1,5 часа в зависимости от загруженности аэропорта.</li>
+<li>Время ожидания индивидуального трансфера с момента посадки самолёта — около 2-х часов.</li>
 </ul>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Утапао:</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Гостей встречают у выхода из терминала Сотрудник в униформе компании с табличкой с логотипом Анекс. Стойка Анекс находится с правой стороны на выходе из терминала.</p>
-  <ul class="check-list mb-8">
-    <li>Время ожидания группового трансфера с момента посадки самолёта — около 2-х часов.</li>
-    <li>Время ожидания индивидуального трансфера с момента посадки самолёта — около 3-х часов.</li>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Утапао:</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Гостей встречают у выхода из терминала Сотрудник в униформе компании с табличкой с логотипом Анекс. Стойка Анекс находится с правой стороны на выходе из терминала.</p>
+<ul class="check-list mb-8">
+<li>Время ожидания группового трансфера с момента посадки самолёта — около 2-х часов.</li>
+<li>Время ожидания индивидуального трансфера с момента посадки самолёта — около 3-х часов.</li>
 </ul>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Суварнабхуми:</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Гостей встречают у выхода номер 4 на втором этаже. Сотрудник в униформе компании с табличкой с логотипом Анекс (стойки нет).</p>
-  <ul class="check-list mb-8">
-    <li>Время ожидания группового трансфера с момента посадки самолёта — около 2-х часов.</li>
-    <li>Время ожидания индивидуального трансфера с момента посадки самолёта — около 3-х часов.</li>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Суварнабхуми:</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Гостей встречают у выхода номер 4 на втором этаже. Сотрудник в униформе компании с табличкой с логотипом Анекс (стойки нет).</p>
+<ul class="check-list mb-8">
+<li>Время ожидания группового трансфера с момента посадки самолёта — около 2-х часов.</li>
+<li>Время ожидания индивидуального трансфера с момента посадки самолёта — около 3-х часов.</li>
 </ul>
-<section id="pasportnyj-kontrol-viza" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Паспортный контроль. Виза</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Граждане РФ, посещающие Таиланд с туристской целью, имеют право без оформления визы однократно въезжать в страну на срок не более 60 дней. Если вы просрочите 60-дневный срок нахождения в Таиланде на безвизовом основании, то с вас могут потребовать не только уплатить штраф в размере 500 бат за каждый день такой просрочки, но также, если просрочка составит более 21 дня, вам может грозить тюремное заключение и последующая депортация.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">По прибытии в аэропорт Таиланда вы проходите к специальной стойке VISA ON ARRIVAL, где необходимо предоставить:</p>
-  <ul class="check-list mb-8">
-    <li>паспорт;</li>
-    <li>копию билета (миграционные службы проверяют дату обратного вылета, ксерокопию билета рекомендуется сделать заранее).</li>
+<section class="scroll-mt-32 mb-20" id="pasportnyj-kontrol-viza">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Паспортный контроль. Виза</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Граждане РФ, посещающие Таиланд с туристской целью, имеют право без оформления визы однократно въезжать в страну на срок не более 60 дней. Если вы просрочите 60-дневный срок нахождения в Таиланде на безвизовом основании, то с вас могут потребовать не только уплатить штраф в размере 500 бат за каждый день такой просрочки, но также, если просрочка составит более 21 дня, вам может грозить тюремное заключение и последующая депортация.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">По прибытии в аэропорт Таиланда вы проходите к специальной стойке VISA ON ARRIVAL, где необходимо предоставить:</p>
+<ul class="check-list mb-8">
+<li>паспорт;</li><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6461-3537-4165-b365-363961373965__598c6e030ca3f598c6e0.jpg"/></div>
+<li>копию билета (миграционные службы проверяют дату обратного вылета, ксерокопию билета рекомендуется сделать заранее).</li>
 </ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При прохождении паспортного контроля служащие миграционной службы Таиланда могут потребовать предъявить наличные деньги в качестве доказательства вашей платежеспособности.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Для граждан, не имеющих гражданства РФ, могут быть установлены иные правила въезда на</span> территорию Королевства Таиланд. Получить информацию по этому вопросу следует в посольстве Королевства Таиланд по месту гражданства.</p>
-<section id="korolevstvo-tailand" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Королевство Таиланд</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Официальное название страны: Королевство Таиланд. Территория Таиланда составляет 514 тыс. кв. км.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Столица</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Бангкок (Крунг-Тхеп-Маха-Накхон)</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Язык</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Тайский, в общении с иностранцами — английский.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Валюта</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Таиландский бат.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Время работы банков с 08:00 до 15:30 в рабочие дни (в них наиболее выгодный курс). Существует сеть обменных пунктов, они работают с 08:30 до 20:00, однако курс в них менее выгоден. В крупных городах и туристских зонах к оплате принимаются основные кредитные карты: Visa, American Express, Master Card и другие.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Климат</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Тропический, субэкваториальный. Три сезона: жаркий (март-май), дождливый (июнь-октябрь), прохладный (ноябрь-февраль). Среднегодовая температура в Бангкоке около +29 °С. Высокая влажность.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Время</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В зимний период опережает московское на 4 часа, в летний — на 3.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Летоисчисление ведется по 3 календарям: по григорианскому, буддистскому (с 543 года до н. э.) и по календарю Раттанакосин (от дня основания Бангкока и династии Чакри — 6 апреля 1782 года н. э.).</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Население</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Приблизительная численность населения — 70 млн человек.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Религия</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Буддизм. Король Таиланда считается покровителем всех буддистов мира.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Обычаи</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В Таиланде существуют местные обычаи и традиции, социальные и религиозные табу, нарушения которых могут оскорбить тайцев. В Таиланде король — глава государства, посредник между людьми и высшими силами на земле. Не следует неуважительно отзываться о короле Таиланда, о его изображениях или членах королевской семьи, за подобные действия предусмотрено наказание 20 лет каторги, вне зависимости от гражданства и без права помилования. Грубостью считается и неуважение к тайским деньгам, поскольку на них есть изображение короля Таиланда. Запрещено посещение королевского дворца с оголенными плечами, коленями, пятками. Перед входом в храмы и дома снимайте обувь.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Статуи Будды священны — на них нельзя влезать, на них нельзя облокачиваться или дотрагиваться при фотографировании. Не принято публично выражать чувства между мужчиной и женщиной. Запрещено появляться на пляжах топлесс, запрещен нудизм. Женщины не имеют право обращаться к монахам. Сохраняйте в общении с тайцами спокойствие и улыбку, т. к. гнев здесь — выражение грубости и невоспитанности. В Таиланде считается неприличным говорить громко, спрашивать о жизни короля, сидеть во время исполнения национального гимна, указывать пальцем, опираться на статуи для фото.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Действующие запреты:</span></p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Использование на территории королевства электронных сигарет и их ввоз в страну влечет за собой наказание в виде штрафа в размере 1 млн батов (более 30 000 долларов) или тюремное заключение сроком до 10 лет. Настоятельно рекомендуем воздержаться от ввоза в Таиланд электронных сигарет, а также их использования, хранения и ношения.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">С 1 ноября 2017 года запрещено курить на пляжах Таиланда.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Нарушившим запрет грозит штраф до 100 000 батов (около 3 000 долларов) или лишение свободы сроком до одного года.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">С 11 октября 2017 года запрещена эксплуатация радиоуправляемых летательных аппаратов (дронов) без соответствующей регистрации.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Употребление алкоголя на пляжах запрещено.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Правила поведения в общественных местах</span></p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Тайцы не пожимают друг другу руки при встрече и расставании. Они сводят ладони вместе, держа их перед собой, как христиане во время молитвы. Этот жест называется «вай». Младший первым приветствует старшего, тот отвечает таким же жестом.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Считается неприличным указывать на кого-либо ногой. Даже когда человек сидит, мыски его ног ни на кого не должны быть направлены. Постарайтесь внимательно следить за этим.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Местные жители обращаются друг к другу по имени, перед именем тайцы добавляют слово «кхун», что эквивалентно нашим словам «господин», «госпожа».</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Правила поведения в культовых местах</span></p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Одеваться следует опрятно и сдержанно. Не допускается появление в храме без рубашки, в шортах, укороченных брюках, мини-юбках и другой чересчур открытой одежде.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В обуви можно прогуливаться вне храмов. Но как только соберетесь зайти внутрь храма, где помещается основная статуя Будды, пожалуйста, разуйтесь. Не беспокойтесь о гигиене — в таких местах пол обычно очень чистый.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Буддийским монахам запрещено прикасаться к женщине или принимать что-либо из ее рук. Если женщина желает сделать подношение монаху, она обязана сначала передать дар мужчине, а уже тот отдаст его служителю.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Курение разрешено в специально отведенных местах.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Праздники и нерабочие дни</span></p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">31 декабря и 1 января — Новый год;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">28 февраля — День Макха Буча;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">6 апреля — День династии Чакри;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">13–15 апреля — Сонгкран (тайский Новый год);</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">5 мая — День коронации;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">13 мая — День первой борозды;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">28 мая — День Висакха Буча;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">26 июля — День Асанха Буча;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">27 июля — День Кхаупанса (начало буддийского поста);</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">12 августа — День рождения Королевы;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">13 октября — Годовщина смерти короля Пумипона;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">23 октября — День Чулалонгкорна;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">5 декабря — День отца;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">10 декабря — День Конституции.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">В отеле</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В день приезда расселение осуществляется в соответствии с правилами, принятыми в отеле. Обычно начиная с 15:00 по местному времени. Просим ознакомиться на месте с условиями предоставления услуг в отеле и придерживаться установленных отелем правил.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В день выезда до наступления расчетного часа (как правило, 12:00) необходимо освободить свой номер и оплатить дополнительные услуги: телефонные переговоры, мини-бар, заказ питания и напитков в номер, массаж и др. Свой багаж можно оставить в камере хранения отеля и оставаться на территории отеля до прибытия трансфера. Если вы не сдали номер до 12:00, стоимость комнаты оплачивается полностью за следующие сутки.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Гиды</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Информационные встречи с гидами возможны только в Паттайе, на о. Пхукет.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Ввиду географической специфики направления, на курортах Бангкок, Районг, Ко Чанг, Краби и Самуи гиды не проводят информационные встречи в отелях.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">По запросу гостей по номеру Горячей Линии, информационная поддержка будет предоставлена гидом посредством мессенджеров.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Сопровождение гида на трансфере</span></p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">С 1 ноября 2025 групповые трансферы будут сопровождаться только тайскими англоговорящими гидами. Русскоговорящие гиды будут встречать туристов в аэропорту и предоставлять информацию о встрече с гидом в отеле.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Напряжение электросети</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Напряжение сети: 220 В, частота тока 50 Гц. В большинстве отелей электрические розетки «евро» (плоские вилки электроприборов российского производства вставляются в них, но плохо держатся; круглые вилки без выемок по бокам вообще не подходят). Может пригодиться переходник «евро-азия» (в розетку типа «азия» не вставляются российские и евровилки).</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Пляжи</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Пляжи страны муниципальные и бесплатные. Шезлонги и зонтики, как правило, за дополнительную плату. Загорать и купаться без купального костюма на пляжах запрещено — взимается крупный штраф. Кроме того, ограничения действуют и на ночные купания. С 01.11.17 года введен запрет на курение на пляжах Таиланда. Созданы специально отведенные для курения места. Нарушение влечет наказание в виде штрафа в размере 100 000 бат и/или тюремного заключения на срок до 1 года.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Экскурсии</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Гид компании, принимающий вас в Таиланде, во время встречи в отеле сообщит перечень предлагаемых экскурсий, их содержание, график проведения и стоимость. Не рекомендуем приобретать экскурсии или прочие услуги в неизвестных вам туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, а также о качестве транспорта для ее организации. Вам может быть предоставлено для использования несертифицированное, неисправное или не соответствующее санитарно-гигиеническим нормам оборудование, в том числе зараженный паразитарными, грибковыми, инфекционными заболеваниями инвентарь, включая сжатый воздух в баллонах для погружения.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Магазины</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Работают с 08:00 до 21:00. В Таиланде действует система небольших универсальных магазинов Seven-Eleven, Family Mart, работающих с 04:00 до 23:00. Если в магазине покупки оплачиваются кредитной картой, то вводится наценка 3-5 % от стоимости товара. Фиксированные цены на товары только в универмагах и крупных магазинах, на рынках цены ниже, торг возможен.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Транспорт</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Движение левостороннее. На автомобильных дорогах движение хаотично, водители не соблюдают правила дорожного движения. Посольство РФ в Таиланде категорически не рекомендует садиться на мотоциклы, в связи с тем, что нередки случаи ДТП с серьезными последствиями.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В Таиланде разветвленная сеть междугородних автобусов. При переездах на дальние расстояния можно воспользоваться ночными пассажирскими поездами. В Бангкоке можно использовать городские автобусы, а также проехать на лодке по реке. Такси TAXI-METER возят пассажиров по счетчику, мототакси — оплата по договоренности. Рекомендуем брать визитную карточку отеля (или спички) с указанием адреса гостиницы на тайском языке. Обязательно попросите таксиста включить счетчик, иначе придется выложить приличную сумму. В Паттайе есть такси на 10 человек, открытые и закрытые. Туристам рекомендуется пользоваться такси при отеле. Заранее договаривайтесь о цене поездки.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Аренда автомобиля</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Настоятельно рекомендуется не брать напрокат автомобили: российское национальное водительское удостоверение в Таиланде не действует — управлять по нему автотранспортным средством незаконно (необходимо иметь водительское удостоверение международного образца). В случае ДТП отсутствие действующего удостоверения будет являться отягчающим обстоятельством.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если вы все-таки решили арендовать машину, воспользуйтесь услугами известных компаний, а не мелких уличных прокатов. В специализированных фирмах автомобили застрахованы и поддерживаются в нормальном техническом состоянии.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При аренде транспортных средств, включая те, для которых не требуется специальное разрешение (например, водный мотоцикл), следует тщательно проверять их техническое состояние (сделать подробные фотографии), не подписывать контрактов, в которых четко не оговаривается сумма платы за повреждения, и не оставлять в залог</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">паспорт . Иначе при поломке транспортного средства его владелец может потребовать уплаты завышенной</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">стоимости ремонта, а в случае отказа — заявить в полицию.</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Телефон</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для телефонных переговоров удобно использовать карточки, которые продаются в метро, табачных киосках, на почте.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Позвонить из России в Таиланд: 8 + 10 + 66 + код региона (Бангкок - 2, Паттайя - 38, Пхукет - 76, Самуи - 77) + телефон абонента;</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Позвонить из Таиланда в Россию: 006 + 7 + код города + номер абонента. (при осуществлении звонка оператора Truemove).</p>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Экстренные телефоны</h3>
-  <ul class="check-list mb-8">
-    <li>Полиция 123, 1644 (англ. яз.);</li>
-    <li>туристическая полиция 1155;</li>
-    <li>скорая помощь: 191;</li>
-    <li>пожарная служба: 199;</li>
-    <li>посольство России в Бангкоке: +66 2 234 98 24/+66 2 268 11 69 (консульский отдел: +66 2 234 20 12);</li>
-    <li>Генеральное консульство России в г. Пхукет: +66 95 259 80 81;</li>
-    <li>Почетное консульство России в провинциях Чонбури и Районг: +66 38 25 04 21.</li>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При прохождении паспортного контроля служащие миграционной службы Таиланда могут потребовать предъявить наличные деньги в качестве доказательства вашей платежеспособности.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Внимание! Для граждан, не имеющих гражданства РФ, могут быть установлены иные правила въезда на</span> территорию Королевства Таиланд. Получить информацию по этому вопросу следует в посольстве Королевства Таиланд по месту гражданства.</p>
+<section class="scroll-mt-32 mb-20" id="korolevstvo-tailand">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Королевство Таиланд</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6339-6238-4637-b338-353361353964__shutterstock_2501780.webp"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Официальное название страны: Королевство Таиланд. Территория Таиланда составляет 514 тыс. кв. км.</p><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6261-3635-4865-b463-303065373666__locationmyanmarsvg.png"/></div>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Столица</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Бангкок (Крунг-Тхеп-Маха-Накхон)</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Язык</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Тайский, в общении с иностранцами — английский.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Валюта</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6561-3431-4338-b833-616238653335__2535264_big.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Таиландский бат.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Время работы банков с 08:00 до 15:30 в рабочие дни (в них наиболее выгодный курс). Существует сеть обменных пунктов, они работают с 08:30 до 20:00, однако курс в них менее выгоден. В крупных городах и туристских зонах к оплате принимаются основные кредитные карты: Visa, American Express, Master Card и другие.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Климат</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Тропический, субэкваториальный. Три сезона: жаркий (март-май), дождливый (июнь-октябрь), прохладный (ноябрь-февраль). Среднегодовая температура в Бангкоке около +29 °С. Высокая влажность.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Время</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В зимний период опережает московское на 4 часа, в летний — на 3.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Летоисчисление ведется по 3 календарям: по григорианскому, буддистскому (с 543 года до н. э.) и по календарю Раттанакосин (от дня основания Бангкока и династии Чакри — 6 апреля 1782 года н. э.).</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Население</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Приблизительная численность населения — 70 млн человек.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Религия</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Буддизм. Король Таиланда считается покровителем всех буддистов мира.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Обычаи</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6461-6362-4565-b035-633538383563__36f526d9b83c320058d0.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В Таиланде существуют местные обычаи и традиции, социальные и религиозные табу, нарушения которых могут оскорбить тайцев. В Таиланде король — глава государства, посредник между людьми и высшими силами на земле. Не следует неуважительно отзываться о короле Таиланда, о его изображениях или членах королевской семьи, за подобные действия предусмотрено наказание 20 лет каторги, вне зависимости от гражданства и без права помилования. Грубостью считается и неуважение к тайским деньгам, поскольку на них есть изображение короля Таиланда. Запрещено посещение королевского дворца с оголенными плечами, коленями, пятками. Перед входом в храмы и дома снимайте обувь.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Статуи Будды священны — на них нельзя влезать, на них нельзя облокачиваться или дотрагиваться при фотографировании. Не принято публично выражать чувства между мужчиной и женщиной. Запрещено появляться на пляжах топлесс, запрещен нудизм. Женщины не имеют право обращаться к монахам. Сохраняйте в общении с тайцами спокойствие и улыбку, т. к. гнев здесь — выражение грубости и невоспитанности. В Таиланде считается неприличным говорить громко, спрашивать о жизни короля, сидеть во время исполнения национального гимна, указывать пальцем, опираться на статуи для фото.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Действующие запреты:</span></p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Использование на территории королевства электронных сигарет и их ввоз в страну влечет за собой наказание в виде штрафа в размере 1 млн батов (более 30 000 долларов) или тюремное заключение сроком до 10 лет. Настоятельно рекомендуем воздержаться от ввоза в Таиланд электронных сигарет, а также их использования, хранения и ношения.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">С 1 ноября 2017 года запрещено курить на пляжах Таиланда.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Нарушившим запрет грозит штраф до 100 000 батов (около 3 000 долларов) или лишение свободы сроком до одного года.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">С 11 октября 2017 года запрещена эксплуатация радиоуправляемых летательных аппаратов (дронов) без соответствующей регистрации.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Употребление алкоголя на пляжах запрещено.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Правила поведения в общественных местах</span></p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Тайцы не пожимают друг другу руки при встрече и расставании. Они сводят ладони вместе, держа их перед собой, как христиане во время молитвы. Этот жест называется «вай». Младший первым приветствует старшего, тот отвечает таким же жестом.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Считается неприличным указывать на кого-либо ногой. Даже когда человек сидит, мыски его ног ни на кого не должны быть направлены. Постарайтесь внимательно следить за этим.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Местные жители обращаются друг к другу по имени, перед именем тайцы добавляют слово «кхун», что эквивалентно нашим словам «господин», «госпожа».</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Правила поведения в культовых местах</span></p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Одеваться следует опрятно и сдержанно. Не допускается появление в храме без рубашки, в шортах, укороченных брюках, мини-юбках и другой чересчур открытой одежде.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В обуви можно прогуливаться вне храмов. Но как только соберетесь зайти внутрь храма, где помещается основная статуя Будды, пожалуйста, разуйтесь. Не беспокойтесь о гигиене — в таких местах пол обычно очень чистый.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Буддийским монахам запрещено прикасаться к женщине или принимать что-либо из ее рук. Если женщина желает сделать подношение монаху, она обязана сначала передать дар мужчине, а уже тот отдаст его служителю.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Курение разрешено в специально отведенных местах.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Праздники и нерабочие дни</span></p><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6262-3763-4861-a662-643963346635__id5841399-gettyimage.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">31 декабря и 1 января — Новый год;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">28 февраля — День Макха Буча;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">6 апреля — День династии Чакри;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">13–15 апреля — Сонгкран (тайский Новый год);</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">5 мая — День коронации;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">13 мая — День первой борозды;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">28 мая — День Висакха Буча;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">26 июля — День Асанха Буча;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">27 июля — День Кхаупанса (начало буддийского поста);</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">12 августа — День рождения Королевы;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">13 октября — Годовщина смерти короля Пумипона;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">23 октября — День Чулалонгкорна;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">5 декабря — День отца;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">10 декабря — День Конституции.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">В отеле</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6666-6538-4635-a565-326137343535__courtyard2922f11f.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В день приезда расселение осуществляется в соответствии с правилами, принятыми в отеле. Обычно начиная с 15:00 по местному времени. Просим ознакомиться на месте с условиями предоставления услуг в отеле и придерживаться установленных отелем правил.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В день выезда до наступления расчетного часа (как правило, 12:00) необходимо освободить свой номер и оплатить дополнительные услуги: телефонные переговоры, мини-бар, заказ питания и напитков в номер, массаж и др. Свой багаж можно оставить в камере хранения отеля и оставаться на территории отеля до прибытия трансфера. Если вы не сдали номер до 12:00, стоимость комнаты оплачивается полностью за следующие сутки.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Гиды</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Информационные встречи с гидами возможны только в Паттайе, на о. Пхукет.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Ввиду географической специфики направления, на курортах Бангкок, Районг, Ко Чанг, Краби и Самуи гиды не проводят информационные встречи в отелях.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">По запросу гостей по номеру Горячей Линии, информационная поддержка будет предоставлена гидом посредством мессенджеров.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope"><span class="font-bold text-black">Сопровождение гида на трансфере</span></p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">С 1 ноября 2025 групповые трансферы будут сопровождаться только тайскими англоговорящими гидами. Русскоговорящие гиды будут встречать туристов в аэропорту и предоставлять информацию о встрече с гидом в отеле.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Напряжение электросети</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Напряжение сети: 220 В, частота тока 50 Гц. В большинстве отелей электрические розетки «евро» (плоские вилки электроприборов российского производства вставляются в них, но плохо держатся; круглые вилки без выемок по бокам вообще не подходят). Может пригодиться переходник «евро-азия» (в розетку типа «азия» не вставляются российские и евровилки).</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Пляжи</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Пляжи страны муниципальные и бесплатные. Шезлонги и зонтики, как правило, за дополнительную плату. Загорать и купаться без купального костюма на пляжах запрещено — взимается крупный штраф. Кроме того, ограничения действуют и на ночные купания. С 01.11.17 года введен запрет на курение на пляжах Таиланда. Созданы специально отведенные для курения места. Нарушение влечет наказание в виде штрафа в размере 100 000 бат и/или тюремного заключения на срок до 1 года.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Экскурсии</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3236-3139-4635-b136-613666316564__img_5282.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Гид компании, принимающий вас в Таиланде, во время встречи в отеле сообщит перечень предлагаемых экскурсий, их содержание, график проведения и стоимость. Не рекомендуем приобретать экскурсии или прочие услуги в неизвестных вам туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, а также о качестве транспорта для ее организации. Вам может быть предоставлено для использования несертифицированное, неисправное или не соответствующее санитарно-гигиеническим нормам оборудование, в том числе зараженный паразитарными, грибковыми, инфекционными заболеваниями инвентарь, включая сжатый воздух в баллонах для погружения.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Магазины</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3430-3134-4436-b737-613538326237__788gon_71920x.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Работают с 08:00 до 21:00. В Таиланде действует система небольших универсальных магазинов Seven-Eleven, Family Mart, работающих с 04:00 до 23:00. Если в магазине покупки оплачиваются кредитной картой, то вводится наценка 3-5 % от стоимости товара. Фиксированные цены на товары только в универмагах и крупных магазинах, на рынках цены ниже, торг возможен.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Транспорт</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3834-3366-4336-a439-336333386136__images__629980740.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Движение левостороннее. На автомобильных дорогах движение хаотично, водители не соблюдают правила дорожного движения. Посольство РФ в Таиланде категорически не рекомендует садиться на мотоциклы, в связи с тем, что нередки случаи ДТП с серьезными последствиями.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В Таиланде разветвленная сеть междугородних автобусов. При переездах на дальние расстояния можно воспользоваться ночными пассажирскими поездами. В Бангкоке можно использовать городские автобусы, а также проехать на лодке по реке. Такси TAXI-METER возят пассажиров по счетчику, мототакси — оплата по договоренности. Рекомендуем брать визитную карточку отеля (или спички) с указанием адреса гостиницы на тайском языке. Обязательно попросите таксиста включить счетчик, иначе придется выложить приличную сумму. В Паттайе есть такси на 10 человек, открытые и закрытые. Туристам рекомендуется пользоваться такси при отеле. Заранее договаривайтесь о цене поездки.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Аренда автомобиля</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Настоятельно рекомендуется не брать напрокат автомобили: российское национальное водительское удостоверение в Таиланде не действует — управлять по нему автотранспортным средством незаконно (необходимо иметь водительское удостоверение международного образца). В случае ДТП отсутствие действующего удостоверения будет являться отягчающим обстоятельством.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если вы все-таки решили арендовать машину, воспользуйтесь услугами известных компаний, а не мелких уличных прокатов. В специализированных фирмах автомобили застрахованы и поддерживаются в нормальном техническом состоянии.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При аренде транспортных средств, включая те, для которых не требуется специальное разрешение (например, водный мотоцикл), следует тщательно проверять их техническое состояние (сделать подробные фотографии), не подписывать контрактов, в которых четко не оговаривается сумма платы за повреждения, и не оставлять в залог</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">паспорт . Иначе при поломке транспортного средства его владелец может потребовать уплаты завышенной</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">стоимости ремонта, а в случае отказа — заявить в полицию.</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Телефон</h3><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3337-3934-4532-a536-386363633935__phone_old_year_built.jpg"/></div>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для телефонных переговоров удобно использовать карточки, которые продаются в метро, табачных киосках, на почте.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Позвонить из России в Таиланд: 8 + 10 + 66 + код региона (Бангкок - 2, Паттайя - 38, Пхукет - 76, Самуи - 77) + телефон абонента;</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Позвонить из Таиланда в Россию: 006 + 7 + код города + номер абонента. (при осуществлении звонка оператора Truemove).</p>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Экстренные телефоны</h3>
+<ul class="check-list mb-8">
+<li>Полиция 123, 1644 (англ. яз.);</li>
+<li>туристическая полиция 1155;</li>
+<li>скорая помощь: 191;</li>
+<li>пожарная служба: 199;</li>
+<li>посольство России в Бангкоке: +66 2 234 98 24/+66 2 268 11 69 (консульский отдел: +66 2 234 20 12);</li>
+<li>Генеральное консульство России в г. Пхукет: +66 95 259 80 81;</li>
+<li>Почетное консульство России в провинциях Чонбури и Районг: +66 38 25 04 21.</li>
 </ul>
-  <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Чаевые</h3>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Принято оставлять чаевые носильщикам, горничным в гостинице, официантам (5-10 % от суммы счета). Считается, что заслуживают поощрения водители автобусов, гиды, если клиент остался доволен обслуживанием.</p>
-<section id="pravila-lichnoj-gigieny-i-bezopasnosti" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Правила личной гигиены и безопасности</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед путешествием мы советуем ознакомиться с «Полезными советами российским гражданам, выезжающим за рубеж», размещенными на сайте МИД РФ: https://www.kdmid.ru/info-for-traveling-abroad/useful-tips-for-russian-citizens-traveling-abroad/, а также с памяткой МИД РФ «Каждому, кто направляется за границу», и памяткой Роспотребнадзора выезжающим за рубеж.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не нарушайте правила безопасности, установленные авиакомпаниями, транспортными организациями, гостиницами, местными органами власти.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Категорически не рекомендуем приобретать экскурсии и дополнительные туристские услуги в неизвестных туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, вам не будет гарантирована безопасность предоставленных услуг и исправность используемого оборудования, тем самым можно подвергнуть себя серьезной опасности.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед поездкой рекомендуется взять с собой ксерокопии основных страниц (с фотографией, личными данными, отметкой о регистрации) заграничного и внутреннего паспортов РФ. Паспорт (или ксерокопию паспорта), визитную карточку отеля носите с собой.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При возникновении транспортных аварий, конфликтов с полицией, другими органами местной власти необходимо поставить в известность представителя принимающей стороны или сотрудников посольства/консульства РФ.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В период путешествия турист не имеет права на коммерческую деятельность или иную оплачиваемую работу.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Мойте руки перед едой. Не пейте сырую воду, особенно из открытых водоемов. Для питья рекомендуется использовать минеральную воду, которую можно приобрести в магазинах и барах отеля.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не рекомендуется носить с собой большие наличные суммы. Кражи денег и вещей у туристов случаются довольно часто, как и махинации с фальшивыми долларами. Не следует вынимать из кошелька на виду у всех большие суммы денег.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Покидая автобус на остановках и во время экскурсий, не оставляйте в нем ручную кладь, особенно ценные вещи и деньги.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Важные документы, наличные деньги и драгоценности лучше хранить в сейфе номера. Если в номере нет сейфа, его можно взять в аренду за плату у администрации отеля или сдать на хранение портье в сейф на стойке регистрации.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Рекомендуется сдавать ключ от номера на стойку регистрации отеля, в случае его утери поставить в известность администрацию.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Во многих отелях запрещается выносить из номера полотенца на пляж или к бассейну. Не приносите на пляж полотенца или инвентарь из номера без разрешения персонала.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если в номере стоит мини-бар, то все напитки и закуски, взятые из него, как правило, должны быть оплачены.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не рекомендуется проносить в номер еду и оставлять пищевые отходы. Запрещено проносить в номер дуриан.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Категорически запрещается курить в постели, а также в некурящих номерах отеля.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Во многих городах существует система штрафов за засорение улиц, а также за плевки на улице. В Бангкоке и других городах Таиланда городскими инспекторами thetsakij (проверяющими) взимается штраф за брошенный на тротуар мусор или окурок. Известны многочисленные случаи незаконного преследования со стороны thetsakij иностранных туристов и навязывания им противоправных штрафов за мусор на улицах. В этом случае тайские власти рекомендуют туристу обратиться в ближайшую районную управу или к первому встречному полицейскому, чтобы пресечь незаконные действия инспекторов.</p>
-<section id="v-sluchae-poteri-pasporta" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">В случае потери паспорта</h2>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Незамедлительно обращайтесь в дипломатическое представительство, в консульское учреждение или в представительство МИД РФ, которое находится в пределах приграничной территории.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вам необходимо получить свидетельство на въезд в РФ (REENTRY CERTIFICATE TO THE RUSSIAN FEDERATION), которое называется временным загранпаспортом. Выдается на срок до 15 дней для того, чтобы турист успел купить обратный билет и улететь на родину.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для того чтобы вам выдали свидетельство на возвращение в РФ, необходимо представить следующие документы:</p>
-  <ul class="check-list mb-8">
-    <li>основной документ, на основании которого будут предприниматься какие-либо действия, — заявление о выдаче свидетельства ( образец заявления ),</li>
-    <li>две фотографии (цветные или ч/б, размер — 35х45 мм на однотонном фоне с четким изображением лица),</li>
-    <li>внутренний паспорт РФ, также возможно предоставление других документов для подтверждения своей личности — водительских прав или служебного удостоверения.</li>
+<h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">Чаевые</h3>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Принято оставлять чаевые носильщикам, горничным в гостинице, официантам (5-10 % от суммы счета). Считается, что заслуживают поощрения водители автобусов, гиды, если клиент остался доволен обслуживанием.</p>
+<section class="scroll-mt-32 mb-20" id="pravila-lichnoj-gigieny-i-bezopasnosti">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Правила личной гигиены и безопасности</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед путешествием мы советуем ознакомиться с «Полезными советами российским гражданам, выезжающим за рубеж», размещенными на сайте МИД РФ: https://www.kdmid.ru/info-for-traveling-abroad/useful-tips-for-russian-citizens-traveling-abroad/, а также с памяткой МИД РФ «Каждому, кто направляется за границу», и памяткой Роспотребнадзора выезжающим за рубеж.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не нарушайте правила безопасности, установленные авиакомпаниями, транспортными организациями, гостиницами, местными органами власти.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Категорически не рекомендуем приобретать экскурсии и дополнительные туристские услуги в неизвестных туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, вам не будет гарантирована безопасность предоставленных услуг и исправность используемого оборудования, тем самым можно подвергнуть себя серьезной опасности.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Перед поездкой рекомендуется взять с собой ксерокопии основных страниц (с фотографией, личными данными, отметкой о регистрации) заграничного и внутреннего паспортов РФ. Паспорт (или ксерокопию паспорта), визитную карточку отеля носите с собой.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">При возникновении транспортных аварий, конфликтов с полицией, другими органами местной власти необходимо поставить в известность представителя принимающей стороны или сотрудников посольства/консульства РФ.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">В период путешествия турист не имеет права на коммерческую деятельность или иную оплачиваемую работу.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Мойте руки перед едой. Не пейте сырую воду, особенно из открытых водоемов. Для питья рекомендуется использовать минеральную воду, которую можно приобрести в магазинах и барах отеля.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не рекомендуется носить с собой большие наличные суммы. Кражи денег и вещей у туристов случаются довольно часто, как и махинации с фальшивыми долларами. Не следует вынимать из кошелька на виду у всех большие суммы денег.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Покидая автобус на остановках и во время экскурсий, не оставляйте в нем ручную кладь, особенно ценные вещи и деньги.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Важные документы, наличные деньги и драгоценности лучше хранить в сейфе номера. Если в номере нет сейфа, его можно взять в аренду за плату у администрации отеля или сдать на хранение портье в сейф на стойке регистрации.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Рекомендуется сдавать ключ от номера на стойку регистрации отеля, в случае его утери поставить в известность администрацию.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Во многих отелях запрещается выносить из номера полотенца на пляж или к бассейну. Не приносите на пляж полотенца или инвентарь из номера без разрешения персонала.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Если в номере стоит мини-бар, то все напитки и закуски, взятые из него, как правило, должны быть оплачены.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Не рекомендуется проносить в номер еду и оставлять пищевые отходы. Запрещено проносить в номер дуриан.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Категорически запрещается курить в постели, а также в некурящих номерах отеля.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Во многих городах существует система штрафов за засорение улиц, а также за плевки на улице. В Бангкоке и других городах Таиланда городскими инспекторами thetsakij (проверяющими) взимается штраф за брошенный на тротуар мусор или окурок. Известны многочисленные случаи незаконного преследования со стороны thetsakij иностранных туристов и навязывания им противоправных штрафов за мусор на улицах. В этом случае тайские власти рекомендуют туристу обратиться в ближайшую районную управу или к первому встречному полицейскому, чтобы пресечь незаконные действия инспекторов.</p>
+<section class="scroll-mt-32 mb-20" id="v-sluchae-poteri-pasporta">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">В случае потери паспорта</h2>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Незамедлительно обращайтесь в дипломатическое представительство, в консульское учреждение или в представительство МИД РФ, которое находится в пределах приграничной территории.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вам необходимо получить свидетельство на въезд в РФ (REENTRY CERTIFICATE TO THE RUSSIAN FEDERATION), которое называется временным загранпаспортом. Выдается на срок до 15 дней для того, чтобы турист успел купить обратный билет и улететь на родину.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Для того чтобы вам выдали свидетельство на возвращение в РФ, необходимо представить следующие документы:</p>
+<ul class="check-list mb-8">
+<li>основной документ, на основании которого будут предприниматься какие-либо действия, — заявление о выдаче свидетельства ( образец заявления ),</li>
+<li>две фотографии (цветные или ч/б, размер — 35х45 мм на однотонном фоне с четким изображением лица),</li>
+<li>внутренний паспорт РФ, также возможно предоставление других документов для подтверждения своей личности — водительских прав или служебного удостоверения.</li>
 </ul>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Срок выдачи свидетельства на возвращение в РФ составляет 2 рабочих дня со дня регистрации заявления.</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вернувшись в РФ, в трехдневный срок необходимо сдать свидетельство в организацию, выдавшую паспорт (ОВИР, МИД).</p>
-  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Все вышеперечисленные документы регламентированы пунктом 20 Приказа МИД РФ от 28.06.2012 года № 10304.</p>
-<section id="poleznaya-informatsiya-span-class-font-bold-text-black-goryachaya-span-span-class-font-bold-text-black-liniya-span-span-class-font-bold-text-black-prinimayushchej-span-span-class-font-bold-text-black-kompanii-span-90-850-549-07-07" class="scroll-mt-32 mb-20">
-  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Полезная информация <span class="font-bold text-black">Горячая</span> <span class="font-bold text-black">линия</span> <span class="font-bold text-black">принимающей</span> <span class="font-bold text-black">компании:</span> +90 850 549 07 07.</h2>
-
-        </div>
-
-        <div class="h-px bg-black/5 my-16"></div>
-
-        <!-- СЕКЦИЯ: ФОРМА -->
-        <section id="section-form" class="scroll-mt-32 py-12">
-          <h2 class="text-3xl md:text-4xl font-black mb-8 tracking-tight">Отправить заявку</h2>
-          <form id="booking-form"
-            class="bg-[#fffcf5] border border-black/5 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-10 md:p-16 shadow-2xl shadow-[#5f531a]/10 space-y-10 md:space-y-12 relative overflow-hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 md:gap-y-8 mt-2">
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="userName" placeholder="Иван Иванов" type="text" required />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="userEmail" placeholder="hello@example.com" type="email" required />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="userPhone" placeholder="+7 (___) ___-__-__" type="tel" required />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Направление</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="destination" value="Тайланд" type="text" />
-              </div>
-              <div class="grid grid-cols-2 gap-4">
-                <div class="space-y-2">
-                  <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
-                  <input
-                    class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                    name="adults" min="1" type="number" value="2" />
-                </div>
-                <div class="space-y-2">
-                  <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
-                  <input
-                    class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                    name="children" placeholder="1 реб, 5 лет" type="text" />
-                </div>
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="budget" placeholder="От 200 000" type="text" />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="nights" min="1" type="number" value="7" />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="startDate" type="date" />
-              </div>
-            </div>
-            <div class="space-y-4">
-              <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
-              <div class="flex flex-wrap gap-8">
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
-                    name="excursions" type="radio" value="Да" />
-                  <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
-                </label>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
-                    name="excursions" type="radio" value="Нет" />
-                  <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
-                </label>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
-                    name="excursions" type="radio" value="Пока не знаю" />
-                  <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
-                </label>
-              </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
-                <textarea
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="hotelPrefs" placeholder="Напр. первая линия, только 5*, наличие детского клуба..."
-                  rows="3"></textarea>
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="airport" placeholder="Шереметьево, Пулково..." type="text" />
-              </div>
-            </div>
-            <div class="pt-8 flex justify-center w-full">
-              <button
-                class="w-full sm:w-auto bg-black text-white px-10 md:px-14 py-5 rounded-full text-lg md:text-xl font-bold shadow-xl shadow-black/15 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center"
-                type="submit">Отправить заявку</button>
-            </div>
-          </form>
-        </section>
-
-      </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-surface-container-low w-full border-t border-black/5 pt-16 pb-10 px-4 md:px-8 mt-8">
-    <div class="max-w-7xl mx-auto flex flex-col gap-12 md:gap-16">
-      <div class="flex flex-col md:flex-row justify-between items-start gap-12">
-        <div class="space-y-6 max-w-sm text-center md:text-left mx-auto md:mx-0">
-          <img src="../../images/LogoB_300x.png" alt="Emoji Tours" class="h-12 md:h-14 mx-auto md:mx-0">
-          <p class="text-on-surface-variant font-medium text-sm leading-relaxed px-4 md:px-0">
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Срок выдачи свидетельства на возвращение в РФ составляет 2 рабочих дня со дня регистрации заявления.</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Вернувшись в РФ, в трехдневный срок необходимо сдать свидетельство в организацию, выдавшую паспорт (ОВИР, МИД).</p>
+<p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">Все вышеперечисленные документы регламентированы пунктом 20 Приказа МИД РФ от 28.06.2012 года № 10304.</p>
+<section class="scroll-mt-32 mb-20" id="poleznaya-informatsiya-span-class-font-bold-text-black-goryachaya-span-span-class-font-bold-text-black-liniya-span-span-class-font-bold-text-black-prinimayushchej-span-span-class-font-bold-text-black-kompanii-span-90-850-549-07-07">
+<h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Полезная информация <span class="font-bold text-black">Горячая</span> <span class="font-bold text-black">линия</span> <span class="font-bold text-black">принимающей</span> <span class="font-bold text-black">компании:</span> +90 850 549 07 07.</h2>
+</section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></div>
+<div class="h-px bg-black/5 my-16"></div>
+<!-- СЕКЦИЯ: ФОРМА -->
+<section class="scroll-mt-32 py-12" id="section-form">
+<h2 class="text-3xl md:text-4xl font-black mb-8 tracking-tight">Отправить заявку</h2>
+<form class="bg-[#fffcf5] border border-black/5 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-10 md:p-16 shadow-2xl shadow-[#5f531a]/10 space-y-10 md:space-y-12 relative overflow-hidden" id="booking-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 md:gap-y-8 mt-2">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="userName" placeholder="Иван Иванов" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="userEmail" placeholder="hello@example.com" required="" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="userPhone" placeholder="+7 (___) ___-__-__" required="" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Направление</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="destination" type="text" value="Тайланд"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" min="1" name="adults" type="number" value="2"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="children" placeholder="1 реб, 5 лет" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="budget" placeholder="От 200 000" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" min="1" name="nights" type="number" value="7"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="startDate" type="date"/>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
+<div class="flex flex-wrap gap-8">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer" name="excursions" type="radio" value="Да"/>
+<span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer" name="excursions" type="radio" value="Нет"/>
+<span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer" name="excursions" type="radio" value="Пока не знаю"/>
+<span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
+<textarea class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="hotelPrefs" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
+<input class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="airport" placeholder="Шереметьево, Пулково..." type="text"/>
+</div>
+</div>
+<div class="pt-8 flex justify-center w-full">
+<button class="w-full sm:w-auto bg-black text-white px-10 md:px-14 py-5 rounded-full text-lg md:text-xl font-bold shadow-xl shadow-black/15 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center" type="submit">Отправить заявку</button>
+</div>
+</form>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full border-t border-black/5 pt-16 pb-10 px-4 md:px-8 mt-8">
+<div class="max-w-7xl mx-auto flex flex-col gap-12 md:gap-16">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="space-y-6 max-w-sm text-center md:text-left mx-auto md:mx-0">
+<img alt="Emoji Tours" class="h-12 md:h-14 mx-auto md:mx-0" src="../../images/LogoB_300x.png"/>
+<p class="text-on-surface-variant font-medium text-sm leading-relaxed px-4 md:px-0">
             Мы верим, что путешествия — это лучший способ познать себя и окружающий мир.
           </p>
-          <div class="flex gap-4 justify-center md:justify-start">
-            <a href="https://max.ru/join/0haRr-rt5CMasX93mYrj_DuaLtUNy7gLfKyjXIdKFys" target="_blank"
-              class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group">
-              <img src="../../images/Логотип_MAX.svg" alt="MAX"
-                class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all">
-            </a>
-            <a href="https://vk.com/emoji_tours" target="_blank"
-              class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group">
-              <img src="../../images/VK_Compact_Logo_(2021-present).svg.png" alt="VK"
-                class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all">
-            </a>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-16 w-full md:w-auto text-center md:text-left">
-          <div class="space-y-4">
-            <h4 class="font-bold text-on-surface-variant text-sm">Связаться с нами</h4>
-            <div class="space-y-3 text-lg">
-              <a href="tel:+79636491852"
-                class="block font-black text-on-surface hover:text-primary transition-colors">+7 963-649-18-52</a>
-              <a href="mailto:trohin.zh@yandex.ru"
-                class="block text-on-surface-variant hover:text-black transition-colors text-sm font-medium">trohin.zh@yandex.ru</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="pt-8 md:pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div
-          class="text-on-surface-variant font-medium text-[11px] md:text-xs text-center md:text-left w-full md:w-auto">©
+<div class="flex gap-4 justify-center md:justify-start">
+<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group" href="https://max.ru/join/0haRr-rt5CMasX93mYrj_DuaLtUNy7gLfKyjXIdKFys" target="_blank">
+<img alt="MAX" class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all" src="../../images/Логотип_MAX.svg"/>
+</a>
+<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group" href="https://vk.com/emoji_tours" target="_blank">
+<img alt="VK" class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all" src="../../images/VK_Compact_Logo_(2021-present).svg.png"/>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-16 w-full md:w-auto text-center md:text-left">
+<div class="space-y-4">
+<h4 class="font-bold text-on-surface-variant text-sm">Связаться с нами</h4>
+<div class="space-y-3 text-lg">
+<a class="block font-black text-on-surface hover:text-primary transition-colors" href="tel:+79636491852">+7 963-649-18-52</a>
+<a class="block text-on-surface-variant hover:text-black transition-colors text-sm font-medium" href="mailto:trohin.zh@yandex.ru">trohin.zh@yandex.ru</a>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 md:pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-on-surface-variant font-medium text-[11px] md:text-xs text-center md:text-left w-full md:w-auto">©
           2026 Emoji Tours. Путешествия с душой.</div>
-        <div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-on-surface-variant">
-          <a href="../../index.html#countries" class="hover:text-black transition-colors">Страны</a>
-          <a href="../../index.html#calendar" class="hover:text-black transition-colors">Календарь</a>
-          <a href="../../index.html#testimonials" class="hover:text-black transition-colors">Отзывы</a>
-          <a href="../../index.html#journey" class="hover:text-black transition-colors">Начать путешествие</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Success Modal -->
-  <div id="success-modal"
-    class="fixed inset-0 z-[200] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
-    <div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
-    <div
-      class="bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl relative z-10 max-w-sm w-full text-center space-y-6 transform scale-90 transition-transform duration-500"
-      id="success-card">
-      <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-        <span class="material-symbols-outlined text-5xl">check</span>
-      </div>
-      <h3 class="text-3xl font-black tracking-tight">Заявка принята!</h3>
-      <p class="text-on-surface-variant font-medium leading-relaxed">
-        Мы уже получили ваши данные и начали подбор идеального тура. Наш эксперт свяжется с вами в ближайшее время!
-      </p>
-      <button onclick="closeModal()"
-        class="w-full bg-black text-white py-5 rounded-full text-xl font-bold hover:scale-105 active:scale-95 transition-all shadow-xl shadow-black/10 mt-4">
-        Супер!
-      </button>
-    </div>
-  </div>
-
-  <script src="https://unpkg.com/imask"></script>
-  <script>
+<div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-on-surface-variant">
+<a class="hover:text-black transition-colors" href="../../index.html#countries">Страны</a>
+<a class="hover:text-black transition-colors" href="../../index.html#calendar">Календарь</a>
+<a class="hover:text-black transition-colors" href="../../index.html#testimonials">Отзывы</a>
+<a class="hover:text-black transition-colors" href="../../index.html#journey">Начать путешествие</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Success Modal -->
+<div class="fixed inset-0 z-[200] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500" id="success-modal">
+<div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+</div>
+<script src="https://unpkg.com/imask"></script>
+<script>
     // ScrollSpy
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -820,7 +722,7 @@
       // 1. Популяция мобильного меню из десктопного
       const mobileQuickLinks = document.getElementById('mobile-quick-links');
       const desktopLinksSource = document.querySelectorAll('#quick-links .nav-link');
-      
+
       if (mobileQuickLinks && desktopLinksSource.length > 0) {
         mobileQuickLinks.innerHTML = '';
         desktopLinksSource.forEach(link => {
@@ -893,5 +795,4 @@
     }
   </script>
 </body>
-
 </html>

@@ -363,11 +363,15 @@ def process_file(file_path):
         # Inject styles before </head>
         new_content = content.replace('</head>', overlay_styles + '</head>')
         
-        # Link fixing with normalization
-        new_content = new_content.replace('images/', '../tilda_raw/emojitours.ru/images/')
-        new_content = new_content.replace('css/', '../tilda_raw/emojitours.ru/css/')
-        new_content = new_content.replace('js/', '../tilda_raw/emojitours.ru/js/')
+        # Link fixing with normalization (Only relative paths)
+        new_content = re.sub(r'(src|href|data-original|data-content-cover-bg)="images/', r'\1="../tilda_raw/emojitours.ru/images/', new_content)
+        new_content = re.sub(r'(src|href)="css/', r'\1="../tilda_raw/emojitours.ru/css/', new_content)
+        new_content = re.sub(r'(src|href)="js/', r'\1="../tilda_raw/emojitours.ru/js/', new_content)
         
+        # Add a specific fix for full-width covers to ignore the global border-radius
+        cover_fix = "\n    .t-cover, .t-cover__carrier, .t-cover__filter { border-radius: 0 !important; }\n"
+        new_content = new_content.replace('</style>', cover_fix + '</style>')
+
         # Internal links redirection
         links_to_fix = re.findall(r'href="/(.*?)"', new_content)
         for link in links_to_fix:

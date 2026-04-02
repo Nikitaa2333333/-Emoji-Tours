@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html class="light" lang="ru">
 
+<html class="light" lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Памятка: Памятка туриста Куба — Emoji Tours</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-    rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script id="tailwind-config">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Памятка: Памятка туриста Куба — Emoji Tours</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
@@ -33,7 +31,7 @@
       },
     }
   </script>
-  <style>
+<style>
     body {
       font-family: 'Manrope', sans-serif;
       opacity: 1 !important;
@@ -161,589 +159,447 @@
     }
   </style>
 </head>
-
 <body class="bg-background text-on-surface">
-
-  <!-- ШАПКА -->
-  <nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/90 backdrop-blur-md border-b border-black/5 py-4">
-    <div class="max-w-7xl mx-auto flex justify-between md:justify-center items-center px-4 md:px-8 relative">
-      <a href="../../index.html"
-        class="flex md:absolute md:left-8 text-xs md:text-sm font-bold items-center gap-1 md:gap-2 hover:opacity-70 transition-opacity whitespace-nowrap bg-black/5 px-3 py-2 rounded-full md:bg-transparent">
-        <span class="material-symbols-outlined text-[18px] md:text-[24px]">arrow_back</span>
+<!-- ШАПКА -->
+<nav class="fixed top-0 w-full z-50 bg-[#fffcf5]/90 backdrop-blur-md border-b border-black/5 py-4">
+<div class="max-w-7xl mx-auto flex justify-between md:justify-center items-center px-4 md:px-8 relative">
+<a class="flex md:absolute md:left-8 text-xs md:text-sm font-bold items-center gap-1 md:gap-2 hover:opacity-70 transition-opacity whitespace-nowrap bg-black/5 px-3 py-2 rounded-full md:bg-transparent" href="../../index.html">
+<span class="material-symbols-outlined text-[18px] md:text-[24px]">arrow_back</span>
         Все страны
       </a>
-      <a href="../../index.html" class="flex-shrink-0 mx-auto md:mx-0">
-        <img src="../../images/LogoB_300x.png" alt="Emoji Tours" class="h-8 md:h-10"
-          onerror="this.src='https://via.placeholder.com/150?text=Emoji+Tours'">
-      </a>
-    </div>
-  </nav>
-
-  <!-- Кнопка навигации мобильная (Floating) -->
-  <button onclick="toggleMenu()"
-    class="md:hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-[90] flex items-center gap-2 bg-black text-white px-6 py-4 rounded-full font-bold shadow-2xl active:scale-95 transition-all">
-    <span class="material-symbols-outlined text-[20px]">menu</span>
+<a class="flex-shrink-0 mx-auto md:mx-0" href="../../index.html">
+<img alt="Emoji Tours" class="h-8 md:h-10" onerror="this.src='https://via.placeholder.com/150?text=Emoji+Tours'" src="../../images/LogoB_300x.png"/>
+</a>
+</div>
+</nav>
+<!-- Кнопка навигации мобильная (Floating) -->
+<button class="md:hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-[90] flex items-center gap-2 bg-black text-white px-6 py-4 rounded-full font-bold shadow-2xl active:scale-95 transition-all" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-[20px]">menu</span>
     Содержание
   </button>
-
-  <!-- Mobile Drawer (Navigation) -->
-  <div id="drawer-overlay" onclick="toggleMenu()"
-    class="fixed inset-0 bg-black/40 z-[100] transition-opacity duration-300 opacity-0 pointer-events-none backdrop-blur-sm">
-  </div>
-  <div id="mobile-drawer"
-    class="fixed top-0 right-0 w-[85%] max-w-sm h-full bg-[#fffcf5] z-[110] transform translate-x-full transition-transform duration-500 ease-out shadow-2xl p-8 flex flex-col">
-    <div class="flex justify-between items-center mb-10">
-      <p class="text-[13px] font-black text-black/40">Содержание</p>
-      <button onclick="toggleMenu()"
-        class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-variant/30 text-on-surface active:scale-90 transition-transform">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-    </div>
-    <nav id="mobile-quick-links"
-      class="flex flex-col gap-2 font-['Manrope'] font-bold text-lg tracking-tight overflow-y-auto">
-      <a href="#BEFORELEAVING" class="nav-link">Документы</a>
-<a href="#travellingwithchildren" class="nav-link">Дети</a>
-<a href="#CollectingLuggage" class="nav-link">Багаж</a>
-<a href="#atRussianairports" class="nav-link">Прибытие</a>
-<a href="#russianCUSTOMSCONTROLleave" class="nav-link">Таможня вылет</a>
-<a href="#russiancustomcontrolarrive" class="nav-link">Таможня прилет</a>
-<a href="#russianCHECK-INANDBAGGAGE" class="nav-link">Регистрация</a>
-<a href="#russianPASSPORTCONTROL" class="nav-link">Контроль</a>
-<a href="#INcubaAIRPORT" class="nav-link">Прилет/вылет</a>
-<a href="#cubaPASSPORTCONTROL" class="nav-link">Паспортный контроль</a>
-<a href="#cubaCUSTOMSCONTROL" class="nav-link">Таможенный контроль</a>
-<a href="#aboutcuba" class="nav-link">О стране</a>
-<a href="#time" class="nav-link">Время</a>
-<a href="#climate" class="nav-link">Климат</a>
-<a href="#Currency" class="nav-link">Валюта</a>
-<a href="#language" class="nav-link">Язык</a>
-<a href="#Population" class="nav-link">Население</a>
-<a href="#religion" class="nav-link">Религия</a>
-<a href="#Customs" class="nav-link">Обычаи</a>
-<a href="#holidays" class="nav-link">Праздники</a>
-<a href="#kitchen" class="nav-link">Кухня</a>
-<a href="#shops" class="nav-link">Магазины</a>
-<a href="#transport" class="nav-link">Транспорт</a>
-<a href="#phone" class="nav-link">Связь</a>
-<a href="#inhotel" class="nav-link">Приезд/Отъезд</a>
-<a href="#tips" class="nav-link">Чаевые</a>
-<a href="#Mainsvoltage" class="nav-link">Электросеть</a>
-<a href="#excursions" class="nav-link">Экскурсии</a>
-<a href="#THERULESOFPERSONALHYGIENEANDSAFETY" class="nav-link">Правила</a>
-<a href="#INCASEOFLOSSOFPASSPORT" class="nav-link">Потеря паспорта</a>
-<a href="#embassy" class="nav-link">Посольство</a>
-
-    </nav>
-    <div class="mt-auto pt-10 border-t border-black/10">
-      <p class="text-[11px] text-on-surface-variant font-bold uppercase tracking-[0.1em]">© 2026 Emoji Tours.
-        <br>Путешествия с душой.
-      </p>
-    </div>
-  </div>
-
-  <main class="pt-24">
-    <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col lg:flex-row gap-12">
-
-      <!-- БОКОВАЯ НАВИГАЦИЯ -->
-      <aside class="hidden lg:block w-64 self-start sticky top-24 h-fit pb-10">
-        <div>
-          <p class="text-[13px] font-black text-black/40 mb-6 px-6">Содержание</p>
-          <nav id="quick-links" class="flex flex-col border-l border-black/5">
-            <a href="#BEFORELEAVING" class="nav-link">Документы</a>
-<a href="#travellingwithchildren" class="nav-link">Дети</a>
-<a href="#CollectingLuggage" class="nav-link">Багаж</a>
-<a href="#atRussianairports" class="nav-link">Прибытие</a>
-<a href="#russianCUSTOMSCONTROLleave" class="nav-link">Таможня вылет</a>
-<a href="#russiancustomcontrolarrive" class="nav-link">Таможня прилет</a>
-<a href="#russianCHECK-INANDBAGGAGE" class="nav-link">Регистрация</a>
-<a href="#russianPASSPORTCONTROL" class="nav-link">Контроль</a>
-<a href="#INcubaAIRPORT" class="nav-link">Прилет/вылет</a>
-<a href="#cubaPASSPORTCONTROL" class="nav-link">Паспортный контроль</a>
-<a href="#cubaCUSTOMSCONTROL" class="nav-link">Таможенный контроль</a>
-<a href="#aboutcuba" class="nav-link">О стране</a>
-<a href="#time" class="nav-link">Время</a>
-<a href="#climate" class="nav-link">Климат</a>
-<a href="#Currency" class="nav-link">Валюта</a>
-<a href="#language" class="nav-link">Язык</a>
-<a href="#Population" class="nav-link">Население</a>
-<a href="#religion" class="nav-link">Религия</a>
-<a href="#Customs" class="nav-link">Обычаи</a>
-<a href="#holidays" class="nav-link">Праздники</a>
-<a href="#kitchen" class="nav-link">Кухня</a>
-<a href="#shops" class="nav-link">Магазины</a>
-<a href="#transport" class="nav-link">Транспорт</a>
-<a href="#phone" class="nav-link">Связь</a>
-<a href="#inhotel" class="nav-link">Приезд/Отъезд</a>
-<a href="#tips" class="nav-link">Чаевые</a>
-<a href="#Mainsvoltage" class="nav-link">Электросеть</a>
-<a href="#excursions" class="nav-link">Экскурсии</a>
-<a href="#THERULESOFPERSONALHYGIENEANDSAFETY" class="nav-link">Правила</a>
-<a href="#INCASEOFLOSSOFPASSPORT" class="nav-link">Потеря паспорта</a>
-<a href="#embassy" class="nav-link">Посольство</a>
-
-          </nav>
-        </div>
-      </aside>
-
-      <!-- КОНТЕНТНАЯ ОБЛАСТЬ -->
-      <div class="flex-1 py-10">
-        <p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
-        <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-10">Памятка: Памятка туриста Куба</h1>
-
-        <div class="flex flex-wrap gap-4 mb-14">
-          <a href="../countries/cuba.html"
-            class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">О
+<!-- Mobile Drawer (Navigation) -->
+<div class="fixed inset-0 bg-black/40 z-[100] transition-opacity duration-300 opacity-0 pointer-events-none backdrop-blur-sm" id="drawer-overlay" onclick="toggleMenu()">
+</div>
+<main class="pt-24">
+<div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col lg:flex-row gap-12">
+<!-- БОКОВАЯ НАВИГАЦИЯ -->
+<aside class="hidden lg:block w-64 self-start sticky top-24 h-fit pb-10">
+<div>
+<p class="text-[13px] font-black text-black/40 mb-6 px-6">Содержание</p>
+<nav class="flex flex-col border-l border-black/5" id="quick-links">
+<a class="nav-link" href="#BEFORELEAVING">Документы</a>
+<a class="nav-link" href="#travellingwithchildren">Дети</a>
+<a class="nav-link" href="#CollectingLuggage">Багаж</a>
+<a class="nav-link" href="#atRussianairports">Прибытие</a>
+<a class="nav-link" href="#russianCUSTOMSCONTROLleave">Таможня вылет</a>
+<a class="nav-link" href="#russiancustomcontrolarrive">Таможня прилет</a>
+<a class="nav-link" href="#russianCHECK-INANDBAGGAGE">Регистрация</a>
+<a class="nav-link" href="#russianPASSPORTCONTROL">Контроль</a>
+<a class="nav-link" href="#INcubaAIRPORT">Прилет/вылет</a>
+<a class="nav-link" href="#cubaPASSPORTCONTROL">Паспортный контроль</a>
+<a class="nav-link" href="#cubaCUSTOMSCONTROL">Таможенный контроль</a>
+<a class="nav-link" href="#aboutcuba">О стране</a>
+<a class="nav-link" href="#time">Время</a>
+<a class="nav-link" href="#climate">Климат</a>
+<a class="nav-link" href="#Currency">Валюта</a>
+<a class="nav-link" href="#language">Язык</a>
+<a class="nav-link" href="#Population">Население</a>
+<a class="nav-link" href="#religion">Религия</a>
+<a class="nav-link" href="#Customs">Обычаи</a>
+<a class="nav-link" href="#holidays">Праздники</a>
+<a class="nav-link" href="#kitchen">Кухня</a>
+<a class="nav-link" href="#shops">Магазины</a>
+<a class="nav-link" href="#transport">Транспорт</a>
+<a class="nav-link" href="#phone">Связь</a>
+<a class="nav-link" href="#inhotel">Приезд/Отъезд</a>
+<a class="nav-link" href="#tips">Чаевые</a>
+<a class="nav-link" href="#Mainsvoltage">Электросеть</a>
+<a class="nav-link" href="#excursions">Экскурсии</a>
+<a class="nav-link" href="#THERULESOFPERSONALHYGIENEANDSAFETY">Правила</a>
+<a class="nav-link" href="#INCASEOFLOSSOFPASSPORT">Потеря паспорта</a>
+<a class="nav-link" href="#embassy">Посольство</a>
+</nav>
+</div>
+</aside>
+<!-- КОНТЕНТНАЯ ОБЛАСТЬ -->
+<div class="flex-1 py-10">
+<p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-10">Памятка: Памятка туриста Куба</h1>
+<div class="flex flex-wrap gap-4 mb-14">
+<a class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all" href="../countries/cuba.html">О
             стране</a>
-          <a href="#section-form"
-            class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу
+<a class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all" href="#section-form">Хочу
             туда</a>
-        </div>
-
-        <div class="space-y-16" id="main-content">
-          
-                <section id="BEFORELEAVING" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Документы</h2>
-                  <img src="../../images/tild3434-6638-4437-a663-626532353762__zagranpasport-novogo.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>ПЕРЕД ОТЪЕЗДОМ</strong> <br><br> <h3>Проверьте наличие необходимых для поездки документов:</h3><br> <strong>Заграничный паспорт</strong> <strong>(паспорт должен быть действителен в течение не менее шести месяцев</strong> <strong>после даты окончания поездки,</strong> и иметь свободную страницу для проставления визы); <strong>ксерокопии загранпаспорта</strong> (могут пригодиться при утрате загранпаспорта и в случае иных непредвиденных обстоятельств); <strong>авиабилеты или маршрут/квитанции электронного билета; ваучер; страховой медицинский полис.</strong><strong></strong><br>          <imgsrc="images/tild3434-6638-4437-a663-626532353762__-__empty__zagranpasport-novogo.jpg"alt="Документы для путушествия на Кубу"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="travellingwithchildren" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Дети</h2>
-                  <img src="../../images/tild6234-6362-4539-b665-323137643933__komfortnyi-otdykh-s-.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>В случае путешествия с детьми:</strong><strong><strong></strong></strong> <br><br> Несовершеннолетний гражданин Российской Федерации, следующий совместно хотя бы с одним из родителей, ДОЛЖЕН ВЫЕЗЖАТЬ ИЗ РОССИЙСКОЙ ФЕДЕРАЦИИ ТОЛЬКО ПО СВОЕМУ ЗАГРАНИЧНОМУ ПАСПОРТУ. <br><br> Без необходимости оформления отдельного заграничного паспорта несовершеннолетний гражданин Российской Федерации до 14 лет может выехать совместно хотя бы с одним из родителей, если он вписан в <strong>ОФОРМЛЕННЫЙ ДО 01 МАРТА 2010 ГОДА</strong> заграничный паспорт выезжающего вместе с ним родителя. В паспорт родителя в этом случае ОБЯЗАТЕЛЬНО должна быть вклеена фотография ребенка, независимо от его возраста, на которой должна стоять печать паспортно-визовой службы. Отсутствие фотографии или печати является основанием для отказа ребенку в пересечении границы. Выезд из Российской Федерации несовершеннолетних детей, сведения о которых внесены в паспорта сопровождающих их родителей, оформленные до 01 марта 2010 года, осуществляется по срокам действия этих паспортов. <br><br> При следовании несовершеннолетнего российского гражданина через государственную границу Российской Федерации совместно с одним из родителей, предъявлять письменное согласие второго родителя не требуется, если только от него ранее не поступало заявления о его несогласии на выезд из Российской Федерации детей, родителем которых он является. <br><br> Если у несовершеннолетнего ребенка и выезжающего совместно с ним родителя разные фамилии, то рекомендуем взять с собой нотариально заверенную копию свидетельства о рождении – для подтверждения родства. <br>          <imgsrc="images/tild6234-6362-4539-b665-323137643933__-__empty__komfortnyi-otdykh-s-.jpg"alt="Путешествие на Кубу с детьми"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="CollectingLuggage" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Багаж</h2>
-                  <img src="../../images/tild3838-6539-4365-b630-323066343866__thumb_67866_expert_b.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong>Собирая багаж: <br><br> Рекомендуем все ценные вещи, документы и деньги положить в ручную кладь и взять с собой в самолет. В багаж следует упаковать все металлические острые и режущие предметы (маникюрные ножницы, пилочки для ногтей, перочинный ножик и т.п.), а также любые жидкости, гели и аэрозоли (за исключением, если в этом есть необходимость, детского питания и лекарств) – проносить подобные предметы на борт воздушного судна в ручной клади ЗАПРЕЩЕНО или регламентировано особыми правилами. <br><br> Не забывайте собрать и взять с собой аптечку первой помощи, которая поможет Вам при легких недомоганиях, сэкономит Ваше время на поиски лекарственных средств и избавит от проблем общения на иностранном языке. <br>          <imgsrc="images/tild3838-6539-4365-b630-323066343866__-__empty__thumb_67866_expert_b.jpg"alt="Сбор багажа перед путешествием"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="atRussianairports" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Прибытие</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong></strong> <strong></strong><strong>В РОССИЙСКОМ АЭРОПОРТУ ВЫЛЕТА/ПРИЛЕТА</strong><strong></strong> <br><br> <strong>Перед выездом в аэропорт:</strong> Рекомендуем получить дополнительную информацию о возможно произошедших изменениях в условиях вылета Вашего рейса, используя возможности сайта авиакомпании, выполняющей рейс, или по телефону ее справочной службы.<br><br>Рекомендуем заблаговременно, не позднее, чем за три часа до вылета рейса, прибыть к месту регистрации пассажиров для прохождения процедур регистрации на рейс, оформления багажа, и выполнения требований, связанных с пограничным, таможенным, санитарно-карантинным, ветеринарным и другими видами контроля, установленными законодательством РФ.<br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="russianCUSTOMSCONTROLleave" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Таможня вылет</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>ТАМОЖЕННЫЙ КОНТРОЛЬ НА ВЫЛЕТЕ ИЗ РФ</strong><strong></strong> <br><br>Если Вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то Вам следует проходить зону таможенного контроля по «Зеленому коридору». <br><br> Без предъявления документов и без внесения сведений о валюте в пассажирскую таможенную декларацию туристы имеют право вывезти наличную иностранную валюту и/или валюту Российской Федерации, а также дорожные чеки на сумму не более <strong>10.000</strong> долларов США. При вывозе физическими лицами иностранной валюты и/или валюты Российской Федерации в эквиваленте до 10.000 долларов США, либо дорожных чеков в сумме, превышающей 10.000 долларов США, эти суммы средств должны быть задекларированы в пассажирской таможенной декларации. <br><br> На денежные средства, вывозимые с помощью банковской карты, ограничений нет. Банковскую карту декларировать не требуется.<br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="russiancustomcontrolarrive" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Таможня прилет</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>ТАМОЖЕННЫЙ КОНТРОЛЬ НА ПРИЛЕТЕ В РФ</strong><strong></strong> <br><br> Если Вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то Вам следует проходить зону таможенного контроля по «Зеленому коридору». <br><br> Без уплаты таможенных пошлин можно <strong>ввозить</strong> в Российскую Федерацию товары для личного пользования на сумму не более <strong>10.000</strong> долларов по курсу на день декларирования, общим весом – не более 50 килограммов. <br><br> Физическое лицо не моложе 18 лет может ввозить без уплаты таможенных пошлин: 3 литра алкогольных напитков и пиво; 50 сигар (сигарилл) или 200 сигарет или 250 граммов табака, либо указанные изделия в ассортименте общим весом не более 250 граммов. <br><br> При единовременном ввозе в Россию физическими лицами наличных денежных средств и/или дорожных чеков в сумме в эквиваленте превышающей <strong>10.000</strong> долларов США, либо внешних и/или внутренних ценных бумаг в документарной форме (независимо от суммы), то эти суммы и сведения необходимо внести в пассажирскую таможенную декларацию. <br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="russianCHECK-INANDBAGGAGE" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Регистрация</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>РЕГИСТРАЦИЯ НА РЕЙС И ОФОРМЛЕНИЕ БАГАЖА</strong><strong></strong> <br><br> Регистрация пассажиров на рейс и оформление их багажа производятся на основании именного авиабилета или распечатанной на бумажном носителе маршрут/квитанции электронного билета, а также заграничного паспорта пассажира. <br><br> При регистрации пассажиру выдается посадочный талон, который необходимо сохранять до момента возможного предъявления авиакомпании претензий по качеству предоставленных услуг авиаперевозки. <br><br> Регистрация на рейс заканчивается за 40 минут, а посадка в воздушное судно за 20 минут, – до времени вылета рейса по местному времени. Пассажиру, опоздавшему ко времени окончания регистрации или посадки в воздушное судно, может быть отказано в перевозке. <br><br> Рекомендуем отдельно уточнять в авиакомпании нормы бесплатного провоза и габариты багажа, принимаемого к перевозке. <br><br> Перевозчик имеет право отказать туристу в перевозке багажа, вес или объем которого не соответствуют установленным нормам.<br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="russianPASSPORTCONTROL" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Контроль</h2>
-                  <img src="../../images/tild6263-3236-4164-b132-313762653661__34944474314_b12b5af4.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>ПОГРАНИЧНЫЙ КОНТРОЛЬ в аэропорту РФ</strong><strong></strong> <br><br> Для прохождения пограничного контроля необходимо предъявить заграничный паспорт и посадочный талон. При осуществлении пограничного контроля пограничники имеют право запрашивать у туристов дополнительные документы и проводить их устный опрос. <br><br> <strong>САНИТАРНЫЙ КОНТРОЛЬ</strong><strong></strong> <br><br> <strong>При совершении путешествия по Кубе р</strong>иска заражения особо опасными инфекционными заболеваниями нет, делать <strong>прививки</strong> официально не требуются. Можно рекомендовать в профилактических целях сделать противостолбнячные инъекции и прививку против гепатита А и В. <br><br> <strong>ВЕТЕРИНАРНЫЙ И ФИТО КОНТРОЛЬ в аэропортах РФ</strong> <br><br>Если Вы <strong>вывозите</strong> животных, то Вам необходимо иметь комплект документов, подтверждающих, что они здоровы. Как правило, следует иметь: <strong>Ветеринарный паспорт</strong>, <strong>Справку о состоянии здоровья</strong> (выдается любой государственной ветеринарной клиникой), <strong>Справку из клуба СКОР или РКФ</strong> (в справке указывается, что животное не представляет племенной ценности, справки из других клубов вызывают вопросы на таможне). <br><br> При <strong>ввозе</strong> в РФ животных и птиц Вам необходимо иметь сопровождающее ветеринарное свидетельство, полученное в Государственной ветеринарной службе страны, где приобретено животное. <br><br> <strong>ВНИМАНИЕ!</strong> <br><br> <strong>ЗАПРЕЩЕНО на выезде и въезде</strong> <strong></strong> ПЕРЕМЕЩЕНИЕ КУЛЬТУРНЫХ ЦЕННОСТЕЙ, ОБЪЕКТОВ ДИКОЙ ФАУНЫ и ФЛОРЫ, находящихся под угрозой исчезновения, ОРУЖИЯ И БОЕПРИПАСОВ к нему БЕЗ РАЗРЕШЕНИЯ УПОЛНОМОЧЕННЫХ ОРГАНОВ. <br><br> <strong>ЗАПРЕЩЕНО на выезде и въезде</strong> <strong></strong> ПРИНИМАТЬ ОТ ПОСТОРОННИХ ЛИЦ чемоданы, посылки и другие предметы для перевозки на борту воздушного судна.<strong></strong> <br><br> <strong>ПОМНИТЕ! Незаконное перемещение товаров или валюты через таможенную границу Российской Федерации или их недекларирование либо недостоверное декларирование влечет за собой административную или уголовную ответственность.</strong> <br>          <imgsrc="images/tild6263-3236-4164-b132-313762653661__-__empty__34944474314_b12b5af4.jpg"alt="перелет из России на Кубу"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="INcubaAIRPORT" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Прилет/вылет</h2>
-                  <img src="../../images/tild3938-6331-4730-b364-346235303732__landing_at_beach-wal.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>В АЭРОПОРТУ ПРИЛЕТА/ВЫЛЕТА «Хосе Марти» (Гавана)</strong> <br><br> По прибытию в аэропорт Кубы Вы должны последовательно: заполнить иммиграционные карточки печатными буквами на английском языке, пройти паспортный контроль, получить свой багаж, пройти таможенный контроль, выйти из здания аэропорта, найти встречающего гида с табличкой, предъявить гиду туристский ваучер. <br>          <imgsrc="images/tild3938-6331-4730-b364-346235303732__-__empty__landing_at_beach-wal.jpg"alt="Аэропорт Кубы"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="cubaPASSPORTCONTROL" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Паспортный контроль</h2>
-                  <img src="../../images/tild6164-3539-4236-a536-653666633263__919255ebe5775d87ea2b.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>ПАСПОРТНЫЙ КОНТРОЛЬ в аэропорту Республики Куба</strong><strong></strong> <br><br> <strong>ВИЗА.</strong> <strong>Для граждан РФ при въезде на Кубу разрешен безвизовый въезд на срок до 30 дней пребывания. Миграционную карточку вам возвращают, ее вы сохраняете и предъявляете на паспортном контроле при выезде из страны.</strong> <strong>ВНИМАНИЕ! На Кубе НЕ СТАВЯТ</strong> <strong>печать в паспорт с датой прибытия.</strong> <br><br> Для граждан, не имеющих гражданства Российской Федерации, могут быть установлены иные правила въезда на территорию Кубы. Получить информацию по этому вопросу следует в посольстве Республики Куба по месту гражданства. <br><br> При прохождении паспортного контроля необходимо предъявить загранпаспорт, у Вас также могут потребовать предъявить туристский ваучер и обратный авиабилет. <br>          <imgsrc="images/tild6164-3539-4236-a536-653666633263__-__empty__919255ebe5775d87ea2b.jpg"alt="Паспортный контроль на Кубе"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="cubaCUSTOMSCONTROL" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Таможенный контроль</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>ТАМОЖЕННЫЙ КОНТРОЛЬ</strong> <strong>в аэропорту Республики Куба</strong> <strong></strong> <br><br> <strong>Ввоз</strong> иностранной валюты неограничен, но необходимо декларировать сумму свыше 3.000 долларов США, так вывоз валюты разрешается только в пределах декларации. <br><br> Разрешен беспошлинный <strong>ввоз 200 сигарет или 250 гр. табака, 2 л алкогольных напитков</strong>, <br><br> ЗАПРЕЩЕН <strong>ввоз</strong> наркотиков, лекарств, содержащих большую дозу наркотических веществ, и оружия. <br><br> <strong>Вывозить</strong> разрешено не более <strong>5 тысяч долларов США</strong>. <br><br> ЗАПРЕЩЕН <strong>вывоз</strong> предметов искусства и антиквариата, ювелирных украшений и предметов народного промысла без соответствующего документального оформления. <br><br> ЗАПРЕЩЕН <strong>вывоз</strong> национальной валюты. <br><br> <strong>ВЕТЕРИНАРНЫЙ КОНТРОЛЬ</strong> <strong>в аэропорту Республики Куба</strong> <br><br> При ввозе домашних животных требуется предъявлять действительный сертификат ветеринарной службы с отметкой о всех прививках, включая прививку против бешенства. <br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="cuba" class="scroll-mt-32 mb-24">
-                  
-                  <img src="../../images/tild6637-6537-4933-b234-323231303961__resimgoster.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>                 <strong> <strong> <strong> <strong>РЕСПУБЛИКА КУБА</strong><strong></strong> </strong> </strong></strong>                    <imgsrc="images/tild6637-6537-4933-b234-323231303961__-__empty__resimgoster.jpg"alt="Куба"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="aboutcuba" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">О стране</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong> <strong></strong>Официальное название страны: Республика Куба. Территория Кубы составляет 109 тыс. кв.км. Столица: г. Гавана.<br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="time" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Время</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>Время</strong> <br><br> Время на Кубе отстает от московского на 8 часов. <br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="climate" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Климат</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>Климат</strong> <br><br> Тропический. Два сезона: солнечный (ноябрь-апрель), дождливый (май-октябрь). Среднегодовая температура на Кубе около +26С. Высокая влажность. <br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="Currency" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Валюта</h2>
-                  <img src="../../images/tild3264-3735-4261-a263-336336353839__cuba185564297.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>Валюта</strong> <br><br> Кубинское песо, Кубинское конвертируемое песо. <br><br> Существует два вида песо: песо неконвертируемый, для расчетов внутри страны, и песо конвертируемый (имеющий аббревиатуру "CUC", или как его называют русскоговорящие - "КУК"), которым расплачиваются туристы и который официально приравнивается к доллару США. Эти банкноты, которые от обычного кубинского песо отличаются своей ценностью и многоцветностью, печатаются на острове и за его пределами ценности не имеют. <br><br> На Кубе 09 апреля 2005 года было запрещено использовать доллары США, поэтому основной платежной единицей для туристов стал конвертируемый песо. Конвертируемый песо не имеет никакой ценности в других странах мира. При обмене долларов США на территории Кубы взимается налог. Также можно использовать кредитные карты, главное, чтобы платежи не проходили через банки, расположенные на территории США. Запрет коснулся и других конвертируемых валют - евро, фунта стерлингов и т.д. <br>           <imgsrc="images/tild3264-3735-4261-a263-336336353839__-__empty__cuba185564297.jpg"alt="Какие деньги на Кубе"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="language" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Язык</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong></strong> <strong></strong><strong>Язык</strong> <br><br>Испанский, в общении с иностранцами – английский, французский, русский<br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="Population" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Население</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong></strong> <strong>Население</strong> около 11 млн. человек. <br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="religion" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Религия</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong></strong><strong>Религия</strong> самая распространённая религия на Кубе – католицизм.<br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="Customs" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Обычаи</h2>
-                  <img src="../../images/tild6261-3866-4335-b763-356262373935__slider1b_cuba_1920by.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong>Обычаи</strong> <br><br> Кубинцы - очень дружелюбный народ, но все же лучше следовать некоторым простым правилам: <br><br> Во всех случаях сопровождайте ваши просьбы фразами «mi amour» (любовь моя), mi corazon (сердце мое), mi tiema (нежная моя) mi reina (моя королева), если вам нужно обратиться к женщине, и «сатреоп», pipo, viejo tio (дружище, старик) - если к мужчине. <br><br> Арендовать квартиру у местных жителей запрещается законом, однако с того времени, как жителям Кубы позволили иметь доллары, они могут разместить у себя путешественников. Многие жители Кубы предложат вам ночлег и завтрак по стоимости 10 долларов за ночь, поскольку по правилам вы должны пробыть там пару дней. <br><br> Если вас зовут куда-либо потанцевать, наряжайтесь, как следует. Жители Кубы не любят, когда официально приглашенный заявляется в топе и рваных джинсах, даже если атмосфера весьма дружеская. <br><br> Не принято отказываться, если вас приглашают поужинать или выпить. <br><br> Если кто-то вам помог, подарите ему что-либо из косметических средств, либо бутылку рома. Дети очень любят жевательную резинку и шариковые ручки. <br><br> Отправляясь в Кубу, нужно помнить, что здесь нельзя фотографировать военную технику, промышленные организации и военнослужащих, а также курить в общественных местах. <br><br> Местный народ, напротив, очень любит, когда их фотографируют. Правда, нужно спросить у них разрешения. <br><br> Нежелательно в темный период суток гулять в центральной и старой частях города Гаваны, а также в нетуристических, жилых районах. Не нужно брать с собой много наличных и дорогие украшения. <br><br> Рекомендуется оставить паспорт и кредитную карточку в сейфе в гостинице, предварительно откопировав документы, не расплачиваться купюрами крупных размеров, внимательно следить за счетами и пользоваться услугами только официальных авто. <br><br> Попрошайничество на Кубе находится под запретом, а потому воздержитесь от раздачи мелких денег местным жителям. Полиция (обычно ее трудно распознать в штатской одежде) ничего не сделает вам, а вот кубинцев заберут в участок. <br>          <imgsrc="images/tild6261-3866-4335-b763-356262373935__-__empty__slider1b_cuba_1920by.jpg"alt="Обычаи на Кубе"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="holidays" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Праздники</h2>
-                  <img src="../../images/tild3738-3733-4834-b835-313531336365__kar1.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong>Праздники и</strong> <strong>нерабочие дни</strong> <br><br> 1-2 января - День освобождения (победа кубинской революции в 1959 г.). <br><br> 1 мая - День международной солидарности трудящихся, День Труда. <br><br> 26 июля - День Национального восстания (нападение на казарму Монкада в Сантьяго-де-Куба, 25 и 27 июля также являются выходными днями). <br><br> 10 октября - Годовщина начала войн за независимость от испанского владычества, День Кубинской Культуры. <br><br> 25 декабря - Рождество. <br>          <imgsrc="images/tild3738-3733-4834-b835-313531336365__-__empty__kar1.jpg"alt="Праздники на Кубе"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="kitchen" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Кухня</h2>
-                  <img src="../../images/tild3431-6133-4764-b436-353331303034__i42kg0psm.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong></strong><strong></strong> <strong></strong><strong>Кухня</strong> <br><br>Основу рациона кубинцев составляют рис и черная фасоль (по-кубински moroz y cristianos), свинина и цыплята. Кубинцы не очень любят овощи, но обожают фрукты, их огромное множество и они всегда свежие. Очень вкусны манго и бананы. Печеные бананы (platanos) в кубинской кухне идут еще от африканских рабов. Fufu - это бананы, смешанные с другими ингредиентами. Чатинос - легкая закуска к аперитиву, также готовится на базе платанос. Если Вы заказываете фруктовые соки, требуйте, чтобы они были свежеприготовленными. Если Ваши средства ограничены, в закусочных (mesas suecas) Вам предложат комплексный обед по фиксированной цене, блюда Вы выберете сами. Очень популярно мороженое Coppelia. Есть много маленьких ресторанчиков прямо на дому у кубинцев, где можно поесть примерно за 4cuc. Говоря о кухне, нельзя обойти вниманием кофе по-кубински, который кубинцы пьют в огромных количествах в течение всего дня. Кофе по-кубински очень крепкий и сладкий. В городах много кафе, а также casas de infusiones, где можно отведать различные настои, отвары и другие напитки. Во все напитки кубинцы кладут большое количество сахара. Самым популярным алкогольным напитком является ром. Самая знаменитая марка рома - Havana Club. Существует три сорта: Carta Oro (золотой), Carta Blanca (белый) и Anejo (старый), которые различаются по выдержке. Любимый ром кубинцев - Anejo (около 8cuc за бутылку).<br>          <imgsrc="images/tild3431-6133-4764-b436-353331303034__-__empty__i42kg0psm.jpg"alt="Кухня Кубы"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="shops" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Магазины</h2>
-                  <img src="../../images/tild3238-3437-4165-a131-343064666137__cuba_d300-588503.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong></strong> <strong></strong><strong>Магазины</strong> <br><br>Работают 09:00 - 18:00 (некоторые до 20:00) по будням, по субботам 09:00 - 15:00 (некоторые до 18:00). Супермаркеты и магазины в курортных районах обычно открыты 10:00 - 20:00. Рекомендуемые сувениры: черный коралл и украшения из него, тропическая рубашка «гуаябера», народные ударные музыкальные инструменты, художественные ткани, вышивка и кружева, картины местных художников, изделия из панциря черепахи - браслеты и заколки, кубинский ром, сигары, среди которых наиболее высоко ценятся марки: «Боливар», «Кохиба», «Монтекристо», «Партагас», «Панч», «Рамон Аллонес», «Санчо Панса», «Ромео и Джульетта» и «Тринидад». Ароматный кофе - молотый и в зернах.<br>          <imgsrc="images/tild3238-3437-4165-a131-343064666137__-__empty__cuba_d300-588503.jpg"alt="Что купить на Кубе"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="transport" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Транспорт</h2>
-                  <img src="../../images/tild6664-3036-4564-b234-623663663363__s12001.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong> <strong></strong><strong>Транспорт</strong> <br><br>Популярным транспортным средством в стране является автобус. Автобус называется gua-gua (ва-ва), это основной городской транспорт. Стоимость проезда - 10 сентаво. Автобус останавливается через каждые четыре квартала, водителя можно попросить объявить остановку. Часы пик ничем не лучше московских. Существуют такси для туристов (с радиотелефоном и кондиционером) и такси для кубинцев за песо, которые очень трудно поймать. В Гаване три компании такси, все государственные. Cubanacan - самая дорогая, обслуживают мерседесы; Turistaxi обслуживают японские серые малолитражки с кондиционерами; Panataxi обслуживают "Лады", совсем не дорого, но эта компания работает только в столице. В провинции, в отелях и в туристических центрах можно найти такси Cubanacan и Turistaxi. Надежнее всего поймать такси у входа в отель.<br>          <imgsrc="images/tild6664-3036-4564-b234-623663663363__-__empty__s12001.jpg"alt="транспорт на Кубе"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="phone" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Связь</h2>
-                  <img src="../../images/tild3337-3934-4532-a536-386363633935__phone_old_year_built.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>Телефон</strong> <br><br> Для телефонных переговоров в черте города используются телефоны-автоматы, работающие как на монетах, так и на карточках (много реже). Для звонка с "монетного" автомата необходимы монеты в 5 и 20 сентаво. Звонить в другие города или провинции затруднительно. Международные телефонные звонки осуществляются исключительно с телефонных станций "Телекорреос", которые есть практически во всех крупных отелях. Для звонка необходима специальная карточка (продается у администратора отеля). Статистика соединения и его стоимость выводятся на дисплей телефона. Сотовая связь и интернет-телефония развиты слабо. <br><br> Для звонка в Россию необходимо набрать 007 (код России - 7), затем код города и номер телефона. Например, звонок в Москву: 007 - 495 - номер телефона. <br><br> Посольство РФ в Гаване: +53 7 204 2686, 204 1085. <br><br> Полиция: 867 7777, 882 0116. <br><br> Скорая помощь: 204 2811. <br>          <imgsrc="images/tild3337-3934-4532-a536-386363633935__-__empty__phone_old_year_built.jpg"alt="Как позвонить с Кубы в Россию"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="inhotel" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Приезд/Отъезд</h2>
-                  <img src="../../images/tild3165-6164-4137-a430-626532303666__otdyh-na-kube-otel-b.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>В отеле</strong> <br><br> В день приезда расселение осуществляется в соответствии с правилами, принятыми в отеле, начиная с 16-00 местного времени. Если вы хотите заселиться в номер ранее указанного времени, необходимо заранее забронировать номер на сутки раньше даты вашего приезда (например, вы прилетаете на Кубу в 5 утра 10 сентября, чтобы не ждать заселения до 16.00, вы можете забронировать номер не с 10 сентября, а с 09 сентября. В этом случае вас заселят в номер сразу же, как только вы приедете в отель). При заселении вам выдадут ключи от номера, карточки на полотенца. Просим ознакомиться на месте с условиями предоставления услуг в отеле и придерживаться установленных отелем правил. <br><br> В день выезда до наступления расчетного часа (как правило, 12-00) необходимо освободить свой номер и оплатить дополнительные услуги: телефонные переговоры, мини-бар, заказ питания и напитков в номер, массаж и др. Свой багаж Вы можете оставить в камере хранения отеля и оставаться на территории отеля до прибытия трансфера. Если Вы не сдали номер до 12-00, стоимость комнаты оплачивается полностью за следующие сутки. <br>          <imgsrc="images/tild3165-6164-4137-a430-626532303666__-__empty__otdyh-na-kube-otel-b.jpg"alt="Отели Кубы"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="tips" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Чаевые</h2>
-                  <img src="../../images/tild3436-3037-4639-b466-343265646230__f0bb5b1ec29efb7dfe1a.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>Чаевые</strong> <br><br> На Кубе принято платить чаевые 5-15% от стоимости услуг. Учитывайте, что чаевые, данные при свидетелях, будут сданы в общую кассу и затем будут делится персоналом всего отеля, либо ресторана. <br>          <imgsrc="images/tild3436-3037-4639-b466-343265646230__-__empty__f0bb5b1ec29efb7dfe1a.jpg"alt="Чаевые на Кубе"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="Mainsvoltage" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Электросеть</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>Напряжение электросети</strong> <br><br> Сетевое напряжение 110/120 В, частота 60 Герц. Нужен адаптер, так как вилки и розетки на Кубе имеют плоскую форму. Правда, в современных кубинских отелях напряжение 220 В и «европейские» розетки. <br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="excursions" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Экскурсии</h2>
-                  <img src="../../images/tild3133-3534-4462-a664-343062346563__e95c33801b3354665070.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>Экскурсии</strong> <br><br> Гид принимающей Вас на Кубе туроператорской компании во время встречи в отеле сообщит Вам перечень предлагаемых экскурсий, их содержание, график проведения и их стоимость. Не рекомендуем Вам приобретать экскурсии или прочие услуги в неизвестных Вам туристских и экскурсионных агентствах. <br><br> На Кубе достойно внимания: <br><br> Прогулка по Крепости Castillo del Morro, посещение Базилики Virgen de la Caridad del Cobre, посещение фабрики рома La Barrita de Ron Caney, прогулка по Площади Революции города Holguín, посещение табачной фабрики и Loma de la Cruz, посещение Площади имени революционера Antonio Maceo, морская экскурсия «Райский остров» и «Катамаран Эксклюзив», сафари на джипах, путешествия на острова, национальные шоу, выступления и многое другое. <br>          <imgsrc="images/tild3133-3534-4462-a664-343062346563__-__empty__e95c33801b3354665070.jpg"alt="Экскурсии на Кубе"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="THERULESOFPERSONALHYGIENEANDSAFETY" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Правила</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong></strong><strong>ПРАВИЛА ЛИЧНОЙ ГИГИЕНЫ И БЕЗОПАСНОСТИ</strong><strong>:</strong><strong></strong> <br><br> Перед путешествием мы советуем ознакомиться с «Полезными советами российским гражданам, выезжающим за рубеж», размещенными на сайте МИД России: <a href="http://www.mid.ru/dks.nsf/advinf"><strong>http://www.mid.ru/dks.nsf/advinf</strong></a> <br><br> Не нарушайте правила безопасности, установленные авиакомпаниями, транспортными организациями, гостиницами, местными органами власти. <br><br> Категорически не рекомендуем Вам приобретать экскурсии и дополнительные туристские услуги в неизвестных Вам туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, Вам не будет гарантирована безопасность предоставленных услуг и исправность используемого оборудования, тем самым Вы можете подвергнуть себя серьезной опасности. <br><br> Перед поездкой рекомендуется сделать ксерокопии основных страниц (с фотографией, личными данными, отметкой о регистрации) заграничного и внутреннего российского паспортов и взять их с собой. <br><br> Паспорт (или ксерокопию паспорта), визитную карточку отеля носите с собой. <br><br> При возникновении транспортных аварий, конфликтов с полицией, другими органами местной власти необходимо поставить в известность представителя принимающей стороны или сотрудников Посольства/консульства России. <br><br> В период путешествия Вы не имеете права на коммерческую деятельность или иную оплачиваемую работу. <br><br> Вы обязаны покинуть страну временного пребывания до истечения срока безвизового пребывания, в противном случае, Вы можете быть подвергнуты штрафу, аресту и высланы из страны в принудительном порядке. <br><br> Не оставляйте детей одних без Вашего присмотра на пляже, у бассейна, на водных горках и при пользовании аттракционами. <br><br> Следует учитывать особенности местной фауны. Просим соблюдать правила безопасности, установленные в этой связи в конкретном отеле и (или) регионе. <br><br> Мойте руки перед едой. Не пейте сырую воду, особенно из открытых водоемов. Для питья рекомендуется использовать минеральную воду, которую можно приобрести в магазинах и барах отеля. <br><br> Будьте осторожны с солнцем! Советуем Вам заранее запастись защитными от солнечных ожогов средствами и пользоваться ими в период пребывания на солнце. Не забудьте и про солнцезащитные очки. <br><br> Не бродите босиком по протокам или стоячим водоемам, не мойте в них руки. Не ложитесь на землю без подстилки на берегах рек. <br><br> Возьмите в путешествие индивидуальную аптечку с необходимым Вам набором лекарств. <br><br> Помните, что многообразные представители животного и растительного мира могут быть не только красивыми, но и опасными. Если Вы поранились или были укушены, немедленно обратитесь к врачу. <br><br> Не рекомендуется носить с собой большие наличные суммы. Кражи денег и вещей у туристов случаются довольно часто, как и махинации с фальшивыми долларами. Не следует вынимать из кошелька на виду у всех большие суммы денег. <br><br> Чтобы избежать опасности на улицах, рекомендуем следить за своими сумочками и бумажниками, особенно в туристических центрах, на вокзалах, автозаправочных станциях и рынках. <br><br> Покидая автобус на остановках и во время экскурсий, не оставляйте в нем ручную кладь, особенно ценные вещи и деньги. <br><br> Автомобили и мотоциклы советуем оставлять на охраняемых стоянках и в гаражах отелей, и не оставлять ценные вещи в машине на виду. <br><br> Важные документы, наличные деньги и драгоценности лучше хранить в сейфе номера. Если в номере нет сейфа, его можно взять в аренду за плату у администрации отеля или сдать на хранение портье в сейф на стойке регистрации. <br><br> Рекомендуется сдавать ключ от номера на стойку регистрации отеля, в случае его утери поставить в известность администрацию. <br><br> Во многих отелях запрещается выносить из номера полотенца на пляж или к бассейну. Не приносите на пляж полотенца или инвентарь из номера без разрешения персонала. <br><br> Если в номере имеется мини бар, то все напитки и закуски, взятые из него, как правило, должны быть оплачены. <br><br> Категорически запрещается курить в постели. <br><br> Для россиян ограничений на передвижение по стране нет. <br><br> Если Вы оказались на территории иностранного государства без средств к существованию, Вы имеет право на получение помощи от дипломатических представительств и консульств РФ. <br></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="INCASEOFLOSSOFPASSPORT" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Потеря паспорта</h2>
-                  <img src="../../images/tild6461-3537-4165-b365-363961373965__598c6e030ca3f598c6e0.jpg" class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14">
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>       <strong></strong><strong>В СЛУЧАЕ ПОТЕРИ ПАСПОРТА</strong> <br><br> Как только Вы поняли, что загранпаспорт потерялся, или его украли, то незамедлительно обращайтесь в дипломатическое представительство, в консульское учреждение или в представительство МИД России, которое находится в пределах приграничной территории. <br><br> Вам необходимо получить свидетельство на въезд в РФ (REENTRY CERTIFICATE TO THE RUSSIAN FEDERATION), которое еще называется временным загранпаспортом. Выдается на срок до 15 дней, для того, чтобы Вы успели купить обратный билет и улететь на родину. <br><br> Для того, чтобы Вам выдали свидетельство на возвращение в РФ, необходимо представить следующие документы: <ul class="check-list mb-12"><li>основной документ, на основании которого будут предприниматься какие-либо действия, это заявление о выдаче свидетельства (<strong>образец заявления</strong>) </li> <li>две фотографии цветного или черно – белого исполнения. Размер должен соответствовать 35х45 мм на четком фоне с четким изображением лица. </li> <li>обязательно понадобится Ваш внутренний паспорт РФ, так же возможно предоставление других документов для подтверждения своей личности, это водительские права или служебное удостоверение. </li></ul>Срок выдачи свидетельства на возвращение в РФ составляет 2 рабочих дня со дня регистрации заявления. <br><br> Вернувшись в Российскую Федерацию, в трехдневный срок необходимо сдать свидетельство в организацию, выдавшую паспорт (ОВИР, МИД). <br><br> Все вышеперечисленные документы регламентированы пунктом 20 Приказа МИД России от 28.06.2012 года № 10304.<br>          <imgsrc="images/tild6461-3537-4165-b365-363961373965__-__empty__598c6e030ca3f598c6e0.jpg"alt="Потеря паспорта на Кубе"></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-                <section id="embassy" class="scroll-mt-32 mb-24">
-                  <h2 class="text-4xl font-black mb-14 tracking-tight text-black">Посольство</h2>
-                  
-                  <div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
-                    <p class="mb-4"></a>        <strong></strong><strong></strong><strong></strong><strong>ПОЛЕЗНАЯ ИНФОРМАЦИЯ</strong> <br><br><strong>Посольство России на Кубе</strong> <br> <strong>Адрес: Гавана, Мирамар, 5 авенида № 6402, между улицами 62 и 66</strong> <br> <strong>Телефоны: (8-10-537) 204-10-85, 204-26-28, 204-26-86, 204-10-80</strong> <br> <strong>Факс: (8-10-537) 204-10-38</strong><br> <strong>E-mail: embrusia@newmail.ru, embrusia2007@mail.ru</strong><br> <strong>Время работы: понедельник – четверг с 08:00 до 12:30 и с 15:00 до 19:00</strong><br><br><strong>Посольство Республики Куба в Российской Федерации</strong><br> Адрес Посольства Республики Куба: 119017, Москва, Б. Ордынка, д.66<br> Телефоны: (495)933-79-50<br> Факс: 933-79-50<br> E-mail Посольства Республики Куба: prencult[perro]ecurusia.ru<br> E-mail Консульского отдела: consul[perro]ecurusia.cu и consulado[perro]ecurusia.cu<br>          <strong></strong></p>
-                  </div>
-                  <div class="h-px bg-black/[0.05] mt-12"></div>
-                </section>
-        </div>
-
-        <div class="h-px bg-black/5 my-16"></div>
-
-        <!-- СЕКЦИЯ: ФОРМА -->
-        <section id="section-form" class="scroll-mt-32 py-12">
-          <h2 class="text-3xl md:text-4xl font-black mb-8 tracking-tight">Отправить заявку</h2>
-          <form id="booking-form"
-            class="bg-[#fffcf5] border border-black/5 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-10 md:p-16 shadow-2xl shadow-[#5f531a]/10 space-y-10 md:space-y-12 relative overflow-hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 md:gap-y-8 mt-2">
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="userName" placeholder="Иван Иванов" type="text" required />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="userEmail" placeholder="hello@example.com" type="email" required />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="userPhone" placeholder="+7 (___) ___-__-__" type="tel" required />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Направление</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="destination" value="Памятка туриста Куба" type="text" />
-              </div>
-              <div class="grid grid-cols-2 gap-4">
-                <div class="space-y-2">
-                  <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
-                  <input
-                    class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                    name="adults" min="1" type="number" value="2" />
-                </div>
-                <div class="space-y-2">
-                  <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
-                  <input
-                    class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                    name="children" placeholder="1 реб, 5 лет" type="text" />
-                </div>
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="budget" placeholder="От 200 000" type="text" />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="nights" min="1" type="number" value="7" />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="startDate" type="date" />
-              </div>
-            </div>
-            <div class="space-y-4">
-              <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
-              <div class="flex flex-wrap gap-8">
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
-                    name="excursions" type="radio" value="Да" />
-                  <span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
-                </label>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
-                    name="excursions" type="radio" value="Нет" />
-                  <span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
-                </label>
-                <label class="flex items-center gap-3 cursor-pointer group">
-                  <input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
-                    name="excursions" type="radio" value="Пока не знаю" />
-                  <span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
-                </label>
-              </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
-                <textarea
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="hotelPrefs" placeholder="Напр. первая линия, только 5*, наличие детского клуба..."
-                  rows="3"></textarea>
-              </div>
-              <div class="space-y-2">
-                <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
-                <input
-                  class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="airport" placeholder="Шереметьево, Пулково..." type="text" />
-              </div>
-            </div>
-            <div class="pt-8 flex justify-center w-full">
-              <button
-                class="w-full sm:w-auto bg-black text-white px-10 md:px-14 py-5 rounded-full text-lg md:text-xl font-bold shadow-xl shadow-black/15 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center"
-                type="submit">Отправить заявку</button>
-            </div>
-          </form>
-        </section>
-
-      </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-surface-container-low w-full border-t border-black/5 pt-16 pb-10 px-4 md:px-8 mt-8">
-    <div class="max-w-7xl mx-auto flex flex-col gap-12 md:gap-16">
-      <div class="flex flex-col md:flex-row justify-between items-start gap-12">
-        <div class="space-y-6 max-w-sm text-center md:text-left mx-auto md:mx-0">
-          <img src="../../images/LogoB_300x.png" alt="Emoji Tours" class="h-12 md:h-14 mx-auto md:mx-0">
-          <p class="text-on-surface-variant font-medium text-sm leading-relaxed px-4 md:px-0">
+</div>
+<div class="space-y-16" id="main-content">
+<section class="scroll-mt-32 mb-24" id="BEFORELEAVING">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Документы</h2>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild3434-6638-4437-a663-626532353762__zagranpasport-novogo.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>ПЕРЕД ОТЪЕЗДОМ</strong> <br/><br/> <h3>Проверьте наличие необходимых для поездки документов:</h3><br/> <strong>Заграничный паспорт</strong> <strong>(паспорт должен быть действителен в течение не менее шести месяцев</strong> <strong>после даты окончания поездки,</strong> и иметь свободную страницу для проставления визы); <strong>ксерокопии загранпаспорта</strong> (могут пригодиться при утрате загранпаспорта и в случае иных непредвиденных обстоятельств); <strong>авиабилеты или маршрут/квитанции электронного билета; ваучер; страховой медицинский полис.</strong><strong></strong><br/> <imgsrc="images tild3434-6638-4437-a663-626532353762__-__empty__zagranpasport-novogo.jpg"alt="Документы для путушествия на Кубу"></imgsrc="images></p><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3434-6638-4437-a663-626532353762__zagranpasport-novogo.jpg"/></div>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="travellingwithchildren">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Дети</h2>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild6234-6362-4539-b665-323137643933__komfortnyi-otdykh-s-.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>В случае путешествия с детьми:</strong><strong><strong></strong></strong> <br/><br/> Несовершеннолетний гражданин Российской Федерации, следующий совместно хотя бы с одним из родителей, ДОЛЖЕН ВЫЕЗЖАТЬ ИЗ РОССИЙСКОЙ ФЕДЕРАЦИИ ТОЛЬКО ПО СВОЕМУ ЗАГРАНИЧНОМУ ПАСПОРТУ. <br/><br/> Без необходимости оформления отдельного заграничного паспорта несовершеннолетний гражданин Российской Федерации до 14 лет может выехать совместно хотя бы с одним из родителей, если он вписан в <strong>ОФОРМЛЕННЫЙ ДО 01 МАРТА 2010 ГОДА</strong> заграничный паспорт выезжающего вместе с ним родителя. В паспорт родителя в этом случае ОБЯЗАТЕЛЬНО должна быть вклеена фотография ребенка, независимо от его возраста, на которой должна стоять печать паспортно-визовой службы. Отсутствие фотографии или печати является основанием для отказа ребенку в пересечении границы. Выезд из Российской Федерации несовершеннолетних детей, сведения о которых внесены в паспорта сопровождающих их родителей, оформленные до 01 марта 2010 года, осуществляется по срокам действия этих паспортов. <br/><br/> При следовании несовершеннолетнего российского гражданина через государственную границу Российской Федерации совместно с одним из родителей, предъявлять письменное согласие второго родителя не требуется, если только от него ранее не поступало заявления о его несогласии на выезд из Российской Федерации детей, родителем которых он является. <br/><br/> Если у несовершеннолетнего ребенка и выезжающего совместно с ним родителя разные фамилии, то рекомендуем взять с собой нотариально заверенную копию свидетельства о рождении – для подтверждения родства. <br/> <imgsrc="images tild6234-6362-4539-b665-323137643933__-__empty__komfortnyi-otdykh-s-.jpg"alt="Путешествие на Кубу с детьми"></imgsrc="images></p><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6234-6362-4539-b665-323137643933__komfortnyi-otdykh-s-.jpg"/></div>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="CollectingLuggage">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Багаж</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3838-6539-4365-b630-323066343866__thumb_67866_expert_b.jpg"/></div>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild3838-6539-4365-b630-323066343866__thumb_67866_expert_b.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong>Собирая багаж: <br/><br/> Рекомендуем все ценные вещи, документы и деньги положить в ручную кладь и взять с собой в самолет. В багаж следует упаковать все металлические острые и режущие предметы (маникюрные ножницы, пилочки для ногтей, перочинный ножик и т.п.), а также любые жидкости, гели и аэрозоли (за исключением, если в этом есть необходимость, детского питания и лекарств) – проносить подобные предметы на борт воздушного судна в ручной клади ЗАПРЕЩЕНО или регламентировано особыми правилами. <br/><br/> Не забывайте собрать и взять с собой аптечку первой помощи, которая поможет Вам при легких недомоганиях, сэкономит Ваше время на поиски лекарственных средств и избавит от проблем общения на иностранном языке. <br/> <imgsrc="images tild3838-6539-4365-b630-323066343866__-__empty__thumb_67866_expert_b.jpg"alt="Сбор багажа перед путешествием"></imgsrc="images></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="atRussianairports">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Прибытие</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong></strong> <strong></strong><strong>В РОССИЙСКОМ АЭРОПОРТУ ВЫЛЕТА/ПРИЛЕТА</strong><strong></strong> <br/><br/> <strong>Перед выездом в аэропорт:</strong> Рекомендуем получить дополнительную информацию о возможно произошедших изменениях в условиях вылета Вашего рейса, используя возможности сайта авиакомпании, выполняющей рейс, или по телефону ее справочной службы.<br/><br/>Рекомендуем заблаговременно, не позднее, чем за три часа до вылета рейса, прибыть к месту регистрации пассажиров для прохождения процедур регистрации на рейс, оформления багажа, и выполнения требований, связанных с пограничным, таможенным, санитарно-карантинным, ветеринарным и другими видами контроля, установленными законодательством РФ.<br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="russianCUSTOMSCONTROLleave">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Таможня вылет</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>ТАМОЖЕННЫЙ КОНТРОЛЬ НА ВЫЛЕТЕ ИЗ РФ</strong><strong></strong> <br/><br/>Если Вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то Вам следует проходить зону таможенного контроля по «Зеленому коридору». <br/><br/> Без предъявления документов и без внесения сведений о валюте в пассажирскую таможенную декларацию туристы имеют право вывезти наличную иностранную валюту и/или валюту Российской Федерации, а также дорожные чеки на сумму не более <strong>10.000</strong> долларов США. При вывозе физическими лицами иностранной валюты и/или валюты Российской Федерации в эквиваленте до 10.000 долларов США, либо дорожных чеков в сумме, превышающей 10.000 долларов США, эти суммы средств должны быть задекларированы в пассажирской таможенной декларации. <br/><br/> На денежные средства, вывозимые с помощью банковской карты, ограничений нет. Банковскую карту декларировать не требуется.<br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="russiancustomcontrolarrive">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Таможня прилет</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>ТАМОЖЕННЫЙ КОНТРОЛЬ НА ПРИЛЕТЕ В РФ</strong><strong></strong> <br/><br/> Если Вы не перемещаете через границу валюту и предметы, которые необходимо декларировать, то Вам следует проходить зону таможенного контроля по «Зеленому коридору». <br/><br/> Без уплаты таможенных пошлин можно <strong>ввозить</strong> в Российскую Федерацию товары для личного пользования на сумму не более <strong>10.000</strong> долларов по курсу на день декларирования, общим весом – не более 50 килограммов. <br/><br/> Физическое лицо не моложе 18 лет может ввозить без уплаты таможенных пошлин: 3 литра алкогольных напитков и пиво; 50 сигар (сигарилл) или 200 сигарет или 250 граммов табака, либо указанные изделия в ассортименте общим весом не более 250 граммов. <br/><br/> При единовременном ввозе в Россию физическими лицами наличных денежных средств и/или дорожных чеков в сумме в эквиваленте превышающей <strong>10.000</strong> долларов США, либо внешних и/или внутренних ценных бумаг в документарной форме (независимо от суммы), то эти суммы и сведения необходимо внести в пассажирскую таможенную декларацию. <br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="russianCHECK-INANDBAGGAGE">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Регистрация</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>РЕГИСТРАЦИЯ НА РЕЙС И ОФОРМЛЕНИЕ БАГАЖА</strong><strong></strong> <br/><br/> Регистрация пассажиров на рейс и оформление их багажа производятся на основании именного авиабилета или распечатанной на бумажном носителе маршрут/квитанции электронного билета, а также заграничного паспорта пассажира. <br/><br/> При регистрации пассажиру выдается посадочный талон, который необходимо сохранять до момента возможного предъявления авиакомпании претензий по качеству предоставленных услуг авиаперевозки. <br/><br/> Регистрация на рейс заканчивается за 40 минут, а посадка в воздушное судно за 20 минут, – до времени вылета рейса по местному времени. Пассажиру, опоздавшему ко времени окончания регистрации или посадки в воздушное судно, может быть отказано в перевозке. <br/><br/> Рекомендуем отдельно уточнять в авиакомпании нормы бесплатного провоза и габариты багажа, принимаемого к перевозке. <br/><br/> Перевозчик имеет право отказать туристу в перевозке багажа, вес или объем которого не соответствуют установленным нормам.<br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="russianPASSPORTCONTROL">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Контроль</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6164-3539-4236-a536-653666633263__919255ebe5775d87ea2b.jpg"/></div><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6263-3236-4164-b132-313762653661__34944474314_b12b5af4.jpg"/></div>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild6263-3236-4164-b132-313762653661__34944474314_b12b5af4.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>ПОГРАНИЧНЫЙ КОНТРОЛЬ в аэропорту РФ</strong><strong></strong> <br/><br/> Для прохождения пограничного контроля необходимо предъявить заграничный паспорт и посадочный талон. При осуществлении пограничного контроля пограничники имеют право запрашивать у туристов дополнительные документы и проводить их устный опрос. <br/><br/> <strong>САНИТАРНЫЙ КОНТРОЛЬ</strong><strong></strong> <br/><br/> <strong>При совершении путешествия по Кубе р</strong>иска заражения особо опасными инфекционными заболеваниями нет, делать <strong>прививки</strong> официально не требуются. Можно рекомендовать в профилактических целях сделать противостолбнячные инъекции и прививку против гепатита А и В. <br/><br/> <strong>ВЕТЕРИНАРНЫЙ И ФИТО КОНТРОЛЬ в аэропортах РФ</strong> <br/><br/>Если Вы <strong>вывозите</strong> животных, то Вам необходимо иметь комплект документов, подтверждающих, что они здоровы. Как правило, следует иметь: <strong>Ветеринарный паспорт</strong>, <strong>Справку о состоянии здоровья</strong> (выдается любой государственной ветеринарной клиникой), <strong>Справку из клуба СКОР или РКФ</strong> (в справке указывается, что животное не представляет племенной ценности, справки из других клубов вызывают вопросы на таможне). <br/><br/> При <strong>ввозе</strong> в РФ животных и птиц Вам необходимо иметь сопровождающее ветеринарное свидетельство, полученное в Государственной ветеринарной службе страны, где приобретено животное. <br/><br/> <strong>ВНИМАНИЕ!</strong> <br/><br/> <strong>ЗАПРЕЩЕНО на выезде и въезде</strong> <strong></strong> ПЕРЕМЕЩЕНИЕ КУЛЬТУРНЫХ ЦЕННОСТЕЙ, ОБЪЕКТОВ ДИКОЙ ФАУНЫ и ФЛОРЫ, находящихся под угрозой исчезновения, ОРУЖИЯ И БОЕПРИПАСОВ к нему БЕЗ РАЗРЕШЕНИЯ УПОЛНОМОЧЕННЫХ ОРГАНОВ. <br/><br/> <strong>ЗАПРЕЩЕНО на выезде и въезде</strong> <strong></strong> ПРИНИМАТЬ ОТ ПОСТОРОННИХ ЛИЦ чемоданы, посылки и другие предметы для перевозки на борту воздушного судна.<strong></strong> <br/><br/> <strong>ПОМНИТЕ! Незаконное перемещение товаров или валюты через таможенную границу Российской Федерации или их недекларирование либо недостоверное декларирование влечет за собой административную или уголовную ответственность.</strong> <br/> <imgsrc="images tild6263-3236-4164-b132-313762653661__-__empty__34944474314_b12b5af4.jpg"alt="перелет из России на Кубу"></imgsrc="images></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="INcubaAIRPORT">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Прилет/вылет</h2>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild3938-6331-4730-b364-346235303732__landing_at_beach-wal.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>В АЭРОПОРТУ ПРИЛЕТА/ВЫЛЕТА «Хосе Марти» (Гавана)</strong> <br/><br/> По прибытию в аэропорт Кубы Вы должны последовательно: заполнить иммиграционные карточки печатными буквами на английском языке, пройти паспортный контроль, получить свой багаж, пройти таможенный контроль, выйти из здания аэропорта, найти встречающего гида с табличкой, предъявить гиду туристский ваучер. <br/> <imgsrc="images tild3938-6331-4730-b364-346235303732__-__empty__landing_at_beach-wal.jpg"alt="Аэропорт Кубы"></imgsrc="images></p><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3938-6331-4730-b364-346235303732__landing_at_beach-wal.jpg"/></div>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="cubaPASSPORTCONTROL">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Паспортный контроль</h2>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild6164-3539-4236-a536-653666633263__919255ebe5775d87ea2b.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>ПАСПОРТНЫЙ КОНТРОЛЬ в аэропорту Республики Куба</strong><strong></strong> <br/><br/> <strong>ВИЗА.</strong> <strong>Для граждан РФ при въезде на Кубу разрешен безвизовый въезд на срок до 30 дней пребывания. Миграционную карточку вам возвращают, ее вы сохраняете и предъявляете на паспортном контроле при выезде из страны.</strong> <strong>ВНИМАНИЕ! На Кубе НЕ СТАВЯТ</strong> <strong>печать в паспорт с датой прибытия.</strong> <br/><br/> Для граждан, не имеющих гражданства Российской Федерации, могут быть установлены иные правила въезда на территорию Кубы. Получить информацию по этому вопросу следует в посольстве Республики Куба по месту гражданства. <br/><br/> При прохождении паспортного контроля необходимо предъявить загранпаспорт, у Вас также могут потребовать предъявить туристский ваучер и обратный авиабилет. <br/> <imgsrc="images tild6164-3539-4236-a536-653666633263__-__empty__919255ebe5775d87ea2b.jpg"alt="Паспортный контроль на Кубе"></imgsrc="images></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="cubaCUSTOMSCONTROL">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Таможенный контроль</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>ТАМОЖЕННЫЙ КОНТРОЛЬ</strong> <strong>в аэропорту Республики Куба</strong> <strong></strong> <br/><br/> <strong>Ввоз</strong> иностранной валюты неограничен, но необходимо декларировать сумму свыше 3.000 долларов США, так вывоз валюты разрешается только в пределах декларации. <br/><br/> Разрешен беспошлинный <strong>ввоз 200 сигарет или 250 гр. табака, 2 л алкогольных напитков</strong>, <br/><br/> ЗАПРЕЩЕН <strong>ввоз</strong> наркотиков, лекарств, содержащих большую дозу наркотических веществ, и оружия. <br/><br/> <strong>Вывозить</strong> разрешено не более <strong>5 тысяч долларов США</strong>. <br/><br/> ЗАПРЕЩЕН <strong>вывоз</strong> предметов искусства и антиквариата, ювелирных украшений и предметов народного промысла без соответствующего документального оформления. <br/><br/> ЗАПРЕЩЕН <strong>вывоз</strong> национальной валюты. <br/><br/> <strong>ВЕТЕРИНАРНЫЙ КОНТРОЛЬ</strong> <strong>в аэропорту Республики Куба</strong> <br/><br/> При ввозе домашних животных требуется предъявлять действительный сертификат ветеринарной службы с отметкой о всех прививках, включая прививку против бешенства. <br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="cuba">
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild6637-6537-4933-b234-323231303961__resimgoster.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong> <strong> <strong> <strong>РЕСПУБЛИКА КУБА</strong><strong></strong> </strong> </strong></strong> <imgsrc="images tild6637-6537-4933-b234-323231303961__-__empty__resimgoster.jpg"alt="Куба"></imgsrc="images></p><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6637-6537-4933-b234-323231303961__resimgoster.jpg"/></div>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="aboutcuba">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">О стране</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong> <strong></strong>Официальное название страны: Республика Куба. Территория Кубы составляет 109 тыс. кв.км. Столица: г. Гавана.<br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="time">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Время</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>Время</strong> <br/><br/> Время на Кубе отстает от московского на 8 часов. <br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="climate">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Климат</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>Климат</strong> <br/><br/> Тропический. Два сезона: солнечный (ноябрь-апрель), дождливый (май-октябрь). Среднегодовая температура на Кубе около +26С. Высокая влажность. <br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="Currency">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Валюта</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3264-3735-4261-a263-336336353839__cuba185564297.jpg"/></div>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild3264-3735-4261-a263-336336353839__cuba185564297.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>Валюта</strong> <br/><br/> Кубинское песо, Кубинское конвертируемое песо. <br/><br/> Существует два вида песо: песо неконвертируемый, для расчетов внутри страны, и песо конвертируемый (имеющий аббревиатуру "CUC", или как его называют русскоговорящие - "КУК"), которым расплачиваются туристы и который официально приравнивается к доллару США. Эти банкноты, которые от обычного кубинского песо отличаются своей ценностью и многоцветностью, печатаются на острове и за его пределами ценности не имеют. <br/><br/> На Кубе 09 апреля 2005 года было запрещено использовать доллары США, поэтому основной платежной единицей для туристов стал конвертируемый песо. Конвертируемый песо не имеет никакой ценности в других странах мира. При обмене долларов США на территории Кубы взимается налог. Также можно использовать кредитные карты, главное, чтобы платежи не проходили через банки, расположенные на территории США. Запрет коснулся и других конвертируемых валют - евро, фунта стерлингов и т.д. <br/> <imgsrc="images tild3264-3735-4261-a263-336336353839__-__empty__cuba185564297.jpg"alt="Какие деньги на Кубе"></imgsrc="images></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="language">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Язык</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong></strong> <strong></strong><strong>Язык</strong> <br/><br/>Испанский, в общении с иностранцами – английский, французский, русский<br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="Population">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Население</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong></strong> <strong>Население</strong> около 11 млн. человек. <br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="religion">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Религия</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong></strong><strong>Религия</strong> самая распространённая религия на Кубе – католицизм.<br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="Customs">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Обычаи</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6261-3866-4335-b763-356262373935__slider1b_cuba_1920by.jpg"/></div>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild6261-3866-4335-b763-356262373935__slider1b_cuba_1920by.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong>Обычаи</strong> <br/><br/> Кубинцы - очень дружелюбный народ, но все же лучше следовать некоторым простым правилам: <br/><br/> Во всех случаях сопровождайте ваши просьбы фразами «mi amour» (любовь моя), mi corazon (сердце мое), mi tiema (нежная моя) mi reina (моя королева), если вам нужно обратиться к женщине, и «сатреоп», pipo, viejo tio (дружище, старик) - если к мужчине. <br/><br/> Арендовать квартиру у местных жителей запрещается законом, однако с того времени, как жителям Кубы позволили иметь доллары, они могут разместить у себя путешественников. Многие жители Кубы предложат вам ночлег и завтрак по стоимости 10 долларов за ночь, поскольку по правилам вы должны пробыть там пару дней. <br/><br/> Если вас зовут куда-либо потанцевать, наряжайтесь, как следует. Жители Кубы не любят, когда официально приглашенный заявляется в топе и рваных джинсах, даже если атмосфера весьма дружеская. <br/><br/> Не принято отказываться, если вас приглашают поужинать или выпить. <br/><br/> Если кто-то вам помог, подарите ему что-либо из косметических средств, либо бутылку рома. Дети очень любят жевательную резинку и шариковые ручки. <br/><br/> Отправляясь в Кубу, нужно помнить, что здесь нельзя фотографировать военную технику, промышленные организации и военнослужащих, а также курить в общественных местах. <br/><br/> Местный народ, напротив, очень любит, когда их фотографируют. Правда, нужно спросить у них разрешения. <br/><br/> Нежелательно в темный период суток гулять в центральной и старой частях города Гаваны, а также в нетуристических, жилых районах. Не нужно брать с собой много наличных и дорогие украшения. <br/><br/> Рекомендуется оставить паспорт и кредитную карточку в сейфе в гостинице, предварительно откопировав документы, не расплачиваться купюрами крупных размеров, внимательно следить за счетами и пользоваться услугами только официальных авто. <br/><br/> Попрошайничество на Кубе находится под запретом, а потому воздержитесь от раздачи мелких денег местным жителям. Полиция (обычно ее трудно распознать в штатской одежде) ничего не сделает вам, а вот кубинцев заберут в участок. <br/> <imgsrc="images tild6261-3866-4335-b763-356262373935__-__empty__slider1b_cuba_1920by.jpg"alt="Обычаи на Кубе"></imgsrc="images></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="holidays">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Праздники</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3738-3733-4834-b835-313531336365__kar1.jpg"/></div>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild3738-3733-4834-b835-313531336365__kar1.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong>Праздники и</strong> <strong>нерабочие дни</strong> <br/><br/> 1-2 января - День освобождения (победа кубинской революции в 1959 г.). <br/><br/> 1 мая - День международной солидарности трудящихся, День Труда. <br/><br/> 26 июля - День Национального восстания (нападение на казарму Монкада в Сантьяго-де-Куба, 25 и 27 июля также являются выходными днями). <br/><br/> 10 октября - Годовщина начала войн за независимость от испанского владычества, День Кубинской Культуры. <br/><br/> 25 декабря - Рождество. <br/> <imgsrc="images tild3738-3733-4834-b835-313531336365__-__empty__kar1.jpg"alt="Праздники на Кубе"></imgsrc="images></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="kitchen">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Кухня</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3431-6133-4764-b436-353331303034__i42kg0psm.jpg"/></div>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild3431-6133-4764-b436-353331303034__i42kg0psm.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong></strong><strong></strong> <strong></strong><strong>Кухня</strong> <br/><br/>Основу рациона кубинцев составляют рис и черная фасоль (по-кубински moroz y cristianos), свинина и цыплята. Кубинцы не очень любят овощи, но обожают фрукты, их огромное множество и они всегда свежие. Очень вкусны манго и бананы. Печеные бананы (platanos) в кубинской кухне идут еще от африканских рабов. Fufu - это бананы, смешанные с другими ингредиентами. Чатинос - легкая закуска к аперитиву, также готовится на базе платанос. Если Вы заказываете фруктовые соки, требуйте, чтобы они были свежеприготовленными. Если Ваши средства ограничены, в закусочных (mesas suecas) Вам предложат комплексный обед по фиксированной цене, блюда Вы выберете сами. Очень популярно мороженое Coppelia. Есть много маленьких ресторанчиков прямо на дому у кубинцев, где можно поесть примерно за 4cuc. Говоря о кухне, нельзя обойти вниманием кофе по-кубински, который кубинцы пьют в огромных количествах в течение всего дня. Кофе по-кубински очень крепкий и сладкий. В городах много кафе, а также casas de infusiones, где можно отведать различные настои, отвары и другие напитки. Во все напитки кубинцы кладут большое количество сахара. Самым популярным алкогольным напитком является ром. Самая знаменитая марка рома - Havana Club. Существует три сорта: Carta Oro (золотой), Carta Blanca (белый) и Anejo (старый), которые различаются по выдержке. Любимый ром кубинцев - Anejo (около 8cuc за бутылку).<br/> <imgsrc="images tild3431-6133-4764-b436-353331303034__-__empty__i42kg0psm.jpg"alt="Кухня Кубы"></imgsrc="images></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="shops">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Магазины</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3238-3437-4165-a131-343064666137__cuba_d300-588503.jpg"/></div>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild3238-3437-4165-a131-343064666137__cuba_d300-588503.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong></strong> <strong></strong><strong>Магазины</strong> <br/><br/>Работают 09:00 - 18:00 (некоторые до 20:00) по будням, по субботам 09:00 - 15:00 (некоторые до 18:00). Супермаркеты и магазины в курортных районах обычно открыты 10:00 - 20:00. Рекомендуемые сувениры: черный коралл и украшения из него, тропическая рубашка «гуаябера», народные ударные музыкальные инструменты, художественные ткани, вышивка и кружева, картины местных художников, изделия из панциря черепахи - браслеты и заколки, кубинский ром, сигары, среди которых наиболее высоко ценятся марки: «Боливар», «Кохиба», «Монтекристо», «Партагас», «Панч», «Рамон Аллонес», «Санчо Панса», «Ромео и Джульетта» и «Тринидад». Ароматный кофе - молотый и в зернах.<br/> <imgsrc="images tild3238-3437-4165-a131-343064666137__-__empty__cuba_d300-588503.jpg"alt="Что купить на Кубе"></imgsrc="images></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="transport">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Транспорт</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6664-3036-4564-b234-623663663363__s12001.jpg"/></div>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild6664-3036-4564-b234-623663663363__s12001.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong> <strong></strong><strong>Транспорт</strong> <br/><br/>Популярным транспортным средством в стране является автобус. Автобус называется gua-gua (ва-ва), это основной городской транспорт. Стоимость проезда - 10 сентаво. Автобус останавливается через каждые четыре квартала, водителя можно попросить объявить остановку. Часы пик ничем не лучше московских. Существуют такси для туристов (с радиотелефоном и кондиционером) и такси для кубинцев за песо, которые очень трудно поймать. В Гаване три компании такси, все государственные. Cubanacan - самая дорогая, обслуживают мерседесы; Turistaxi обслуживают японские серые малолитражки с кондиционерами; Panataxi обслуживают "Лады", совсем не дорого, но эта компания работает только в столице. В провинции, в отелях и в туристических центрах можно найти такси Cubanacan и Turistaxi. Надежнее всего поймать такси у входа в отель.<br/> <imgsrc="images tild6664-3036-4564-b234-623663663363__-__empty__s12001.jpg"alt="транспорт на Кубе"></imgsrc="images></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="phone">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Связь</h2>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild3337-3934-4532-a536-386363633935__phone_old_year_built.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>Телефон</strong> <br/><br/> Для телефонных переговоров в черте города используются телефоны-автоматы, работающие как на монетах, так и на карточках (много реже). Для звонка с "монетного" автомата необходимы монеты в 5 и 20 сентаво. Звонить в другие города или провинции затруднительно. Международные телефонные звонки осуществляются исключительно с телефонных станций "Телекорреос", которые есть практически во всех крупных отелях. Для звонка необходима специальная карточка (продается у администратора отеля). Статистика соединения и его стоимость выводятся на дисплей телефона. Сотовая связь и интернет-телефония развиты слабо. <br/><br/> Для звонка в Россию необходимо набрать 007 (код России - 7), затем код города и номер телефона. Например, звонок в Москву: 007 - 495 - номер телефона. <br/><br/> Посольство РФ в Гаване: +53 7 204 2686, 204 1085. <br/><br/> Полиция: 867 7777, 882 0116. <br/><br/> Скорая помощь: 204 2811. <br/> <imgsrc="images tild3337-3934-4532-a536-386363633935__-__empty__phone_old_year_built.jpg"alt="Как позвонить с Кубы в Россию"></imgsrc="images></p><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3337-3934-4532-a536-386363633935__phone_old_year_built.jpg"/></div>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="inhotel">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Приезд/Отъезд</h2>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild3165-6164-4137-a430-626532303666__otdyh-na-kube-otel-b.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>В отеле</strong> <br/><br/> В день приезда расселение осуществляется в соответствии с правилами, принятыми в отеле, начиная с 16-00 местного времени. Если вы хотите заселиться в номер ранее указанного времени, необходимо заранее забронировать номер на сутки раньше даты вашего приезда (например, вы прилетаете на Кубу в 5 утра 10 сентября, чтобы не ждать заселения до 16.00, вы можете забронировать номер не с 10 сентября, а с 09 сентября. В этом случае вас заселят в номер сразу же, как только вы приедете в отель). При заселении вам выдадут ключи от номера, карточки на полотенца. Просим ознакомиться на месте с условиями предоставления услуг в отеле и придерживаться установленных отелем правил. <br/><br/> В день выезда до наступления расчетного часа (как правило, 12-00) необходимо освободить свой номер и оплатить дополнительные услуги: телефонные переговоры, мини-бар, заказ питания и напитков в номер, массаж и др. Свой багаж Вы можете оставить в камере хранения отеля и оставаться на территории отеля до прибытия трансфера. Если Вы не сдали номер до 12-00, стоимость комнаты оплачивается полностью за следующие сутки. <br/> <imgsrc="images tild3165-6164-4137-a430-626532303666__-__empty__otdyh-na-kube-otel-b.jpg"alt="Отели Кубы"></imgsrc="images></p><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3165-6164-4137-a430-626532303666__otdyh-na-kube-otel-b.jpg"/></div>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="tips">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Чаевые</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3436-3037-4639-b466-343265646230__f0bb5b1ec29efb7dfe1a.jpg"/></div>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild3436-3037-4639-b466-343265646230__f0bb5b1ec29efb7dfe1a.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>Чаевые</strong> <br/><br/> На Кубе принято платить чаевые 5-15% от стоимости услуг. Учитывайте, что чаевые, данные при свидетелях, будут сданы в общую кассу и затем будут делится персоналом всего отеля, либо ресторана. <br/> <imgsrc="images tild3436-3037-4639-b466-343265646230__-__empty__f0bb5b1ec29efb7dfe1a.jpg"alt="Чаевые на Кубе"></imgsrc="images></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="Mainsvoltage">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Электросеть</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>Напряжение электросети</strong> <br/><br/> Сетевое напряжение 110/120 В, частота 60 Герц. Нужен адаптер, так как вилки и розетки на Кубе имеют плоскую форму. Правда, в современных кубинских отелях напряжение 220 В и «европейские» розетки. <br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="excursions">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Экскурсии</h2><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild3133-3534-4462-a664-343062346563__e95c33801b3354665070.jpg"/></div>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild3133-3534-4462-a664-343062346563__e95c33801b3354665070.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>Экскурсии</strong> <br/><br/> Гид принимающей Вас на Кубе туроператорской компании во время встречи в отеле сообщит Вам перечень предлагаемых экскурсий, их содержание, график проведения и их стоимость. Не рекомендуем Вам приобретать экскурсии или прочие услуги в неизвестных Вам туристских и экскурсионных агентствах. <br/><br/> На Кубе достойно внимания: <br/><br/> Прогулка по Крепости Castillo del Morro, посещение Базилики Virgen de la Caridad del Cobre, посещение фабрики рома La Barrita de Ron Caney, прогулка по Площади Революции города Holguín, посещение табачной фабрики и Loma de la Cruz, посещение Площади имени революционера Antonio Maceo, морская экскурсия «Райский остров» и «Катамаран Эксклюзив», сафари на джипах, путешествия на острова, национальные шоу, выступления и многое другое. <br/> <imgsrc="images tild3133-3534-4462-a664-343062346563__-__empty__e95c33801b3354665070.jpg"alt="Экскурсии на Кубе"></imgsrc="images></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="THERULESOFPERSONALHYGIENEANDSAFETY">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Правила</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong>ПРАВИЛА ЛИЧНОЙ ГИГИЕНЫ И БЕЗОПАСНОСТИ</strong><strong>:</strong><strong></strong> <br/><br/> Перед путешествием мы советуем ознакомиться с «Полезными советами российским гражданам, выезжающим за рубеж», размещенными на сайте МИД России: <a href="http://www.mid.ru/dks.nsf/advinf"><strong>http://www.mid.ru/dks.nsf/advinf</strong></a> <br/><br/> Не нарушайте правила безопасности, установленные авиакомпаниями, транспортными организациями, гостиницами, местными органами власти. <br/><br/> Категорически не рекомендуем Вам приобретать экскурсии и дополнительные туристские услуги в неизвестных Вам туристских и экскурсионных агентствах. Вам может быть дана заведомо ложная информация о самой экскурсии, Вам не будет гарантирована безопасность предоставленных услуг и исправность используемого оборудования, тем самым Вы можете подвергнуть себя серьезной опасности. <br/><br/> Перед поездкой рекомендуется сделать ксерокопии основных страниц (с фотографией, личными данными, отметкой о регистрации) заграничного и внутреннего российского паспортов и взять их с собой. <br/><br/> Паспорт (или ксерокопию паспорта), визитную карточку отеля носите с собой. <br/><br/> При возникновении транспортных аварий, конфликтов с полицией, другими органами местной власти необходимо поставить в известность представителя принимающей стороны или сотрудников Посольства/консульства России. <br/><br/> В период путешествия Вы не имеете права на коммерческую деятельность или иную оплачиваемую работу. <br/><br/> Вы обязаны покинуть страну временного пребывания до истечения срока безвизового пребывания, в противном случае, Вы можете быть подвергнуты штрафу, аресту и высланы из страны в принудительном порядке. <br/><br/> Не оставляйте детей одних без Вашего присмотра на пляже, у бассейна, на водных горках и при пользовании аттракционами. <br/><br/> Следует учитывать особенности местной фауны. Просим соблюдать правила безопасности, установленные в этой связи в конкретном отеле и (или) регионе. <br/><br/> Мойте руки перед едой. Не пейте сырую воду, особенно из открытых водоемов. Для питья рекомендуется использовать минеральную воду, которую можно приобрести в магазинах и барах отеля. <br/><br/> Будьте осторожны с солнцем! Советуем Вам заранее запастись защитными от солнечных ожогов средствами и пользоваться ими в период пребывания на солнце. Не забудьте и про солнцезащитные очки. <br/><br/> Не бродите босиком по протокам или стоячим водоемам, не мойте в них руки. Не ложитесь на землю без подстилки на берегах рек. <br/><br/> Возьмите в путешествие индивидуальную аптечку с необходимым Вам набором лекарств. <br/><br/> Помните, что многообразные представители животного и растительного мира могут быть не только красивыми, но и опасными. Если Вы поранились или были укушены, немедленно обратитесь к врачу. <br/><br/> Не рекомендуется носить с собой большие наличные суммы. Кражи денег и вещей у туристов случаются довольно часто, как и махинации с фальшивыми долларами. Не следует вынимать из кошелька на виду у всех большие суммы денег. <br/><br/> Чтобы избежать опасности на улицах, рекомендуем следить за своими сумочками и бумажниками, особенно в туристических центрах, на вокзалах, автозаправочных станциях и рынках. <br/><br/> Покидая автобус на остановках и во время экскурсий, не оставляйте в нем ручную кладь, особенно ценные вещи и деньги. <br/><br/> Автомобили и мотоциклы советуем оставлять на охраняемых стоянках и в гаражах отелей, и не оставлять ценные вещи в машине на виду. <br/><br/> Важные документы, наличные деньги и драгоценности лучше хранить в сейфе номера. Если в номере нет сейфа, его можно взять в аренду за плату у администрации отеля или сдать на хранение портье в сейф на стойке регистрации. <br/><br/> Рекомендуется сдавать ключ от номера на стойку регистрации отеля, в случае его утери поставить в известность администрацию. <br/><br/> Во многих отелях запрещается выносить из номера полотенца на пляж или к бассейну. Не приносите на пляж полотенца или инвентарь из номера без разрешения персонала. <br/><br/> Если в номере имеется мини бар, то все напитки и закуски, взятые из него, как правило, должны быть оплачены. <br/><br/> Категорически запрещается курить в постели. <br/><br/> Для россиян ограничений на передвижение по стране нет. <br/><br/> Если Вы оказались на территории иностранного государства без средств к существованию, Вы имеет право на получение помощи от дипломатических представительств и консульств РФ. <br/></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="INCASEOFLOSSOFPASSPORT">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Потеря паспорта</h2>
+<img class="w-full h-auto rounded-[3.5rem] shadow-xl mb-14" src="../../images/tild6461-3537-4165-b365-363961373965__598c6e030ca3f598c6e0.jpg"/>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong>В СЛУЧАЕ ПОТЕРИ ПАСПОРТА</strong> <br/><br/> Как только Вы поняли, что загранпаспорт потерялся, или его украли, то незамедлительно обращайтесь в дипломатическое представительство, в консульское учреждение или в представительство МИД России, которое находится в пределах приграничной территории. <br/><br/> Вам необходимо получить свидетельство на въезд в РФ (REENTRY CERTIFICATE TO THE RUSSIAN FEDERATION), которое еще называется временным загранпаспортом. Выдается на срок до 15 дней, для того, чтобы Вы успели купить обратный билет и улететь на родину. <br/><br/> Для того, чтобы Вам выдали свидетельство на возвращение в РФ, необходимо представить следующие документы: <ul class="check-list mb-12"><li>основной документ, на основании которого будут предприниматься какие-либо действия, это заявление о выдаче свидетельства (<strong>образец заявления</strong>) </li> <li>две фотографии цветного или черно – белого исполнения. Размер должен соответствовать 35х45 мм на четком фоне с четким изображением лица. </li> <li>обязательно понадобится Ваш внутренний паспорт РФ, так же возможно предоставление других документов для подтверждения своей личности, это водительские права или служебное удостоверение. </li></ul>Срок выдачи свидетельства на возвращение в РФ составляет 2 рабочих дня со дня регистрации заявления. <br/><br/> Вернувшись в Российскую Федерацию, в трехдневный срок необходимо сдать свидетельство в организацию, выдавшую паспорт (ОВИР, МИД). <br/><br/> Все вышеперечисленные документы регламентированы пунктом 20 Приказа МИД России от 28.06.2012 года № 10304.<br/> <imgsrc="images tild6461-3537-4165-b365-363961373965__-__empty__598c6e030ca3f598c6e0.jpg"alt="Потеря паспорта на Кубе"></imgsrc="images></p><div class="my-8 overflow-hidden rounded-3xl shadow-2xl"><img class="w-full h-auto" src="../../tilda_raw/emojitours.ru/images/tild6461-3537-4165-b365-363961373965__598c6e030ca3f598c6e0.jpg"/></div>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+<section class="scroll-mt-32 mb-24" id="embassy">
+<h2 class="text-4xl font-black mb-14 tracking-tight text-black">Посольство</h2>
+<div class="text-on-surface-variant font-medium text-xl leading-relaxed max-w-4xl">
+<p class="mb-4"> <strong></strong><strong></strong><strong></strong><strong>ПОЛЕЗНАЯ ИНФОРМАЦИЯ</strong> <br/><br/><strong>Посольство России на Кубе</strong> <br/> <strong>Адрес: Гавана, Мирамар, 5 авенида № 6402, между улицами 62 и 66</strong> <br/> <strong>Телефоны: (8-10-537) 204-10-85, 204-26-28, 204-26-86, 204-10-80</strong> <br/> <strong>Факс: (8-10-537) 204-10-38</strong><br/> <strong>E-mail: embrusia@newmail.ru, embrusia2007@mail.ru</strong><br/> <strong>Время работы: понедельник – четверг с 08:00 до 12:30 и с 15:00 до 19:00</strong><br/><br/><strong>Посольство Республики Куба в Российской Федерации</strong><br/> Адрес Посольства Республики Куба: 119017, Москва, Б. Ордынка, д.66<br/> Телефоны: (495)933-79-50<br/> Факс: 933-79-50<br/> E-mail Посольства Республики Куба: prencult[perro]ecurusia.ru<br/> E-mail Консульского отдела: consul[perro]ecurusia.cu и consulado[perro]ecurusia.cu<br/> <strong></strong></p>
+</div>
+<div class="h-px bg-black/[0.05] mt-12"></div>
+</section>
+</div>
+<div class="h-px bg-black/5 my-16"></div>
+<!-- СЕКЦИЯ: ФОРМА -->
+<section class="scroll-mt-32 py-12" id="section-form">
+<h2 class="text-3xl md:text-4xl font-black mb-8 tracking-tight">Отправить заявку</h2>
+<form class="bg-[#fffcf5] border border-black/5 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-10 md:p-16 shadow-2xl shadow-[#5f531a]/10 space-y-10 md:space-y-12 relative overflow-hidden" id="booking-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 md:gap-y-8 mt-2">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="userName" placeholder="Иван Иванов" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="userEmail" placeholder="hello@example.com" required="" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="userPhone" placeholder="+7 (___) ___-__-__" required="" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Направление</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="destination" type="text" value="Памятка туриста Куба"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" min="1" name="adults" type="number" value="2"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="children" placeholder="1 реб, 5 лет" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="budget" placeholder="От 200 000" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" min="1" name="nights" type="number" value="7"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
+<input class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="startDate" type="date"/>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
+<div class="flex flex-wrap gap-8">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer" name="excursions" type="radio" value="Да"/>
+<span class="text-on-surface group-hover:text-primary transition-colors">Да, обязательно</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer" name="excursions" type="radio" value="Нет"/>
+<span class="text-on-surface group-hover:text-primary transition-colors">Нет, только отдых</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer" name="excursions" type="radio" value="Пока не знаю"/>
+<span class="text-on-surface group-hover:text-primary transition-colors">Пока не знаю</span>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
+<textarea class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="hotelPrefs" placeholder="Напр. первая линия, только 5*, наличие детского клуба..." rows="3"></textarea>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
+<input class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" name="airport" placeholder="Шереметьево, Пулково..." type="text"/>
+</div>
+</div>
+<div class="pt-8 flex justify-center w-full">
+<button class="w-full sm:w-auto bg-black text-white px-10 md:px-14 py-5 rounded-full text-lg md:text-xl font-bold shadow-xl shadow-black/15 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center" type="submit">Отправить заявку</button>
+</div>
+</form>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full border-t border-black/5 pt-16 pb-10 px-4 md:px-8 mt-8">
+<div class="max-w-7xl mx-auto flex flex-col gap-12 md:gap-16">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="space-y-6 max-w-sm text-center md:text-left mx-auto md:mx-0">
+<img alt="Emoji Tours" class="h-12 md:h-14 mx-auto md:mx-0" src="../../images/LogoB_300x.png"/>
+<p class="text-on-surface-variant font-medium text-sm leading-relaxed px-4 md:px-0">
             Мы верим, что путешествия — это лучший способ познать себя и окружающий мир.
           </p>
-          <div class="flex gap-4 justify-center md:justify-start">
-            <a href="https://max.ru/join/0haRr-rt5CMasX93mYrj_DuaLtUNy7gLfKyjXIdKFys" target="_blank"
-              class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group">
-              <img src="../../images/Логотип_MAX.svg" alt="MAX"
-                class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all">
-            </a>
-            <a href="https://vk.com/emoji_tours" target="_blank"
-              class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group">
-              <img src="../../images/VK_Compact_Logo_(2021-present).svg.png" alt="VK"
-                class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all">
-            </a>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-16 w-full md:w-auto text-center md:text-left">
-          <div class="space-y-4">
-            <h4 class="font-bold text-on-surface-variant text-sm">Связаться с нами</h4>
-            <div class="space-y-3 text-lg">
-              <a href="tel:+79636491852"
-                class="block font-black text-on-surface hover:text-primary transition-colors">+7 963-649-18-52</a>
-              <a href="mailto:trohin.zh@yandex.ru"
-                class="block text-on-surface-variant hover:text-black transition-colors text-sm font-medium">trohin.zh@yandex.ru</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="pt-8 md:pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div
-          class="text-on-surface-variant font-medium text-[11px] md:text-xs text-center md:text-left w-full md:w-auto">©
+<div class="flex gap-4 justify-center md:justify-start">
+<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group" href="https://max.ru/join/0haRr-rt5CMasX93mYrj_DuaLtUNy7gLfKyjXIdKFys" target="_blank">
+<img alt="MAX" class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all" src="../../images/Логотип_MAX.svg"/>
+</a>
+<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:scale-110 shadow-sm transition-transform group" href="https://vk.com/emoji_tours" target="_blank">
+<img alt="VK" class="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all" src="../../images/VK_Compact_Logo_(2021-present).svg.png"/>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-16 w-full md:w-auto text-center md:text-left">
+<div class="space-y-4">
+<h4 class="font-bold text-on-surface-variant text-sm">Связаться с нами</h4>
+<div class="space-y-3 text-lg">
+<a class="block font-black text-on-surface hover:text-primary transition-colors" href="tel:+79636491852">+7 963-649-18-52</a>
+<a class="block text-on-surface-variant hover:text-black transition-colors text-sm font-medium" href="mailto:trohin.zh@yandex.ru">trohin.zh@yandex.ru</a>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 md:pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-on-surface-variant font-medium text-[11px] md:text-xs text-center md:text-left w-full md:w-auto">©
           2026 Emoji Tours. Путешествия с душой.</div>
-        <div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-on-surface-variant">
-          <a href="../../index.html#countries" class="hover:text-black transition-colors">Страны</a>
-          <a href="../../index.html#calendar" class="hover:text-black transition-colors">Календарь</a>
-          <a href="../../index.html#testimonials" class="hover:text-black transition-colors">Отзывы</a>
-          <a href="../../index.html#journey" class="hover:text-black transition-colors">Начать путешествие</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Success Modal -->
-  <div id="success-modal"
-    class="fixed inset-0 z-[200] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
-    <div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
-    <div
-      class="bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl relative z-10 max-w-sm w-full text-center space-y-6 transform scale-90 transition-transform duration-500"
-      id="success-card">
-      <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-        <span class="material-symbols-outlined text-5xl">check</span>
-      </div>
-      <h3 class="text-3xl font-black tracking-tight">Заявка принята!</h3>
-      <p class="text-on-surface-variant font-medium leading-relaxed">
-        Мы уже получили ваши данные и начали подбор идеального тура. Наш эксперт свяжется с вами в ближайшее время!
-      </p>
-      <button onclick="closeModal()"
-        class="w-full bg-black text-white py-5 rounded-full text-xl font-bold hover:scale-105 active:scale-95 transition-all shadow-xl shadow-black/10 mt-4">
-        Супер!
-      </button>
-    </div>
-  </div>
-
-  <script src="https://unpkg.com/imask"></script>
-  <script>
+<div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-on-surface-variant">
+<a class="hover:text-black transition-colors" href="../../index.html#countries">Страны</a>
+<a class="hover:text-black transition-colors" href="../../index.html#calendar">Календарь</a>
+<a class="hover:text-black transition-colors" href="../../index.html#testimonials">Отзывы</a>
+<a class="hover:text-black transition-colors" href="../../index.html#journey">Начать путешествие</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Success Modal -->
+<div class="fixed inset-0 z-[200] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500" id="success-modal">
+<div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+</div>
+<script src="https://unpkg.com/imask"></script>
+<script>
     // ScrollSpy
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -884,5 +740,4 @@
     }
   </script>
 </body>
-
 </html>
