@@ -200,12 +200,12 @@
       </button>
     </div>
     <nav id="mobile-quick-links"
-      class="flex flex-col gap-2 font-['Manrope'] font-bold text-lg tracking-tight overflow-y-auto">
-      <!-- Мобильные ссылки -->
+      class="flex flex-col gap-6 font-['Manrope'] font-bold text-2xl tracking-tight overflow-y-auto pr-4">
+      <!-- Сюда попадут ссылки из основного меню -->
     </nav>
     <div class="mt-auto pt-10 border-t border-black/10">
-      <p class="text-[11px] text-on-surface-variant font-bold uppercase tracking-[0.1em]">© 2026 Emoji Tours.
-        <br>Путешествия с душой.
+      <p class="text-[11px] text-on-surface-variant font-bold uppercase tracking-[0.2em] leading-relaxed">
+        © 2026 Emoji Tours.<br>Путешествия с душой.
       </p>
     </div>
   </div>
@@ -791,6 +791,24 @@
 
     // Form logic
     document.addEventListener('DOMContentLoaded', () => {
+      // 1. Популяция мобильного меню из десктопного
+      const mobileQuickLinks = document.getElementById('mobile-quick-links');
+      const desktopLinksSource = document.querySelectorAll('#quick-links .nav-link');
+      
+      if (mobileQuickLinks && desktopLinksSource.length > 0) {
+        mobileQuickLinks.innerHTML = '';
+        desktopLinksSource.forEach(link => {
+          const mobileLink = link.cloneNode(true);
+          // Стили для мобильного меню (крупнее, жирнее)
+          mobileLink.className = 'text-[22px] font-black py-2 hover:text-primary transition-colors';
+          mobileLink.onclick = () => {
+            toggleMenu();
+            // Плавный скролл уже есть в общем скрипте
+          };
+          mobileQuickLinks.appendChild(mobileLink);
+        });
+      }
+
       const phoneInput = document.querySelector('input[name="userPhone"]');
       if (phoneInput) IMask(phoneInput, { mask: '+7 (000) 000-00-00' });
 
@@ -829,16 +847,51 @@
             });
         });
       }
+
+      // Populate mobile quick links from desktop links
+      const mobileNav = document.getElementById('mobile-quick-links');
+      const sideLinks = document.querySelectorAll('#quick-links .nav-link');
+      if (mobileNav && sideLinks.length > 0) {
+        sideLinks.forEach(link => {
+          const mLink = document.createElement('a');
+          mLink.href = link.href;
+          mLink.className = "block py-2 text-[22px] font-black tracking-tight text-black/80 hover:text-black transition-all active:scale-[0.98]";
+          mLink.textContent = link.textContent;
+          mLink.onclick = (e) => {
+            // Close menu first
+            toggleMenu();
+            
+            // Smooth scroll
+            const targetId = mLink.getAttribute('href');
+            const target = document.querySelector(targetId);
+            if (target) {
+              window.scrollTo({
+                top: target.offsetTop - 120,
+                behavior: 'smooth'
+              });
+            }
+          };
+          mobileNav.appendChild(mLink);
+        });
+      }
     });
 
     function toggleMenu() {
       const drw = document.getElementById('mobile-drawer');
       const ovl = document.getElementById('drawer-overlay');
       if (!drw || !ovl) return;
-      drw.classList.toggle('translate-x-full');
-      ovl.classList.toggle('opacity-0');
-      ovl.classList.toggle('pointer-events-none');
-      document.body.style.overflow = drw.classList.contains('translate-x-full') ? '' : 'hidden';
+      
+      const isOpen = !drw.classList.contains('translate-x-full');
+      
+      if (isOpen) {
+        drw.classList.add('translate-x-full');
+        ovl.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+      } else {
+        drw.classList.remove('translate-x-full');
+        ovl.classList.remove('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'hidden';
+      }
     }
 
     function closeModal() {

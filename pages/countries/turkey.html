@@ -594,6 +594,24 @@
 
     // Form logic
     document.addEventListener('DOMContentLoaded', () => {
+      // 1. Популяция мобильного меню из десктопного
+      const mobileQuickLinks = document.getElementById('mobile-quick-links');
+      const desktopLinksSource = document.querySelectorAll('#quick-links .nav-link');
+      
+      if (mobileQuickLinks && desktopLinksSource.length > 0) {
+        mobileQuickLinks.innerHTML = '';
+        desktopLinksSource.forEach(link => {
+          const mobileLink = link.cloneNode(true);
+          // Стили для мобильного меню (крупнее, жирнее)
+          mobileLink.className = 'text-[22px] font-black py-2 hover:text-primary transition-colors';
+          mobileLink.onclick = () => {
+            toggleMenu();
+            // Плавный скролл уже есть в общем скрипте
+          };
+          mobileQuickLinks.appendChild(mobileLink);
+        });
+      }
+
       const phoneInput = document.querySelector('input[name="userPhone"]');
       if (phoneInput) IMask(phoneInput, { mask: '+7 (000) 000-00-00' });
 
