@@ -5,48 +5,43 @@ import re
 pdf_path = r"c:\Users\User\Downloads\tilda dododo\Памятка туриста  Египет.pdf"
 output_path = r"c:\Users\User\Downloads\tilda dododo\egypt_extracted.txt"
 
+def get_obj_top(obj, page_height):
+    """Универсальное получение верхней координаты объекта в системе 'от верха'"""
+    if 'top' in obj: return obj['top']
+    if 'y1' in obj: return page_height - obj['y1']
+    return None
+
 def has_underline(page, line_words):
     if not line_words: return False
     
-    # Резюме координат текста
-    text_top = min(w['top'] for w in line_words)
-    text_bottom = max(w['bottom'] for w in line_words)
-    text_x0 = min(w['x0'] for w in line_words)
-    text_x1 = max(w['x1'] for w in line_words)
+    h = page.height
+    t_top = min(w['top'] for w in line_words)
+    t_bottom = max(w['bottom'] for w in line_words)
+    t_x0 = min(w['x0'] for w in line_words)
+    t_x1 = max(w['x1'] for w in line_words)
     
-    # Собираем ВСЕ графические объекты
-    # Проверяем все: lines, rects, curves
+    # Зона поиска линии: под текстом (от середины буквы до 8 пунктов ниже конца буквы)
+    search_min_y = t_top + (t_bottom - t_top) / 2
+    search_max_y = t_bottom + 8
+    
     objs = page.lines + page.rects + page.curves
     
     for obj in objs:
-        # Иногда у объектов нет 'top'/'bottom', но есть 'y0'/'y1'
-        y0 = obj.get('top', obj.get('y0'))
-        y1 = obj.get('bottom', obj.get('y1'))
-        x0 = obj.get('x0')
-        x1 = obj.get('x1')
+        o_top = get_obj_top(obj, h)
+        if o_top is None: continue
         
-        if x0 is None or y0 is None: continue
-
-        # Подчеркивание должно быть горизонтальным (высота < 4 пунктов)
-        if abs(y0 - y1) > 4: continue
-        
-        # ПРОВЕРКА ПО ВЕРТИКАЛИ:
-        # Линия может быть прямо на базовой линии текста или чуть ниже (до 6 пунктов)
-        is_under_text = (text_bottom - 2 <= y0 <= text_bottom + 6)
-        
-        if is_under_text:
-            # ПРОВЕРКА ПО ГОРИЗОНТАЛИ:
-            # Линия должна пересекаться с текстом
-            overlap_x0 = max(text_x0, x0)
-            overlap_x1 = min(text_x1, x1)
+        # Если графический объект в вертикальной зоне текста
+        if search_min_y <= o_top <= search_max_y:
+            o_x0 = obj.get('x0', 0)
+            o_x1 = obj.get('x1', 0)
+            
+            overlap_x0 = max(t_x0, o_x0)
+            overlap_x1 = min(t_x1, o_x1)
             
             if overlap_x1 > overlap_x0:
-                # Если линия перекрывает хотя бы 15% ширины текста - это оно!
-                line_width = overlap_x1 - overlap_x0
-                text_width = text_x1 - text_x0
-                if line_width / text_width > 0.15:
+                # Если линия покрывает более 30% ширины текста
+                if (overlap_x1 - overlap_x0) / (t_x1 - t_x0) > 0.3:
                     return True
-                
     return False
 
 def extract_with_merging(pdf_path):
@@ -78,31 +73,29 @@ def extract_with_merging(pdf_path):
                 
                 avg_size = sum([w['size'] for w in line]) / len(line)
                 fname_lower = line[0]['fontname'].lower()
-                is_bold = any(k in fname_lower for k in ["bold", "heavy", "700", "800", "semibold"])
+                is_bold = any(k in fname_lower for k in ["bold", "heavy", "700", "800"])
                 
-                current_top = line[0]['top']
-                current_bottom = line[0]['bottom']
                 underlined = has_underline(page, line)
-                
+                current_top = line[0]['top']
                 gap = current_top - last_bottom
-                is_continuation = gap < 12 and last_bottom > 0
-
-                # 1. СТРОГИЙ H1/H2 (Размер 12.0 по отчету)
-                if is_bold and avg_size >= 11.8:
+                
+                # Если это одна строка и она подчеркнута -> H3
+                # Если просто жирная -> сохраняем <b>
+                
+                # 1. ЗАГОЛОВКИ H1/H2 (размер > 11.5)
+                if is_bold and avg_size >= 11.5:
                     if current_block:
                          structure.append((f"{current_tag} " if current_tag else "") + " ".join(current_block))
                     current_tag = "[H1]" if not h1_found else "[H2]"
                     current_block = [raw_text]
                     h1_found = True
-                    last_bottom = current_bottom
                 
-                # 2. ПОДЧЕРКНУТЫЙ H3 (Размер 9.0 + Линия)
+                # 2. ПОДЧЕРКНУТЫЙ ЗАГОЛОВОК H3
                 elif is_bold and underlined:
                     if current_block:
                          structure.append((f"{current_tag} " if current_tag else "") + " ".join(current_block))
                     current_tag = "[H3]"
                     current_block = [raw_text]
-                    last_bottom = current_bottom
                 
                 # 3. СПИСКИ
                 elif raw_text.startswith(("-", "•", "—", "●")):
@@ -110,36 +103,29 @@ def extract_with_merging(pdf_path):
                          structure.append((f"{current_tag} " if current_tag else "") + " ".join(current_block))
                     current_tag = "[BULLET]"
                     current_block = [re.sub(r'^[\-•—●]\s*', '', raw_text)]
-                    last_bottom = current_bottom
                 
-                # 4. ОБЫЧНЫЙ ТЕКСТ (в том числе жирный без линий)
+                # 4. ПРОДОЛЖЕНИЕ ТЕКСТА (очень близко к прошлой строке)
+                elif gap < 12 and current_block and current_tag in [None, "[BULLET]"]:
+                    current_block.append(f"<b>{raw_text}</b>" if is_bold else raw_text)
+                
+                # 5. НОВЫЙ БЛОК
                 else:
-                    # Если это продолжение обычного текста
-                    if is_continuation and current_block and current_tag not in ["[H1]", "[H2]", "[H3]", "[BULLET]"]:
-                        # Если текст жирный внутри обычного блока — добавим разметку
-                        if is_bold:
-                            current_block.append(f"<b>{raw_text}</b>")
-                        else:
-                            current_block.append(raw_text)
-                    else:
-                        # Сбрасываем старый блок
-                        if current_block:
-                            structure.append((f"{current_tag} " if current_tag else "") + " ".join(current_block))
-                        
-                        current_tag = None 
-                        if is_bold:
-                            current_block = [f"<b>{raw_text}</b>"]
-                        else:
-                            current_block = [raw_text]
-                    last_bottom = current_bottom
+                    if current_block:
+                        structure.append((f"{current_tag} " if current_tag else "") + " ".join(current_block))
+                    current_tag = None
+                    current_block = [f"<b>{raw_text}</b>" if is_bold else raw_text]
+
+                last_bottom = line[0]['bottom']
 
             if current_block:
                 structure.append((f"{current_tag} " if current_tag else "") + " ".join(current_block))
+            
+            # Сброс для новой страницы
+            last_bottom = 0
 
     return structure
 
-print(f"--- КАЛИБРОВАННЫЙ ПАРСИНГ (База: Times New Roman 12.0/9.0) ---")
+print("Анализ графики PDF углублен. Мощный поиск подчеркиваний включен.")
 content = extract_with_merging(pdf_path)
 with open(output_path, "w", encoding="utf-8") as f:
     f.write("\n".join(content))
-print(f"Данные извлечены! Запускайте генерацию.")
