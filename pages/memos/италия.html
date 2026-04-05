@@ -4,30 +4,12 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Мальдивы — Туроператора</title>
+  <title>Памятка: Италия — Туроператор</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -46,12 +28,11 @@
             "on-primary-container": "#000000",
           },
           fontFamily: { "headline": ["Manrope"], "body": ["Manrope"] },
-          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "3xl": "3rem", "full": "9999px" },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
         },
       },
     }
   </script>
-
   <style>
     body {
       font-family: 'Manrope', sans-serif;
@@ -76,7 +57,7 @@
       vertical-align: middle;
     }
 
-    /* Навигация (Quick Links) - Оставляем как есть в шаблоне */
+    /* Навигация */
     #quick-links {
       max-height: calc(100vh - 220px);
       overflow-y: auto;
@@ -106,11 +87,24 @@
 
     .nav-link.active {
       color: #000;
-      font-weight: 800;
+      font-weight: 700;
       border-left-color: #f5e2a1;
       background: rgba(245, 226, 161, 0.2);
     }
 
+    .nav-category {
+      padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+      font-size: 13px;
+      font-weight: 800;
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-group {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding-bottom: 1rem;
+    }
+
+    /* Красивые списки с желтыми галочками */
     .check-list {
       list-style-type: none !important;
       padding-left: 0 !important;
@@ -134,8 +128,38 @@
       font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       font-size: 1.4rem;
     }
-  </style>
 
+    /* Таблицы */
+    .table-container {
+      overflow-x: auto;
+      margin: 2.5rem 0;
+      background: rgba(0, 0, 0, 0.02);
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .table-container table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table-container td {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      font-size: 1rem;
+    }
+
+    .table-container tr:last-child td {
+      border-bottom: none;
+    }
+
+    .table-container td:first-child {
+      font-weight: 800;
+      color: #000;
+      width: 35%;
+    }
+  </style>
 </head>
 
 <body class="bg-background text-on-surface">
@@ -149,8 +173,8 @@
         Все страны
       </a>
       <a href="../../index.html" class="flex-shrink-0 mx-auto md:mx-0">
-        <img src="../../images/logo.png" alt="Туроператора" class="h-8 md:h-10"
-          onerror="this.src='https://via.placeholder.com/150?text=Emoji+Tours'">
+        <img src="../../images/logo.png" alt="Туроператор" class="h-8 md:h-10"
+          onerror="this.src='https://via.placeholder.com/150?text=Туроператор'">
       </a>
     </div>
   </nav>
@@ -178,31 +202,16 @@
     </div>
     <nav id="mobile-quick-links"
       class="flex flex-col font-['Manrope'] font-bold text-xl tracking-tight overflow-y-auto">
-      <a href="#aboutmaldives" class="nav-link">О стране</a>
-      <a href="#Northmale" class="nav-link">Северный Мале</a>
-      <a href="#southmale" class="nav-link">Южный Мале</a>
-      <a href="#ari" class="nav-link">Ари</a>
-      <a href="#baa" class="nav-link">Баа</a>
-      <a href="#daalu" class="nav-link">Даалу</a>
-      <a href="#raa" class="nav-link">Раа</a>
-      <a href="#laviani" class="nav-link">Лавияни</a>
-
+      <!-- Мобильные ссылки -->
     </nav>
     <div class="mt-auto pt-10 border-t border-black/10">
-      <p class="text-[11px] text-black/80 font-bold uppercase tracking-[0.1em]">© 2026 Туроператора.
+      <p class="text-[11px] text-on-surface-variant font-bold tracking-[0.1em]">© 2026 Туроператор.
         <br>Путешествия с душой.
       </p>
     </div>
   </div>
 
-  <main class="pt-0">
-    <!-- ═══ HERO PHOTO ═══ -->
-    <section class="relative h-[60vh] w-full overflow-hidden mb-12 md:mb-16">
-      <img src="../../tilda_raw/emojitours.ru/images/tild3665-3434-4139-b532-643238666163__i.jpg"
-        class="w-full h-full object-cover object-center" id="hero-image">
-      <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
-    </section>
-
+  <main class="pt-24">
     <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col lg:flex-row gap-12">
 
       <!-- БОКОВАЯ НАВИГАЦИЯ -->
@@ -210,238 +219,96 @@
         <div>
           <p class="text-[13px] font-black text-black/40 mb-6 px-6">Содержание</p>
           <nav id="quick-links" class="flex flex-col border-l border-black/5">
-            <a href="#aboutmaldives" class="nav-link">О стране</a>
-            <a href="#Northmale" class="nav-link">Северный Мале</a>
-            <a href="#southmale" class="nav-link">Южный Мале</a>
-            <a href="#ari" class="nav-link">Атолл Ари</a>
-            <a href="#baa" class="nav-link">Атолл Баа</a>
-            <a href="#daalu" class="nav-link">Атолл Даалу</a>
-            <a href="#raa" class="nav-link">Атолл Раа</a>
-            <a href="#laviani" class="nav-link">Атолл Лавияни</a>
-
+            <!-- Ссылки -->
           </nav>
         </div>
       </aside>
 
       <!-- КОНТЕНТНАЯ ОБЛАСТЬ -->
       <div class="flex-1 py-10">
-        <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-10">Мальдивы</h1>
+        <p class="text-black/40 font-bold tracking-widest uppercase text-xs mb-2">Направление</p>
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-10">Памятка: ██Название██</h1>
 
         <div class="flex flex-wrap gap-4 mb-14">
+          <a href="../countries/██slug██.html"
+            class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">О
+            стране</a>
           <a href="#section-form"
             class="inline-block bg-primary text-black px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Хочу
             туда</a>
-          <a href="../memos/maldives.html"
-            class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">Памятка</a>
         </div>
 
         <div class="space-y-16" id="main-content">
-
-          <section id="aboutmaldives" class="scroll-mt-32 mb-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">О стране</h2>
-            <div class="text-black/80 text-xl leading-relaxed max-w-4xl">
-
-
-              <p class="mb-4">Живописные белоснежные пляжи, чистейший Индийский океан, красочный подводный мир, богатый
-                коралловыми рифами и морскими обитателями. Это настоящий рай для дайверов со всего мира. Здесь можно
-                увидеть гигантских скатов Манта Рэй и рифовых акул. Именно на Мальдивы предпочитают приезжать
-                молодожёны, поскольку тут царит атмосфера романтики. Здесь каждого ждет первоклассный отдых, насыщенный
-                яркими впечатлениями.</p>
-              <p class="mb-4">Мальдивская республика представляет собой природные атоллы, бесчисленное количество
-                коралловых островов, на которых путешественников ждут как превосходные пятизвездочные отели с
-                высококлассным сервисом, так и бюджетные варианты размещения, а главное, полное единение с природой
-                вдали от городской суеты.</p>
-              <p class="mb-4">Спа-центры, полный релакс, песчаные пляжи с мелким бархатистым песком, возможность выхода
-                в океан прямо из забронированной виллы и отели с подводными ресторанами — всё это становится реалиями
-                для туристов, которые предпочли отдых на Мальдивах.</p>
-            </div>
-            <div class="h-px bg-black/[0.05] mt-12"></div>
-          </section>
-          <section id="Northmale" class="scroll-mt-32 mb-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Северный Мале</h2>
-            <img src="../../tilda_raw/emojitours.ru/images/tild3739-3336-4131-a166-623838346636__i_1.jpg"
-              class="w-full h-auto rounded-3xl shadow-xl mb-14">
-            <div class="text-black/80  text-xl leading-relaxed max-w-4xl">
-              <p class="mb-4">
-                <imgsrc="..
-                  /../tilda_raw/emojitours.ru/images/tild3739-3336-4131-a166-623838346636__-__empty__i_1.jpg"alt="Купить тур на Мальдивы Подольск">
-                  Туристы чаще всего выбирают этот атолл из-за близкого расположения к аэропорту. Трансфер до отеля
-                  занимает минимальное время и осуществляется на традиционных лодках и катерах. В атолле Северный Мале
-                  широкий выбор отелей для размеренного спа-отдыха, множество развлечений, а также все необходимые
-                  условия для сноркелинга и серфинга.
-              </p>
-            </div>
-            <div class="h-px bg-black/[0.05] mt-12"></div>
-          </section>
-          <section id="southmale" class="scroll-mt-32 mb-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Южный Мале</h2>
-            <img src="../../tilda_raw/emojitours.ru/images/tild3038-3438-4564-a234-663266653436__8q1a7167.jpg"
-              class="w-full h-auto rounded-3xl shadow-xl mb-14">
-            <div class="text-black/80  text-xl leading-relaxed max-w-4xl">
-              <p class="mb-4">
-                <imgsrc="..
-                  /../tilda_raw/emojitours.ru/images/tild3038-3438-4564-a234-663266653436__-__empty__8q1a7167.jpg"alt="Турагентство Подольск">
-                  Более 20 сказочных коралловых рифов, дайв-центры, подходящие новичкам, национальный заповедник, где
-                  можно повстречать скатов и рифовых акул, ждут туристов в атолле Южный Мале. Опытным ныряльщикам
-                  предлагается погружение на глубину 20-30 метров, на которой находятся затонувшие корабли. А близ
-                  природного заповедника Гураиду расположен популярный у серфингистов курорт Кандума, у берегов которого
-                  нередко бывают хорошие волны.
-              </p>
-            </div>
-            <div class="h-px bg-black/[0.05] mt-12"></div>
-          </section>
-          <section id="ari" class="scroll-mt-32 mb-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Ари</h2>
-            <img
-              src="../../tilda_raw/emojitours.ru/images/tild6630-6538-4330-b464-393463393134__yv9ruhd5mvt7khn3uw60.jpg"
-              class="w-full h-auto rounded-3xl shadow-xl mb-14">
-            <div class="text-black/80  text-xl leading-relaxed max-w-4xl">
-              <p class="mb-4">
-                <imgsrc="..
-                  /../tilda_raw/emojitours.ru/images/tild6630-6538-4330-b464-393463393134__-__empty__yv9ruhd5mvt7khn3uw60.jpg"alt="Купить горящую путевку на Мальдивы в Подольске">
-                  В составе атолла насчитывается 70 островов, из которых только 28 - туристические. Между некоторыми
-                  островками проложены мостики, по которым можно покататься на велосипеде или прогуляться. Считается,
-                  здесь находится лучшее место для наблюдения за китовыми акулами.
-              </p>
-            </div>
-            <div class="h-px bg-black/[0.05] mt-12"></div>
-          </section>
-          <section id="baa" class="scroll-mt-32 mb-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Баа</h2>
-            <img
-              src="../../tilda_raw/emojitours.ru/images/tild6331-3531-4436-a431-353735636630__anantara_kihavah_-_a.jpg"
-              class="w-full h-auto rounded-3xl shadow-xl mb-14">
-            <div class="text-black/80  text-xl leading-relaxed max-w-4xl">
-              <p class="mb-4">
-                <imgsrc="..
-                  /../tilda_raw/emojitours.ru/images/tild6331-3531-4436-a431-353735636630__-__empty__anantara_kihavah_-_a.jpg"alt="Купить горящую путевку на Мальдивы в Подольске">
-                  Особо охраняемый биосферный заповедник ЮНЕСКО с очень разнообразной подводной фауной, коралловыми
-                  рифами, морскими черепахами и большими фрегатами, птицами с причудливым окрасом, обитающими только в
-                  этих местах. Атолл является жемчужиной Мальдивских островов и местом паломничества дайверов со всего
-                  мира.
-              </p>
-            </div>
-            <div class="h-px bg-black/[0.05] mt-12"></div>
-          </section>
-          <section id="daalu" class="scroll-mt-32 mb-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Даалу</h2>
-            <img src="../../tilda_raw/emojitours.ru/images/tild6139-6437-4131-b637-363137333330__photo.jpg"
-              class="w-full h-auto rounded-3xl shadow-xl mb-14">
-            <div class="text-black/80  text-xl leading-relaxed max-w-4xl">
-              <p class="mb-4">
-                <imgsrc="..
-                  /../tilda_raw/emojitours.ru/images/tild6139-6437-4131-b637-363137333330__-__empty__photo.jpg"alt="Купить горящую путевку на Мальдивы в Подольске">
-                  Первозданный атолл был открыт туристами сравнительно недавно и является образцом тропического рая
-                  нетронутого рукой человека. В настоящий момент лишь три из 56 островов готовы предложить гостям отдых
-                  и являются курортными зонами. На одном из островов можно посмотреть древнюю мечеть из резного коралла
-                  и развалины старинных буддийских монастырей. Еще одно любопытное место – «черепаший остров» Велавару,
-                  окруженный лагунами, дивными пляжами и местами подводного погружения.
-              </p>
-            </div>
-            <div class="h-px bg-black/[0.05] mt-12"></div>
-          </section>
-          <section id="raa" class="scroll-mt-32 mb-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Раа</h2>
-            <img
-              src="../../tilda_raw/emojitours.ru/images/tild6263-3564-4536-b135-396134623436__hbr-maldives-excursi.jpg"
-              class="w-full h-auto rounded-3xl shadow-xl mb-14">
-            <div class="text-black/80  text-xl leading-relaxed max-w-4xl">
-              <p class="mb-4">
-                <imgsrc="..
-                  /../tilda_raw/emojitours.ru/images/tild6263-3564-4536-b135-396134623436__-__empty__hbr-maldives-excursi.jpg"alt="Купить горящую путевку на Мальдивы в Подольске">
-                  Несмотря на удаленность от столицы, атолл считается одним из наиболее популярных мест Мальдив. Один из
-                  15 островов атолла известен мастерами национальных лодок дони. А остров Расгетииму предлагает
-                  познакомиться с историей, овеянной десятками мифов и легенд, которые непременно поведают местные
-                  жители.
-              </p>
-            </div>
-            <div class="h-px bg-black/[0.05] mt-12"></div>
-          </section>
-          <section id="laviani" class="scroll-mt-32 mb-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Лавияни</h2>
-            <img src="../../tilda_raw/emojitours.ru/images/tild6463-6337-4131-a432-626631353861__i_2.jpg"
-              class="w-full h-auto rounded-3xl shadow-xl mb-14">
-            <div class="text-black/80  text-xl leading-relaxed max-w-4xl">
-              <p class="mb-4">
-                <imgsrc="..
-                  /../tilda_raw/emojitours.ru/images/tild6463-6337-4131-a432-626631353861__-__empty__i_2.jpg"alt="Купить горящую путевку на Мальдивы в Подольске">
-                  Отличительной особенностью этого атолла являются размеры островов - все 63 из них слишком крошечные по
-                  сравнению с другими Мальдивскими островами. Сюда едут любители гольфа, ведь только на острове Куреду
-                  работают 9 гольф-клубов.<br>Этот список неполный — существует целый ряд других удивительных атоллов со
-                  своими особенностями.
-              </p>
-            </div>
-            <div class="h-px bg-black/[0.05] mt-12"></div>
-          </section>
+          <!-- Контент -->
         </div>
 
-
+        <div class="h-px bg-black/5 my-16"></div>
 
         <!-- СЕКЦИЯ: ФОРМА -->
         <section id="section-form" class="scroll-mt-32 py-12">
-          <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">Отправить заявку</h2>
+          <h2 class="text-3xl md:text-4xl font-black mb-8 tracking-tight">Отправить заявку</h2>
           <form id="booking-form"
-            class="bg-[#fffcf5] border border-black/5 rounded-3xl md:rounded-3xl p-6 sm:p-10 md:p-16 shadow-2xl shadow-[#5f531a]/10 space-y-10 md:space-y-12 relative overflow-hidden">
+            class="bg-[#fffcf5] border border-black/5 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-10 md:p-16 shadow-2xl shadow-[#5f531a]/10 space-y-10 md:space-y-12 relative overflow-hidden">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 md:gap-y-8 mt-2">
               <div class="space-y-2">
-                <label class="block text-sm font-bold text-black/80 ml-1">Имя и Фамилия</label>
+                <label class="block text-sm font-bold text-on-surface-variant ml-1">Имя и Фамилия</label>
                 <input
                   class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                   name="userName" placeholder="Иван Иванов" type="text" required />
               </div>
               <div class="space-y-2">
-                <label class="block text-sm font-bold text-black/80 ml-1">E-mail</label>
+                <label class="block text-sm font-bold text-on-surface-variant ml-1">E-mail</label>
                 <input
                   class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                   name="userEmail" placeholder="hello@example.com" type="email" required />
               </div>
               <div class="space-y-2">
-                <label class="block text-sm font-bold text-black/80 ml-1">Телефон</label>
+                <label class="block text-sm font-bold text-on-surface-variant ml-1">Телефон</label>
                 <input
                   class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                   name="userPhone" placeholder="+7 (___) ___-__-__" type="tel" required />
               </div>
               <div class="space-y-2">
-                <label class="block text-sm font-bold text-black/80 ml-1">Направление</label>
+                <label class="block text-sm font-bold text-on-surface-variant ml-1">Направление</label>
                 <input
                   class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                  name="destination" value="Мальдивы" type="text" />
+                  name="destination" value="██Название██" type="text" />
               </div>
               <div class="grid grid-cols-2 gap-4">
                 <div class="space-y-2">
-                  <label class="block text-sm font-bold text-black/80 ml-1">Взрослых</label>
+                  <label class="block text-sm font-bold text-on-surface-variant ml-1">Взрослых</label>
                   <input
                     class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                     name="adults" min="1" type="number" value="2" />
                 </div>
                 <div class="space-y-2">
-                  <label class="block text-sm font-bold text-black/80 ml-1">Детей (и возраст)</label>
+                  <label class="block text-sm font-bold text-on-surface-variant ml-1">Детей (и возраст)</label>
                   <input
                     class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                     name="children" placeholder="1 реб, 5 лет" type="text" />
                 </div>
               </div>
               <div class="space-y-2">
-                <label class="block text-sm font-bold text-black/80 ml-1">Бюджет (RUB)</label>
+                <label class="block text-sm font-bold text-on-surface-variant ml-1">Бюджет (RUB)</label>
                 <input
                   class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                   name="budget" placeholder="От 200 000" type="text" />
               </div>
               <div class="space-y-2">
-                <label class="block text-sm font-bold text-black/80 ml-1">Количество ночей</label>
+                <label class="block text-sm font-bold text-on-surface-variant ml-1">Количество ночей</label>
                 <input
                   class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                   name="nights" min="1" type="number" value="7" />
               </div>
               <div class="space-y-2">
-                <label class="block text-sm font-bold text-black/80 ml-1">Дата начала</label>
+                <label class="block text-sm font-bold text-on-surface-variant ml-1">Дата начала</label>
                 <input
                   class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                   name="startDate" type="date" />
               </div>
             </div>
             <div class="space-y-4">
-              <label class="block text-sm font-bold text-black/80 ml-1">Нужны ли экскурсии?</label>
+              <label class="block text-sm font-bold text-on-surface-variant ml-1">Нужны ли экскурсии?</label>
               <div class="flex flex-wrap gap-8">
                 <label class="flex items-center gap-3 cursor-pointer group">
                   <input class="w-5 h-5 text-primary border-black/20 rounded-full transition-colors cursor-pointer"
@@ -462,16 +329,16 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div class="space-y-2">
-                <label class="block text-sm font-bold text-black/80 ml-1">Предпочтения по отелю</label>
+                <label class="block text-sm font-bold text-on-surface-variant ml-1">Предпочтения по отелю</label>
                 <textarea
                   class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                   name="hotelPrefs" placeholder="Напр. первая линия, только 5*, наличие детского клуба..."
                   rows="3"></textarea>
               </div>
               <div class="space-y-2">
-                <label class="block text-sm font-bold text-black/80 ml-1">Аэропорт вылета</label>
+                <label class="block text-sm font-bold text-on-surface-variant ml-1">Аэропорт вылета</label>
                 <input
-                  class="w-full bg-transparent border border-black/15 rounded-full p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                  class="w-full bg-transparent border border-black/15 rounded-xl p-4 hover:border-black/30 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                   name="airport" placeholder="Шереметьево, Пулково..." type="text" />
               </div>
             </div>
@@ -487,12 +354,13 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-surface-container-low w-full border-t border-black/5 pt-16 pb-10 px-4 md:px-8 mt-8">
     <div class="max-w-7xl mx-auto flex flex-col gap-12 md:gap-16">
       <div class="flex flex-col md:flex-row justify-between items-start gap-12">
         <div class="space-y-6 max-w-sm text-center md:text-left mx-auto md:mx-0">
-          <img src="../../images/logo.png" alt="Туроператора" class="h-12 md:h-14 mx-auto md:mx-0">
-          <p class="text-black/80  text-sm leading-relaxed px-4 md:px-0">
+          <img src="../../images/logo.png" alt="Туроператор" class="h-12 md:h-14 mx-auto md:mx-0">
+          <p class="text-on-surface-variant font-medium text-sm leading-relaxed px-4 md:px-0">
             Мы верим, что путешествия — это лучший способ познать себя и окружающий мир.
           </p>
           <div class="flex gap-4 justify-center md:justify-start">
@@ -511,21 +379,20 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-16 w-full md:w-auto text-center md:text-left">
           <div class="space-y-4">
-            <h4 class="font-bold text-black/80 text-sm">Связаться с нами</h4>
+            <h4 class="font-bold text-on-surface-variant text-sm">Связаться с нами</h4>
             <div class="space-y-3 text-lg">
               <a href="tel:+79636491852"
                 class="block font-black text-on-surface hover:text-primary transition-colors">+7 963-649-18-52</a>
               <a href="mailto:trohin.zh@yandex.ru"
-                class="block text-black/80 hover:text-black transition-colors text-sm ">trohin.zh@yandex.ru</a>
+                class="block text-on-surface-variant hover:text-black transition-colors text-sm font-medium">trohin.zh@yandex.ru</a>
             </div>
           </div>
 
         </div>
       </div>
       <div class="pt-8 md:pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="text-black/80  text-[11px] md:text-xs text-center md:text-left w-full md:w-auto">©
-          2026 Туроператора. Путешествия с душой.</div>
-        <div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-black/80">
+          2026 Туроператор. Путешествия с душой.</div>
+        <div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-on-surface-variant">
           <a href="../../index.html#countries" class="hover:text-black transition-colors">Страны</a>
           <a href="../../index.html#calendar" class="hover:text-black transition-colors">Календарь</a>
           <a href="../../index.html#testimonials" class="hover:text-black transition-colors">Отзывы</a>
@@ -540,13 +407,13 @@
     class="fixed inset-0 z-[200] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
     <div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
     <div
-      class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl relative z-10 max-w-sm w-full text-center space-y-6 transform scale-90 transition-transform duration-500"
+      class="bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl relative z-10 max-w-sm w-full text-center space-y-6 transform scale-90 transition-transform duration-500"
       id="success-card">
       <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
         <span class="material-symbols-outlined text-5xl">check</span>
       </div>
       <h3 class="text-3xl font-black tracking-tight">Заявка принята!</h3>
-      <p class="text-black/80  leading-relaxed">
+      <p class="text-on-surface-variant font-medium leading-relaxed">
         Мы уже получили ваши данные и начали подбор идеального тура. Наш эксперт свяжется с вами в ближайшее время!
       </p>
       <button onclick="closeModal()"
@@ -561,28 +428,62 @@
     // ScrollSpy
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
+    const quickLinksContainer = document.getElementById('quick-links');
+
+    let isScrolling = false;
 
     window.addEventListener('scroll', () => {
+      if (isScrolling) return;
+
       let current = "";
+      const scrollPos = window.pageYOffset + 160;
+
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        if (window.pageYOffset >= (sectionTop - 150)) {
+        if (scrollPos >= sectionTop) {
           current = section.getAttribute('id');
         }
       });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === "#" + current) {
-          link.classList.add('active');
-        }
-      });
+
+      if (current) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === "#" + current) {
+            link.classList.add('active');
+
+            // АВТО-СКРОЛЛ БОКОВОГО МЕНЮ
+            // Прокручиваем контейнер меню, чтобы активный пункт был виден
+            link.scrollIntoView({
+              behavior: 'smooth',
+              block: 'nearest',
+              inline: 'start'
+            });
+          }
+        });
+      }
     });
 
+    // Плавный скролл при клике
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+
+        if (target) {
+          isScrolling = true;
+          // Сначала подсвечиваем кликнутый пункт
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+
+          window.scrollTo({
+            top: target.offsetTop - 120,
+            behavior: 'smooth'
+          });
+
+          // Разблокируем ScrollSpy после завершения анимации
+          setTimeout(() => { isScrolling = false; }, 800);
+        }
       });
     });
 
@@ -603,12 +504,12 @@
           mobileLink.appendChild(arrow);
           mobileLink.onclick = (e) => {
             e.preventDefault();
-            const targetId = mobileLink.getAttribute("href");
+            const targetId = mobileLink.getAttribute('href');
             const target = targetId ? document.querySelector(targetId) : null;
             toggleMenu();
             if (target) {
               setTimeout(() => {
-                window.scrollTo({ top: target.offsetTop - 120, behavior: "smooth" });
+                window.scrollTo({ top: target.offsetTop - 120, behavior: 'smooth' });
               }, 50);
             }
           };
@@ -676,5 +577,3 @@
 </body>
 
 </html>
-
-

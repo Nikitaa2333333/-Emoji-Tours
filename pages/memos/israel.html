@@ -458,11 +458,21 @@
         mobileQuickLinks.innerHTML = '';
         desktopLinksSource.forEach(link => {
           const mobileLink = link.cloneNode(true);
-          // Стили для мобильного меню (крупнее, жирнее)
-          mobileLink.className = 'text-[22px] font-black py-2 hover:text-primary transition-colors';
-          mobileLink.onclick = () => {
+          mobileLink.className = 'text-on-surface hover:text-black transition-colors py-3 border-b border-black/5 flex items-center justify-between group';
+          const arrow = document.createElement('span');
+          arrow.className = 'material-symbols-outlined opacity-20 group-hover:opacity-100 transition-opacity';
+          arrow.textContent = 'arrow_forward';
+          mobileLink.appendChild(arrow);
+          mobileLink.onclick = (e) => {
+            e.preventDefault();
+            const targetId = mobileLink.getAttribute("href");
+            const target = targetId ? document.querySelector(targetId) : null;
             toggleMenu();
-            // Плавный скролл уже есть в общем скрипте
+            if (target) {
+              setTimeout(() => {
+                window.scrollTo({ top: target.offsetTop - 120, behavior: "smooth" });
+              }, 50);
+            }
           };
           mobileQuickLinks.appendChild(mobileLink);
         });

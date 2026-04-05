@@ -192,8 +192,9 @@
   </div>
   <div id="mobile-drawer"
     class="fixed top-0 right-0 w-[85%] max-w-sm h-full bg-[#fffcf5] z-[110] transform translate-x-full transition-transform duration-500 ease-out shadow-2xl p-8 flex flex-col">
-    <div class="flex justify-between items-center mb-10">
-      <p class="text-[13px] font-black text-black/40">Содержание</p>
+    <div class="flex justify-between items-center mb-12">
+      <img src="../../images/logo.png" alt="Туроператор" class="h-8"
+        onerror="this.src='https://via.placeholder.com/150?text=Туроператор'">
       <button onclick="toggleMenu()"
         class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-variant/30 text-on-surface active:scale-90 transition-transform">
         <span class="material-symbols-outlined">close</span>
@@ -798,11 +799,21 @@
         mobileQuickLinks.innerHTML = '';
         desktopLinksSource.forEach(link => {
           const mobileLink = link.cloneNode(true);
-          // Стили для мобильного меню (крупнее, жирнее)
-          mobileLink.className = 'text-[22px] font-black py-2 hover:text-primary transition-colors';
-          mobileLink.onclick = () => {
+          mobileLink.className = 'text-on-surface hover:text-black transition-colors py-3 border-b border-black/5 flex items-center justify-between group';
+          const arrow = document.createElement('span');
+          arrow.className = 'material-symbols-outlined opacity-20 group-hover:opacity-100 transition-opacity';
+          arrow.textContent = 'arrow_forward';
+          mobileLink.appendChild(arrow);
+          mobileLink.onclick = (e) => {
+            e.preventDefault();
+            const targetId = mobileLink.getAttribute("href");
+            const target = targetId ? document.querySelector(targetId) : null;
             toggleMenu();
-            // Плавный скролл уже есть в общем скрипте
+            if (target) {
+              setTimeout(() => {
+                window.scrollTo({ top: target.offsetTop - 120, behavior: "smooth" });
+              }, 50);
+            }
           };
           mobileQuickLinks.appendChild(mobileLink);
         });

@@ -226,7 +226,7 @@
   </nav>
   <!-- Hero Section -->
   <header
-    class="pt-36 md:pt-48 pb-16 flex flex-col items-center justify-center px-4 md:px-8 text-center bg-primary relative overflow-hidden">
+    class="pt-28 md:pt-48 pb-16 flex flex-col items-center justify-center px-4 md:px-8 text-center bg-primary relative overflow-hidden">
     <!-- Декоративные световые пятна (Aura glow) -->
     <div
       class="absolute top-0 left-1/2 -translate-x-1/2 w-[90vw] max-w-[1200px] h-[400px] bg-[#fffcf5]/60 blur-[100px] rounded-[100%] pointer-events-none">
@@ -236,21 +236,21 @@
 
       <!-- Chic Ticket Badge -->
       <div
-        class="inline-flex items-center justify-center px-10 md:px-12 py-4 md:py-5 bg-primary text-on-surface font-extrabold tracking-wide text-base md:text-lg mb-8 md:mb-10 animate-fade-up opacity-0 -rotate-2 hover:rotate-0 transition-transform duration-300"
+        class="inline-flex items-center justify-center px-6 md:px-12 py-2.5 md:py-5 bg-primary text-on-surface font-extrabold tracking-wide text-sm md:text-lg mb-8 md:mb-10 animate-fade-up opacity-0 -rotate-2 hover:rotate-0 transition-transform duration-300"
         style="animation-delay: 0.1s; filter: drop-shadow(0 4px 6px rgba(95,83,26,0.05)); -webkit-mask-image: radial-gradient(circle at 0 50%, transparent 10px, black 10.5px), radial-gradient(circle at 100% 50%, transparent 10px, black 10.5px); -webkit-mask-size: 51% 100%; -webkit-mask-repeat: no-repeat; -webkit-mask-position: left, right; mask-image: radial-gradient(circle at 0 50%, transparent 10px, black 10.5px), radial-gradient(circle at 100% 50%, transparent 10px, black 10.5px); mask-size: 51% 100%; mask-repeat: no-repeat; mask-position: left, right;">
         <span class="mt-px">Путешествия с душой</span>
       </div>
 
       <!-- Main Headline -->
       <h1
-        class="text-6xl sm:text-7xl md:text-9xl lg:text-[11.5rem] font-black tracking-tighter leading-[0.85] text-on-surface animate-fade-up opacity-0 px-6 whitespace-nowrap"
+        class="text-[clamp(3rem,14vw,11.5rem)] font-black tracking-tighter leading-[0.85] text-on-surface animate-fade-up opacity-0 px-6 whitespace-nowrap"
         style="animation-delay: 0.3s;">
         Эмоджи турс
       </h1>
 
       <!-- Subheadline -->
       <h2
-        class="text-xl md:text-3xl font-extrabold text-black max-w-2xl mx-auto leading-[0.9] mt-10 md:mt-14 mb-10 md:mb-14 opacity-0 animate-fade-up px-4 text-center"
+        class="text-xl md:text-3xl font-extrabold text-black max-w-2xl mx-auto leading-snug mt-6 md:mt-14 mb-8 md:mb-14 opacity-0 animate-fade-up px-4 text-center"
         style="animation-delay: 0.5s;">
         Мы создаем туры, полные <br class="sm:hidden"> настоящих&nbsp;эмоций
       </h2>
@@ -259,7 +259,7 @@
       <div class="flex flex-col sm:flex-row items-center justify-center w-full sm:w-auto animate-fade-up opacity-0 px-4"
         style="animation-delay: 0.7s;">
         <a href="#countries"
-          class="group inline-flex items-center justify-center w-full sm:w-auto bg-black text-white px-10 py-5 rounded-full text-xl font-bold transition-all hover:scale-[1.03] active:scale-95 shadow-xl shadow-[#5f531a]/15 hover:shadow-2xl hover:shadow-[#5f531a]/25 overflow-hidden">
+          class="group inline-flex items-center justify-center w-full sm:w-auto bg-black text-white px-14 py-5 rounded-full text-xl font-bold transition-all hover:scale-[1.03] active:scale-95 shadow-xl shadow-[#5f531a]/15 hover:shadow-2xl hover:shadow-[#5f531a]/25 overflow-hidden whitespace-nowrap">
           Выбрать направление
           <span
             class="material-symbols-outlined ml-3 transition-all duration-500 group-hover:-translate-y-12 group-hover:translate-x-6 group-hover:opacity-0 text-[22px]">flight</span>
@@ -691,18 +691,19 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const countries = [
-        { name: "Египет", emoji: "🇪🇬", code: "eg", link: "pages/countries/egypt.html", schedule: [[], [], [], ['beach'], ['beach'], [], [], [], ['beach'], ['beach'], ['beach'], []] },
-        { name: "Мальдивы", emoji: "🇲🇻", code: "mv", link: "pages/countries/maldives.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], [], [], [], [], [], [], ['beach'], ['beach']] },
-        { name: "Турция", emoji: "🇹🇷", code: "tr", link: "pages/countries/turkey.html", schedule: [['excursion'], ['excursion'], ['excursion'], ['excursion'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['excursion'], ['excursion']] },
-        { name: "Вьетнам", emoji: "🇻🇳", code: "vn", link: "pages/countries/vietnam.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], [], [], [], [], [], [], [], ['beach']] },
-        { name: "Китай", emoji: "🇨🇳", code: "cn", link: "pages/countries/china.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], ['excursion'], ['excursion'], ['excursion'], ['excursion'], ['excursion'], ['beach'], ['beach'], ['beach']] },
-        { name: "Маврикий", emoji: "🇲🇺", code: "mu", link: "pages/countries/mauritius.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], ['beach'], [], [], [], ['beach'], ['beach'], ['beach'], ['beach']] },
-        { name: "Таиланд", emoji: "🇹🇭", code: "th", link: "pages/countries/thailand.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], [], [], [], [], [], [], ['beach'], ['beach']] },
-        { name: "Сейшелы", emoji: "🇸🇨", code: "sc", link: "pages/countries/seychelles.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach']] },
-        { name: "Индонезия", emoji: "🇮🇩", code: "id", link: "pages/countries/indonesia.html", schedule: [[], [], [], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], [], [], []] },
-        { name: "Шри-Ланка", emoji: "🇱🇰", code: "lk", link: "pages/countries/sri-lanka.html", schedule: [['beach'], ['beach'], ['beach'], ['beach'], [], [], [], [], [], [], ['beach'], ['beach']] },
-        { name: "Танзания", emoji: "🇹🇿", code: "tz", link: "pages/countries/tanzania.html", schedule: [['beach'], ['beach'], [], [], [], [], ['beach'], ['beach'], ['beach'], ['beach'], [], ['beach']] },
-        { name: "Тунис", emoji: "🇹🇳", code: "tn", link: "pages/countries/tunisia.html", schedule: [[], [], [], [], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], ['beach'], [], []] }
+        { name: "Египет", emoji: "🇪🇬", code: "eg", link: "pages/countries/egypt.html", schedule: [[], [], [], ["beach"], ["beach"], [], [], [], ["beach"], ["beach"], ["beach"], []] },
+        { name: "Мальдивы", emoji: "🇲🇻", code: "mv", link: "pages/countries/maldives.html", schedule: [["beach"], ["beach"], ["beach"], ["beach"], [], [], [], [], [], [], ["beach"], ["beach"]] },
+        { name: "Турция", emoji: "🇹🇷", code: "tr", link: "pages/countries/turkey.html", schedule: [["excursion"], ["excursion"], ["excursion"], ["excursion"], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"], ["excursion"], ["excursion"]] },
+        { name: "Вьетнам", emoji: "🇻🇳", code: "vn", link: "pages/countries/vietnam.html", schedule: [["beach"], ["beach"], ["beach"], ["beach"], [], [], [], [], [], [], [], ["beach"]] },
+        { name: "Китай", emoji: "🇨🇳", code: "cn", link: "pages/countries/china.html", schedule: [["beach"], ["beach"], ["beach"], ["beach"], ["excursion"], ["excursion"], ["excursion"], ["excursion"], ["excursion"], ["beach"], ["beach"], ["beach"]] },
+        { name: "Маврикий", emoji: "🇲🇺", code: "mu", link: "pages/countries/mauritius.html", schedule: [["beach"], ["beach"], ["beach"], ["beach"], ["beach"], [], [], [], ["beach"], ["beach"], ["beach"], ["beach"]] },
+        { name: "Таиланд", emoji: "🇹🇭", code: "th", link: "pages/countries/thailand.html", schedule: [["beach"], ["beach"], ["beach"], ["beach"], [], [], [], [], [], [], ["beach"], ["beach"]] },
+        { name: "Сейшелы", emoji: "🇸🇨", code: "sc", link: "pages/countries/seychelles.html", schedule: [["beach"], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"]] },
+        { name: "Индонезия", emoji: "🇮🇩", code: "id", link: "pages/countries/indonesia.html", schedule: [[], [], [], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"], [], [], []] },
+        { name: "Шри-Ланка", emoji: "🇱🇰", code: "lk", link: "pages/countries/sri-lanka.html", schedule: [["beach"], ["beach"], ["beach"], ["beach"], [], [], [], [], [], [], ["beach"], ["beach"]] },
+        { name: "Танзания", emoji: "🇹🇿", code: "tz", link: "pages/countries/tanzania.html", schedule: [["beach"], ["beach"], [], [], [], [], ["beach"], ["beach"], ["beach"], ["beach"], [], ["beach"]] },
+        { name: "Тунис", emoji: "🇹🇳", code: "tn", link: "pages/countries/tunisia.html", schedule: [[], [], [], [], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"], ["beach"], [], []] },
+        { name: "Италия", emoji: "🇮🇹", code: "it", link: "pages/countries/italy.html", schedule: [[], [], ["beach"], [], [], [], [], ["excursion"], [], [], ["beach"], []] }
       ];
 
       const icons = {
@@ -826,7 +827,7 @@
   <section id="testimonials" class="py-24 md:py-32 bg-surface overflow-hidden relative z-10">
     <div class="space-y-12 md:space-y-16">
       <div class="text-center space-y-4 max-w-3xl mx-auto px-6 md:px-8">
-        <h2 class="text-4xl md:text-5xl font-headline font-black text-on-surface tracking-tight leading-none">
+        <h2 class="text-3xl md:text-5xl font-headline font-black text-on-surface tracking-tight leading-tight">
           Истории наших
           путешественников</h2>
         <p class="text-base md:text-xl text-on-surface-variant font-medium leading-relaxed pt-2">Те, кто уже
@@ -864,7 +865,7 @@
           </div>
           <div class="pt-8 flex items-center gap-4">
             <div
-              class="w-12 h-12 bg-white/40 border border-black/5 rounded-full flex items-center justify-center font-bold text-lg text-black/80">
+              class="w-12 h-12 flex-shrink-0 bg-white/40 border border-black/5 rounded-full flex items-center justify-center font-bold text-lg text-black/80">
               М</div>
             <div>
               <p class="font-bold">Михаил</p>
@@ -883,7 +884,7 @@
           </div>
           <div class="pt-8 flex items-center gap-4">
             <div
-              class="w-12 h-12 bg-white/40 border border-black/5 rounded-full flex items-center justify-center font-bold text-lg text-black/80">
+              class="w-12 h-12 flex-shrink-0 bg-white/40 border border-black/5 rounded-full flex items-center justify-center font-bold text-lg text-black/80">
               ГН</div>
             <div>
               <p class="font-bold">Галина и Наталья К.</p>
@@ -901,7 +902,7 @@
           </div>
           <div class="pt-10 flex items-center gap-4">
             <div
-              class="w-12 h-12 bg-white/40 border border-black/5 rounded-full flex items-center justify-center font-bold text-lg text-black/80">
+              class="w-12 h-12 flex-shrink-0 bg-white/40 border border-black/5 rounded-full flex items-center justify-center font-bold text-lg text-black/80">
               ИП</div>
             <div>
               <p class="font-bold">Игорь П.</p>
@@ -920,7 +921,7 @@
           </div>
           <div class="pt-10 flex items-center gap-4">
             <div
-              class="w-12 h-12 bg-white/40 border border-black/5 rounded-full flex items-center justify-center font-bold text-lg text-black/80">
+              class="w-12 h-12 flex-shrink-0 bg-white/40 border border-black/5 rounded-full flex items-center justify-center font-bold text-lg text-black/80">
               ЮК</div>
             <div>
               <p class="font-bold">Юлия К.</p>
@@ -1115,7 +1116,7 @@
       <div class="pt-8 md:pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
         <div
           class="text-on-surface-variant font-medium text-[11px] md:text-xs text-center md:text-left w-full md:w-auto">
-          © 2026 Туроператора. Путешествия с душой.</div>
+          © 2026 Emoji Tours. Путешествия с душой. <a href="http://localhost:5001" target="_blank" class="opacity-20 hover:opacity-60 transition-opacity ml-2">⚙</a></div>
         <div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-on-surface-variant">
           <a href="#countries" class="hover:text-black transition-colors">Страны</a>
           <a href="#calendar" class="hover:text-black transition-colors">Календарь</a>

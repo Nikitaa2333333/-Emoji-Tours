@@ -214,11 +214,11 @@
      </span>
     </button>
    </div>
-   <nav class="flex flex-col gap-2 font-['Manrope'] font-bold text-lg tracking-tight overflow-y-auto" id="mobile-quick-links">
+   <nav class="flex flex-col font-['Manrope'] font-bold text-xl tracking-tight overflow-y-auto" id="mobile-quick-links">
     <!-- Мобильные ссылки -->
    </nav>
    <div class="mt-auto pt-10 border-t border-black/10">
-    <p class="text-[11px] text-on-surface-variant font-bold uppercase tracking-[0.1em]">
+    <p class="text-[11px] text-on-surface-variant font-bold tracking-[0.1em]">
      © 2026 Туроператора.
      <br/>
      Путешествия с душой.
@@ -366,7 +366,7 @@
        <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">
         Не забывайте собрать и взять с собой аптечку первой помощи , которая поможет при легких недомоганиях, сэкономит время на поиски лекарственных средств и избавит от нежелательного общения на иностранном языке.
        </p>
-       <section class="scroll-mt-32 mb-20" id="v-rossijskom-aeroportu-vyleta-prilyota">
+       <section class="scroll-mt-32 mb-20" id="v-rossijskom-aeroportu">
         <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">
          В российском аэропорту вылета/прилёта
         </h2>
@@ -429,7 +429,7 @@
          денежных средств и (или) денежных инструментов влечёт за собой административную или уголовную ответственность.
         </p>
         <img alt="таможенный контроль" class="no-print w-full h-auto rounded-[2rem] md:rounded-[3.5rem] shadow-2xl my-16 object-cover" src="../../images/tild3039-3166-4636-b537-366535646636__secret-01.jpg"/>
-        <section class="scroll-mt-32 mb-20" id="tamozhennyj-kontrol-v-shri-lanke">
+        <section class="scroll-mt-32 mb-20" id="tamozhennyj-kontrol-sri-lanka">
          <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">
           Таможенный контроль в Шри-Ланке
          </h2>
@@ -585,7 +585,7 @@
              находящиеся под угрозой исчезновения.
             </span>
            </p>
-           <section class="scroll-mt-32 mb-20" id="v-aeroportu-prileta-vyleta-respubliki-shri-lanka">
+           <section class="scroll-mt-32 mb-20" id="v-aeroportu-sri-lanka">
             <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">
              В аэропорту прилета/вылета Республики Шри-Ланка
             </h2>
@@ -675,7 +675,7 @@
                </span>
                въезда на территорию Республики Шри-Ланка. Получить информацию по этому вопросу следует в посольстве Шри-Ланки по месту гражданства.
               </p>
-              <section class="scroll-mt-32 mb-20" id="demokraticheskaya-sotsialisticheskaya-respublika-shri-lanka">
+              <section class="scroll-mt-32 mb-20" id="about-sri-lanka">
                <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">
                 Демократическая Социалистическая Республика Шри-Ланка
                </h2>
@@ -887,7 +887,7 @@
                  122 — пожарная служба.
                 </li>
                </ul>
-               <section class="scroll-mt-32 mb-20" id="pravila-lichnoj-gigieny-i-bezopasnosti">
+               <section class="scroll-mt-32 mb-20" id="pravila-gigieny">
                 <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">
                  Правила личной гигиены и безопасности
                 </h2>
@@ -930,7 +930,7 @@
                 <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">
                  Если в номере стоит мини-бар, то все напитки и закуски, взятые из него, как правило, должны быть оплачены.
                 </p>
-                <section class="scroll-mt-32 mb-20" id="v-sluchae-poteri-pasporta">
+                <section class="scroll-mt-32 mb-20" id="poterya-pasporta">
                  <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">
                   В случае потери паспорта
                  </h2>
@@ -978,7 +978,7 @@
                  <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">
                   Консульство РФ в Шри-Ланке помочь с оформлением документов гражданину РБ не сможет.
                  </p>
-                       <section class="scroll-mt-32 mb-20" id="poleznaya-informatsiya">
+                       <section class="scroll-mt-32 mb-20" id="poleznaya-info">
         <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">
           Полезная информация
         </h2>
@@ -1013,16 +1013,6 @@
         </div>
         </div>
       </section>
-                </section>
-               </section>
-              </section>
-             </section>
-            </section>
-           </section>
-          </section>
-         </section>
-        </section>
-       </section>
       </section>
      </div>
      <div class="h-px bg-black/5 my-16">
@@ -1292,11 +1282,21 @@
         mobileQuickLinks.innerHTML = '';
         desktopLinksSource.forEach(link => {
           const mobileLink = link.cloneNode(true);
-          // Стили для мобильного меню (крупнее, жирнее)
-          mobileLink.className = 'text-[22px] font-black py-2 hover:text-primary transition-colors';
-          mobileLink.onclick = () => {
+          mobileLink.className = 'text-on-surface hover:text-black transition-colors py-3 border-b border-black/5 flex items-center justify-between group';
+          const arrow = document.createElement('span');
+          arrow.className = 'material-symbols-outlined opacity-20 group-hover:opacity-100 transition-opacity';
+          arrow.textContent = 'arrow_forward';
+          mobileLink.appendChild(arrow);
+          mobileLink.onclick = (e) => {
+            e.preventDefault();
+            const targetId = mobileLink.getAttribute("href");
+            const target = targetId ? document.querySelector(targetId) : null;
             toggleMenu();
-            // Плавный скролл уже есть в общем скрипте
+            if (target) {
+              setTimeout(() => {
+                window.scrollTo({ top: target.offsetTop - 120, behavior: "smooth" });
+              }, 50);
+            }
           };
           mobileQuickLinks.appendChild(mobileLink);
         });

@@ -93,6 +93,10 @@ def clean_memo(html: str) -> str:
     # 7. Удаляем секцию с формой (#section-form) и разделитель перед ней
     form_section = soup.find(id='section-form')
     if form_section:
+        # BS4 может засунуть полезные секции внутрь form_section из-за кривого HTML — спасаем их
+        for rescued in form_section.find_all('section', recursive=False):
+            form_section.insert_before(rescued.extract())
+
         # Ищем разделитель <div class="h-px ..."> прямо перед формой
         prev = form_section.find_previous_sibling()
         while prev and prev.name is None:

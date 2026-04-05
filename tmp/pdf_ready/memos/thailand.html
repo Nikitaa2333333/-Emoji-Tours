@@ -206,10 +206,10 @@
 <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">
         Перед отъездом
        </h2>
-
 <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">
         Проверьте наличие необходимых для поездки документов:
        </h3>
+
 <ul class="check-list mb-8">
 <li>
          заграничный паспорт (действителен в течение не менее шести месяцев с даты начала поездки, имеет не
@@ -412,7 +412,6 @@
                     судна.
           </li>
 </ul>
-
 <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">
           Таможенный контроль по окончании путешествия
          </h3>
@@ -731,7 +730,6 @@
                    В
                                     аэропорту прилета/вылета Таиланда
                   </h2>
-
 <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">
                    По прибытии в
                                     аэропорт Таиланда нужно последовательно:
@@ -875,7 +873,6 @@
                       Королевство Таиланд
                      </h2>
 
-
 <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">
                       Официальное
                                           название страны: Королевство Таиланд. Территория Таиланда составляет 514 тыс.
@@ -895,7 +892,6 @@
                       Тайский, в
                                           общении с иностранцами — английский.
                      </p>
-
 <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">
                       Валюта
                      </h3>
@@ -948,7 +944,6 @@
 <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">
                       Обычаи
                      </h3>
-
 <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">
                       В Таиланде
                                           существуют местные обычаи и традиции, социальные и религиозные табу, нарушения
@@ -1113,11 +1108,9 @@
                       10 декабря —
                                           День Конституции.
                      </p>
-
 <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">
                       В отеле
                      </h3>
-
 
 <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">
                       В день
@@ -1185,11 +1178,9 @@
                                           специально отведенные для курения места. Нарушение влечет наказание в виде
                                           штрафа в размере 100 000 бат и/или тюремного заключения на срок до 1 года.
                      </p>
-
 <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">
                       Экскурсии
                      </h3>
-
 
 <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">
                       Гид компании,
@@ -1204,7 +1195,6 @@
                                           паразитарными, грибковыми, инфекционными заболеваниями инвентарь, включая
                                           сжатый воздух в баллонах для погружения.
                      </p>
-
 <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">
                       Магазины
                      </h3>
@@ -1220,7 +1210,6 @@
 <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">
                       Транспорт
                      </h3>
-
 <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">
                       Движение
                                           левостороннее. На автомобильных дорогах движение хаотично, водители не
@@ -1270,7 +1259,6 @@
 <h3 class="text-2xl font-bold mt-12 mb-6 underline decoration-primary underline-offset-8 text-black">
                       Телефон
                      </h3>
-
 
 <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">
                       Для
@@ -1428,7 +1416,6 @@
 <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">
                         В случае потери паспорта
                        </h2>
-
 <p class="mb-6 text-xl text-black/80 leading-relaxed font-manrope">
                         Незамедлительно обращайтесь в дипломатическое представительство, в
                                               консульское учреждение или в представительство МИД РФ, которое находится в
@@ -1478,21 +1465,15 @@
                        </p>
 <section class="scroll-mt-32 mb-20" id="poleznaya-informatsiya">
 <h2 class="text-3xl md:text-5xl font-black mb-10 tracking-tight text-black">
-                         Полезная информация
-                         <span class="font-bold text-black">
-                          Горячая
-                         </span>
-<span class="font-bold text-black">
-                          линия
-                         </span>
-<span class="font-bold text-black">
-                          принимающей
-                         </span>
-<span class="font-bold text-black">
-                          компании:
-                         </span>
-                         +90 850 549 07 07.
-                        </h2>
+          Полезная информация
+        </h2>
+<div class="space-y-10 my-10">
+<div class="bg-primary/20 rounded-2xl p-6">
+<p class="text-xl font-bold text-black">
+            Горячая линия принимающей компании: <span class="font-black">+90 850 549 07 07</span>
+</p>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -1614,11 +1595,21 @@
         mobileQuickLinks.innerHTML = '';
         desktopLinksSource.forEach(link => {
           const mobileLink = link.cloneNode(true);
-          // Стили для мобильного меню (крупнее, жирнее)
-          mobileLink.className = 'text-[22px] font-black py-2 hover:text-primary transition-colors';
-          mobileLink.onclick = () => {
+          mobileLink.className = 'text-on-surface hover:text-black transition-colors py-3 border-b border-black/5 flex items-center justify-between group';
+          const arrow = document.createElement('span');
+          arrow.className = 'material-symbols-outlined opacity-20 group-hover:opacity-100 transition-opacity';
+          arrow.textContent = 'arrow_forward';
+          mobileLink.appendChild(arrow);
+          mobileLink.onclick = (e) => {
+            e.preventDefault();
+            const targetId = mobileLink.getAttribute("href");
+            const target = targetId ? document.querySelector(targetId) : null;
             toggleMenu();
-            // Плавный скролл уже есть в общем скрипте
+            if (target) {
+              setTimeout(() => {
+                window.scrollTo({ top: target.offsetTop - 120, behavior: "smooth" });
+              }, 50);
+            }
           };
           mobileQuickLinks.appendChild(mobileLink);
         });

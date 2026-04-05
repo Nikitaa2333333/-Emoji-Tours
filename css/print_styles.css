@@ -137,6 +137,6 @@
 
 /* Fallback for non-print view */
 .print-only {
-    display: none;
+    display: none !important;
 }
 
