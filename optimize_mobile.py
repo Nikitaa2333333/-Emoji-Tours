@@ -9,11 +9,11 @@ def optimize_file(path):
     # Списки замен (Типографика + Цвет)
     replacements = [
         # Типографика (мобильные адаптации)
-        (r'\btext-6xl\b', 'text-4xl md:text-8xl'),
-        (r'\btext-3xl\b', 'text-2xl md:text-5xl'),
-        (r'\btext-xl\b', 'text-base md:text-xl'),
-        (r'\bmb-24\b', 'mb-12 md:mb-24'),
-        (r'\bspace-y-16\b', 'space-y-10 md:space-y-16'),
+        (r'(?<![:-])\btext-6xl\b', 'text-4xl md:text-8xl'),
+        (r'(?<![:-])\btext-3xl\b', 'text-2xl md:text-5xl'),
+        (r'(?<![:-])\btext-xl\b', 'text-base md:text-xl'),
+        (r'(?<![:-])\bmb-24\b', 'mb-12 md:mb-24'),
+        (r'(?<![:-])\bspace-y-16\b', 'space-y-10 md:space-y-16'),
         
         # Черный цвет везде (удаление прозрачности и серого)
         (r'\btext-black\/[0-9]+\b', 'text-black'),  # text-black/80, text-black/40 и т.д.
