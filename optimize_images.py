@@ -9,8 +9,13 @@ def optimize_images(directory):
             file_path = os.path.join(directory, filename)
             try:
                 with Image.open(file_path) as img:
-                    # Convert to RGB if necessary
-                    if img.mode in ("RGBA", "P"):
+                    # Preserve transparency (RGBA/LA)
+                    if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
+                        # Keep as is to preserve alpha
+                        pass
+                    elif img.mode == "P":
+                        img = img.convert("RGBA")
+                    else:
                         img = img.convert("RGB")
                     
                     width, height = img.size
