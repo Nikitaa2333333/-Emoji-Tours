@@ -75,6 +75,13 @@
       font-size: 1.4rem;
     }
 
+    /* Анимация покачивания маскота */
+    @keyframes mascot-float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      25% { transform: translateY(-10px) rotate(1.5deg); }
+      75% { transform: translateY(-5px) rotate(-1deg); }
+    }
+
     /* Эффект аккордеона для фото-ленты */
     .photo-strip-item {
       transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -186,6 +193,11 @@
     <div
       class="absolute top-0 left-1/2 -translate-x-1/2 w-[90vw] max-w-[1200px] h-[400px] bg-[#fffcf5]/60 blur-[100px] rounded-[100%] pointer-events-none">
     </div>
+
+    <!-- Маскот туканчик -->
+    <img src="pepe.png" alt="Туканчик Эмоджи Турс"
+      class="absolute right-[-2%] md:right-[2%] lg:right-[6%] bottom-[-20px] md:bottom-[-30px] w-[160px] md:w-[220px] lg:w-[280px] pointer-events-none select-none z-20"
+      style="animation: mascot-float 3.5s ease-in-out infinite; filter: drop-shadow(0 12px 24px rgba(0,0,0,0.12));">
 
     <div class="max-w-6xl mx-auto relative z-10 flex flex-col items-center w-full">
 
