@@ -148,6 +148,7 @@
       <a href="index.html" class="flex-shrink-0"><img loading="lazy" fetchpriority="low" decoding="async" src="images/logo.webp" alt="Эмоджи Турс" class="h-8 md:h-10" loading="eager" fetchpriority="high"></a>
       <div
         class="hidden md:flex gap-10 items-center font-['Manrope'] font-bold text-sm tracking-tight absolute left-1/2 -translate-x-1/2">
+        <a class="text-black hover:text-black transition-colors" href="#search">Поиск туров</a>
         <a class="text-black hover:text-black transition-colors" href="#countries">Страны</a>
         <a class="text-black hover:text-black transition-colors" href="#calendar">Календарь</a>
         <a class="text-black hover:text-black transition-colors" href="#testimonials">Отзывы</a>
@@ -362,7 +363,7 @@
     </div>
   </section>
   <!-- Widget Section -->
-  <section class="py-24 md:py-32 px-4 md:px-8 bg-background">
+  <section id="search" class="py-24 md:py-32 px-4 md:px-8 bg-background">
     <div class="max-w-7xl mx-auto space-y-10">
       <div class="text-center space-y-4 max-w-2xl mx-auto">
         <h2 class="text-4xl md:text-5xl font-headline font-black text-black tracking-tight leading-none px-2">Найдите свой тур</h2>
@@ -1074,6 +1075,7 @@
           class="text-black font-medium text-[11px] md:text-xs text-center md:text-left w-full md:w-auto">
           © 2026 Emoji Tours. Путешествия с душой. <a href="http://localhost:5001" target="_blank" class="opacity-20 hover:opacity-60 transition-opacity ml-2">⚙</a></div>
         <div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-bold text-black">
+          <a href="#search" class="hover:text-black transition-colors">Поиск туров</a>
           <a href="#countries" class="hover:text-black transition-colors">Страны</a>
           <a href="#calendar" class="hover:text-black transition-colors">Календарь</a>
           <a href="#testimonials" class="hover:text-black transition-colors">Отзывы</a>
@@ -1098,6 +1100,12 @@
       </button>
     </div>
     <nav class="flex flex-col gap-6 font-['Manrope'] font-bold text-base md:text-xl tracking-tight">
+      <a class="text-black hover:text-black transition-colors py-3 border-b border-black/5 flex items-center justify-between group"
+        href="#search" onclick="toggleMenu()">
+        Поиск туров
+        <span
+          class="material-symbols-outlined opacity-20 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+      </a>
       <a class="text-black hover:text-black transition-colors py-3 border-b border-black/5 flex items-center justify-between group"
         href="#countries" onclick="toggleMenu()">
         Страны
