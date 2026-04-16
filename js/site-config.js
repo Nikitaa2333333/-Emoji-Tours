@@ -1,9 +1,9 @@
 window.SITE_CONFIG = {
-  "phone": "+7 963-649-18-51",
-  "phone_raw": "79636491851",
+  "phone": "+7 963-649-18-52",
+  "phone_raw": "79636491852",
   "email": "trohin.zh@yandex.ru",
   "social": {
-    "max": "https://max.ru/",
+    "max": "https://max.ru/join/0haRr-rt5CMasX93mYrj_DuaLtUNy7gLfKyjXIdKFys",
     "vk": "https://vk.com/emoji_tours"
   },
   "legal": {
